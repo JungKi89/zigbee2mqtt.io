@@ -22,7 +22,14 @@ async function checkFile(file: string, availableFiles: string[]) {
             }
         })
         .map(([org, resolved]) => [org, resolved.endsWith('/') ? `${resolved}index.html` : resolved]) // add index.html for links pointing to a directory
-        .map(([org, resolved]) => [org, resolved.substr(getBase().length)]);
+        .map(([org, resolved]) => {
+            if (resolved.startsWith(getBase())) {
+                return [org, resolved.substr(getBase().length)];
+            }
+            // VuePress SSG does not always prepend base to absolute links;
+            // fall back to stripping just the leading slash
+            return [org, resolved.startsWith('/') ? resolved.substr(1) : resolved];
+        });
 
     const broken = linkToFiles.filter(([org, resolved]) => !availableFiles.includes(resolved));
 
