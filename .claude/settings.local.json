@@ -1,0 +1,11 @@
+{
+    "permissions": {
+        "allow": ["Bash", "PowerShell", "WebSearch", "WebFetch", "mcp__context7", "mcp__playwright", "mcp__sequential-thinking", "Skill(git-commit)"],
+        "deny": [],
+        "ask": [],
+        "defaultMode": "plan"
+    },
+    "enableAllProjectMcpServers": true,
+    "enabledMcpjsonServers": ["context7", "playwright", "sequential-thinking", "shrimp-task-manager"],
+    "plansDirectory": ".claude/plans"
+}
