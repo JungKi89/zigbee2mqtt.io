@@ -1,8 +1,8 @@
-export const domain = 'https://www.zigbee2mqtt.io';
+export const domain = 'https://jungki89.github.io/zigbee2mqtt.io';
 export const isDevelop = !!process.env.DEVELOP_BRANCH;
 
 export function getBase() {
-    let base = '/';
+    let base = '/zigbee2mqtt.io/';
     if (isDevelop) base += 'develop/';
     return base as '/' | `/${string}/`;
 }
