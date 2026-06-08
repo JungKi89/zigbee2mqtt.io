@@ -27,30 +27,30 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory resetting this Nue / 3A light can be accomplished with the following methods.
-After resetting the bulb will automatically connect.
+### 페어링
+이 Nue / 3A 조명의 공장 초기화는 다음 방법으로 수행할 수 있습니다.
+초기화 후 전구가 자동으로 연결됩니다.
 
-#### Reset button
-Press and hold the reset button on the adaptor for 10 seconds.
+#### 리셋 버튼
+어댑터의 리셋 버튼을 10초간 누르고 있습니다.
 
-Also see the [VIDEO: Demo on Pairing Nue Zigbee Downlight with Philips Hue Bridge](https://www.youtube.com/watch?v=Z2U6mJSmA34).
+[VIDEO: Demo on Pairing Nue Zigbee Downlight with Philips Hue Bridge](https://www.youtube.com/watch?v=Z2U6mJSmA34)도 참고하세요.
 
-#### Power cycling the device
-Turn on and off the for 9 times. The light will blink twice on the 9th time.
+#### 기기 전원 사이클
+전원을 9번 껐다 켭니다. 9번째에 조명이 두 번 깜박입니다.
 
-Similar to [VIDEO: How to reset a TRÅDFRI light bulb](https://www.youtube.com/watch?v=npxOrPxVfe0)
+[VIDEO: How to reset a TRÅDFRI light bulb](https://www.youtube.com/watch?v=npxOrPxVfe0)와 유사한 방법입니다.
 
-#### Hue dimmer switch
-With [one](./324131092621.md) of the [two](./929002398602.md) Hue Dimmer switches it is possible to put the bulbs into a factory reset.
+#### Hue 디머 스위치
+[두 가지](./929002398602.md) Hue 디머 스위치 [중 하나](./324131092621.md)를 사용하여 전구를 공장 초기화할 수 있습니다.
 
-1. Power-supply the bulb
-2. Bring the dimmer switch next to the bulb, as close as possible
-3. Hold the I/On and 0/Off button pressed simultaneously for 10 to 12 seconds until…
-4. The bulb flashes a couple of times. Don't release the buttons until the last flash + a safety second
-5. Switch the bulb off and on again: it can now be paired again.
+1. 전구에 전원을 공급합니다
+2. 디머 스위치를 전구 최대한 가까이 가져갑니다
+3. I/On 버튼과 0/Off 버튼을 동시에 10~12초간 누르고 있습니다
+4. 전구가 몇 번 깜박입니다. 마지막 깜박임 후 1초가 지날 때까지 버튼을 놓지 마세요
+5. 전구를 껐다가 다시 켜면 다시 페어링할 수 있습니다.
 
-See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
+[VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs)도 참고하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

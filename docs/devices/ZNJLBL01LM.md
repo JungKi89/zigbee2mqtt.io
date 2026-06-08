@@ -27,31 +27,31 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Hold the reset button, on the bottom of the device, for 5 seconds.
+### 페어링
+기기 하단의 리셋 버튼을 5초간 누르고 있습니다.
 
-*Pairing the device with a new bridge will **not** reset the fully open/closed position.*
+*기기를 새 브리지에 페어링해도 완전 열림/닫힘 위치는 **초기화되지 않습니다**.*
 
-### Fully open and fully closed positions
-The rotation range (fully open and fully closed) can be reset by holding the both the up and down buttons for 3 seconds until the light turns blue.
+### 완전 열림 및 완전 닫힘 위치
+회전 범위(완전 열림 및 완전 닫힘)는 위쪽과 아래쪽 버튼을 동시에 3초간 눌러 표시등이 파란색으로 바뀔 때까지 누르면 초기화됩니다.
 
-#### Fully open position
-The fully open position can be set by setting the shade to the desired position and then pressing the up button 5 times in succession. If successful the light turns blue and flashes 3 times.
+#### 완전 열림 위치
+완전 열림 위치는 셰이드를 원하는 위치로 설정한 후 위쪽 버튼을 5번 연속으로 누르면 설정됩니다. 성공하면 표시등이 파란색으로 바뀌며 3번 깜박입니다.
 
-#### Fully closed position
-The fully closed position can be set by setting the shade to the desired position and then pressing the down button 5 times in succession. If successful the light turns blue and flashes 3 times.
+#### 완전 닫힘 위치
+완전 닫힘 위치는 셰이드를 원하는 위치로 설정한 후 아래쪽 버튼을 5번 연속으로 누르면 설정됩니다. 성공하면 표시등이 파란색으로 바뀌며 3번 깜박입니다.
 
-### Change button directions
-If the up and down buttons are working in the opposite direction of how your blinds operate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
+### 버튼 방향 변경
+위쪽 및 아래쪽 버튼이 블라인드 작동 방향과 반대로 동작하는 경우, 리셋 버튼을 3번 눌러 방향을 바꿀 수 있습니다. 성공하면 표시등이 1초간 파란색으로 고정됩니다.
 
-### Adapter firmware
-In order for this device to work (fully), at least the following firmware is required on your adapter:
+### 어댑터 펌웨어
+이 기기가 (완전히) 작동하려면 어댑터에 최소한 다음 펌웨어가 필요합니다:
 - CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
 - CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
 - CC2538: [`20211222`](https://github.com/jethome-ru/zigbee-firmware/tree/master/ti/coordinator/cc2538_cc2592)
 - Conbee II: [`0x26720700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26720700.bin.GCF)
 
-*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
+*기기를 이미 페어링한 경우 어댑터 펌웨어 업그레이드 후 다시 페어링해야 합니다.*
 <!-- Notes END: Do not edit below this line -->
 
 

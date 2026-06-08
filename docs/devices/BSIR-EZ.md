@@ -25,13 +25,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-If new, the device will be in pairing mode when powered on, but you will need to add the install code from the back of the unit in order to pair the siren. If you do not complete this step the interview will fail and the unit will be shown as unsupported. On the back of the siren is a QR code and a 36 digit code that is called "Install code" - do NOT use this 36 digit code. Instead, scan the QR code with your phone and this will return a 91 or 95 character code. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
-IMPORTANT: [Check DIP switchers](https://github.com/Koenkk/zigbee2mqtt/issues/28088) factory settings and set switch number 8 to ON - "Smart" mode (Operation Bosch Smart Home controller).
+새 제품의 경우, 전원을 켜면 페어링 모드 상태이지만 사이렌을 페어링하려면 기기 뒷면의 설치 코드를 추가해야 합니다. 이 단계를 완료하지 않으면 인터뷰가 실패하고 기기가 미지원으로 표시됩니다. 사이렌 뒷면에는 QR 코드와 "Install code"라고 불리는 36자리 코드가 있습니다 - 이 36자리 코드를 사용하지 마세요. 대신, 스마트폰으로 QR 코드를 스캔하면 91자 또는 95자 코드가 반환됩니다. zigbee2mqtt에서 "Settings" --> "Tools"로 이동하여 "Add install code"를 클릭하세요. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 후, 참여 허용이 활성화되어 있는지 확인하세요. 기기가 연결될 때까지 기다리세요.
+중요: [DIP 스위치 확인](https://github.com/Koenkk/zigbee2mqtt/issues/28088) 초기 설정에서 스위치 번호 8을 ON으로 설정하세요 - "Smart" 모드 (Bosch Smart Home controller 작동).
 
-If the device is not in pairing mode, you must
-- turn the device off
-- press the Reset button and keep it pressed, while you turn the device back on
-- as soon as the status LED starts blinking orange, release and long-press the Reset button again until the LED turns green
+기기가 페어링 모드가 아닌 경우:
+- 기기를 끄세요
+- 리셋 버튼을 누른 채로 기기를 다시 켜세요
+- 상태 LED가 주황색으로 깜빡이기 시작하면 리셋 버튼을 놓고 LED가 녹색으로 바뀔 때까지 다시 길게 누르세요
 <!-- Notes END: Do not edit below this line -->
 
 

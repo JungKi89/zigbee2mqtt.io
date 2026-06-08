@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Power cycle three times: on-off, on-off, on-off, ON >> [up to 5 seconds] >>> starts flashing.
-A gap of 3+ seconds between off and on should be applied so the power drains out.
+### 페어링
+전원을 세 번 껐다 켭니다: 켜기-끄기, 켜기-끄기, 켜기-끄기, 켜기 >> [최대 5초] >>> 깜박임 시작.
+전원이 완전히 방전되도록 끄기와 켜기 사이에 3초 이상 간격을 두어야 합니다.
 
-### Issues
+### 알려진 문제
 
-The pairing sequence is triggered too easily, for example by noisy power (internal or external). As a result, **the device may occasionally "reset" on its own**, or with a single power-on cycle.  
+페어링 시퀀스가 너무 쉽게 트리거됩니다. 예를 들어 내부 또는 외부의 불안정한 전원 공급으로 인해 **기기가 간혹 스스로 "초기화"될 수 있으며**, 단 한 번의 전원 사이클로도 발생할 수 있습니다.
 
-The device keeps the network key until it's overwritten with a new one. So even if it was "reset", the device behaves like it never left the network. However, Zigbee2MQTT and the routers would have removed it from their tables.
+기기는 새로운 네트워크 키로 덮어써지기 전까지 기존 키를 유지합니다. 따라서 "초기화"가 발생하더라도 기기는 네트워크를 떠난 적이 없는 것처럼 동작합니다. 그러나 Zigbee2MQTT와 라우터는 해당 기기를 테이블에서 제거했을 것입니다.
 
-An [external extension](https://github.com/Koenkk/zigbee2mqtt-user-extensions/tree/main/stable/ignore_device_leave) can be used to keep it in the Zigbee2MQTT database. But ideally, the misbehaving devices should be avoided, in order to keep a healthy and secure network.
+[외부 확장 기능](https://github.com/Koenkk/zigbee2mqtt-user-extensions/tree/main/stable/ignore_device_leave)을 사용하면 Zigbee2MQTT 데이터베이스에 기기를 유지할 수 있습니다. 하지만 건강하고 안전한 네트워크를 유지하려면 문제 있는 기기의 사용을 피하는 것이 좋습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

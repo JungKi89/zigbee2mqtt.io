@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Put the device in pairing mode by pressing and holding the button on the device for 3 seconds until the LED indicator flashes rapidly.
+### 페어링
+기기의 버튼을 3초간 누르고 있으면 LED 표시등이 빠르게 깜박이면서 페어링 모드로 진입합니다.
 
-### Reset
-To reset the device, press and hold the button for 10 seconds until the LED indicator flashes 3 times.
+### 초기화
+기기를 초기화하려면 버튼을 10초간 누르고 있으면 LED 표시등이 3번 깜박입니다.
 
-### Installation
-- Remove the magnetic part from the main unit
-- Install the main unit on the door/window frame
-- Install the magnetic part on the door/window
-- Ensure the distance between the two parts is less than 2cm when closed
+### 설치
+- 메인 유닛에서 자석 부품을 분리합니다
+- 메인 유닛을 문/창문 프레임에 설치합니다
+- 자석 부품을 문/창문에 설치합니다
+- 닫혔을 때 두 부품 사이의 거리가 2cm 미만인지 확인합니다
 <!-- Notes END: Do not edit below this line -->
 
 

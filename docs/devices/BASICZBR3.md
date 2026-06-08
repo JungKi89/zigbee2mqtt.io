@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+### 페어링
+새 제품의 경우, 전원을 켜면 자동으로 Zigbee2MQTT에 페어링을 시도합니다. 그렇지 않은 경우(또는 이전에 페어링된 적이 있어 재페어링이 필요한 경우) - 상단의 (릴레이) 버튼을 약 5초간 길게 눌러 릴레이가 클릭되고 빨간색 LED가 여러 번 깜빡일 때까지 누르세요. 그러면 기기가 페어링 모드로 진입하고 파란색 LED가 깜빡이기 시작합니다. 연결되면 파란색 LED가 지속적으로 켜집니다. 이후 Zigbee2MQTT에 연결됩니다. 버튼을 누르면 평소처럼 릴레이가 켜지고 꺼지며, 빨간색 LED도 켜지고 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

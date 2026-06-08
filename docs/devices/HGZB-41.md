@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
+### 페어링
+버튼을 녹색으로 깜박일 때까지 20초간 누르고 있으면 기기가 초기화됩니다. 이후 자동으로 페어링됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

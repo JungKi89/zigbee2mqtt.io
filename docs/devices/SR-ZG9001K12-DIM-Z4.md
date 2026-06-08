@@ -28,17 +28,17 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
+### 페어링
+리모컨의 All On 버튼을 상태 LED가 켜질 때까지 누르고 있습니다. 그런 다음 즉시 All Off 버튼을 누릅니다. 상태 LED가 5번 빠르게 깜빡이면 페어링 성공입니다.
 
-### Resetting
-Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
+### 초기화
+리모컨의 All On 버튼을 상태 LED가 켜질 때까지 누르고 있습니다. 그런 다음 즉시 All On 버튼을 5번 누릅니다. 상태 LED가 3번 깜빡이면 초기화 성공입니다.
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+기본적으로 이 기기는 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기에 대해 `legacy: false`를 설정하세요. 예시:
 
 ```yaml
 devices:

@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Factory reset the Lutron Connected Bulb Remote by pressing and holding the remote's top and bottom buttons for approximately 15 seconds. The light on the remote will blink rapidly to indicate that the remote has been reset.
+### 페어링
+리모컨의 상단 버튼과 하단 버튼을 약 15초간 길게 눌러 Lutron Connected Bulb Remote를 공장 초기화합니다. 리모컨의 LED가 빠르게 깜빡이면 초기화가 완료된 것입니다.
 
-After resetting the remote can be paired to a network by pressing and holding the top button for approximately 2 seconds.
+초기화 후 상단 버튼을 약 2초간 길게 눌러 네트워크에 페어링할 수 있습니다.
 
-#### Using the Connected Bulb Remote to reset a connected light bulb (Hue, Cree, GE Link)
-Connected light bulbs can be reset with the Lutron Connected Bulb Remote by bringing the remote close (~3 inches) to the light bulb and pressing and holding the remote's 2nd and bottom buttons. The light bulb will flash and the remote's LED will turn on. Continue to hold both buttons until the remote's LED turns off.
+#### Connected Bulb Remote를 사용하여 스마트 전구(Hue, Cree, GE Link) 초기화하기
+Lutron Connected Bulb Remote로 스마트 전구를 초기화하려면, 리모컨을 전구 가까이(약 7~8cm)에 가져다 대고 리모컨의 2번째 버튼과 하단 버튼을 길게 누릅니다. 전구가 점멸하고 리모컨의 LED가 켜집니다. 리모컨의 LED가 꺼질 때까지 두 버튼을 계속 누르고 있으세요.
 
-After resetting the bulb will automatically attempt to join a network.
+초기화 후 전구는 자동으로 네트워크 참여를 시도합니다.
 
-This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs, Connected Cree bulbs, and EcoSmart SMART bulbs.
+이 방법은 Philips Hue 전구, IKEA TRADFRI 전구, GE Link 전구, Connected Cree 전구, EcoSmart SMART 전구에서 사용할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

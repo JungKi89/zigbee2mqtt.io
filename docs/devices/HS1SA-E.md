@@ -27,40 +27,40 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash rapidly. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the side button every 2 seconds until configuration is done in Zigbee2MQTT logs.
+기기 측면 버튼을 클립으로 2초 이상 누릅니다. 메인 버튼 LED가 빠르게 깜박이기 시작합니다. 페어링 중에는 기기가 깨어 있는 상태인지 확인해야 합니다. 그렇지 않으면 설정이 실패할 수 있습니다. Zigbee2MQTT 로그에서 설정이 완료될 때까지 2초마다 측면 버튼을 눌러 기기를 깨우세요.
 
-### Reset
+### 초기화
 
-If you have trouble pairing, the device can be reset by pressing the side button with a paper clip for 5 seconds. The led will flash (slower than in pairing mode) 6 times to confirm. After that you can retry the normal pairing procedure.
+페어링에 문제가 있는 경우, 클립으로 측면 버튼을 5초간 눌러 기기를 초기화할 수 있습니다. LED가 (페어링 모드보다 느리게) 6번 깜박이면 확인된 것입니다. 이후 일반 페어링 절차를 다시 시도하세요.
 
-### Important
-There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visually identical. Make sure to get the correct version that will work with Zigbee2MQTT:
+### 중요
+이 기기에는 3가지 버전이 있습니다: 독립형, Zigbee, Z-wave. 외관이 동일하므로 Zigbee2MQTT와 호환되는 올바른 버전을 구매하세요:
 
-Supported:
+지원:
 - **HS1SA-M : Zigbee**
 - **HS1SA-N : Zigbee**
 - **HS1SA-E : Zigbee 3.0**
 
-Unsupported:
-- HS1SA : Standalone
+미지원:
+- HS1SA : 독립형
 - HS1SA-Z : Z-wave
 
-The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
+Zigbee 버전의 제품 코드는 *-M*으로 끝나야 합니다. 배터리 칸 안쪽 라벨에도 Zigbee 로고가 표시되어 있어야 합니다.
 
-### Issue with regular (false) alarm notifications
+### 정기적인 (오경보) 알람 알림 문제
 
-If your smoke detector is regularily signalling an alarm over Zigbee (every 1-2 days), without actually making any alarm sound, it is probably affected by a firmware bug. This can be worked around as follows:
+스모크 디텍터가 Zigbee를 통해 정기적으로 (1~2일마다) 실제 알람 소리 없이 알람 신호를 보내는 경우, 펌웨어 버그에 영향을 받은 것일 수 있습니다. 다음과 같이 해결할 수 있습니다:
 
-1. Open the device in the Z2M web interface
-2. Navigate to the Dev console
-3. Select the cluster `ssIasZone` from the dropdown list
-4. Select the attributes `zoneState`, `zoneType`, `zoneStatus` and `zoneId`
-5. Click the *Read* button
-5. Wake the device immediately after pressing the *Read* button by pressing it's main button (test alarm button).
+1. Z2M 웹 인터페이스에서 기기를 엽니다
+2. Dev 콘솔로 이동합니다
+3. 드롭다운 목록에서 클러스터 `ssIasZone`을 선택합니다
+4. 속성 `zoneState`, `zoneType`, `zoneStatus`, `zoneId`를 선택합니다
+5. *Read* 버튼을 클릭합니다
+5. *Read* 버튼을 누른 직후 메인 버튼(테스트 알람 버튼)을 눌러 기기를 깨웁니다.
 
-Timing is important here so you might need a fews tries. Once you have read these attributes successfully the false alarm messages should be gone. ([Source](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5824#issuecomment-1092089211))
+타이밍이 중요하므로 몇 번 시도해야 할 수 있습니다. 이 속성들을 성공적으로 읽으면 오경보 메시지가 사라집니다. ([출처](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5824#issuecomment-1092089211))
 <!-- Notes END: Do not edit below this line -->
 
 

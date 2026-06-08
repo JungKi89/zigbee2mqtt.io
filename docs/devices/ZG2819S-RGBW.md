@@ -27,13 +27,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Using the remote to reset other Zigbee devices
+### 리모컨을 사용하여 다른 Zigbee 디바이스 초기화하기
 
-Many devices can be factory reset / re-paired with a help of ZG2819-RGBW remote:
-1. Make sure your device is powered on and set to start Touchlink commissionning.
-2. Bring the remote within 10cm of the lighting device.
-3. Take the remote, press and hold down the ON/OFF button until the LED indictaor turns on.
-4. Immediately short press 5 times **S2** to start touch reset of the remote. LED indicator flashes fast for 3s then flashes 3 times slowly to indicate sucessful reset.
+ZG2819-RGBW 리모컨을 사용하면 많은 디바이스를 공장 초기화/재페어링 할 수 있습니다:
+1. 디바이스의 전원이 켜져 있고 Touchlink 커미셔닝을 시작할 수 있는 상태인지 확인합니다.
+2. 리모컨을 조명 디바이스 10cm 이내로 가져갑니다.
+3. 리모컨의 ON/OFF 버튼을 LED 표시등이 켜질 때까지 길게 누릅니다.
+4. 즉시 **S2**를 5번 짧게 눌러 리모컨의 터치 리셋을 시작합니다. LED 표시등이 3초 동안 빠르게 깜빡인 후 3번 천천히 깜빡이면 리셋 성공을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

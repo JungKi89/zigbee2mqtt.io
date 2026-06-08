@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-The first time the downlight is powered on, it will be in pairing mode.  
-Once the downlight has successfully paired it will change from a warm white to a cool white color to indicate a successful pairing. 
+다운라이트를 처음 켜면 페어링 모드 상태입니다.  
+페어링에 성공하면 다운라이트의 색상이 따뜻한 흰색에서 차가운 흰색으로 변경되어 페어링 성공을 알립니다.
 
-In order to put the downlight into pairing mode after the initial pairing, power cycle the downlight 6 times in quick succession.
+초기 페어링 이후 다운라이트를 다시 페어링 모드로 진입시키려면, 빠르게 연속으로 6번 전원을 껐다 켜세요.
 <!-- Notes END: Do not edit below this line -->
 
 

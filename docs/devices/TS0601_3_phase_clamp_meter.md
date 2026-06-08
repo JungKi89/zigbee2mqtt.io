@@ -27,24 +27,24 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-Device is powered through wire A/L1.
+기기는 와이어 A/L1을 통해 전원이 공급됩니다.
 
 
-The device can be **modified** to work in systems **without a neutral**, like the Norwegian **IT-system** (isolé-terre).
-This modification should only be conducted by someone with knowledge about mains electricity. All three phases have to be connected to ensure propper function and avoid short circuits. Make 100% sure that you have no more than 240 V between any two phases. 
+이 기기는 노르웨이 **IT-시스템**(isolé-terre)과 같이 **중성선이 없는** 시스템에서도 작동하도록 **수정**할 수 있습니다.
+이 수정은 교류 전력에 대한 지식이 있는 사람만 수행해야 합니다. 올바른 작동과 단락 방지를 위해 세 상 모두 연결해야 합니다. 어떤 두 상 사이에도 240V를 초과하지 않는지 100% 확인하세요.
 
-First, the voltage sensing transformers (VT) have to be isolated from the common neutral line (N) by scratching away the copper traces:
+먼저 구리 트레이스를 긁어내어 전압 감지 변압기(VT)를 공통 중성선(N)에서 절연해야 합니다:
 
 ![PC321-Z-TY_trace](https://github.com/user-attachments/assets/534a8b4d-6deb-47a8-8749-fc23f91868fd)
-Note that a capacitor was removed temporarily for better access. The copper traces were removed thoroughly to absolutely guarantee that no short circuit could occur.
+더 나은 접근을 위해 커패시터가 임시로 제거되었습니다. 단락이 절대 발생하지 않도록 구리 트레이스를 철저히 제거했습니다.
 
-Afterwards, the inputs have to be re-connected to the voltage transformers (VT):
+그 다음, 입력을 전압 변압기(VT)에 다시 연결해야 합니다:
 
 ![PC321-Z-TY_input](https://github.com/user-attachments/assets/70425e25-db41-4691-a02d-1990275997ac)
-In this example, phase 3 (L3) has been connected to neutral (N). This will power the device from L1 & L3.
-Use propper mains cables; although the current is very low (2 mA) the insulation has to be able to withstand mains voltage and voltage spikes.
+이 예시에서 3상(L3)이 중성선(N)에 연결되었습니다. 이렇게 하면 L1 & L3에서 기기에 전원이 공급됩니다.
+적절한 전력용 케이블을 사용하세요. 전류는 매우 낮지만(2mA) 절연은 전원 전압과 전압 스파이크를 견딜 수 있어야 합니다.
 
-Here is a circuit diagram, created with TinyCAD (https://www.tinycad.net), comparing the original wiring with the modification:
+다음은 TinyCAD (https://www.tinycad.net)로 만든 회로도로, 원래 배선과 수정된 배선을 비교합니다:
 
 ![power_meter](https://github.com/user-attachments/assets/8749ef72-538a-4b16-905c-1382163fc094)
 <!-- Notes END: Do not edit below this line -->

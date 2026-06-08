@@ -26,26 +26,26 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Switch between BLE and Zigbee mode
+### BLE와 Zigbee 모드 전환
 
-Plug comes out of the box in BLE mode (Green LED). To use with zigbee2mqtt you need to change to zigbee mode (Red LED):
+스마트 플러그는 기본적으로 BLE 모드(녹색 LED)로 출고됩니다. zigbee2mqtt와 사용하려면 Zigbee 모드(빨간색 LED)로 변경해야 합니다:
 #### BLE → Zigbee
-1. Press the button and hold, then insert the Smart Plug into an outlet until the green light
-is ON.
-2. Release the button, then press the button immediately. LED light will flash in red,
-indicating that your Smart Plug is in Zigbee mode now.
+1. 버튼을 누른 채로 스마트 플러그를 콘센트에 꽂아 녹색 LED가
+켜질 때까지 기다립니다.
+2. 버튼을 놓은 후 즉시 다시 버튼을 누릅니다. LED 빛이 빨간색으로 깜빡이며
+스마트 플러그가 Zigbee 모드로 전환되었음을 알립니다.
 
-If you want to restore to BLE to work with most Echo devices: 
+대부분의 Echo 기기와 함께 사용하기 위해 BLE로 복원하려면: 
 #### Zigbee → BLE
-1. Press the button and hold, then insert the Smart Plug into an outlet until the red light is
-ON.
-2. Release the button, then press the button immediately. LED light will alternately flash in
-green and red, indicating that your Smart Plug is in BLE mode now.
+1. 버튼을 누른 채로 스마트 플러그를 콘센트에 꽂아 빨간색 LED가
+켜질 때까지 기다립니다.
+2. 버튼을 놓은 후 즉시 다시 버튼을 누릅니다. LED 빛이 녹색과 빨간색으로 번갈아 깜빡이며
+스마트 플러그가 BLE 모드로 전환되었음을 알립니다.
 
-### Factory Reset
-After your Smart Plug is powered on, press and hold the button for more than 10 seconds
-until the LED light flashes indicating that your Smart Plug is in pairing mode. (The mode won’t
-be change while factory reset your Smart Plug.)
+### 공장 초기화
+스마트 플러그 전원이 켜진 상태에서 버튼을 10초 이상 길게 누르면
+LED 빛이 깜빡이며 스마트 플러그가 페어링 모드로 진입합니다. (공장 초기화 중에는
+모드가 변경되지 않습니다.)
 <!-- Notes END: Do not edit below this line -->
 
 

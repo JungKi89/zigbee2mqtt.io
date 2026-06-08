@@ -25,26 +25,26 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[DiY 8/12/20 button keypad](http://modkam.ru/?p=1114)
+[DIY 8/12/20 버튼 키패드](http://modkam.ru/?p=1114)
 
 
-### Firmware
-Open source firmware can be found here: [Github](https://github.com/diyruz/freepad)
+### 펌웨어
+오픈 소스 펌웨어는 여기에서 확인할 수 있습니다: [Github](https://github.com/diyruz/freepad)
 
-### How to join:
-#### If device in FN(factory new) state:
-1. Press and hold button (1) for 2-3 seconds, until device start flashing led
-2. Wait, in case of successful join, device will flash led 5 times
-3. If join failed, device will flash led 3 times
+### 참가 방법:
+#### 디바이스가 FN(공장 초기화) 상태인 경우:
+1. 버튼 (1)을 2~3초간 누르고 있어 디바이스 LED가 깜박이기 시작할 때까지 유지합니다
+2. 기다립니다. 성공적으로 참가하면 LED가 5번 깜박입니다
+3. 참가에 실패하면 LED가 3번 깜박입니다
 
-#### If device in a network:
-1. Hold button (1) for 10 seconds, this will reset device to FN(factory new) status
-2. Go to step 1 for FN device
+#### 디바이스가 네트워크에 연결된 경우:
+1. 버튼 (1)을 10초간 누르면 디바이스가 FN(공장 초기화) 상태로 초기화됩니다
+2. FN 디바이스의 1단계로 이동합니다
 
-### How to use touch link
-1. Bring you remote near to TL device
-2. Hold button (2) for 5 seconds
-TL functionality can work without connecting to network
+### Touch Link 사용 방법
+1. 리모컨을 TL 디바이스 근처에 가져갑니다
+2. 버튼 (2)을 5초간 누릅니다
+TL 기능은 네트워크 연결 없이도 작동할 수 있습니다
 <!-- Notes END: Do not edit below this line -->
 
 

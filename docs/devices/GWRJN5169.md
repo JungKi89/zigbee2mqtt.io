@@ -28,10 +28,10 @@ pageClass: device-page
 [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169)
 
 
-### Firmware
-Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
+### 펌웨어
+__Xiaomi DGNWG05LM__ 및 __Aqara ZHWG11LM__ 게이트웨이용 Zigbee 라우터입니다.
 
-Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
+오픈 소스 펌웨어는 여기에서 찾을 수 있습니다: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
 <!-- Notes END: Do not edit below this line -->
 
 

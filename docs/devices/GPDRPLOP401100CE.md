@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Set default power on/off transition
-Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
+### 기본 전원 켜기/끄기 전환 설정
+다양한 Osram/Sylvania LED는 조명을 켜고 끌 때 기본 전환(transition)을 설정할 수 있습니다.
 
 **TOPIC**: `zigbee2mqtt/FRIENDLY_NAME/set`
 ```js
@@ -36,13 +36,11 @@ Various Osram/Sylvania LED support setting a default transition when turning a l
     "set_transition": 1
 }
 ```
-**INFO**: Value is time in seconds (integer, float values are not supported)
+**INFO**: 값은 초 단위의 시간입니다 (정수만 가능, 소수점 값은 지원되지 않음)
 
-### Remember current light state
-Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light
-is manually switched off then on. Lights will remember their respective attributes
-(i.e. brightness, color, saturation, etc.).
-**NOTE**: This must be executed every time you make changes to a light's attributes for it to then 'remember' it.
+### 현재 조명 상태 기억
+다양한 Osram/Sylvania LED는 전원 손실이 발생하거나 조명이 수동으로 껐다가 켜졌을 때 현재 상태를 기억할 수 있습니다. 조명은 각각의 속성(밝기, 색상, 채도 등)을 기억합니다.
+**NOTE**: 조명의 속성을 변경할 때마다 해당 명령을 실행해야 '기억'됩니다.
 
 **TOPIC**: `zigbee2mqtt/FRIENDLY_NAME/set`
 ```js
@@ -50,7 +48,7 @@ is manually switched off then on. Lights will remember their respective attribut
     "remember_state": true
 }
 ```
-**INFO**: Value is true, false (boolean)
+**INFO**: 값은 true 또는 false (불리언)
 <!-- Notes END: Do not edit below this line -->
 
 

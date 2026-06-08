@@ -25,12 +25,12 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Reset/pairing:
-- To reset, the battery cover must first be removed.
-Then press the main button for at least 5 seconds and the red LED start fast flashing.
-- Then loose the button, the red LED starts goes to normal flashing, the flashing frequency is 0.5 s on and 0.5 s off, and keep on flashing 3 mins.
-- If the vibration sensor is paired successfully, the red LED turns green, and for about 10 seconds, then stop blinking and turns off.
-- If the vibration sensor fails to join in the network, the red LED will keep on flashing 3 minutes, then turn off.
+### 초기화/페어링:
+- 초기화를 위해 먼저 배터리 커버를 제거해야 합니다.
+그런 다음 주 버튼을 최소 5초간 누르면 빨간색 LED가 빠르게 깜박이기 시작합니다.
+- 버튼을 놓으면 빨간색 LED가 일반 깜박임으로 전환되며, 깜박임 주기는 0.5초 ON, 0.5초 OFF로 3분간 계속됩니다.
+- 진동 센서가 성공적으로 페어링되면 빨간색 LED가 녹색으로 바뀌고 약 10초 후 깜박임이 멈추며 꺼집니다.
+- 진동 센서가 네트워크 참가에 실패하면 빨간색 LED가 3분간 계속 깜박이다가 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

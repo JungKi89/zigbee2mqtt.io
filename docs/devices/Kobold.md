@@ -26,7 +26,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-[Product info](https://phoscon.de/en/kobold/) on the Phoscon website.
+Phoscon 웹사이트의 [제품 정보](https://phoscon.de/en/kobold/)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

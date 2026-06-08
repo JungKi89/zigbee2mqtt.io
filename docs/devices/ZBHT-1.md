@@ -27,36 +27,36 @@ pageClass: device-page
 ## Notes
 
 
-### Similar Devices
-This device is older and seems to be similar to the netvox Z711 (and others).
+### 유사 기기
+이 기기는 구형 모델로, netvox Z711(및 기타 모델)과 유사한 것으로 보입니다.
 
-### Pairing
+### 페어링
 
-#### Resetting the Device/Restore to Factory Defaults
-1. Remove the battery to power off the device.
-2. Press and hold the only button.
-3. Re-install the batteries to power on the device
-4. Release the button.
- * The LED will blink quickly, and the reset/restore is complete
+#### 기기 초기화/공장 초기값 복원
+1. 배터리를 제거하여 기기 전원을 끕니다.
+2. 유일한 버튼을 누른 채로 유지합니다.
+3. 배터리를 다시 장착하여 기기에 전원을 공급합니다.
+4. 버튼을 놓습니다.
+ * LED가 빠르게 깜박이면 초기화/복원이 완료된 것입니다.
 
-#### Joining the Network
-1. Remove battery from device
-2. Enable permit-join on Zigbee2MQTT
-3. Re-install battery in the device
- * The LED will flash 5 times to indicate success (no flashing means not successful)
-4. After successfully joining, press and hold the only button for 3 seconds to broadcast the binding request.
-5. The LED will flash once.
-6. The LED flashes 5 times after the binding is completed; otherwise, it flashes 10 times.
+#### 네트워크 참가
+1. 기기에서 배터리를 제거합니다.
+2. Zigbee2MQTT에서 참가 허용을 활성화합니다.
+3. 기기에 배터리를 다시 장착합니다.
+ * 성공 시 LED가 5번 깜박입니다 (깜박이지 않으면 실패입니다).
+4. 참가 성공 후, 유일한 버튼을 3초 동안 길게 눌러 바인딩 요청을 브로드캐스트합니다.
+5. LED가 한 번 깜박입니다.
+6. 바인딩 완료 후 LED가 5번 깜박입니다. 실패 시에는 10번 깜박입니다.
 
-#### Waking the Device
-If the device is asleep (which is most of the time) and you need it to be awake for some reason, tap the only button on the device. The LED will flash 5 times and the device will be awake for a brief period.
+#### 기기 깨우기
+기기가 잠든 상태(대부분의 경우)에서 깨울 필요가 있다면, 기기의 유일한 버튼을 탭합니다. LED가 5번 깜박이고 기기는 잠시 동안 깨어있는 상태가 됩니다.
 
-### Status of Functions
-1. Temperature monitoring - Works
-2. Humidity monitoring - Works
-3. Battery monitoring - untested.
- * In theory the device LED will flash ONCE if the voltage falls below 2.4V
- * In theory the device will send a low-power report to the Zigbee network if the voltage falls below 2.4V - no other battery reporting.
+### 기능 상태
+1. 온도 모니터링 - 작동 중
+2. 습도 모니터링 - 작동 중
+3. 배터리 모니터링 - 미테스트.
+ * 이론상 전압이 2.4V 이하로 떨어지면 기기 LED가 한 번 깜박입니다.
+ * 이론상 전압이 2.4V 이하로 떨어지면 기기가 Zigbee 네트워크에 저전력 보고를 전송합니다 - 그 외 배터리 보고는 없습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,15 +27,15 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+### 페어링
+1. 기기를 켜세요.
+2. 2초 이내에 껐다 켜세요.
+3. 켜기/끄기를 4번 반복하세요.
+4. 다섯 번째 켜졌을 때 불이 4번 깜빡인 후 계속 켜져 있으면 초기화 완료입니다
 
 
-### 2ID handling
-This device exposes the two specific endpoints `rgb` and `cct`. The command topics are `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`, and `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`. Both [specific endpoints can be added to a group](../guide/usage/groups.md#adding-a-specific-endpoint). These endpoints are `<FRIENDLY_NAME>/rgb`, and `<FRIENDLY_NAME>/cct`.
+### 2ID 처리
+이 기기는 `rgb`와 `cct`라는 두 가지 특정 엔드포인트를 노출합니다. 명령 토픽은 `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`와 `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`입니다. [특정 엔드포인트 모두 그룹에 추가](../guide/usage/groups.md#adding-a-specific-endpoint)할 수 있습니다. 이 엔드포인트는 `<FRIENDLY_NAME>/rgb`와 `<FRIENDLY_NAME>/cct`입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,28 +26,28 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Zigbee / Matter mode
-The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can either be done via the Web UI, or by pressing the button on the back of the device 5 times. Afterwards, the device will start pairing mode for 3 minutes. To restart pairing mode, press the button three times again.
+### Zigbee / Matter 모드
+기기는 기본적으로 Matter 모드로 출고됩니다. Zigbee2MQTT와 함께 사용하려면 Zigbee 모드로 전환해야 합니다. Web UI를 통하거나 기기 뒷면의 버튼을 5번 눌러 전환할 수 있습니다. 이후 기기는 3분 동안 페어링 모드로 진입합니다. 페어링 모드를 다시 시작하려면 버튼을 세 번 다시 누릅니다.
 
-### Usage scenarios
-The Shelly 2PM Gen4 device allows two different usage scenarios that appear as separate devices in Zigbee2MQTT:
+### 사용 시나리오
+Shelly 2PM Gen4 기기는 Zigbee2MQTT에서 별도의 기기로 표시되는 두 가지 사용 시나리오를 지원합니다:
 
-- **Cover Control** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - This device supports window covering controls with lift and tilt functionality with power monitoring
-- **Switch Control** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - Provides dual switch functionality with power monitoring
+- **커버 제어** [(`S4SW-002P16EU-COVER`)](/devices/S4SW-002P16EU-COVER.html) - 이 기기는 전력 모니터링과 함께 리프트 및 틸트 기능을 갖춘 창문 가리개 제어를 지원합니다
+- **스위치 제어** [(`S4SW-002P16EU-SWITCH`)](/devices/S4SW-002P16EU-SWITCH.html) - 전력 모니터링과 함께 이중 스위치 기능을 제공합니다
 
-The usage is automatically detected based on the endpoint configuration.  For now, changing usage is only possible through Shelly WebUI.
+사용 방식은 엔드포인트 설정에 따라 자동으로 감지됩니다. 현재 사용 방식 변경은 Shelly WebUI를 통해서만 가능합니다.
 
-### Switch Mode Features
-When operating in switch mode, this device provides:
-- Dual on/off switches (l1 and l2 endpoints)
-- Power monitoring for both switches
-- Energy consumption tracking
-- Voltage and current measurements
+### 스위치 모드 기능
+스위치 모드로 작동 시 이 기기는 다음을 제공합니다:
+- 이중 켜기/끄기 스위치(l1 및 l2 엔드포인트)
+- 두 스위치에 대한 전력 모니터링
+- 에너지 소비량 추적
+- 전압 및 전류 측정
 
-Vendor product page: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
+제조사 제품 페이지: [Shelly 2PM Gen4](https://kb.shelly.cloud/knowledge-base/shelly-2pm-gen4)
 
-### Maintenance and factory reset
-To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
+### 유지관리 및 공장 초기화
+유지관리를 위해 기기 내장 액세스 포인트와 블루투스를 활성화하려면 기기 뒷면의 버튼을 5초 동안 길게 누릅니다. 10초 동안 누르면 공장 초기화가 실행됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

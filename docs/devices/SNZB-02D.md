@@ -26,25 +26,25 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Troubleshooting
-* In case the sensor gets stuck and stops reporting (correct) data, you can try to restore it by following these steps:
-    1. Force remove the device via the frontend.
-    2. Restart Zigbee2MQTT.
-    3. Re-pair the device.
+### 문제 해결
+* 센서가 멈춰서 데이터 보고를 중단하거나 잘못된 데이터를 보고하는 경우, 다음 단계로 복구를 시도하세요:
+    1. 프론트엔드에서 디바이스를 강제 제거합니다.
+    2. Zigbee2MQTT를 재시작합니다.
+    3. 디바이스를 다시 페어링합니다.
 
-  Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
-  To update your device, short press the pairing button once and use the web interface to start the firmware update.
+  Zigbee2MQTT v2.3.0 버전에서 데이터 보고를 개선한 것으로 보이는 펌웨어 v2.3.0이 도입되었습니다. \
+  디바이스를 업데이트하려면 페어링 버튼을 한 번 짧게 누르고 웹 인터페이스를 사용하여 펌웨어 업데이트를 시작하세요.
 
-* In case the sensor does not pair with the coordinator, just remove the battery for 10 seconds.
+* 센서가 코디네이터와 페어링되지 않는 경우, 배터리를 10초 동안 제거합니다.
 
-### Battery
-Uses a CR2450 battery
+### 배터리
+CR2450 배터리를 사용합니다.
 
-### Pairing
-Long press the pairing button for five seconds. The signal indicator on the display will begin to blink when in pairing mode.
+### 페어링
+페어링 버튼을 5초간 길게 누릅니다. 페어링 모드에 진입하면 화면의 신호 표시등이 깜박이기 시작합니다.
 
-### Temperature display
-Double click the pairing button to toggle the display between Celsius and Fahrenheit. This does not change the unit of the measured temperature value.
+### 온도 표시
+페어링 버튼을 두 번 클릭하면 화면의 섭씨/화씨 표시가 전환됩니다. 이는 측정된 온도 값의 단위를 변경하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -28,18 +28,18 @@ pageClass: device-page
 
 
 ### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.  
-The device identification is the same for several models ZLGP14, ZLGP15 and ZLGP16 (so far). Only command IDs differ (from 16 to 23).  
-Current supported models are:   
-- ZLGP14 (home arrival/home departure)
-- ZLGP15 (1 to 4 numbered switches)
-- ZLGP16 (daytime day/daytime night)
+이 디바이스는 Zigbee Green Power 디바이스로, 매우 에너지 효율적입니다.  
+ZLGP14, ZLGP15, ZLGP16 여러 모델의 디바이스 식별자가 동일합니다(현재까지). 커맨드 ID만 다릅니다(16~23).  
+현재 지원되는 모델은 다음과 같습니다:   
+- ZLGP14 (귀가/외출)
+- ZLGP15 (1~4번 스위치)
+- ZLGP16 (낮/밤)
 
-### Pairing
-To pair this device, hold the configuration button (on the back of the device) and press any of the buttons.  
-For further details, please refer to manufacturer documentation below.
+### 페어링
+이 디바이스를 페어링하려면 설정 버튼(디바이스 뒷면)을 누른 상태에서 아무 버튼이나 누르세요.  
+자세한 내용은 아래 제조사 문서를 참고하세요.
 
-### Manfacturer documentations
+### 제조사 문서
 - ZLGP14 [EN](https://www.admin.legrandoc.com/files/documents/S000113314EN-00.pdf) [FR](https://www.admin.legrandoc.com/files/documents/S000113314FR-00.pdf)
 - ZLGP15 [EN](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf) [FR](https://www.admin.legrandoc.com/files/documents/S000113321FR-00.pdf)
 - ZLGP16 [EN](https://www.admin.legrandoc.com/files/documents/S000113317EN-00.pdf) [FR](https://www.admin.legrandoc.com/files/documents/S000113317FR-00.pdf)

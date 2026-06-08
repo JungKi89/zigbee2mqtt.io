@@ -26,16 +26,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Channel
-This device [does not work](https://github.com/Koenkk/zigbee2mqtt/discussions/7259#discussioncomment-6012304) on Zigbee channel 20-24.
+### 채널
+이 기기는 Zigbee 채널 20-24에서 [작동하지 않습니다](https://github.com/Koenkk/zigbee2mqtt/discussions/7259#discussioncomment-6012304).
 
-### Pairing
-Press and hold the knob on the device for 8 seconds (until the indicator blinks blue light 3 times) the indicator will continue blinking blue light if pairing is successful otherwise it will blink red light.
+### 페어링
+기기의 노브를 8초 동안 누르고 있습니다 (표시등이 파란색으로 3번 깜빡일 때까지). 페어링이 성공하면 표시등이 파란색으로 계속 깜빡이고, 실패하면 빨간색으로 깜빡입니다.
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+기본적으로 이 기기는 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기에 `legacy: false`를 설정합니다. 예시:
 
 ```yaml
 devices:

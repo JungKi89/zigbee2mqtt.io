@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Zigbee / Matter mode
-The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can either be done via the Web UI, or by pressing the button on the back of the device 5 times. Afterwards, the device will start pairing mode for 3 minutes. To restart pairing mode, press the button three times again.
+### Zigbee / Matter 모드
+기기는 기본적으로 Matter 모드로 출고됩니다. Zigbee2MQTT와 함께 사용하려면 Zigbee 모드로 전환해야 합니다. Web UI를 통하거나 기기 뒷면의 버튼을 5번 눌러 전환할 수 있습니다. 이후 기기는 3분 동안 페어링 모드로 진입합니다. 페어링 모드를 다시 시작하려면 버튼을 세 번 다시 누릅니다.
 
-### Maintenance and factory reset
-To enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 5 seconds. Doing so for 10 seconds will trigger a factory reset.
+### 유지관리 및 공장 초기화
+유지관리를 위해 기기 내장 액세스 포인트와 블루투스를 활성화하려면 기기 뒷면의 버튼을 5초 동안 길게 누릅니다. 10초 동안 누르면 공장 초기화가 실행됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,22 +27,21 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-To Reset the iCasa ICZB-KPD18S do the following:
-1) Press and hold down both OFF button and the ON button until the LED indicator on the remote turns on.
-2) Than immediately click OFF button 5 times. 3) The LED status indicator flashes 3 times to indicate successful reset.
+iCasa ICZB-KPD18S를 초기화하려면 다음 단계를 따르세요:
+1) 리모컨의 LED 표시등이 켜질 때까지 OFF 버튼과 ON 버튼을 동시에 길게 누릅니다.
+2) 그런 다음 즉시 OFF 버튼을 5번 클릭합니다. 3) LED 상태 표시등이 3번 깜박이면 초기화 성공을 나타냅니다.
 
-Pairing mode:
-1) Press and hold down OFF and ON button simultaneously until the status LED indicator on the remote turns on,
-then immediately click ON button.
-2) The status LED indicator on the remote will blink fast.
-3) When the pairing is successful the status LED indicator on the remote will blink 6 times.
+페어링 모드:
+1) 리모컨의 상태 LED 표시등이 켜질 때까지 OFF 버튼과 ON 버튼을 동시에 길게 누른 후, 즉시 ON 버튼을 클릭합니다.
+2) 리모컨의 상태 LED 표시등이 빠르게 깜박입니다.
+3) 페어링에 성공하면 리모컨의 상태 LED 표시등이 6번 깜박입니다.
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+이 디바이스는 기본적으로 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 디바이스에 `legacy: false`를 설정하세요. 예시:
 
 ```yaml
 devices:
@@ -52,10 +51,10 @@ devices:
 ```
 
 
-### Legacy integration
-By default (for backwards compatibility purposes) the legacy integration is enabled.
-For new users it is recommended to **disable** this as it has several fundamental problems.
-To disable the legacy integration add the following to your `configuration.yaml`:
+### 레거시 통합
+기본적으로 (하위 호환성을 위해) 레거시 통합이 활성화되어 있습니다.
+신규 사용자에게는 여러 근본적인 문제가 있으므로 **비활성화**하는 것을 권장합니다.
+레거시 통합을 비활성화하려면 `configuration.yaml`에 다음을 추가하세요:
 
 
 ```yaml

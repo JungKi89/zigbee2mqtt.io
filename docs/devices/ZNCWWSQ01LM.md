@@ -26,11 +26,11 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
+### 페어링
 
-To put the device in pairing mode, hold the reset button for 5 seconds. The LED light should blink quickly and it makes a beep sound once paired.
+기기를 페어링 모드로 진입시키려면 리셋 버튼을 5초 동안 누릅니다. LED가 빠르게 깜박이고, 페어링 완료 시 비프음이 납니다.
 
-Some users required waiting until the pet feeder performs two audible beeps before turning pairing on in z2m for the device to join the mesh.
+일부 사용자는 기기가 메시에 참가하기 전에 z2m에서 페어링을 활성화하기 전 펫 피더가 두 번의 비프음을 내도록 기다려야 했습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

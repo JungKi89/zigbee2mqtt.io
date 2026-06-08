@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the button on device for 5 seconds to reset the device and enter pairing mode.
+### 페어링
+기기의 버튼을 5초 동안 길게 눌러 기기를 초기화하고 페어링 모드로 진입합니다.
 
-### Device mode
-The device supports two modes for the connected external switch: rocker switch mode (which is the default state after pairing) and push button mode.
+### 기기 모드
+기기는 연결된 외부 스위치에 대해 두 가지 모드를 지원합니다: 로커 스위치 모드(페어링 후 기본 상태)와 푸시 버튼 모드.
 
-The mode can be changed by short-pressing the button on the device 3 times. The device will indicate the change by flashing the LED 3 times.
+기기의 버튼을 짧게 3번 눌러 모드를 변경할 수 있습니다. LED가 3번 깜박여 변경이 완료됐음을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

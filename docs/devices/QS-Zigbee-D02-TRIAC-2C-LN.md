@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Turn off the lights and then turn them on by holding the button for 10 seconds until the lights start flashing.
+### 페어링
+조명을 끄고 버튼을 10초 동안 눌러 켜면 조명이 깜박이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

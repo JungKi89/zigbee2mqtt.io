@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Press power button and hold for 10 seconds to enter pairing mode.
+전원 버튼을 10초간 눌러 페어링 모드로 진입합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

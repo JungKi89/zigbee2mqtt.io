@@ -28,10 +28,10 @@ pageClass: device-page
 [Multi-functional device](https://ptvo.info/zigbee-configurable-firmware-features/)
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+이 기기는 기본적으로 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기에 대해 `legacy: false`로 설정하세요. 예시:
 
 ```yaml
 devices:

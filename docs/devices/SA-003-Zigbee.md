@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
+### 페어링
+소켓에 연결된 기기를 모두 분리한 후 버튼을 10초 동안 눌러 LED가 녹색/주황색으로 깜빡이고 소켓이 켜졌다 꺼질 때까지 기다립니다. 60초 이내에 페어링을 완료하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -24,16 +24,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Pairing
+### 페어링
 
-When power is turned ON for the first time, the relay switch Led will blink orange, looking to join a Zigbee network.
-If the relay switch has correctly joined the network, the Led becomes green.
-If the relay switch hasn't joined a network within 15 minutes, the Led becomes orange. Do a brief press on the relay switch button and start again.
+처음으로 전원이 켜지면 릴레이 스위치 LED가 주황색으로 깜빡이며 Zigbee 네트워크 참가를 시도합니다.
+릴레이 스위치가 네트워크에 올바르게 참가하면 LED가 녹색으로 바뀝니다.
+15분 이내에 네트워크에 참가하지 못하면 LED가 주황색으로 바뀝니다. 릴레이 스위치 버튼을 잠깐 누르고 다시 시도하세요.
 
-To remove the module from its network, perform a Module reset:
-1. Press more than 5 seconds on the module's button. The Led blinks orange.
-2. Press the button again (short press) to validate the reset. If the reset is successful, the Led flashes red and green alternately, then flashes orange.
-3. The module has returned to its original configuration and is ready to join a new Zigbee network.
+모듈을 네트워크에서 제거하려면 모듈 초기화를 수행하세요:
+1. 모듈 버튼을 5초 이상 누릅니다. LED가 주황색으로 깜빡입니다.
+2. 버튼을 다시 (짧게) 눌러 초기화를 확인합니다. 초기화가 성공하면 LED가 빨간색과 녹색으로 번갈아 깜빡이다가 주황색으로 깜빡입니다.
+3. 모듈이 원래 구성으로 복원되어 새로운 Zigbee 네트워크 참가 준비가 됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

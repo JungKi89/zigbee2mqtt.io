@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-When the thermostat is on, long press the temperature up button for 5 seconds. Now the WiFi-like icon starts flashing indicating readiness for pairing the device.
+### 페어링
+온도 조절기가 켜진 상태에서 온도 올리기 버튼을 5초간 길게 누릅니다. 이제 WiFi 아이콘이 깜박이며 기기가 페어링 준비 상태임을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

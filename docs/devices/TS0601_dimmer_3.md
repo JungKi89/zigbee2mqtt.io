@@ -26,8 +26,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-Turn off the light switches (no blue light). Press one of the switch buttons for 6 times, and hold on the 6th time for a few seconds. Release when the blue indicators are flashing fast. The device is in pairing mode.
+### 페어링
+조명 스위치를 끕니다 (파란 불 없음). 스위치 버튼 중 하나를 6번 누르고, 6번째에는 몇 초 동안 누르고 있습니다. 파란 표시등이 빠르게 깜박이면 손을 뗍니다. 기기가 페어링 모드로 전환됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

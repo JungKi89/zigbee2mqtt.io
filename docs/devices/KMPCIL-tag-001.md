@@ -26,18 +26,18 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Installation
-The Arrival Sensor will be in pairing mode when it is first powered up.  You can force it to go back into pairing mode by factory resetting the sensor in the following steps.
+### 설치
+도착 센서는 처음 전원을 켜면 페어링 모드가 됩니다. 다음 단계에 따라 센서를 초기화하여 페어링 모드로 강제로 돌아갈 수 있습니다.
 
-1.remove all power (battery and dc)
-2.press the button on the back of the board.
-3.plug the dc power and count to 4 to 5 seconds (not more).
-4.release the button. At this point, the module is in pairing mode.
+1. 모든 전원 제거 (배터리 및 DC)
+2. 보드 뒷면의 버튼을 누릅니다.
+3. DC 전원을 연결하고 4~5초를 셉니다 (그 이상은 안 됨).
+4. 버튼을 놓습니다. 이 시점에서 모듈이 페어링 모드가 됩니다.
 
-Once the Arrival Sensor is in pairing mode,  please follow the standard Zigbee2Mqtt pairing process for a new device. 
+도착 센서가 페어링 모드가 되면, 새 디바이스에 대한 표준 Zigbee2MQTT 페어링 프로세스를 따르세요.
 
-### Additional notes
-Please visit https://community.home-assistant.io/t/zigbee-arrival-sensor-for-car/382529/7
+### 추가 참고 사항
+https://community.home-assistant.io/t/zigbee-arrival-sensor-for-car/382529/7 를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

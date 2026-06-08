@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The power must be disconnected during installation
+설치 중에는 전원을 반드시 차단해야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

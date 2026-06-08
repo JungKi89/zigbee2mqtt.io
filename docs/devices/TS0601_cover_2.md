@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Pairing
-On 2-button units; press down and set simultaneously until LED flashes blue.
-On 1-button units; press the set key 3 times in 5 seconds until the LED flashes blue.
+## 페어링
+2버튼 기기의 경우: 아래 버튼과 설정 버튼을 동시에 누르고 LED가 파란색으로 깜박일 때까지 유지합니다.
+1버튼 기기의 경우: 5초 이내에 설정 키를 3번 눌러 LED가 파란색으로 깜박이도록 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

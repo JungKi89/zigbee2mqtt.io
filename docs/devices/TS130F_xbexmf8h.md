@@ -26,20 +26,20 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press the stop button for 10 seconds to enter pairing mode.
+### 페어링
+정지 버튼을 10초간 눌러 페어링 모드로 진입합니다.
 
-### Calibration
+### 캘리브레이션
 
-* Press the open button on the switch, wait until the blind is completely open.
-* Press the stop button on the switch.
-* Put the device into calibration mode, see [below](#calibration-binary).
-* Press the close button on the switch, wait until the blind is fully closed.
-* Press the stop button on the switch.
-* Disable the calibration mode, see [below](#calibration-binary).
+* 스위치의 열기 버튼을 눌러 블라인드가 완전히 열릴 때까지 기다립니다.
+* 스위치의 정지 버튼을 누릅니다.
+* 기기를 캘리브레이션 모드로 전환합니다. [아래](#calibration-binary)를 참고하세요.
+* 스위치의 닫기 버튼을 눌러 블라인드가 완전히 닫힐 때까지 기다립니다.
+* 스위치의 정지 버튼을 누릅니다.
+* 캘리브레이션 모드를 비활성화합니다. [아래](#calibration-binary)를 참고하세요.
 
-### Indicator mode
-This device does not support indicator mode. The backlight LED is a simple on/off control only.
+### 인디케이터 모드
+이 기기는 인디케이터 모드를 지원하지 않습니다. 백라이트 LED는 단순 켜기/끄기 제어만 가능합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

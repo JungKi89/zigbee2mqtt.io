@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Follow instructions from step 1
-[Why is my Hive Light showing as Offline in my app or online dashboard?](https://www.hivehome.com/ie/support/Help_Using_Hive/HUH_Hive_Active_Light/Why-is-my-Hive-Active-Light-showing-as-Offline-in-my-app-or-online-dashboard). After resetting the bulb will automatically connect.
+### 페어링
+1단계의 안내를 따르세요:
+[Why is my Hive Light showing as Offline in my app or online dashboard?](https://www.hivehome.com/ie/support/Help_Using_Hive/HUH_Hive_Active_Light/Why-is-my-Hive-Active-Light-showing-as-Offline-in-my-app-or-online-dashboard). 초기화 후 전구가 자동으로 연결됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

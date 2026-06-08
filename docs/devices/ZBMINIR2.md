@@ -26,18 +26,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-There are two different options to reset the device and enter pairing mode:
+### 페어링
+기기를 초기화하고 페어링 모드로 진입하는 두 가지 방법이 있습니다:
 
-* button: Press and hold the device button for 5 seconds.
-* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+* 버튼: 기기의 버튼을 5초 동안 길게 누릅니다.
+* 스위치: 연결된 외부 스위치를 10번 연속으로 켰다 껐다 합니다. 버튼에 직접 물리적으로 접근하기 어려울 때 특히 유용합니다.
 
-The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
+페어링 모드에서는 기기가 “state”: “OFF” 상태를 유지하며 스위칭할 수 없습니다. 페어링에 성공하지 못하면 180초 후에 페어링 모드를 종료합니다.
 
-### Turbo Mode
-The Turbo mode increases transmission power and can therefore better bridge thick walls or large distances to the coordinator/next router, but with disadvantages such as 
-unwanted interference with Wi-Fi and other Zigbee networks, asymmetrical connections (end device hears the router well, but the router does not hear the end device) 
-and 'unhealthy Zigbee' network because devices do connect to the “loudest” router, which is not necessarily the closest one.
+### 터보 모드
+터보 모드는 전송 출력을 높여 두꺼운 벽이나 코디네이터/다음 라우터까지 먼 거리를 더 잘 연결할 수 있습니다. 단, Wi-Fi 및 다른 Zigbee 네트워크와의 원치 않는 간섭, 비대칭 연결(엔드 디바이스는 라우터를 잘 수신하지만 라우터는 엔드 디바이스를 수신하지 못함), 기기가 반드시 가장 가까운 라우터가 아닌 “가장 큰 소리”의 라우터에 연결되는 '비정상적인 Zigbee' 네트워크 등의 단점이 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

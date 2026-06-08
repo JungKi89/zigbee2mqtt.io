@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 # Notes
-* If you have additional technical problems, please email Technical support at [szalarm@qq.com]
+* 추가적인 기술적 문제가 있는 경우 기술 지원팀에 이메일을 보내세요: [szalarm@qq.com]
 <!-- Notes END: Do not edit below this line -->
 
 

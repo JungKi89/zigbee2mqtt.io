@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Long press any button for 5 seconds until the LED indicator starts flashing rapidly to enter pairing mode.
+### 페어링
+아무 버튼이나 5초 동안 길게 누르면 LED 표시등이 빠르게 깜박이기 시작하며 페어링 모드로 진입합니다.
 
-### Endpoints
-This device exposes 8 switches through endpoints l1-l8. Each switch can be controlled independently.
+### 엔드포인트
+이 기기는 엔드포인트 l1~l8을 통해 8개의 스위치를 노출합니다. 각 스위치는 독립적으로 제어할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

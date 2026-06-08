@@ -27,10 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Pair the sensor to Zigbee2MQTT by holding it close to the coordinator and
-holding the inside button, next to the two AAA batteries, for about 5-10 seconds.
-The blue light just below the button  now flash a few times.
+### 페어링
+센서를 코디네이터에 가까이 대고, AAA 배터리 옆에 있는 내부 버튼을 약 5~10초 동안 누르면 Zigbee2MQTT에 페어링됩니다.
+버튼 바로 아래 파란 불이 몇 번 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

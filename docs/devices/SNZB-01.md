@@ -27,33 +27,33 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-Binding information is confirmed by [sniffing](../advanced/zigbee/04_sniff_zigbee_traffic.md).
+바인딩 정보는 [스니핑](../advanced/zigbee/04_sniff_zigbee_traffic.md)을 통해 확인되었습니다.
 
-### Battery
-Uses 1 x CR2450
+### 배터리
+CR2450 배터리 1개를 사용합니다.
 
-**This device *sleeps* to preserve energy when it's not actively used.**  
-When sleeping, it will not respond to any Z2M commands.  
-Press its button to keep it awake and allow interactions.
+**이 디바이스는 사용하지 않을 때 에너지 절약을 위해 *슬립* 상태로 전환됩니다.**  
+슬립 중에는 Z2M 명령에 응답하지 않습니다.  
+버튼을 눌러 깨어있게 하고 상호작용이 가능하도록 합니다.
 
-### Pairing
-**Long press reset button for 5s** until the LED indicator flashes three times, which means the device has entered pairing mode.  
-The reset button can be found by removing the back cover.
+### 페어링
+LED 표시등이 세 번 깜박일 때까지 **리셋 버튼을 5초간 길게 누릅니다**. 이는 디바이스가 페어링 모드에 진입했음을 의미합니다.  
+리셋 버튼은 후면 커버를 제거하면 찾을 수 있습니다.
 
-### Binding
+### 바인딩
 
-**This button can directly control individual devices and/or groups.**
+**이 버튼은 개별 디바이스 및/또는 그룹을 직접 제어할 수 있습니다.**
 
-- Pairing inside the network is possible by [binding](../guide/usage/binding.md) the `OnOff` cluster.  
-- Pairing outside the network through [Touchlink](../guide/usage/touchlink.md) is **not** supported.
+- 네트워크 내부에서 `OnOff` 클러스터를 [바인딩](../guide/usage/binding.md)하여 페어링할 수 있습니다.  
+- [Touchlink](../guide/usage/touchlink.md)를 통한 네트워크 외부 페어링은 지원되지 **않습니다**.
 
-### Action mapping
+### 액션 매핑
 
-|                                 Real Action | Z2M Action | Bind Action |
+|                                 실제 동작 | Z2M 액션 | 바인드 액션 |
 | ------------------------------------------: | ---------- | ----------- |
-| Single press, *press + release + wait 0.6s* | single     | *Toggle*    |
-|     Double press, *press + release + press* | double     | *On*        |
-|               Long press, *press + hold 2s* | long       | *Off*       |
+| 단일 누름, *누름 + 해제 + 0.6초 대기* | single     | *Toggle*    |
+|     이중 누름, *누름 + 해제 + 누름* | double     | *On*        |
+|               길게 누름, *2초 누르고 유지* | long       | *Off*       |
 <!-- Notes END: Do not edit below this line -->
 
 

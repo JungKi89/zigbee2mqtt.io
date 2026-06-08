@@ -25,9 +25,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Originally this device does not support Zigbee (only Bluetooth).
-To use this device with Zigbee2MQTT a custom firmware has to be flashed which is explained [here](https://github.com/pvvx/ZigbeeTLc).
-This firmware converts the device from Bluetooth to Zigbee.
+원래 이 기기는 Zigbee를 지원하지 않으며 Bluetooth만 지원합니다.
+Zigbee2MQTT와 함께 사용하려면 [여기](https://github.com/pvvx/ZigbeeTLc)에 설명된 대로 커스텀 펌웨어를 플래시해야 합니다.
+이 펌웨어는 기기를 Bluetooth에서 Zigbee로 변환합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -25,19 +25,19 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Router functionality
-The device type is 'End Device' and cannot function as a Zigbee router.
+### 라우터 기능
+기기 유형은 '엔드 디바이스'이며 Zigbee 라우터로 기능할 수 없습니다.
 
-### Pairing
-There are two different options to reset the device and enter pairing mode:
+### 페어링
+기기를 초기화하고 페어링 모드로 진입하는 두 가지 방법이 있습니다:
 
-* button: Press and hold the device button for 5 seconds.
-* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+* 버튼: 기기의 버튼을 5초 동안 길게 누릅니다.
+* 스위치: 연결된 외부 스위치를 10번 연속으로 켰다 껐다 합니다. 버튼에 직접 물리적으로 접근하기 어려울 때 특히 유용합니다.
 
-The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
+페어링 모드에서는 기기가 "state": "OFF" 상태를 유지하며 스위칭할 수 없습니다. 페어링에 성공하지 못하면 180초 후에 페어링 모드를 종료합니다.
 
-## Change Switch Type
-The device supports rocker switch by default. If you want to change the switch type, press the button 3 times and see the green Led indicator flash 3 times quickly, then the switch type is switched successfully.
+## 스위치 유형 변경
+기기는 기본적으로 로커 스위치를 지원합니다. 스위치 유형을 변경하려면 버튼을 3번 누르고 녹색 LED 표시등이 3번 빠르게 깜박이는지 확인하면 스위치 유형이 변경된 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -24,9 +24,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
+## 페어링
 
-Pair the Thermostat radiator valve to Zigbee2MQTT by turning the dial knob to lowest setting 'OFF', put Zigbee2MQTT into joining mode and press the dial button for 5 seconds. The valve will show two lines ' - - ' when ready to be paired.
+다이얼 노브를 최저 설정인 'OFF'로 돌리고, Zigbee2MQTT를 참가 모드로 설정한 후 다이얼 버튼을 5초 동안 눌러 온도조절 라디에이터 밸브를 Zigbee2MQTT에 페어링합니다. 페어링 준비가 되면 밸브에 두 개의 선 ' - - '이 표시됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

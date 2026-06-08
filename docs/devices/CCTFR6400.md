@@ -23,23 +23,23 @@ pageClass: device-page
 
 
 
-<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+<!-- Notes BEGIN: You can edit here. Add “## Notes” headline if not already present. -->
 ## Notes
 
-### Pairing
-Pair the device to Zigbee2MQTT by resetting it:
-1. Remove the batteries and re-insert them.
-2. When the “Wiser” startup screen appears, press the + and - buttons at the same time for 20 seconds until the unit restarts.
+### 페어링
+디바이스를 초기화하여 Zigbee2MQTT에 페어링합니다:
+1. 배터리를 제거한 후 다시 삽입합니다.
+2. “Wiser” 시작 화면이 나타나면 + 및 - 버튼을 동시에 20초간 눌러 장치가 재시작될 때까지 유지합니다.
 
-### Device info
-This device is a
-- thermostat UI for displaying/adjusting target set point.
-- temperature sensor
-- hygrometry sensor
+### 디바이스 정보
+이 디바이스는 다음과 같은 기능을 제공합니다:
+- 목표 온도 표시/조정용 서모스탯 UI
+- 온도 센서
+- 습도 센서
 
-It can display the heating status of associated climate by setting `pi_heating_demand`
+`pi_heating_demand`를 설정하여 연결된 공조 장치의 난방 상태를 표시할 수 있습니다.
 
-It requires a Z-Stack controller (Firmware version > TBD). It is currently not working with zigate and conbee II (maybe supported in further firmware).
+Z-Stack 컨트롤러(펌웨어 버전 > TBD)가 필요합니다. 현재 zigate 및 conbee II에서는 작동하지 않습니다(향후 펌웨어에서 지원될 수 있음).
 <!-- Notes END: Do not edit below this line -->
 
 

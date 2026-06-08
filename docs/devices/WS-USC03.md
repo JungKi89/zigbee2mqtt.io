@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Hold the top button for 5 seconds, until the LED turns red.
+### 페어링
+LED가 빨간색으로 바뀔 때까지 상단 버튼을 5초간 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-**Press and hold the reset button for 5s** to put the device in pairing mode.  
-The yellow status LED will flash until it connects.
+디바이스를 페어링 모드로 진입시키려면 **리셋 버튼을 5초간 누르고 있습니다.**  
+연결될 때까지 노란색 상태 LED가 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

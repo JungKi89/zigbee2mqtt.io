@@ -25,13 +25,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Still in WIP. Copied most from BRT-100-TRV
-### Pairing
+아직 작업 중입니다. BRT-100-TRV에서 대부분 복사했습니다.
+### 페어링
 
-While pairing, keep the valve close to the coordinator.
+페어링 중에는 밸브를 코디네이터 가까이에 두세요.
 
-1. *Turn the display on*: Short press home (🏠).
-2. *Enable pairing mode*: Long press + (plus) for 3 seconds. WiFi logo is now blinking.
+1. *디스플레이 켜기*: 홈(🏠) 버튼을 짧게 누르세요.
+2. *페어링 모드 활성화*: + (플러스) 버튼을 3초간 길게 누르세요. WiFi 로고가 깜빡입니다.
 3.
 <!-- Notes END: Do not edit below this line -->
 

@@ -28,33 +28,33 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-While pairing, keep the valve close to the coordinator.
+페어링 중에는 밸브를 코디네이터 가까이에 두세요.
 
-1. *Turn the display on*: Short press home (🏠).
-2. *Enter settings*: Long press home (🏠) for 3sec.
-3. *Select WiFi settings*: Press the plus button (➕) button 4 times to see the digital **`5`** on the right hand side and the blinking WiFi logo.
-4. *Enter WiFi settings*: Press home (🏠) once again. Now only WiFi logo is showing without blinking.
-5. *Enable pairing mode*: Long press home (🏠). WiFi logo is now blinking.
-6. *Keep display on*: Touch home (🏠) every few seconds.
+1. *화면 켜기*: 홈 버튼(🏠)을 짧게 누릅니다.
+2. *설정 진입*: 홈 버튼(🏠)을 3초 동안 길게 누릅니다.
+3. *WiFi 설정 선택*: 플러스 버튼(➕)을 4번 눌러 오른쪽에 **`5`**가 표시되고 WiFi 로고가 깜박이는지 확인합니다.
+4. *WiFi 설정 진입*: 홈 버튼(🏠)을 한 번 더 누릅니다. 이제 WiFi 로고만 표시되고 깜박임이 없습니다.
+5. *페어링 모드 활성화*: 홈 버튼(🏠)을 길게 누릅니다. WiFi 로고가 깜박이기 시작합니다.
+6. *화면 유지*: 몇 초마다 홈 버튼(🏠)을 터치합니다.
 
-### Local temperature
-If you'd like to force device to send local_temperature you can use this MQTT command:
+### 현재 온도
+기기가 local_temperature를 전송하도록 강제하려면 다음 MQTT 명령을 사용합니다:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
-* `payload`: YOUR_CURRENT_CALIBRATION_VALUE
+* `payload`: 현재_보정값
 
-YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
-After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
+현재_보정값은 0이어도 되지만, 이 기기에 대해 온도를 보정한 경우 현재 값을 전송하세요.
+이 명령 후 서모스탯은 두 개의 메시지로 응답합니다. 하나는 보정 변경 확인이고, 다른 하나는 현재 local_temperature입니다.
 
-### Controlling device specific features
+### 기기 특정 기능 제어
 
-- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
+- 단순히 켜고 끄기만 필요한 경우, `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 "force"를 설정할 수 있습니다.
   
-  The payload values are:\
-  open -> fully opens valve and stays there\
-  close -> fully closes valve and stays there\
-  normal -> normal valve operation
+  페이로드 값은 다음과 같습니다:\
+  open -> 밸브를 완전히 열고 유지\
+  close -> 밸브를 완전히 닫고 유지\
+  normal -> 정상 밸브 작동
 
     ```json
     {
@@ -62,7 +62,7 @@ After this command thermostat responds with two messages. One for calibration ch
     }
     ```
 
-- Use topic `zigbee2mqtt/FRIENDLY_NAME/set/schedule` to set the schedule of the device with 6 timeslots on workdays or holidays (e.g. weekend). Example payload values are:
+- `zigbee2mqtt/FRIENDLY_NAME/set/schedule` 토픽을 사용하여 평일 또는 휴일(예: 주말)에 6개 타임슬롯으로 일정을 설정합니다. 페이로드 값 예시:
 
     ```json
     {
@@ -89,10 +89,10 @@ After this command thermostat responds with two messages. One for calibration ch
         ]
     }
     ```
-- You can set "week" schedule pattern with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
-  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays
-  6+1 -> to be used when workdays for example are monday-saturday and sunday is a holiday
-  7 -> to be used when workdays schedule will be used for the whole week
+- `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 "week" 일정 패턴을 설정할 수 있습니다. 페이로드 값:
+  5+2 -> 평일이 월~금이고 토~일이 휴일인 경우 사용
+  6+1 -> 평일이 월~토이고 일요일이 휴일인 경우 사용
+  7 -> 평일 일정이 전체 주에 적용되는 경우 사용
 
     ```json
     {
@@ -100,21 +100,21 @@ After this command thermostat responds with two messages. One for calibration ch
     }
     ```
 
-- You can set "boost time" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. But be aware that it rounds the values down to multiple of 100.
+- `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 "boost time"을 설정할 수 있습니다. 단, 값은 100의 배수로 내림됩니다.
 
     ```json
     {
         "boost_time": 200
     }
     ```
-- You can set "comfort temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
+- `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 기기의 "comfort temperature" 수준을 설정할 수 있습니다.
 
     ```json
     {
         "comfort_temperature": 21
     }
     ```
-- You can set "eco temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
+- `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 기기의 "eco temperature" 수준을 설정할 수 있습니다.
 
     ```json
     {

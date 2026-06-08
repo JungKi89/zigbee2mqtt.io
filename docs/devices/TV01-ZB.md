@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-This TRV is slow to send updates of the measured local temperature, or might not do so at all. To force the TRV to send an update, write `ON` to the `online` property.
-When using Home Assistant, this can be done through an automation that executes "Turn on *TRVNAME* Online".
+이 TRV는 측정된 로컬 온도 업데이트를 느리게 전송하거나, 전혀 전송하지 않을 수 있습니다. TRV가 업데이트를 전송하도록 강제하려면 `online` 속성에 `ON`을 쓰세요.
+Home Assistant를 사용하는 경우, "Turn on *TRVNAME* Online" 자동화를 통해 이 작업을 수행할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

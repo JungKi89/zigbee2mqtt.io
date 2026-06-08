@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-The bulb automatically pairs after coming out of the box.
+### 페어링
+전구는 박스에서 꺼낸 후 자동으로 페어링됩니다.
 
-To factory reset the bulb; turn on and off the power 6 times within a few seconds. After resetting the bulb will automatically connect.
+전구를 공장 초기화하려면 몇 초 내에 전원을 6번 켰다 끕니다. 초기화 후 전구는 자동으로 연결됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

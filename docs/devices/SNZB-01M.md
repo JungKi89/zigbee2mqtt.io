@@ -26,51 +26,51 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-**All information is taken from the SONOFF website. It needs confirmation!**
+**모든 정보는 SONOFF 웹사이트에서 가져온 것입니다. 확인이 필요합니다!**
 
-### Battery
-Uses 1 x CR2477 battery
+### 배터리
+CR2477 배터리 1개를 사용합니다.
 
-**This device *sleeps* to preserve energy when it's not actively used.**  
-When sleeping, it will not respond to any Z2M commands.  
-Press its buttons to keep it awake and allow interactions.
+**이 디바이스는 사용하지 않을 때 에너지 절약을 위해 *슬립* 상태로 전환됩니다.**  
+슬립 중에는 Z2M 명령에 응답하지 않습니다.  
+버튼을 눌러 깨어있게 하고 상호작용이 가능하도록 합니다.
 
-### Pairing
-**Press and hold the reset button for 5s**. An LED indicator should slowly flash until it connects.  
-The button is found under the back cover, next to the battery.
+### 페어링
+**리셋 버튼을 5초간 누르고 유지합니다**. LED 표시등이 연결될 때까지 천천히 깜박여야 합니다.  
+버튼은 후면 커버 아래, 배터리 옆에 있습니다.
 
-### Binding
+### 바인딩
 
-**This remote can directly control individual devices and/or groups.**
+**이 리모컨은 개별 디바이스 및/또는 그룹을 직접 제어할 수 있습니다.**
 
-- Pairing inside the network is possible by [binding](../guide/usage/binding.md): 
-  - `OnOff` cluster for toggling 
-  - `LevelCtrl` cluster for dimming
-  - `Scenes` cluster for changing scenes
-- Pairing outside the network is possible through [Touchlink](../guide/usage/touchlink.md).  
-  - Activate by keeping it very close to the target device and holding **Button 1** 'until the indicator stays solid for about 3 seconds, then release'.
-  - No information about *cloning*
+- 네트워크 내부에서 [바인딩](../guide/usage/binding.md)을 통해 페어링할 수 있습니다: 
+  - 토글용 `OnOff` 클러스터 
+  - 조광용 `LevelCtrl` 클러스터
+  - 씬 변경용 `Scenes` 클러스터
+- [Touchlink](../guide/usage/touchlink.md)를 통한 네트워크 외부 페어링이 가능합니다.  
+  - 대상 디바이스에 매우 가까이 유지하고 **버튼 1**을 '표시등이 약 3초간 고정될 때까지 누른 후 놓습니다'.
+  - *클로닝*에 대한 정보 없음
   
-### Action mapping
+### 액션 매핑
 
-| Real Action     |        Z2M Action |       Bind Action |
+| 실제 동작       |        Z2M 액션 |       바인드 액션 |
 | --------------- | ----------------: | ----------------: |
-| Button 1 single | `single_button_1` |        'On/Off' ? |
-| Button 1 double | `double_button_1` |                 ? |
-| Button 1 triple | `triple_button_1` |                 ? |
-| Button 1 long   |   `long_button_1` |                 ? |
-| Button 2 single | `single_button_2` |                 ? |
-| Button 2 double | `double_button_2` |                 ? |
-| Button 2 triple | `triple_button_2` |                 ? |
-| Button 2 long   |   `long_button_2` |      'Brighten' ? |
-| Button 3 single | `single_button_3` |                 ? |
-| Button 3 double | `double_button_3` |                 ? |
-| Button 3 triple | `triple_button_3` |                 ? |
-| Button 3 long   |   `long_button_3` |           'Dim' ? |
-| Button 4 single | `single_button_4` | 'Switch Scenes' ? |
-| Button 4 double | `double_button_4` |                 ? |
-| Button 4 triple | `triple_button_4` |                 ? |
-| Button 4 long   |   `long_button_4` |                 ? |
+| 버튼 1 단일 누름 | `single_button_1` |        'On/Off' ? |
+| 버튼 1 이중 누름 | `double_button_1` |                 ? |
+| 버튼 1 삼중 누름 | `triple_button_1` |                 ? |
+| 버튼 1 길게 누름 |   `long_button_1` |                 ? |
+| 버튼 2 단일 누름 | `single_button_2` |                 ? |
+| 버튼 2 이중 누름 | `double_button_2` |                 ? |
+| 버튼 2 삼중 누름 | `triple_button_2` |                 ? |
+| 버튼 2 길게 누름 |   `long_button_2` |      'Brighten' ? |
+| 버튼 3 단일 누름 | `single_button_3` |                 ? |
+| 버튼 3 이중 누름 | `double_button_3` |                 ? |
+| 버튼 3 삼중 누름 | `triple_button_3` |                 ? |
+| 버튼 3 길게 누름 |   `long_button_3` |           'Dim' ? |
+| 버튼 4 단일 누름 | `single_button_4` | 'Switch Scenes' ? |
+| 버튼 4 이중 누름 | `double_button_4` |                 ? |
+| 버튼 4 삼중 누름 | `triple_button_4` |                 ? |
+| 버튼 4 길게 누름 |   `long_button_4` |                 ? |
 <!-- Notes END: Do not edit below this line -->
 
 

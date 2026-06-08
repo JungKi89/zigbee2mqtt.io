@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the on (`1`) and off (`0`) buttons for approximately 10 seconds until the indicator light flashes rapidly.
+### 페어링
+켜기(`1`) 버튼과 끄기(`0`) 버튼을 표시등이 빠르게 깜박일 때까지 약 10초 동안 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

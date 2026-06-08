@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Go [here (pvvx github)](https://github.com/pvvx/ATC_MiThermometer) for the firmware file & instructions on how to flash
+펌웨어 파일 및 플래시 방법은 [여기 (pvvx github)](https://github.com/pvvx/ATC_MiThermometer)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

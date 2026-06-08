@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Long press the reset button for more than 5 seconds, until the blue light blinks 3 times.
+파란 불빛이 3번 깜빡일 때까지 리셋 버튼을 5초 이상 길게 누르세요.
 
 ![DJT12LM pairing](../images/pairing/DJT12LM_pairing.png)
 <!-- Notes END: Do not edit below this line -->

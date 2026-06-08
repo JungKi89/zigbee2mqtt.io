@@ -25,12 +25,12 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Issues with inadvertent state toggling by control switches
-It's been reported by several people that this plug can be turned on or off by control switches (e.g. IKEA E1812 or E1743) when routed through this plug. The problem only affects firmware version v42 according to current knowledge.
-A temporary solution is currently to install an older firmware version (v32) with a modified file version header to bypass the downgrade restriction. See [issue #13903](https://github.com/Koenkk/zigbee2mqtt/issues/13903#issuecomment-1244720072) for a tutorial and further information.
+### 제어 스위치에 의한 의도치 않은 상태 전환 문제
+이 플러그를 통해 라우팅될 때 제어 스위치(예: IKEA E1812 또는 E1743)에 의해 플러그가 켜지거나 꺼질 수 있다는 보고가 여러 사람으로부터 있었습니다. 현재 알려진 바에 따르면 이 문제는 펌웨어 버전 v42에만 영향을 미칩니다.
+현재 임시 해결책은 다운그레이드 제한을 우회하기 위해 수정된 파일 버전 헤더가 적용된 이전 펌웨어 버전(v32)을 설치하는 것입니다. 튜토리얼 및 추가 정보는 [이슈 #13903](https://github.com/Koenkk/zigbee2mqtt/issues/13903#issuecomment-1244720072)을 참조하세요.
 
-### Pairing
-Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
+### 페어링
+파란 불빛이 깜박이기 시작할 때까지 디바이스의 버튼을 약 5초간 누르고 유지합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

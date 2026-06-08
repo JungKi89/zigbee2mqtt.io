@@ -27,8 +27,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The device will automatically be in pairing mode when it is first powered on. Resetting the device will allow it to re-pair. This can be done by pressing the On/Off button on the controller for 5 seconds.
+### 페어링
+기기를 처음 전원을 켤 때 자동으로 페어링 모드가 활성화됩니다. 기기를 초기화하면 재페어링이 가능합니다. 컨트롤러의 On/Off 버튼을 5초 동안 누르면 됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

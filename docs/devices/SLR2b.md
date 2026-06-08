@@ -27,19 +27,19 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-To pair the thermostat with Zigbee2MQTT, follow these steps:
+온도조절기를 Zigbee2MQTT에 페어링하려면 다음 단계를 따르세요:
 
-1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
-2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
-3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
-4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.
-5. You can now re-insert the battery back into any thermostat controllers disconnected in step 1 and pair them to the boiler (and optionally Zigbee2MQTT). For information on pairing the thermostat controllers see the pairing instructions for the [Hive SLT3B](./SLT3.md). Note that the thermostat's Central heating light will remain amber until a controller is paired with the thermostat, however the thermostat will still function correctly.
+1. 온도조절기에 연결된 컨트롤러의 배터리를 제거하여 일시적으로 연결을 끊습니다.
+2. 온도조절기와 보일러를 껐다가 다시 켜서 컨트롤러에 연결을 시도하지 않는 상태로 만듭니다.
+3. 온도조절기와 보일러가 켜지면, 디바이스의 중앙 난방(Central heating) 버튼을 중앙 난방 표시등이 흰색/분홍색으로 바뀔 때까지 누른 후 버튼을 놓습니다. 이렇게 하면 온도조절기가 독립 실행 모드로 전환됩니다.
+4. 중앙 난방 버튼을 다시 눌러 중앙 난방 표시등이 황색으로 깜박이기 시작할 때까지 기다립니다. 이제 디바이스가 페어링 모드에 진입하여 Zigbee2MQTT에서 검색됩니다.
+5. 이제 1단계에서 분리한 컨트롤러에 배터리를 다시 삽입하고 보일러(및 선택적으로 Zigbee2MQTT)에 페어링할 수 있습니다. 컨트롤러 페어링 방법은 [Hive SLT3B](./SLT3.md) 페어링 안내를 참조하세요. 컨트롤러가 온도조절기에 페어링될 때까지 중앙 난방 표시등은 황색으로 유지되지만, 온도조절기는 정상적으로 작동합니다.
 
 
-### Sending payloads on dual channel receivers
-As the receiver makes use of two endpoints, `water` and `heat` there are two methods of sending payloads, both equally valid. For example, the `heat` endpoint:
+### 이중 채널 리시버에서 페이로드 전송
+리시버는 `water`와 `heat` 두 개의 엔드포인트를 사용하므로 페이로드를 전송하는 방법이 두 가지이며 모두 동일하게 유효합니다. 예를 들어 `heat` 엔드포인트의 경우:
 
 Topic `zigbee2mqtt/FRIENDLY_NAME/set`
 ```js
@@ -55,12 +55,12 @@ Topic `zigbee2mqtt/FRIENDLY_NAME/heat/set`
 }
 ```
 
-Notice that `heat` must be part of either the topic or the attribute. With that in mind, adjust the commands in this documentation based on your preferred style.
+`heat`는 토픽이나 속성 중 하나에 반드시 포함되어야 합니다. 이 점을 고려하여 선호하는 스타일에 맞게 문서의 명령을 조정하세요.
 
-### How to start/edit native boost (heat endpoint)
-The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+### 네이티브 부스트 시작/편집 방법 (heat 엔드포인트)
+리시버는 네이티브 Boost를 지원하며, 호환되는 리모컨에 남은 시간을 표시할 수 있습니다.
 
-To start one, or modify an already active one, send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+부스트를 시작하거나 이미 활성화된 부스트를 수정하려면 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 
 ```js
 {
@@ -70,12 +70,12 @@ To start one, or modify an already active one, send the following payload to the
    "occupied_heating_setpoint_heat":18  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+참고: 디바이스 타이밍 문제로 인해 페이로드를 하나의 단일 명령으로 전송해야 합니다. 개별 명령 전송이나 Frontend에서 속성을 수동으로 설정하는 방식은 작동하지 않습니다.
 
-Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+네이티브 부스트는 난방을 일시 중지하는 방법으로도 사용할 수 있습니다. 이 경우 온도를 낮은 값으로 설정하세요.
 
-### Set heating mode to ON (heat endpoint)
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 ON으로 설정 (heat 엔드포인트)
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode_heat":"heat",
@@ -83,27 +83,27 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
    "occupied_heating_setpoint_heat":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
+참고: `temperature_setpoint_hold_duration_heat`이 자동으로 `65535`로 변경되는데, 이는 `undefined`(무기한)를 의미합니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
 
-### Set heating mode to OFF (heat endpoint)
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 OFF로 설정 (heat 엔드포인트)
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode_heat":"off",
    "temperature_setpoint_hold_heat":0
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`. `occupied_heating_setpoint_heat` automatically changes to `1` degree C.
+참고: `temperature_setpoint_hold_duration_heat`이 자동으로 `0`으로 변경되는데, 이는 `설정 안 됨`을 의미합니다. `occupied_heating_setpoint_heat`는 자동으로 1°C로 변경됩니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
-### How to start/edit native boost (water endpoint)
-The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+### 네이티브 부스트 시작/편집 방법 (water 엔드포인트)
+리시버는 네이티브 Boost를 지원하며, 호환되는 리모컨에 남은 시간을 표시할 수 있습니다.
 
-To start one, or modify an already active one, send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+부스트를 시작하거나 이미 활성화된 부스트를 수정하려면 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 
 ```js
 {
@@ -112,35 +112,35 @@ To start one, or modify an already active one, send the following payload to the
    "temperature_setpoint_hold_water":1
 }
 ```
-Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+참고: 디바이스 타이밍 문제로 인해 페이로드를 하나의 단일 명령으로 전송해야 합니다. 개별 명령 전송이나 Frontend에서 속성을 수동으로 설정하는 방식은 작동하지 않습니다.
 
-### Set heating mode to ON (water endpoint)
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 ON으로 설정 (water 엔드포인트)
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode_water":"heat",
    "temperature_setpoint_hold_water":1
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
+참고: `temperature_setpoint_hold_duration_heat`이 자동으로 `65535`로 변경되는데, 이는 `undefined`(무기한)를 의미합니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
 
-### Set heating mode to OFF (water endpoint)
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 OFF로 설정 (water 엔드포인트)
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode_water":"off",
    "temperature_setpoint_hold_water":0
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`.
+참고: `temperature_setpoint_hold_duration_heat`이 자동으로 `0`으로 변경되는데, 이는 `설정 안 됨`을 의미합니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
-### Local and occupied temperature (water endpoint)
-The water endpoint functions as what could be considered an on/off switch based on `system_mode_water`. Because of that, the device uses fixed values for temperature. `local_temperature_water` is always 21 and `occupied_heating_setpoint_water` is always 22.
+### 로컬 및 점유 온도 (water 엔드포인트)
+water 엔드포인트는 `system_mode_water`를 기반으로 한 ON/OFF 스위치처럼 작동합니다. 따라서 디바이스는 고정된 온도 값을 사용합니다. `local_temperature_water`는 항상 21이고 `occupied_heating_setpoint_water`는 항상 22입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

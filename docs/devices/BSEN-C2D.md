@@ -26,37 +26,37 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Important: Install Code Required
+### 중요: 설치 코드 필요
 
-This device uses Zigbee 3.0 security and will not pair via the standard "Permit join" button. You must first add a specific Install Code to your Zigbee2MQTT configuration.
+이 기기는 Zigbee 3.0 보안을 사용하며 표준 "Permit join" 버튼으로는 페어링되지 않습니다. 먼저 Zigbee2MQTT 설정에 특정 설치 코드를 추가해야 합니다.
 
-**Note regarding the QR Code:** The QR code printed on the device is formatted for the **Matter** standard and **is not compatible** with Zigbee2MQTT. **Do not scan the QR code**, as it will yield incorrect data. You must construct the Zigbee Install Code manually using the text printed on the device label.
+**QR 코드 관련 참고:** 기기에 인쇄된 QR 코드는 **Matter** 표준용으로 형식이 지정되어 있으며 Zigbee2MQTT와 **호환되지 않습니다**. **QR 코드를 스캔하지 마세요**, 잘못된 데이터가 생성됩니다. 기기 라벨에 인쇄된 텍스트를 사용하여 Zigbee 설치 코드를 수동으로 구성해야 합니다.
 
-**How to generate the code:** You need to combine 4 elements into a single long string (without spaces or hyphens):
+**코드 생성 방법:** 4가지 요소를 공백이나 하이픈 없이 하나의 긴 문자열로 조합해야 합니다:
 
-**Pattern:** `[Bosch Prefix]` + `[IEEE Address]` + `DLK` + `[Code from label]`
+**패턴:** `[Bosch Prefix]` + `[IEEE Address]` + `DLK` + `[라벨의 코드]`
 
-1. Bosch Prefix (Fixed): Copy this exact string (it is identical for all devices in this series): `RB01SG0D83101826480080000000000000000000`
-2. IEEE Address (MAC): Find the 16-character code on the device sticker (often labeled MAC or IEEE). Type it as a continuous string, removing any colons.
-3. Marker: Simply type the letters: `DLK`
-4. Install Code: Find the alphanumeric string printed next to the QR code. Type it as a continuous string, removing any hyphens or spaces.
+1. Bosch Prefix (고정): 이 정확한 문자열을 복사하세요 (이 시리즈의 모든 기기에서 동일): `RB01SG0D83101826480080000000000000000000`
+2. IEEE Address (MAC): 기기 스티커에서 16자리 코드를 찾으세요 (MAC 또는 IEEE로 표시됨). 콜론을 제거하고 연속 문자열로 입력하세요.
+3. 마커: 단순히 다음 문자를 입력하세요: `DLK`
+4. 설치 코드: QR 코드 옆에 인쇄된 영숫자 문자열을 찾으세요. 하이픈이나 공백을 제거하고 연속 문자열로 입력하세요.
 
-**Construction Example:**
+**구성 예시:**
 
 - Prefix: `RB01SG0D83101826480080000000000000000000`
-- Your MAC: `18FC2600000A1B2C`
+- 나의 MAC: `18FC2600000A1B2C`
 - Marker: `DLK`
-- Your Code: `00112233445566778899AABBCCDDEEFF1234`
+- 나의 코드: `00112233445566778899AABBCCDDEEFF1234`
 
-Final string to paste (example): `RB01SG0D8310182648008000000000000000000018FC2600000A1B2CDLK00112233445566778899AABBCCDDEEFF1234`
+최종 붙여넣기 문자열 (예시): `RB01SG0D8310182648008000000000000000000018FC2600000A1B2CDLK00112233445566778899AABBCCDDEEFF1234`
 
-**How to apply in Zigbee2MQTT:**
+**Zigbee2MQTT에서 적용하는 방법:**
 
-1. Go to Settings -> Tools.
-2. Click Add install code.
-3. Ensure permit joining is active.
-4. Paste the long string generated above and click **OK**.
-5. Only after adding the code, put the sensor into pairing mode (press and hold the button for approx. 5 seconds until the LED flashes orange). The device should now pair automatically.
+1. Settings -> Tools로 이동하세요.
+2. Add install code를 클릭하세요.
+3. 참여 허용이 활성화되어 있는지 확인하세요.
+4. 위에서 생성한 긴 문자열을 붙여넣고 **OK**를 클릭하세요.
+5. 코드를 추가한 후에만 센서를 페어링 모드로 설정하세요 (LED가 주황색으로 깜빡일 때까지 버튼을 약 5초간 길게 누르세요). 이제 기기가 자동으로 페어링되어야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

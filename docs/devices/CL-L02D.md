@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Turn the light on and off 5 times to pair. After this the device will automatically join.
+### 페어링
+조명을 5회 켜고 끄면 페어링됩니다. 이후 디바이스가 자동으로 네트워크에 참가합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

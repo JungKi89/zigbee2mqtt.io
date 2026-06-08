@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-If the indicator light does not flash rapidly, press the button for 5 to 7 seconds to reset the smart plug parameters to factory settings.
+표시등이 빠르게 깜빡이지 않으면 버튼을 5~7초간 눌러 스마트 플러그 매개변수를 공장 설정으로 초기화합니다.
 
-### Reset
+### 초기화
 
-There are two ways to reset the device data. Both will reset to factory settings, which means any changed state (led state, restore state, etc.) will be reset to the default value.
+장치 데이터를 초기화하는 방법은 두 가지입니다. 두 방법 모두 공장 설정으로 초기화되므로, 변경된 상태(LED 상태, 복원 상태 등)가 기본값으로 재설정됩니다.
 
-Once done, next time the plug gets polled, the following states and data will be reset:
+완료 후 다음에 플러그를 폴링하면 다음 상태와 데이터가 초기화됩니다:
 
 - `Power Outage Memory`
 - `Sum of consumed energy`
@@ -42,16 +42,16 @@ Once done, next time the plug gets polled, the following states and data will be
 
 #### Dev console
 
-To reset, use the Dev console and execute:
+초기화하려면 Dev console을 사용하여 다음을 실행합니다:
 `Endpoint`: `1`
 `Cluster`: `0x00` (`genBasic`)
 `Command`: `0` (`resetFactDefault`)
-`Payload`: (don't change this)
+`Payload`: (변경하지 마세요)
 
 
-#### JSON payload
+#### JSON 페이로드
 
-The same effect can be achieved by sending the following json payload to the device : `json::{"reset":""}`
+동일한 효과를 얻으려면 다음 JSON 페이로드를 장치에 전송합니다: `json::{"reset":""}`
 <!-- Notes END: Do not edit below this line -->
 
 

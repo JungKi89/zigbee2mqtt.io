@@ -24,22 +24,22 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Observations after installing the device (based on [Sigalou's documentation](https://www.sigalou-domotique.fr/je-teste-le-capteur-de-niveau-zigbee-par-ultrasons-me201wz-de-chez-moray))
-- "Liquid depth max" is the actual max liquid level (distance from the bottom of the tank to the max level). The comment "Height from sensor to liquid level" is incorrect.
-- "Liquid Level %" is relative to "Liquid depth max".
-- "Mini set" and "Max set" are both relative to "Installation height".
+기기 설치 후 관찰 결과 ([Sigalou의 문서](https://www.sigalou-domotique.fr/je-teste-le-capteur-de-niveau-zigbee-par-ultrasons-me201wz-de-chez-moray) 기반)
+- "Liquid depth max"는 실제 최대 액체 수위(탱크 바닥에서 최대 수위까지의 거리)입니다. "Height from sensor to liquid level"이라는 설명은 올바르지 않습니다.
+- "Liquid Level %"는 "Liquid depth max"에 대한 상대값입니다.
+- "Mini set"과 "Max set"은 모두 "Installation height"에 대한 상대값입니다.
 
-Example:
-- Sensor installation height: 1.70 m (from bottom of tank)
-- Max water level: 1.65 m
-- Settings:
+예시:
+- 센서 설치 높이: 1.70 m (탱크 바닥으로부터)
+- 최대 수위: 1.65 m
+- 설정값:
   - Max set = 97%
   - Mini set = 5%
   - Installation Height = 1.70 m
   - Liquid Max Depth = 1.65 m
-- Liquid state = "low" below 0.085 m (8.5 cm) → 1.70 × 0.05
-- Liquid state = "high" above 1.65 m → 1.70 × 0.97 (prevents overflow)
-- Example reading: water level 1.42 m → sensor reports 1.42 m, 86% (1.65 × 0.86 = 1.419 → 1.42), liquid state = "normal"
+- Liquid state = "low": 0.085 m (8.5 cm) 미만 → 1.70 × 0.05
+- Liquid state = "high": 1.65 m 초과 → 1.70 × 0.97 (넘침 방지)
+- 측정 예시: 수위 1.42 m → 센서 보고: 1.42 m, 86% (1.65 × 0.86 = 1.419 → 1.42), liquid state = "normal"
 <!-- Notes END: Do not edit below this line -->
 
 

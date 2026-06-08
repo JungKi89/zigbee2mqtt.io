@@ -26,19 +26,19 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Initial pairing
+### 초기 페어링
 
-1. Toggle pairing mode from the UI
-1. Turn light power on
-1. If hub does not connect after some time, consider reset instructions
-1. The light will turn green after paired with hub
+1. UI에서 페어링 모드를 활성화합니다
+1. 조명 전원을 켭니다
+1. 허브가 일정 시간 내에 연결되지 않으면 초기화 방법을 확인하세요
+1. 허브와 페어링이 완료되면 조명이 녹색으로 변합니다
 
-### Reset
+### 초기화
 
-1. Switch on your device
-1. Now switch off and on within two seconds
-1. Repeat off/on five times
-1. Reset finalized on the fifth power on, when the device is fully light and flashes four times
+1. 기기 전원을 켭니다
+1. 2초 이내에 전원을 껐다가 다시 켭니다
+1. 전원 끄기/켜기를 5회 반복합니다
+1. 다섯 번째 전원 켜기 시 기기가 완전히 밝아지고 4번 깜박이면 초기화 완료입니다
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The design is open-source, docs for building and using this can be found at https://github.com/lorenz/fanbee.
+이 디자인은 오픈 소스이며, 제작 및 사용 방법 문서는 https://github.com/lorenz/fanbee 에서 찾을 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

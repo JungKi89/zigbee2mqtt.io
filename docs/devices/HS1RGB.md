@@ -25,10 +25,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 # Notes
-## Pairing
+## 페어링
 
-Cycle on and off five times (on-off-on-off-on-off-on-off-on-off-on). 
-Wait a few moments until the light starts blinking. The device is ready for pairing.
+5번 켰다 껐다 합니다 (on-off-on-off-on-off-on-off-on-off-on).
+조명이 깜박이기 시작할 때까지 잠시 기다립니다. 이제 기기가 페어링 준비가 된 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

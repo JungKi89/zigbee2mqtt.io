@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-This device contains an internal backup battery which is used in case of a power outage.
-The manufacturer states that it can last up to 7 hours.
+이 기기는 정전 시에 사용되는 내부 백업 배터리가 내장되어 있습니다.
+제조사에 따르면 최대 7시간 동안 지속될 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

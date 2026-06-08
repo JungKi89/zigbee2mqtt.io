@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
+### 페어링
+"Reset-Button"을 5초 이상 길게 눌러 공장 초기화하거나, Touchlink 공장 초기화를 사용합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

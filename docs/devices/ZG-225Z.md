@@ -26,10 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To start pairing, press the button (pinhole on the side of the device) using a
-pin/paperclip for approx. 5 seconds. The led will turn on, then start blinking while the
-pairing process is in progress.
+### 페어링
+페어링을 시작하려면 핀이나 클립을 사용하여 디바이스 측면의 핀홀 버튼을 약 5초간 누르세요. LED가 켜진 후 페어링 과정이 진행되는 동안 깜빡이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -25,11 +25,11 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Warning: Zigbee firmware flashing required
-This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator shows the wireless standard: green flashing means Thread/Matter pairing, while Zigbee pairing is shown by a yellow flashing indicator.
+### 주의: Zigbee 펌웨어 플래싱 필요
+이 기기는 Thread/Matter 펌웨어가 설치된 상태로 출하됩니다. Zigbee 펌웨어를 플래싱하려면 스마트폰, Aqara Home 앱, Aqara 계정이 필요합니다. 인디케이터 색상으로 무선 표준을 확인할 수 있습니다: 초록색 깜빡임은 Thread/Matter 페어링을 의미하며, Zigbee 페어링은 노란색 깜빡임으로 표시됩니다.
 
-### Resetting:
-A double-click on any button immediately followed by a 5-second long-press will reset the device and put it back into pairing mode. Make sure the gap between the double click and the long press does not exceed 3 seconds. The indicator light will flash when the reset was successful.
+### 초기화:
+아무 버튼이나 더블 클릭한 직후 5초간 길게 누르면 기기가 초기화되어 페어링 모드로 돌아갑니다. 더블 클릭과 길게 누르기 사이의 간격이 3초를 초과하지 않도록 주의하세요. 초기화에 성공하면 인디케이터 LED가 깜빡입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

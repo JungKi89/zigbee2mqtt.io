@@ -26,15 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To put the device in pairing mode, press the Association Button on the front
+### 페어링
+기기를 페어링 모드로 설정하려면 전면의 Association 버튼을 누르세요.
 
-### Factory reset
-Aidoo Zigbee can be reset to the original factory settings by long pressing over the Factoy
-Reset button until all of the front side LEDs light up for a second.
+### 초기화
+Aidoo Zigbee는 전면 LED가 모두 1초간 켜질 때까지 Factory Reset 버튼을 길게 눌러 원래 공장 설정으로 초기화할 수 있습니다.
 
-### More info
-See here for technical info -> https://doc.airzonecloud.com/Documentation/AZ6/AI6/MI_AZAI6ZBE_MUL.pdf?_gl=1*14wx2dy*_gcl_au*MTgzNTcwNDkyMi4xNzE3Nzg3NDM3*_ga*MTUyNzAzMjc0My4xNzE3NjIyNTIx*_ga_DKEBFNDEXJ*MTcxODI5ODI2My44LjEuMTcxODI5ODM0MC4wLjAuMA..
+### 추가 정보
+기술 정보는 여기를 참조하세요 -> https://doc.airzonecloud.com/Documentation/AZ6/AI6/MI_AZAI6ZBE_MUL.pdf?_gl=1*14wx2dy*_gcl_au*MTgzNTcwNDkyMi4xNzE3Nzg3NDM3*_ga*MTUyNzAzMjc0My4xNzE3NjIyNTIx*_ga_DKEBFNDEXJ*MTcxODI5ODI2My44LjEuMTcxODI5ODM0MC4wLjAuMA..
 <!-- Notes END: Do not edit below this line -->
 
 

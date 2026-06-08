@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing 
-Press and hold the reset switch on the device, the pin hole on the side of the device, using the provided reset pin for +- 5 seconds (until the red light starts blinking). After this the device will automatically join.
+### 페어링
+기기 측면의 핀 홀에 제공된 리셋 핀을 사용하여 기기의 리셋 스위치를 약 5초 동안 길게 누릅니다(빨간 불빛이 깜박이기 시작할 때까지). 이후 기기가 자동으로 연결됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -25,8 +25,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-Press & hold pairing button (Wireless icon) for 5 seconds, until the LED slowly flashes green.
+### 페어링
+LED가 천천히 녹색으로 깜박일 때까지 페어링 버튼(무선 아이콘)을 5초 동안 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

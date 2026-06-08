@@ -26,38 +26,38 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Factory resetting
-To factory reset the device, press and hold the only button until the red light starts blinking continuously. The device will reset and become available for pairing again.
+### 공장 초기화
+디바이스를 공장 초기화하려면 빨간 표시등이 연속적으로 깜박이기 시작할 때까지 유일한 버튼을 누르고 유지합니다. 디바이스가 초기화되고 다시 페어링이 가능해집니다.
 
-The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
+Develco 기술 매뉴얼에 따르면 SMSZB-120은 네트워크를 검색할 때 Zigbee 채널 11~24를 스캔합니다.
 
-### Warning usage
-Warning only support a single mode, `burglar`
+### 경고 사용법
+경고(Warning)는 단일 모드인 `burglar`만 지원합니다.
 
-Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 240 seconds
+`warning` 사용 시간은 `max_duration`보다 짧을 수 있지만 더 길게는 설정할 수 없습니다. `max_duration`이 60초로 설정된 상태에서 `duration`을 90초로 설정하려 하면 경고는 60초만 적용됩니다. `max_duration`의 기본값은 240초입니다.
 
-This device do not support the `strobe` and `strobe_duty_cycle` functionality
+이 디바이스는 `strobe` 및 `strobe_duty_cycle` 기능을 지원하지 않습니다.
 
 
-### Triggering alarm (using old style `warning`)
-This smoke alarm can be triggered manually by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with the payloads:
+### 알람 수동 트리거 (구형 `warning` 방식)
+연기 알람을 수동으로 트리거하려면 `zigbee2mqtt/FRIENDLY_NAME/set`으로 다음 페이로드를 발행합니다:
 
-To start :
+시작:
 * `{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}`
-Where:
-- `duration`: the number of seconds the alarm will be on
+여기서:
+- `duration`: 알람이 울리는 초 단위 시간
 - `level`: `low`, `medium`, `high`, `very_high`
 - `mode`: `stop`, `burglar`
-- `strobe`: not supported
-- `strobe_duty_cycle`: not supported
+- `strobe`: 지원하지 않음
+- `strobe_duty_cycle`: 지원하지 않음
 
-To stop:
+중지:
 * `{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}`
 
-### Triggering alarm, Simple
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
-Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
-This alarm are preset to highest volume
+### 알람 트리거 (간단한 방법)
+`zigbee2mqtt/FRIENDLY_NAME/set`으로 페이로드 `{"alarm": "START"}` 및 `{"alarm": "OFF"}`를 발행하여 설정할 수 있습니다.
+`max_duration`은 Zigbee2MQTT UI에서 설정하거나 `{"max_duration": NEW_VALUE}`를 발행하여 설정합니다.
+이 알람은 최고 볼륨으로 사전 설정되어 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

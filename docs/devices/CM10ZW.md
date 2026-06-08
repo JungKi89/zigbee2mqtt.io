@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-If the device is already associated with another zigbee network, you will need to set in "off-network" : Press the reset buttons 5 times and hold it until the blue signal indicator flashes rapidly, which means it has been off the zigbee network. Power it on again to rejoin the zigbee network.
+### 페어링
+디바이스가 이미 다른 Zigbee 네트워크에 연결되어 있다면 "오프 네트워크"로 설정해야 합니다: 리셋 버튼을 5회 누른 후 파란색 신호 표시등이 빠르게 깜박일 때까지 누르고 있으면 Zigbee 네트워크에서 분리된 것입니다. 전원을 다시 켜면 Zigbee 네트워크에 재참가합니다.
 
-If the blue signal indicator flashes rapidly, the relay has not joined the zigbee network.
-If the blue signal indicator flashes once every 2 seconds, the relay is searching the zigbee network.
+파란색 신호 표시등이 빠르게 깜박이면 릴레이가 Zigbee 네트워크에 참가하지 않은 상태입니다.
+파란색 신호 표시등이 2초마다 한 번씩 깜박이면 릴레이가 Zigbee 네트워크를 탐색 중입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

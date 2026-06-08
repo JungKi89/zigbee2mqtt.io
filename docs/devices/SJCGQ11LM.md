@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses CR2032 battery.
+### 배터리
+CR2032 배터리를 사용합니다.
 
-### Pairing
-Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
-In some cases, the sensor may not want to pair. Remove the battery and while you put it back in, keep the reset button pressed until the paring is complete.
+### 페어링
+디바이스 상단(물방울 로고)을 세게 누르는 방식으로 리셋 버튼을 약 5초간 길게 누릅니다(물방울 아래 디바이스 내부의 파란 불빛이 깜박이기 시작할 때까지). 이후 디바이스가 자동으로 네트워크에 참가합니다.
+경우에 따라 센서가 페어링을 거부할 수 있습니다. 배터리를 제거한 후, 다시 삽입하는 동시에 페어링이 완료될 때까지 리셋 버튼을 누른 채로 유지하세요.
 
 > [!NOTE]
-> In case you experience pairing issues:
-> - Try to press the reset button +-5 seconds until it flashes, wait 1 second, push the button short 2x times to enforce communication.
-> - If migrating the device from another network, turn off the old network before pairing with the new one.
+> 페어링 문제가 발생하는 경우:
+> - 리셋 버튼을 약 5초간 눌러 깜박임이 나타날 때까지 기다린 후, 1초 대기하고 버튼을 짧게 2번 눌러 통신을 강제합니다.
+> - 다른 네트워크에서 디바이스를 이전하는 경우, 새 네트워크에 페어링하기 전에 이전 네트워크를 끄세요.
 <!-- Notes END: Do not edit below this line -->
 
 

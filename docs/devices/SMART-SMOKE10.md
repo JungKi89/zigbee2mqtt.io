@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press the test button 3 times (until the red LED stays on).
-After this the device will reset and try to join a network.
+### 페어링
+테스트 버튼을 3번 누릅니다(빨간 LED가 켜진 상태로 유지될 때까지).
+이후 디바이스가 초기화되고 네트워크에 참가를 시도합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

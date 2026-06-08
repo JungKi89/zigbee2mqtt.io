@@ -27,15 +27,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Pairing
+## 페어링
 
-- On 2-button units: press down and set simultaneously until LED flashes blue.
-- On 1-button units: press the set key 3 times in 5 seconds until the LED flashes blue.
-- On Tuya/Zemismart bead curtain motor: Press set once shortly, then press set again for 5 seconds until LED flashes blue.
-  - If the sequence was not started with the initial short press, the 5 second press will turn the device off. In this case press set again for 5 seconds to turn it back on)
+- 2버튼 기기의 경우: 아래 버튼과 설정 버튼을 동시에 누르고 LED가 파란색으로 깜박일 때까지 유지합니다.
+- 1버튼 기기의 경우: 5초 이내에 설정 키를 3번 눌러 LED가 파란색으로 깜박이도록 합니다.
+- Tuya/Zemismart 비드 커튼 모터의 경우: 설정 버튼을 한 번 짧게 누른 후, LED가 파란색으로 깜박일 때까지 다시 5초 동안 누릅니다.
+  - 초기 짧은 누름 없이 시작된 경우, 5초 누르면 기기가 꺼집니다. 이 경우 설정 버튼을 다시 5초 동안 눌러 켭니다.
 
-### Configuration of device attributes
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
+### 기기 속성 설정
+`zigbee2mqtt/FRIENDLY_NAME/set`에 게시하여 다양한 기기 속성을 설정할 수 있습니다:
 ```json
 {
     "options":{
@@ -44,7 +44,7 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 }
 ```
 
-- **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
+- **reverse_direction**: (`true`/`false`, 기본값: `false`). 기기를 반대 방향으로 작동하도록 설정할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

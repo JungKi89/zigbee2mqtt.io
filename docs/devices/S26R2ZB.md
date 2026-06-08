@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-If brand new, the device will enter the pairing mode during the first use and the LED signal indicator flashes. If not (or if has been paired before and needs to be re-paired) - press and hold the pairing/power button for about 5 seconds until the LED signal indicator flashes and release, then the device enters pairing mode.
+새 제품인 경우 처음 사용 시 기기가 페어링 모드로 진입하고 LED 신호 표시기가 깜박입니다. 그렇지 않은 경우(또는 이전에 페어링된 후 다시 페어링해야 하는 경우) - LED 신호 표시기가 깜박일 때까지 페어링/전원 버튼을 약 5초 동안 길게 누른 후 놓으면 기기가 페어링 모드로 진입합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

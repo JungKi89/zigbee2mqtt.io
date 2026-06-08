@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the pairing button on top for 5 seconds. When the signal icon flashes fast, release the button. It will search 20 seconds for network. 
-The signal icon will stay once connected to indicate a successful connection.
+### 페어링
+상단의 페어링 버튼을 5초 동안 누르고 있습니다. 신호 아이콘이 빠르게 깜박이면 버튼을 놓습니다. 기기는 20초 동안 네트워크를 검색합니다.
+연결에 성공하면 신호 아이콘이 유지됩니다.
 
-Pressing more than 10 seconds cancels the pairing.
+10초 이상 누르면 페어링이 취소됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

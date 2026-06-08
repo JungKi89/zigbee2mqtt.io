@@ -26,7 +26,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-The base HS3AQ model does not have Zigbee, the Zigbee versions of this device are HS3AQ-TY(ZTU) and HS3AQ-EFA
+기본 HS3AQ 모델에는 Zigbee가 없으며, 이 기기의 Zigbee 버전은 HS3AQ-TY(ZTU)와 HS3AQ-EFA입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

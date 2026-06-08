@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and back on within 2 seconds.
-3. Repeat off/on four more times.
-4. Reset is done when the device is switched on the fifth time and the light starts pulsing.
+### 페어링
+1. 기기의 전원을 켭니다.
+2. 2초 이내에 전원을 껐다가 다시 켭니다.
+3. 껐다 켜기를 4번 더 반복합니다.
+4. 다섯 번째로 전원을 켰을 때 조명이 맥동하기 시작하면 초기화가 완료된 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

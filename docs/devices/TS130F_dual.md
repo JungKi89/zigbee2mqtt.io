@@ -25,19 +25,19 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The output is only driven once the input signal is released, hence making this device difficult to work with non-momentary switches.
+출력 신호는 입력 신호가 해제된 후에만 구동되므로, 이 기기는 순간 접점 방식이 아닌 스위치와 함께 사용하기 어렵습니다.
 
-### Pairing
-Press on pair button for 10 seconds to enter pairing mode
+### 페어링
+페어링 버튼을 10초간 눌러 페어링 모드로 진입합니다.
 
-### Calibration
+### 캘리브레이션
 
-* Press the open button on the switch, wait until the curtains are completely open.
-* Press the same button on the switch again to 'stop'.
-* Put the device into calibration mode, see [below](#calibration-binary).
-* Press the close button on the switch, wait until curtains are fully closed.
-* Press the same button on the switch.
-* Disable the calibration mode, see [below](#calibration-binary).
+* 스위치의 열기 버튼을 눌러 커튼이 완전히 열릴 때까지 기다립니다.
+* 동일한 버튼을 다시 눌러 '정지'합니다.
+* 기기를 캘리브레이션 모드로 전환합니다. [아래](#calibration-binary)를 참고하세요.
+* 스위치의 닫기 버튼을 눌러 커튼이 완전히 닫힐 때까지 기다립니다.
+* 동일한 버튼을 누릅니다.
+* 캘리브레이션 모드를 비활성화합니다. [아래](#calibration-binary)를 참고하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

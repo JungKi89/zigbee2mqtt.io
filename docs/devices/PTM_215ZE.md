@@ -29,57 +29,57 @@ pageClass: device-page
 
 
 ### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.
-Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+이 기기는 Zigbee Green Power 기기로 매우 에너지 효율적입니다.
+Green Power 기기의 메시지는 일반 Zigbee 기기가 직접 “이해”할 수 없어 먼저 “변환”이 필요합니다.
+모든 Zigbee 기기가 이 변환을 지원하는 것은 아니며, 현재 이를 지원하는 기기는 Philips Hue 기기만 알려져 있습니다. 따라서 Green Power 기기는 Philips Hue 기기의 범위 내에 있어야 사용할 수 있습니다.
 
-Green Power devices don't support binding and are not included in network scans.
+Green Power 기기는 바인딩을 지원하지 않으며 네트워크 스캔에 포함되지 않습니다.
 
-### Pairing
-Before starting a pairing attempt, please carefully read this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+### 페어링
+페어링을 시작하기 전에 **[문서](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**의 해당 섹션을 주의 깊게 읽어보세요.
 
-The pairing may be done via NFC or the physical buttons. The use of NFC is highly recommended in order to ease the paring process and as the direct commisioning mode is disabled by default.
+페어링은 NFC 또는 물리적 버튼으로 할 수 있습니다. 기본적으로 직접 커미셔닝 모드가 비활성화되어 있어 페어링 과정을 쉽게 하려면 NFC 사용을 강력히 권장합니다.
 
 #### NFC
-The easiest way is to use a compatible smartphone (iOS, android) with NFC capability.
+가장 간단한 방법은 NFC 기능이 있는 호환 스마트폰(iOS, Android)을 사용하는 것입니다.
 
-The required tool “EnOcean Tool” is available from the [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en) and from the [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202).
+필요한 도구 “EnOcean Tool”은 [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en)와 [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202)에서 다운로드할 수 있습니다.
 
-For the first configuration, the QR-Code behind the PTM 215ZE shall be scanned in order to get the built-in NFC pin to unlock the device. Then, the user may define a specific one if required. More details are available in the documentation [EnOcean PTM 215ZE manual chapter 4 (NFC interface)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+첫 번째 설정 시 기기를 잠금 해제할 내장 NFC PIN을 얻기 위해 PTM 215ZE 뒷면의 QR 코드를 스캔합니다. 이후 필요한 경우 사용자가 특정 PIN을 지정할 수 있습니다. 자세한 내용은 문서 [EnOcean PTM 215ZE 매뉴얼 4장 (NFC 인터페이스)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf)를 참고하세요.
 
-#### Physical buttons
-This device has 4 buttons:
+#### 물리적 버튼
+이 기기에는 4개의 버튼이 있습니다:
 
-| Number | Button | Position | Zigbee Channel |
+| 번호 | 버튼 | 위치 | Zigbee 채널 |
 |-|-|-|-|
-| 1 | A0 | top left | 15 |
-| 2 | A1 | bottom left | 20 |
-| 3 | B0 | top right | 11 |
-| 4 | B1 | bottom right | 25 |
+| 1 | A0 | 왼쪽 상단 | 15 |
+| 2 | A1 | 왼쪽 하단 | 20 |
+| 3 | B0 | 오른쪽 상단 | 11 |
+| 4 | B1 | 오른쪽 하단 | 25 |
 
-In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+모듈이 단일 로커 스위치에 통합된 경우 모든 버튼을 노출하려면 캡을 제거해야 합니다. 버튼은 해당 버튼의 접점을 잡고 에너지 바를 밀면 누를 수 있습니다.
 
-To pair it, start by shortly (less than 7 seconds) pressing two different buttons one after another. Any button of the device (A0, A1, B0, B1) can be used.
+페어링을 시작하려면 두 개의 서로 다른 버튼을 차례로 짧게(7초 미만) 누릅니다. 기기의 아무 버튼(A0, A1, B0, B1)이나 사용할 수 있습니다.
 
-Next, read the table above and find the Zigbee channel your network runs at (if you don't know this, it's probably channel 11, as this is zigbee2mqtt's default). Select the button of the device (A0, A1, B0, or B1) that fits your desired channel and execute the following long-short-long sequence:
+다음으로 위 표를 참고하여 네트워크가 사용하는 Zigbee 채널을 찾습니다(모르는 경우 Zigbee2MQTT의 기본값인 채널 11일 가능성이 높습니다). 원하는 채널에 맞는 버튼(A0, A1, B0 또는 B1)을 선택하고 다음 길게-짧게-길게 순서를 실행합니다:
 
-1. Press and hold the selected button for more than 7 seconds before releasing it
-2. Press the selected button quickly (hold for less than 2 seconds)
-3. Press and hold the selected button again for more than 7 seconds before releasing it
+1. 선택한 버튼을 7초 이상 길게 누른 후 놓기
+2. 선택한 버튼을 빠르게 누르기(2초 미만)
+3. 선택한 버튼을 다시 7초 이상 길게 누른 후 놓기
 
-Then, press the selected button contact shortly (< 7s) to select radio channel 11. Continue pressing the selected button shortly (< 7s) to increment radio channel. If channel 26 has been reached, then channel 11 will be used next.
+그런 다음 선택한 버튼을 짧게(7초 미만) 눌러 라디오 채널 11을 선택합니다. 계속 짧게 눌러 라디오 채널을 증가시킵니다. 채널 26에 도달하면 다음에는 채널 11이 사용됩니다.
 
-Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
+기기가 페어링되면 채널을 확인해야 합니다. 이전에 사용한 버튼 이외의 다른 버튼을 누릅니다.
 
-For more information's, please refer to the [EnOcean PTM 215ZE manual chapter 3.6.2.1](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+자세한 내용은 [EnOcean PTM 215ZE 매뉴얼 3.6.2.1장](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf)을 참고하세요.
 
 ## Home Assistant
-In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
+Home Assistant 커뮤니티 포럼에서 이 기기와 잘 작동하는 자동화 블루프린트를 찾을 수 있습니다:
 
 @chris-1243
 https://community.home-assistant.io/t/zigbee2mqtt-ptm215z-ze-and-ptm216z/873595
 
-It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
+예를 들어 조명의 밝기를 높이거나 낮추는 데 유용한 `held_#` 같은 기능을 추가합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

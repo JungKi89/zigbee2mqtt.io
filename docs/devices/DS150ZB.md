@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing 
-Sqeeze the top of the sensor until you see a blue led flashing then release. After this the device will automatically join.
+### 페어링
+파란 LED가 깜빡일 때까지 센서 상단을 누른 후 놓으세요. 이후 기기가 자동으로 네트워크에 참여합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

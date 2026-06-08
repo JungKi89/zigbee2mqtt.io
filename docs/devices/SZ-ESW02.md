@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold while the LED has been illuminated (in 4 seconds). The sensor shall the wipe any knowledge of the previous network and other configuration parameters and begin searching for a new network (Auto Joining State).
+### 페어링
+기기를 분리한 상태(또는 소켓을 끈 상태)에서 페어링 버튼을 약 4초 동안 누르고 있습니다. 버튼을 누른 채로 기기를 연결하거나(소켓을 켜거나) LED가 켜지는 동안(약 4초) 계속 누르고 있습니다. 기기는 이전 네트워크 정보 및 기타 설정 매개변수를 초기화하고 새 네트워크 탐색을 시작합니다(자동 참가 상태).
 <!-- Notes END: Do not edit below this line -->
 
 

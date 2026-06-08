@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-Turn on the light (press the rotary knob briefly). Press the rotary knob twice briefly. Now hold down the rotary knob until the light starts flashing.
+## 페어링
+조명을 켭니다(회전 노브를 짧게 누릅니다). 회전 노브를 빠르게 두 번 누릅니다. 이제 조명이 깜박이기 시작할 때까지 회전 노브를 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

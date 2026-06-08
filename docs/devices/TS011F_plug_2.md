@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+### 페어링
+전원 켜기/끄기 버튼을 길게 누릅니다(5초). 버튼이 파란색으로 깜박여 페어링 모드임을 나타냅니다. 파란색 깜박임이 멈추면 페어링되어 LED가 빨간색으로 표시됩니다. LED가 파란색이면 디바이스가 페어링되지 않았거나 페어링에 실패한 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

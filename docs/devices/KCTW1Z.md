@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Pairing
-Press the button on top of the device for at least 5 seconds but not more than 10 seconds (which will cancel the network configuration). The signal strength icon will begin to flash an keep on doing so until it stays solid (network config successful) or disappears (networkconfig failed).
+## 페어링
+디바이스 상단의 버튼을 최소 5초 이상, 10초 이내로 누릅니다(10초 이상 누르면 네트워크 설정이 취소됩니다). 신호 강도 아이콘이 깜박이기 시작하여 점등 상태가 유지(네트워크 설정 성공)되거나 사라질(네트워크 설정 실패) 때까지 계속됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

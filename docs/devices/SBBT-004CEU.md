@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Related
+### 관련 기기
 - [SBBT-104CEU](./SBBT-104CEU.md) - Shelly BLU Wall Switch 4 ZB DK
 - [SBBT-104CUS](./SBBT-104CUS.md) - Shelly BLU RC Button 4 ZB
 - [SBBT-102C](./SBBT-102C.md) - Shelly BLU Button Tough 1 ZB
 
-### Information
+### 정보
 
-See all information on [Shelly API docs](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button22_ZB) (pairing, modes, bind actions, find&bind).
+[Shelly API 문서](https://shelly-api-docs.shelly.cloud/docs-ble/Devices/BLU_ZB/button22_ZB)에서 모든 정보를 확인하세요 (페어링, 모드, 바인드 액션, find&bind).
 <!-- Notes END: Do not edit below this line -->
 
 

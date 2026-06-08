@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press the button on the bottom of the sensor 10 times to reset.
-After this the device will automatically join.
+### 페어링
+센서 바닥의 버튼을 10번 눌러 초기화합니다.
+초기화 후 기기가 자동으로 네트워크에 참여합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

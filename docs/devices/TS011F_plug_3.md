@@ -27,30 +27,30 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Issues with device turning off
-It's been reported by several people that this plug randomly turns off. See [github issue](https://github.com/Koenkk/zigbee2mqtt/issues/11648).
+### 디바이스 꺼짐 문제
+이 플러그가 무작위로 꺼진다고 여러 사람이 보고했습니다. [GitHub 이슈](https://github.com/Koenkk/zigbee2mqtt/issues/11648)를 참조하세요.
 
-### Broken attribute reporting functionality
+### 속성 리포팅 기능 오류
 
-Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has disabled the automatic reporting of power, voltage and current values meaning they need to be polled instead. The poll interval can be controlled through the `measurement_poll_interval` option.
+2021년 4분기 이후에 생산된 플러그에 기본 탑재된 펌웨어 버전 1.0.5부터 이 플러그의 핵심 기능이 손상되었습니다. TuYa가 전력, 전압 및 전류 값의 자동 리포팅을 비활성화하여 대신 폴링이 필요합니다. 폴링 주기는 `measurement_poll_interval` 옵션으로 제어할 수 있습니다.
 
-If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.md) instead of `TS011F_plug_1`.
+플러그가 영향을 받는 경우, `TS011F_plug_1` 대신 [TS011F_plug_3](TS011F_plug_3.md)으로 감지됩니다.
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
-### Reset energy
+### 에너지 초기화
 
-To reset `Sum of consumed energy`, use the Dev console and execute:
+`소비 에너지 합계`를 초기화하려면 Dev 콘솔을 사용하여 다음을 실행합니다:
 `Endpoint`: `1`
 `Cluster`: `0x00` (`genBasic`)
 `Command`: `0` (`resetFactDefault`)
-`Payload`: (don't change this)
+`Payload`: (변경하지 마세요)
 
-Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
+다음에 플러그가 폴링될 때 `소비 에너지 합계`가 다시 0부터 시작됩니다.
 
-### Pairing
+### 페어링
 
-Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+전원 켜기/끄기 버튼을 길게 누릅니다(5초). 버튼이 파란색으로 깜박여 페어링 모드임을 나타냅니다. 파란색 깜박임이 멈추면 페어링되어 LED가 빨간색으로 표시됩니다. LED가 파란색이면 디바이스가 페어링되지 않았거나 페어링에 실패한 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

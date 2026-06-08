@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The smart wall outlet H2 reportedly supports Matter and Zigbee modes. But in contrast to other Aquara H2 products, which need to be switched from Matter to Zigbee mode for usage with Zigbee2MQTT, the wall outlet ships already in Zigbee mode and will start pairing on first power on. Pairing mode is indicated by a flashing blue indicator LED.
+### 페어링
+스마트 벽면 콘센트 H2는 Matter와 Zigbee 모드를 모두 지원한다고 알려져 있습니다. Zigbee2MQTT 사용을 위해 Matter에서 Zigbee 모드로 전환이 필요한 다른 Aqara H2 제품과 달리, 이 벽면 콘센트는 이미 Zigbee 모드로 출하되어 처음 전원을 켜면 자동으로 페어링을 시작합니다. 페어링 모드는 파란색 LED 깜빡임으로 확인할 수 있습니다.
 
-### Factory reset
-To restart the pairing procedure or pair the device with a different Zigbee network, the device can be reset to factory defaults by pressing and holding the button next to the outlet for at least 5 seconds. The device will indicate a successful factory reset with a flashing red indicator LED. Afterwards, the device should return to pairing mode as indicated by a blue flashing LED.
+### 공장 초기화
+페어링 절차를 재시작하거나 다른 Zigbee 네트워크에 기기를 페어링하려면, 콘센트 옆의 버튼을 최소 5초간 눌러 기기를 공장 기본값으로 초기화할 수 있습니다. 공장 초기화가 성공하면 빨간색 LED가 깜빡입니다. 이후 기기는 파란색 LED 깜빡임으로 표시되는 페어링 모드로 돌아갑니다.
 <!-- Notes END: Do not edit below this line -->
 
 

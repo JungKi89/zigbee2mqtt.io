@@ -25,14 +25,14 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 >> ## Notes
-### Description
-Adds support for ACW02 HVAC Thermostat - a custom DIY Zigbee device based on ESP32-C6.
+### 설명
+ACW02 HVAC 온도 조절기에 대한 지원을 추가합니다 - ESP32-C6 기반의 커스텀 DIY Zigbee 기기입니다.
 
-ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series and compatible units (to replace ACW02 WiFi module).
+ACW02-ZB는 Airton 시리즈 및 호환 기기(ACW02 WiFi 모듈 대체)를 위한 오픈소스 Zigbee 지원 HVAC 컨트롤러입니다.
 
-👉 [View the repository on GitHub](https://github.com/Fabiancrg/acw02_zb)
+👉 [GitHub에서 저장소 보기](https://github.com/Fabiancrg/acw02_zb)
 
-### Device Details
+### 기기 세부 정보
 - **Model:** ACW02-ZB
 - **Vendor:** Custom devices (DiY)
 - **Zigbee Model ID:** acw02-z
@@ -40,44 +40,44 @@ ACW02-ZB is an open-source Zigbee-enabled HVAC controller for the Airton series 
 - **Device Type:** Router
 - **Chip:** ESP32-C6 with ESP-Zigbee SDK 5.5.1
 
-### Features
-- **Climate Control:**
-  - Temperature setpoint: 16-31°C (single setpoint for both heating/cooling)
-  - Local temperature reading
-  - System modes: off, auto, cool, heat, dry, fan_only
-  - Running state: idle, heat, cool, fan_only
+### 기능
+- **온도 조절:**
+  - 온도 설정점: 16-31°C (냉난방 모두 단일 설정점)
+  - 로컬 온도 읽기
+  - 시스템 모드: off, auto, cool, heat, dry, fan_only
+  - 작동 상태: idle, heat, cool, fan_only
 
-- **Fan Control:**
-  - Custom fan speeds: quiet, low, low-med, medium, med-high, high, auto
-  - Maps to ACW02 protocol values (SILENT, P20, P40, P60, P80, P100, AUTO)
+- **팬 제어:**
+  - 커스텀 팬 속도: quiet, low, low-med, medium, med-high, high, auto
+  - ACW02 프로토콜 값에 매핑 (SILENT, P20, P40, P60, P80, P100, AUTO)
 
-- **Switches (9 endpoints total):**
-  - Eco mode (endpoint 2)
-  - Swing mode (endpoint 3)
-  - Display control (endpoint 4)
-  - Night/sleep mode (endpoint 5)
-  - Air purifier/ionizer (endpoint 6)
-  - Mute beep sounds (endpoint 8)
+- **스위치 (총 9개 엔드포인트):**
+  - 절전 모드 (엔드포인트 2)
+  - 스윙 모드 (엔드포인트 3)
+  - 디스플레이 제어 (엔드포인트 4)
+  - 야간/수면 모드 (엔드포인트 5)
+  - 공기 청정기/이오나이저 (엔드포인트 6)
+  - 비프음 음소거 (엔드포인트 8)
 
-- **Read-only Sensors:**
-  - Filter cleaning status (endpoint 7)
-  - Error status indicator (endpoint 9)
-  - Error text messages (via locationDesc attribute)
+- **읽기 전용 센서:**
+  - 필터 청소 상태 (엔드포인트 7)
+  - 오류 상태 표시기 (엔드포인트 9)
+  - 오류 메시지 (locationDesc 속성을 통해)
 
-- **Additional:**
-  - OTA firmware updates supported
-  - Optimized reporting (most attributes auto-report via REPORTING flag)
-  - Minimal polling for unreportable attributes (runningMode, fanMode, error_text)
+- **추가 기능:**
+  - OTA 펌웨어 업데이트 지원
+  - 최적화된 보고 (대부분의 속성이 REPORTING 플래그를 통해 자동 보고)
+  - 보고 불가능한 속성에 대한 최소 폴링 (runningMode, fanMode, error_text)
 
 
-### Device Pairing
-1. Power on the device
-2. It will automatically enter pairing mode (factory new)
-3. Permit joining in Zigbee2MQTT
-4. To force pairing, hold the boot button for more than 5 seconds.
+### 기기 페어링
+1. 기기 전원을 켭니다
+2. 기기는 자동으로 페어링 모드로 진입합니다 (공장 신품)
+3. Zigbee2MQTT에서 참여 허용을 활성화합니다
+4. 페어링을 강제하려면 부트 버튼을 5초 이상 누르세요.
 
-### Configuration Options
-- `acw02_poll_interval`: Polling interval for unreportable attributes (default: 60s, set to -1 to disable)
+### 설정 옵션
+- `acw02_poll_interval`: 보고 불가능한 속성의 폴링 간격 (기본값: 60초, -1로 설정하면 비활성화)
 >>
 <!-- Notes END: Do not edit below this line -->
 

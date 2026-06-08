@@ -26,7 +26,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-In order to pair this device, go to the "off" mode by using the button. When in "off" mode, press and hold the button for 3 seconds. The pairing icon should blink.
+이 디바이스를 페어링하려면 버튼을 사용하여 "off" 모드로 이동합니다. "off" 모드에서 버튼을 3초간 길게 누릅니다. 페어링 아이콘이 깜박여야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

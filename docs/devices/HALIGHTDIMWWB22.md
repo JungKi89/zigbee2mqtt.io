@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Follow instructions from
-[How do I reset my Hive Active Light?](https://www.hivehome.com/ca/support/Help_installing_Hive/HIH_Hive_Active_Light/How-do-I-reset-my-Hive-Active-Light). After resetting the bulb will automatically connect.
+### 페어링
+다음 안내를 따르세요:
+[How do I reset my Hive Active Light?](https://www.hivehome.com/ca/support/Help_installing_Hive/HIH_Hive_Active_Light/How-do-I-reset-my-Hive-Active-Light). 초기화 후 전구가 자동으로 연결됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

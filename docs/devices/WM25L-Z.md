@@ -27,19 +27,19 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the button on the motor head for 6 seconds until the motor feedback twice then release the button. The red led light on indicate to enter the pairing mode.
+### 페어링
+모터 헤드의 버튼을 6초간 길게 눌러 모터가 두 번 피드백할 때까지 누른 후 버튼을 놓습니다. 빨간 LED가 켜지면 페어링 모드에 진입한 것입니다.
 
-### End Position
-The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
-To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
+### 끝 위치 설정
+롤러 블라인드 최대 확장 길이는 블라인드를 원하는 위치로 이동한 후 위 또는 아래 버튼을 두 번 눌러 설정할 수 있습니다.
+끝 위치를 재설정하여 더 확장된 새 끝 위치를 정의하려면 블라인드를 완전히 여세요. 그런 다음 위 또는 아래 버튼을 두 번 누릅니다. 이제 블라인드 확장 길이를 다시 설정할 수 있습니다.
 
-### Open/Close Behavior
-If the unit is shipped with the open and close actions swapped (where OPEN causes the shade to lengthen instead of shorten?), it can be reversed with the included remote. To reverse the open/close behavior:
+### 열기/닫기 동작
+기기가 열기와 닫기 동작이 바뀐 상태로 배송된 경우 (OPEN이 차양을 짧게 하는 대신 길게 만드는 경우), 포함된 리모컨으로 동작을 바꿀 수 있습니다. 열기/닫기 동작을 반전시키려면:
 
-1. open the back of the remote and press the P (program buttom) once - the motor will activate once briefly
-2. press and hold the UP and DOWN arrow buttons on the remote briefly until you hear the motor activate once briefly
-3. the open/close behavior should now be reversed
+1. 리모컨 뒷면을 열고 P (프로그램 버튼)를 한 번 누릅니다 - 모터가 잠깐 한 번 작동합니다.
+2. 리모컨의 위 및 아래 화살표 버튼을 모터가 잠깐 한 번 작동할 때까지 짧게 길게 누릅니다.
+3. 이제 열기/닫기 동작이 반전됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

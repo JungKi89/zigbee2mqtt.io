@@ -27,16 +27,16 @@ pageClass: device-page
 ## Notes
 
 
-### Issues
-- It's been reported that this plug automatically turns off by itself if it looses the connection to the coordinator (e.g.: weak signal). So, a loop task that sends a turn on command would be a possible workaround.
+### 알려진 문제
+- 이 플러그는 코디네이터와의 연결이 끊어지면(예: 약한 신호) 스스로 자동으로 꺼진다는 보고가 있습니다. 켜기 명령을 반복적으로 전송하는 루프 작업이 가능한 해결책이 될 수 있습니다.
 
-### Pairing
-Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
+### 페어링
+파란색 불이 깜박이기 시작할 때까지 기기의 버튼을 길게 누른 후 놓으면 기기가 자동으로 참가합니다.
 
-### Power outage memory
-This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
-Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+### 정전 후 상태 기억
+이 옵션을 사용하면 기기가 전원에 재연결될 때 마지막 켜기/끄기 상태를 복원합니다.
+이 옵션을 설정하려면 `zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"power_outage_memory": true}` (또는 `false`)를 게시합니다.
+그런 다음 플러그/스위치의 버튼으로 한 번 토글하면, 이후부터 전원 재연결 시 상태를 복원합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

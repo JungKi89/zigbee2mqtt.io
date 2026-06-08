@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pin code usage
-To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get`) with the body `{"pin_code":{"user":1}}`. To set, sent a `set` message to the device topic (`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set`) with the body `{"pin_code":{"user":1,"pin_code":1234}}`. To clear a code, call `set` but omit the value for `pin_code`.
+### PIN 코드 사용법
+상태를 조회하려면 기기 토픽(`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get`)에 본문 `{"pin_code":{"user":1}}`로 `get` 메시지를 전송하세요. 설정하려면 기기 토픽(`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set`)에 본문 `{"pin_code":{"user":1,"pin_code":1234}}`로 `set` 메시지를 전송하세요. 코드를 지우려면 `set`을 호출하되 `pin_code` 값을 생략하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

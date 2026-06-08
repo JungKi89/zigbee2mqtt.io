@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Warning
-It is [reported](https://github.com/zigpy/zigpy/discussions/736#discussioncomment-730883) that this device does not relay messages of non TuYa devices, **this can break your network!**
+### 경고
+이 디바이스는 TuYa 디바이스가 아닌 디바이스의 메시지를 중계하지 않는다고 [보고](https://github.com/zigpy/zigpy/discussions/736#discussioncomment-730883)되었습니다. **이로 인해 네트워크가 손상될 수 있습니다!**
 
-### Pairing
+### 페어링
 
-The range extender is in pairing mode straight out of the box - allow new devices and the device will join the network. To re-pair the device, unplug and re-plug the device three times, the LED light will blink constantly when ready for pairing.
+범위 확장기는 박스에서 꺼내자마자 페어링 모드로 되어 있습니다 - 새 디바이스를 허용하면 디바이스가 네트워크에 참가합니다. 디바이스를 재페어링하려면 플러그를 세 번 뽑았다가 꽂으면 페어링 준비가 되면 LED가 계속 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

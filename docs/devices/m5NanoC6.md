@@ -24,7 +24,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-See https://github.com/cameronnewell/m5NanoC6_Zigbee_light for instructions how to build this device.
+이 기기 제작 방법은 https://github.com/cameronnewell/m5NanoC6_Zigbee_light 를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

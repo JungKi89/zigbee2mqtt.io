@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-1. With a paper clip, press one time on the R button on the back of the remote control
-2. Press the STOP button
+1. 클립을 사용하여 리모컨 뒷면의 R 버튼을 한 번 누릅니다.
+2. STOP 버튼을 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

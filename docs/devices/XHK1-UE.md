@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing Mode Steps
-Prepare Keypad: Remove the cover and batteries.
-Initiate Pairing: 
-- While pressing and holding the Tamper/Pairing button (small button inside), insert the batteries.
-- Release Button: Keep holding the button for a second after inserting batteries, then release it.
-- Confirm Mode: Look for a flashing green LED below the Tamper/Pairing button, which indicates it is ready to pair.
+### 페어링 모드 단계
+키패드 준비: 커버와 배터리를 제거합니다.
+페어링 시작:
+- 탬퍼/페어링 버튼(내부의 작은 버튼)을 누른 채 배터리를 삽입합니다.
+- 버튼 놓기: 배터리 삽입 후 1초 동안 계속 누르고 있다가 놓습니다.
+- 모드 확인: 탬퍼/페어링 버튼 아래에 녹색 LED가 깜박이면 페어링 준비 상태입니다.
 
-The keypad can be difficult to pair and may require several attempts.
+키패드는 페어링이 어려울 수 있으며 여러 번 시도해야 할 수 있습니다.
 
-### Arming/Disarming from the server
-To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
+### 서버에서 경비 설정/해제
+경비 모드를 설정하려면 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽에 다음 페이로드를 게시합니다:
 
 ```js
 {
@@ -45,34 +45,34 @@ To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/s
     }
 }
 ```
-Valid `mode` values as per ZCL specifications are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`, `not_ready`, `in_alarm`, `arming_stay`, `arming_night`, `arming_away`.
-### Arming/Disarming from the keypad
-When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/FRIENDLY_NAME`:
+ZCL 사양에 따른 유효한 `mode` 값은 `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`, `not_ready`, `in_alarm`, `arming_stay`, `arming_night`, `arming_away`입니다.
+### 키패드에서 경비 설정/해제
+키패드에서 경비 모드 설정을 시도하면 Zigbee2MQTT가 `zigbee2mqtt/FRIENDLY_NAME` 토픽에 다음 페이로드를 게시합니다:
 
 ```js
 {
-    "action": "arm_all_zones", // This is the example
-    "action_code": "123", // The code being entered
-    "action_zone": 0, // The zone being armed (always 0)
-    "action_transaction": 99 // The transaction number
+    "action": "arm_all_zones", // 예시
+    "action_code": "123", // 입력된 코드
+    "action_zone": 0, // 경비 설정되는 구역 (항상 0)
+    "action_transaction": 99 // 트랜잭션 번호
 }
 ```
 
-The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+자동화 서버는 요청을 검증하고 키패드에 승인 또는 거부 알림을 전송해야 합니다.
 
-Do so by sending the following payload to `zigbee2mqtt/FRIENDLY_NAME/set`:
+`zigbee2mqtt/FRIENDLY_NAME/set`에 다음 페이로드를 전송합니다:
 
 ```js
 {
     "arm_mode": {
-        "transaction": 99, // Transaction number (this must be the same as the keypad request `action_transaction`)
-        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request `action`)
+        "transaction": 99, // 트랜잭션 번호 (키패드 요청의 `action_transaction`과 동일해야 함)
+        "mode": "arm_all_zones" // 모드 (키패드 요청의 `action`과 동일해야 함)
     }
 }
 ```
-Valid `mode` values are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`
+유효한 `mode` 값은 `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`입니다.
 
-The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
+자동화 서버는 알림 이후 올바른 경비 모드로 실제 변경을 수행해야 합니다. 위 예시의 경우 서버는 `exit_delay`로 응답하고 경과 시간(예: 30초)을 계산한 후 다시 `arm_all_zones`으로 모드를 변경해야 합니다 (위의 "서버에서 경비 설정/해제" 섹션 참조).
 <!-- Notes END: Do not edit below this line -->
 
 

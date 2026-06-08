@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press the reset button on the side for about 5 seconds until the green led starts blinking. Release the button and it should pair - on successful pairing the LED will light up solid green for a few seconds and then turn off.
+### 페어링
+녹색 LED가 깜박이기 시작할 때까지 측면의 리셋 버튼을 약 5초간 누릅니다. 버튼을 놓으면 페어링됩니다 - 페어링에 성공하면 LED가 몇 초간 녹색으로 고정되었다가 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

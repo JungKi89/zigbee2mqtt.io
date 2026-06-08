@@ -25,14 +25,14 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Warning: Zigbee firmware flashing required
-This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator ring shows the wireless standard: blue flashing means Thread/Matter pairing, while Zigbee pairing is shown by a purple flashing indicator ring.
+### 주의: Zigbee 펌웨어 플래싱 필요
+이 디바이스는 Thread/Matter 펌웨어가 탑재된 상태로 출하됩니다. Zigbee 펌웨어를 플래싱하려면 스마트폰, Aqara Home 앱 및 Aqara 계정이 필요합니다. 표시 링의 색상이 무선 표준을 나타냅니다: 파란색 깜박임은 Thread/Matter 페어링을, 보라색 깜박임은 Zigbee 페어링을 나타냅니다.
 
-### Resetting:
-A double-click on the dimmer knob immediately followed by a 5-second long-press will reset the device and put it back into pairing mode. Make sure the gap between the double click and the long press does not exceed 3 seconds. The indicator light will flash blue when the reset was successful.
+### 초기화
+디머 노브를 더블 클릭한 후 즉시 5초간 길게 누르면 디바이스가 초기화되고 페어링 모드로 돌아갑니다. 더블 클릭과 길게 누르기 사이의 간격이 3초를 초과하지 않도록 하세요. 초기화 성공 시 표시등이 파란색으로 깜박입니다.
 
-### Network connection lost
-When the indicator ring flashes red, the device indicates a loss of network connection. Ensure the coordinator is up and running, and signal range to the coordinator or the next Zigbee router is good enough.
+### 네트워크 연결 끊김
+표시 링이 빨간색으로 깜박이면 디바이스가 네트워크 연결 손실을 나타냅니다. 코디네이터가 실행 중인지 확인하고, 코디네이터 또는 다음 Zigbee 라우터까지의 신호 범위가 충분한지 확인하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Limitations
-This device has various limitations:
-- Changing brightness is not supported
-- On/off and color transition is not supported
-- Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
+### 제한 사항
+이 기기에는 다음과 같은 제한이 있습니다:
+- 밝기 변경이 지원되지 않습니다.
+- 켜기/끄기 및 색상 전환(transition)이 지원되지 않습니다.
+- 색상은 색조/채도를 통해서만 설정할 수 있습니다. 예시 페이로드: `{"color":{"h": 360, "s": 100}}`.
 <!-- Notes END: Do not edit below this line -->
 
 

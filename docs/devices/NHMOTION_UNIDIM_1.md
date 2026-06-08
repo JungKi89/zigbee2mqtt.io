@@ -27,14 +27,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Short press (less than 0.5 seconds) the dimmer button 3 times to set it in pairing mode.
-The status LED will start blinking amber. The status LED will change to green when it is paired.
+디머 버튼을 3번 짧게 (0.5초 미만) 눌러 페어링 모드로 진입합니다.
+상태 LED가 황색으로 깜박이기 시작하며, 페어링이 완료되면 녹색으로 변경됩니다.
 
-### Reset to factory settings
+### 공장 초기화
 
-Short press (less than 0.5 seconds) the dimmer button 3 times, then press the dimmer button for more than 10 seconds.
+디머 버튼을 3번 짧게 (0.5초 미만) 누른 후, 디머 버튼을 10초 이상 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

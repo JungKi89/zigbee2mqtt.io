@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair this device you have to install the device via its installation code which you can get by scanning the QR-code sticker on the physical device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+### 페어링
+이 기기를 페어링하려면 스마트폰으로 기기의 QR 코드 스티커를 스캔하여 얻은 설치 코드를 통해 기기를 설치해야 합니다. 그런 다음 기기를 페어링 모드로 설정하세요. zigbee2mqtt에서 "Settings" --> "Tools"로 이동하여 "Add install code"를 클릭하세요. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 후, 참여 허용이 활성화되어 있는지 확인하세요. 기기가 연결될 때까지 기다리세요.
 
 
-### Factory resetting
-To factory reset the device unplug it from the mains. While pressing and holding the device's main button on the top, plug it in again. As soon as the device's LED is starting to blink orange, release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
+### 초기화
+기기를 초기화하려면 전원을 콘센트에서 뽑으세요. 상단의 메인 버튼을 누른 채로 다시 꽂으세요. LED가 주황색으로 깜빡이기 시작하면 메인 버튼을 놓고 LED가 녹색으로 켜질 때까지 다시 길게 누르세요. 그러면 기기가 재시작되고 접속할 Zigbee 네트워크를 검색합니다. 문제가 발생한 경우 기기 LED가 빨간색으로 깜빡이기 시작합니다. 처음부터 다시 시작해야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

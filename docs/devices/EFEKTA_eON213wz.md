@@ -28,8 +28,8 @@ pageClass: device-page
 [Mini weather station, digital barometer, forecast, charts, temperature, humidity](http://efektalab.com/eON213wz)
 
 
-### Build guide
-Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/EFEKTA_eON213wz)
+### 제작 가이드
+이 기기를 제작하는 방법에 대한 설명은 [여기](https://github.com/smartboxchannel/EFEKTA_eON213wz)에서 확인할 수 있습니다
 <!-- Notes END: Do not edit below this line -->
 
 

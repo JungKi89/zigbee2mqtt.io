@@ -26,40 +26,40 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Put the device in pairing mode by pressing and holding the button on the device for 5 seconds until the LED indicator flashes rapidly.
+### 페어링
+기기의 버튼을 5초간 누르고 있으면 LED 표시등이 빠르게 깜박이면서 페어링 모드로 진입합니다.
 
-### Reset
-To reset the device, press and hold the button for 10 seconds until the LED indicator flashes 3 times.
+### 초기화
+기기를 초기화하려면 버튼을 10초간 누르고 있으면 LED 표시등이 3번 깜박입니다.
 
-### Installation
-- Turn off power at the circuit breaker before installation
-- Remove existing switch and connect wires according to the wiring diagram
-- Ensure proper grounding
-- Maximum load per channel: 10A resistive, 6A inductive
+### 설치
+- 설치 전에 차단기에서 전원을 차단합니다
+- 기존 스위치를 제거하고 배선도에 따라 전선을 연결합니다
+- 적절한 접지를 확인합니다
+- 채널당 최대 부하: 저항성 10A, 유도성 6A
 
-### Multi-Endpoint Control
-This device supports 2 independent switches:
-- **Switch 1**: Controls first electrical load
-- **Switch 2**: Controls second electrical load
-- Each switch can be controlled independently via MQTT
+### 다중 엔드포인트 제어
+이 기기는 2개의 독립 스위치를 지원합니다:
+- **스위치 1**: 첫 번째 전기 부하를 제어합니다
+- **스위치 2**: 두 번째 전기 부하를 제어합니다
+- 각 스위치는 MQTT를 통해 독립적으로 제어할 수 있습니다
 
-### LED Indicator Features
-- **ledIndicatorColorOn**: Set LED color when switch is ON (hex format: #RRGGBB)
-- **ledIndicatorColorOff**: Set LED color when switch is OFF (hex format: #RRGGBB)
-- **morningLedIntensity**: LED intensity for morning period (0-100%)
-- **eveningLedIntensity**: LED intensity for evening period (0-100%)
-- **nightLedIntensity**: LED intensity for night period (0-100%)
-- **ledBrightnessLevels**: Configure low/medium/high brightness levels
+### LED 표시등 기능
+- **ledIndicatorColorOn**: 스위치가 ON일 때 LED 색상 설정 (16진수 형식: #RRGGBB)
+- **ledIndicatorColorOff**: 스위치가 OFF일 때 LED 색상 설정 (16진수 형식: #RRGGBB)
+- **morningLedIntensity**: 아침 시간대 LED 밝기 (0~100%)
+- **eveningLedIntensity**: 저녁 시간대 LED 밝기 (0~100%)
+- **nightLedIntensity**: 야간 시간대 LED 밝기 (0~100%)
+- **ledBrightnessLevels**: 낮음/중간/높음 밝기 수준 설정
 
-### Vibration Feedback
-- **vibrationIntensity**: Button vibration intensity (0-100%)
-- Provides tactile feedback when button is pressed
+### 진동 피드백
+- **vibrationIntensity**: 버튼 진동 강도 (0~100%)
+- 버튼을 누를 때 촉각 피드백을 제공합니다
 
-### Time Period Settings
-- **timePeriods**: Configure morning, evening, and night periods
-- Morning must start before evening, evening must start before night
-- LED behavior changes based on time periods
+### 시간대 설정
+- **timePeriods**: 아침, 저녁, 야간 시간대 설정
+- 아침은 저녁 이전에, 저녁은 야간 이전에 시작해야 합니다
+- LED 동작이 시간대에 따라 변경됩니다
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,56 +26,56 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Device Overview
-Smart scene knob controller with 4 physical buttons and rotation knob. Each button can be configured to one of three modes:
+### 기기 개요
+4개의 물리적 버튼과 회전 노브가 있는 스마트 장면 노브 컨트롤러입니다. 각 버튼은 세 가지 모드 중 하나로 설정할 수 있습니다:
 
-| Mode | LED Color | Function |
+| 모드 | LED 색상 | 기능 |
 |------|-----------|----------|
-| Scene | Red | Triggers scene actions (DP 1-4) |
-| Light | Green | Controls brightness & color temperature |
-| Curtain | Blue | Controls curtain position |
+| Scene | 빨간색 | 장면 동작 실행 (DP 1-4) |
+| Light | 초록색 | 밝기 및 색온도 제어 |
+| Curtain | 파란색 | 커튼 위치 제어 |
 
-### Mode Switching
-Hold button 2 (left) or 4 (right) for 3 seconds to cycle through bound modes. Only modes that have been bound are available.
+### 모드 전환
+버튼 2(왼쪽) 또는 4(오른쪽)를 3초 동안 눌러 바인딩된 모드를 순환합니다. 바인딩된 모드만 사용 가능합니다.
 
-### Initial Setup (Light/Curtain Mode)
-Light and Curtain modes use Group ID broadcasting which must be detected on first use:
+### 초기 설정 (Light/Curtain 모드)
+Light 및 Curtain 모드는 처음 사용 시 감지되어야 하는 그룹 ID 브로드캐스팅을 사용합니다:
 
-1. Click `bind_all_light` or `bind_all_curtain` in the device settings
-2. Status changes to `waiting_button_1`
-3. Press **button 1** on the physical device
-4. Base Group ID is auto-detected, status changes to `ready`
+1. 기기 설정에서 `bind_all_light` 또는 `bind_all_curtain`을 클릭합니다.
+2. 상태가 `waiting_button_1`로 변경됩니다.
+3. 실제 기기에서 **버튼 1**을 누릅니다.
+4. 기본 그룹 ID가 자동 감지되고 상태가 `ready`로 변경됩니다.
 
-To reassign, use `assign_button_1` or manually set via `set_base_group_id`.
+재할당하려면 `assign_button_1`을 사용하거나 `set_base_group_id`로 수동 설정합니다.
 
-### Group ID Pattern
-Group IDs follow the pattern: `base + (button - 1) × 20`
+### 그룹 ID 패턴
+그룹 ID는 다음 패턴을 따릅니다: `기본값 + (버튼 - 1) × 20`
 
-| Button | Offset | Example (base=11220) |
+| 버튼 | 오프셋 | 예시 (기본값=11220) |
 |--------|--------|----------------------|
 | 1 | +0 | 11220 |
 | 2 | +20 | 11240 |
 | 3 | +40 | 11260 |
 | 4 | +60 | 11280 |
 
-### Actions
+### 동작
 
-**Scene mode:**
-- Single press: `scene_1` / `scene_2` / `scene_3` / `scene_4`
+**Scene 모드:**
+- 단일 누름: `scene_1` / `scene_2` / `scene_3` / `scene_4`
 
-**Light mode:**
-- Single press: `light_X_on` / `light_X_off`
-- Knob rotation: `light_X_brightness_up` / `light_X_brightness_down`
-- Double press (LED blinks) + knob rotation: `light_X_colortemp_up` / `light_X_colortemp_down`
+**Light 모드:**
+- 단일 누름: `light_X_on` / `light_X_off`
+- 노브 회전: `light_X_brightness_up` / `light_X_brightness_down`
+- 더블 프레스 (LED 깜박임) + 노브 회전: `light_X_colortemp_up` / `light_X_colortemp_down`
 
-**Curtain mode:**
-- Single press: `curtain_X_start` / `curtain_X_stop`
-- Knob rotation: `curtain_X_position_open` / `curtain_X_position_close`
+**Curtain 모드:**
+- 단일 누름: `curtain_X_start` / `curtain_X_stop`
+- 노브 회전: `curtain_X_position_open` / `curtain_X_position_close`
 
-### Known Limitations
-- Battery status is not exposed (not available even in Tuya app)
-- In Light/Curtain mode, you must press a button first before rotating the knob to select which button/device to control. This means a button press action is always sent before knob rotation, which may trigger unintended commands.
-- In Light mode, knob rotation (brightness/color temp) only works after `light_X_on`. The knob does not function when the light is off.
+### 알려진 제한 사항
+- 배터리 상태는 노출되지 않습니다 (Tuya 앱에서도 사용 불가).
+- Light/Curtain 모드에서는 노브를 돌리기 전에 먼저 버튼을 눌러 제어할 버튼/기기를 선택해야 합니다. 즉, 노브 회전 전에 항상 버튼 누름 동작이 전송되어 의도치 않은 명령이 실행될 수 있습니다.
+- Light 모드에서 노브 회전(밝기/색온도)은 `light_X_on` 이후에만 작동합니다. 조명이 꺼진 상태에서는 노브가 작동하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

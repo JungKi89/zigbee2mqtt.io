@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Press button for 5 seconds.
+버튼을 5초간 누릅니다.
 
-### Battery
-If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFTER device is fully paired usually resolves the issue.
+### 배터리
+Zigbee2MQTT에서 배터리 값이 표시되지 않는 경우, 기기가 완전히 페어링된 후 리셋 버튼을 짧게 누르면 보통 문제가 해결됩니다.
 
-As well, these devices may not report low batteries and start to report incorrect values. Try replacing the batteries before using the calibration options.
+또한, 이 기기들은 배터리 부족을 보고하지 않고 잘못된 값을 보고하기 시작할 수 있습니다. 캘리브레이션 옵션을 사용하기 전에 배터리 교체를 시도해 보세요.
 <!-- Notes END: Do not edit below this line -->
 
 

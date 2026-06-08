@@ -24,9 +24,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Pairing
-The remote will automatically start pairing first time you connect battery.
-To manually reset/pair, press together the `disarm` (bottom-left) and `arm_day_zones` (top-right) for 3 seconds, release when the LED starts to blink.
+### 페어링
+리모컨은 배터리를 처음 연결할 때 자동으로 페어링을 시작합니다.
+수동으로 초기화/페어링하려면 `disarm` (왼쪽 하단)과 `arm_day_zones` (오른쪽 상단) 버튼을 3초간 동시에 누르고 LED가 깜박이기 시작하면 놓습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

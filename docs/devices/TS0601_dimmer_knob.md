@@ -27,11 +27,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Min/max brightness
-Only 'min_brightness', but not 'max_brightness' is provided.
+### 최소/최대 밝기
+'min_brightness'만 제공되며 'max_brightness'는 제공되지 않습니다.
 
-### Pairing
-To pair the device, the knob must be pressed for 5 sec. Sometimes, the pairing mode works only, if the light is on. Additionally, it seems the device can only be paired directly to the coordinator, but not to routers.
+### 페어링
+기기를 페어링하려면 노브를 5초 동안 눌러야 합니다. 경우에 따라 조명이 켜진 상태에서만 페어링 모드가 작동합니다. 또한 이 기기는 라우터가 아닌 코디네이터에 직접 페어링해야 하는 것으로 보입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

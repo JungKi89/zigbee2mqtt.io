@@ -27,34 +27,32 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses a CR2450 battery
+### 배터리
+CR2450 배터리를 사용합니다.
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+### 페어링
+기기의 리셋 버튼을 약 5초 동안 길게 누릅니다(파란 불빛이 깜박이기 시작할 때까지).
+이후 기기가 자동으로 연결됩니다. 작동하지 않으면 버튼을 짧게 한 번 눌러보세요.
 
 
-### Troubleshooting: device stops sending messages/disconnects from network
-Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
-Most of the times this happens because of the following reasons:
-- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
-- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
+### 문제 해결: 기기가 메시지 전송을 멈추거나 네트워크에서 연결이 끊어지는 경우
+Xiaomi 기기는 Zigbee 표준을 완전히 준수하지 않아, 간혹 네트워크에서 연결이 끊어지는 경우가 있습니다.
+대부분의 경우 다음과 같은 이유로 발생합니다:
+- 신호가 약한 경우 - 게시 메시지의 `linkquality`에서 신호 품질을 확인할 수 있습니다. linkquality < 20은 약한 신호로 간주됩니다.
+- 배터리 전압이 낮은 경우 - 배터리가 아직 충분해 보여도 발생할 수 있습니다. 다른 배터리를 시도해 보세요.
+- Xiaomi 기기와 호환되지 않는 라우터를 통해 연결된 경우 - Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi 기기에서 이런 문제가 알려져 있습니다. 리셋 버튼을 누르며 중앙 코디네이터 가까이 이동하여 직접 연결하면 해결될 수 있습니다.
 
-More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+더 자세한 내용은 [여기](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)에서 확인할 수 있습니다.
 
-### Note about `occupancy_timeout` option
-`occupancy_timeout` should not be set to lower than 60 seconds.
-The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this 60 seconds, a new message
-(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
-Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep
-to determine continued occupancy.
-This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
-To work around this, a
-[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
-is needed.
+### `occupancy_timeout` 옵션에 대한 참고
+`occupancy_timeout`은 60초 미만으로 설정하지 않는 것을 권장합니다.
+이유는 다음과 같습니다: 모션을 감지한 후 센서는 정확히 60초 동안 모든 움직임을 무시합니다. 이 60초 이후에 움직임이 있으면 새 메시지
+(`occupancy: true`)가 전송되고 센서는 다시 1분 동안 대기합니다.
+따라서 `occupancy: true` 상태를 유지하려면 이 60초 대기 후 지속적인 재실 여부를 판단할 적절한 시간이 필요합니다.
+이것은 예상된 동작입니다([#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973) 참고).
+이를 해결하려면
+[하드웨어 수정](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)이
+필요합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

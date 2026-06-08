@@ -28,45 +28,34 @@ pageClass: device-page
 
 
 ### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.
-Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+이 기기는 Zigbee Green Power 기기로 매우 에너지 효율적입니다.
+Green Power 기기의 메시지는 일반 Zigbee 기기에서 “이해”할 수 없으므로 먼저 “변환”이 필요합니다.
+모든 Zigbee 기기가 이 변환을 수행할 수 있는 것은 아니며, 현재 이를 수행할 수 있는 유일한 기기는 Philips Hue 기기입니다. 따라서 Green Power 기기는 사용하려면 Philips Hue 기기의 통신 범위 안에 있어야 합니다.
 
-Green Power devices don't support binding and are not included in network scans.
+Green Power 기기는 바인딩을 지원하지 않으며 네트워크 스캔에 포함되지 않습니다.
 
-### Pairing
-This device requires your Zigbee network to run on channel 11-26.
+### 페어링
+이 기기는 Zigbee 네트워크가 채널 11-26에서 실행되어야 합니다.
 
-Pairing GP Switch to a Compatible Zigbee Light Device:
-Step 1: activate learning to GP switch mode of the compatible light device (generally our light devices will enter the
-mode by short pressing “prog.” or “reset” button 4 times, or by resetting power 4 times), please refer to the manual of
-corresponding light device.
-Step 2: put the GP switch into learning mode.
-To enter into learning mode, start by selecting one button on the switch. (Use the same button for the entire sequence,
-pressing any other button will exit the learning mode.)
-Next, execute the following sequence:
-1. Press and hold the selected button for over 7 seconds, and then release it.
-2. Short press the button once, and then release it.
-3. Press and hold the button again for over 7 seconds, and then release it
-The switch has now entered learning mode.
-Wait for approximate 1 second to check whether there is indication on the light device for successful pairing, generally
-our light device will blink twice to indicate successful pairing.
-Exit learning mode on the switch by pressing any other button on the switch after pairing successfully. Just
-ignore step 3.
-If there is no indication, please continue executing step 3.
-Step 3: Cycle through the sixteen Zigbee channels
-A radio signal needs be sent from the switch to the compatible light device on the correct Zigbee channel, the light device
-uses one of the sixteen possible channels, automatically set the device. Using the switch, a signal will be sent on each
-channel until the channel used by the light device is found.
-Upon entering learning mode, the signal will be sent by the switch on default channel 11.
+GP 스위치를 호환 가능한 Zigbee 조명 기기에 페어링하기:
+1단계: 호환 조명 기기의 GP 스위치 학습 모드를 활성화합니다(일반적으로 조명 기기는 “prog.” 또는 “reset” 버튼을 4번 짧게 누르거나 전원을 4번 껐다 켜서 모드에 진입합니다). 해당 조명 기기의 매뉴얼을 참조하세요.
+2단계: GP 스위치를 학습 모드로 진입시킵니다.
+학습 모드에 진입하려면 스위치에서 버튼 하나를 선택합니다. (전체 과정에 동일한 버튼을 사용하며, 다른 버튼을 누르면 학습 모드가 종료됩니다.)
+다음 순서를 실행합니다:
+1. 선택한 버튼을 7초 이상 누르고 있다가 놓습니다.
+2. 버튼을 한 번 짧게 누르고 놓습니다.
+3. 버튼을 다시 7초 이상 누르고 있다가 놓습니다.
+이제 스위치가 학습 모드에 진입했습니다.
+약 1초 동안 기다리며 조명 기기에 페어링 성공 표시가 나타나는지 확인합니다. 일반적으로 조명 기기는 두 번 깜빡여 페어링 성공을 알립니다.
+페어링 성공 후 다른 버튼을 눌러 스위치의 학습 모드를 종료합니다. 3단계는 무시하세요.
+표시가 없으면 3단계를 계속 실행합니다.
+3단계: 16개 Zigbee 채널을 순환합니다.
+스위치에서 호환 조명 기기로 올바른 Zigbee 채널로 무선 신호를 보내야 합니다. 조명 기기는 16개의 가능한 채널 중 하나를 사용하며 자동으로 채널이 설정됩니다. 스위치를 사용하면 조명 기기가 사용하는 채널을 찾을 때까지 각 채널로 신호가 전송됩니다.
+학습 모드에 진입하면 스위치는 기본 채널 11로 신호를 전송합니다.
 
-To change the switch’s channel, short press the selected button to move from default channel 11 to the next
-one. For each such button press, the switch transmits on the next channel.
-After each such button press, please wait for approximate 1 second to check whether there is indication on the light
-device for successful pairing.
-If pairing successfully, please exit learning mode on the switch. If channel 26 has been reached, but there is still no
-indication, it might because the switch has not entered learning mode yet since the very start. We have to repeat the step
-2 to put it into learning mode.
+스위치 채널을 변경하려면 선택한 버튼을 짧게 눌러 기본 채널 11에서 다음 채널로 이동합니다. 버튼을 누를 때마다 스위치는 다음 채널로 전송합니다.
+버튼을 누를 때마다 약 1초를 기다리며 조명 기기에 페어링 성공 표시가 나타나는지 확인합니다.
+페어링에 성공하면 스위치의 학습 모드를 종료합니다. 채널 26까지 도달했는데도 표시가 없으면 스위치가 처음부터 학습 모드에 진입하지 않은 것일 수 있습니다. 2단계를 반복하여 학습 모드로 진입시켜야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

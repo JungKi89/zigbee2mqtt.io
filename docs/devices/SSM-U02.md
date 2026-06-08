@@ -25,18 +25,18 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-#### If you have access to the device
-Long press the button for 8S: reset/connect to network.
+### 페어링
+#### 기기에 직접 접근할 수 있는 경우
+버튼을 8초 동안 길게 누르면 초기화/네트워크 연결됩니다.
 
-#### With connected switch
-Turn on and off 5 times and the device will reset.
+#### 연결된 스위치가 있는 경우
+5번 켰다 끄면 기기가 초기화됩니다.
 
-### Router functionality
-This device **does not** work as a Zigbee router.
+### 라우터 기능
+이 기기는 Zigbee 라우터로 **작동하지 않습니다**.
 
-### Power meter functionality
-This device **does not** support power metering.
+### 전력 측정 기능
+이 기기는 전력 측정을 **지원하지 않습니다**.
 <!-- Notes END: Do not edit below this line -->
 
 

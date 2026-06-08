@@ -26,20 +26,20 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-While pairing, keep the valve close to the coordinator.
+페어링 중에는 밸브를 코디네이터 가까이에 두세요.
 
-1. *Turn the display on*: Short press home (🏠).
-2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking.
+1. *디스플레이 켜기*: 홈(🏠) 버튼을 짧게 누르세요.
+2. *페어링 모드 활성화*: - (마이너스) 버튼을 3초간 길게 누르세요. WiFi 로고가 깜빡입니다.
 
-### Broken OTA updates
+### OTA 업데이트 문제
 
-In the past there have been at least 2 revisions of this device where Zigbee2MQTT detected new firmwares that were incompatible with the device. See :
+과거에 Zigbee2MQTT가 기기와 호환되지 않는 새 펌웨어를 감지한 이 기기의 개정판이 최소 2가지 있었습니다. 참조:
 * [BRT-100-TRV OTA broken / flash ZT5](https://github.com/Koenkk/zigbee2mqtt/issues/19173)
 * [Moes BRT-100-TRV not reporting after OTA update](https://github.com/Koenkk/zigbee2mqtt/issues/7941)
 
-In this situation a firmware update made the device unable to connect to the Zigbee network. As of Zigbee2MQTT 1.33.3 all OTA updates for this device have been disabled, if you are running an older Zigbee2MQTT version it is recommended to not do any OTA updates.
+이 상황에서 펌웨어 업데이트로 인해 기기가 Zigbee 네트워크에 연결할 수 없게 되었습니다. Zigbee2MQTT 1.33.3부터 이 기기의 모든 OTA 업데이트가 비활성화되었습니다. 이전 버전의 Zigbee2MQTT를 실행 중인 경우 OTA 업데이트를 수행하지 않는 것을 권장합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

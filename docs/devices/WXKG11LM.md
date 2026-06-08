@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Actions
-The `triple`, `quadruple`, `hold` and `release` is not supported by all versions of this device.
+### 동작
+`triple`, `quadruple`, `hold`, `release`는 이 기기의 모든 버전에서 지원되지는 않습니다.
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 클릭 이벤트
+이 기기는 기본적으로 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기에 `legacy: false`를 설정하세요. 예시:
 
 ```yaml
 devices:
@@ -44,19 +44,19 @@ devices:
 ```
 
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try pressing the reset button once per second right after holding it for ~10 seconds (the light pattern indicates when the button can be released after holding it).
+### 페어링
+기기의 리셋 버튼을 약 5초 동안 누르고 있습니다 (파란 불이 깜박이기 시작할 때까지).
+그 후 기기가 자동으로 네트워크에 참여합니다. 작동하지 않으면, 약 10초 동안 누르고 있다가 리셋 버튼을 초당 한 번씩 눌러보세요 (불빛 패턴이 버튼을 언제 뗄 수 있는지 알려줍니다).
 
 
-### Troubleshooting: device stops sending messages/disconnects from network
-Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
-Most of the times this happens because of the following reasons:
-- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
-- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
+### 문제 해결: 기기가 메시지 전송을 중단하거나 네트워크에서 연결이 끊어지는 경우
+Xiaomi 기기는 Zigbee 표준을 완전히 준수하지 않기 때문에, 네트워크에서 연결이 끊어지는 경우가 있습니다.
+대부분의 경우 다음 이유로 발생합니다:
+- 신호가 약한 경우, 게시된 메시지에서 `linkquality`로 신호 품질을 확인할 수 있습니다. linkquality < 20은 약한 신호로 간주됩니다.
+- 배터리 전압이 낮은 경우, 배터리가 아직 가득 차 있는 것처럼 보여도 발생할 수 있습니다. 다른 배터리를 사용해 보세요.
+- Xiaomi 기기를 처리하지 못하는 라우터를 통해 연결된 경우. Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi 기기에서 이 문제가 발생하는 것으로 알려져 있습니다. 기기를 물리적으로 가까이에서 리셋 버튼을 눌러 코디네이터에 직접 연결하는 것이 해결책이 될 수 있습니다.
 
-More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+이에 대한 자세한 내용은 [여기](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)에서 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

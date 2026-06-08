@@ -24,24 +24,23 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-# Button Functions
+# 버튼 기능
 
 **Opt:**
 
-1. **Short press:** Turn lights on/off.
-2. **Double short press:** Cycle through lighting dynamic effects (Total 24 dynamicmodes).
-   **Triple short press:** Toggle power-on memory function, the connected strip3.fashes once to confrm.(Default is memory off. The power-on memoryfunction determines whether the controller remembers its on/off statebefore power loss).
-3. **Long press:** Reset the controller-clear Wi-Fi network and RF remotepairing and return to initial factory settings. (indication: strip flashes fivetimes, then the status LED blinks).Initial settings are:
-   1.Chip type: WS2811;2.Color order: RGB; 3. Number of chips: 60.
+1. **짧게 누름:** 조명 켜기/끄기.
+2. **두 번 짧게 누름:** 조명 동적 효과 순환 (총 24가지 동적 모드).
+   **세 번 짧게 누름:** 전원 켜기 메모리 기능 토글, 연결된 스트립이 한 번 깜박여 확인됩니다.(기본값은 메모리 끄기. 전원 켜기 메모리 기능은 컨트롤러가 전원 차단 전 켜기/끄기 상태를 기억할지 여부를 결정합니다).
+3. **길게 누름:** 컨트롤러 초기화 - Wi-Fi 네트워크 및 RF 리모컨 페어링을 지우고 초기 공장 설정으로 복원. (표시: 스트립이 5번 깜박인 후 상태 LED가 깜박임). 초기 설정: 1.칩 유형: WS2811; 2.컬러 순서: RGB; 3. 칩 수: 60.
 
 **Push:**
 
-1. **Short press:** Turn lights on/off.2.Double short press: Cycle through lighting dynamic effects (Total 24 dynamicmodes).
-2. **Long press:** Adjust brightness (holding increases brightness; after release,holding again decreases brightness).
+1. **짧게 누름:** 조명 켜기/끄기. 두 번 짧게 누름: 조명 동적 효과 순환 (총 24가지 동적 모드).
+2. **길게 누름:** 밝기 조절 (누르는 동안 밝기 증가; 놓은 후 다시 누르면 밝기 감소).
 
-# Supported chips
+# 지원 칩
 
-| Chip model     | Compatible chip models                                       |
+| 칩 모델        | 호환 칩 모델                                                 |
 | -------------- | ------------------------------------------------------------ |
 | WS2801         | WS2803                                                       |
 | LPD6803        | LPD1101,D705,UCS6909,UCS6912                                 |
@@ -54,11 +53,11 @@ pageClass: device-page
 | UCS2904B(RGBW) |                                                              |
 | UCS8904B(RGBW) |                                                              |
 
-# Indicator Light Status
+# 표시등 상태
 
-**Flashing:** Not Connected to Network
+**깜박임:** 네트워크에 연결되지 않음
 
-**Steady On:** Connected to Network
+**계속 켜짐:** 네트워크에 연결됨
 <!-- Notes END: Do not edit below this line -->
 
 

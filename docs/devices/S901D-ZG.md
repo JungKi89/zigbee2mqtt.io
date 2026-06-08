@@ -26,24 +26,24 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Factory Reset
+### 공장 초기화
 
-Factory reset the sensor by holding the small rear button for 10 seconds. The LED will blink quickly in red for this duration, then go solid for three seconds, indicating a reset.
+후면의 작은 버튼을 10초 동안 누르고 있으면 센서가 공장 초기화됩니다. 이 시간 동안 LED가 빠르게 빨간색으로 깜빡이다가 3초간 고정되며, 초기화가 완료됩니다.
 
-### Pairing
+### 페어링
 
-Short press the small rear button three times. If the device is not in the network, the LED will blink slowly in orange then attempt to join an available network. If the device is already in the network, the LED will blink green for five seconds - a factory reset is needed to pair to a new network.
+후면의 작은 버튼을 세 번 짧게 누릅니다. 기기가 네트워크에 연결되어 있지 않으면 LED가 주황색으로 천천히 깜빡이면서 사용 가능한 네트워크에 참가를 시도합니다. 기기가 이미 네트워크에 연결되어 있으면 LED가 5초간 녹색으로 깜빡입니다. 이 경우 새 네트워크에 페어링하려면 공장 초기화가 필요합니다.
 
-### LED meanings
+### LED 의미
 
-| Blink/Solid | Color | Duration | Meaning |
+| 깜빡임/고정 | 색상 | 지속 시간 | 의미 |
 |-----|-----|-----|-----|
-| Blink | Green | 7 secs | Power on |
-| Blink | Orange | - | Pairing (timeout: 2 mins) |
-| Solid | Green | - | Pairing successful |
-| Solid | Orange | 3 secs | Pairing failed |
-| Blink | Orange | Once per minute | Low battery |
-| Blink | Orange | Quickly | Lost network connection |
+| 깜빡임 | 녹색 | 7초 | 전원 켜짐 |
+| 깜빡임 | 주황색 | - | 페어링 중 (타임아웃: 2분) |
+| 고정 | 녹색 | - | 페어링 성공 |
+| 고정 | 주황색 | 3초 | 페어링 실패 |
+| 깜빡임 | 주황색 | 1분에 한 번 | 배터리 부족 |
+| 깜빡임 | 주황색 | 빠르게 | 네트워크 연결 끊김 |
 <!-- Notes END: Do not edit below this line -->
 
 

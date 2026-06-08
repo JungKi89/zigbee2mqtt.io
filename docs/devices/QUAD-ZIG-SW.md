@@ -26,34 +26,34 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [FUGA compatible switch from Smarthjemmet.dk](https://smarthjemmet.dk)
-### Pairing
-If the device did not automatically start in pairing mode (LED blinking), you can start it manually by powering on and off the device four times, keeping it on the 4th time.
+### 페어링
+기기가 자동으로 페어링 모드(LED 깜박임)로 시작되지 않은 경우, 기기의 전원을 네 번 켰다 끄되 네 번째에는 켜진 상태로 유지하면 수동으로 시작할 수 있습니다.
 
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery
+- 배터리 삽입 후 1초 대기
+- 배터리 빼기
+- 배터리 삽입 후 1초 대기
+- 배터리 빼기
+- 배터리 삽입 후 1초 대기
+- 배터리 빼기
+- 배터리 삽입
 
-The LED should now be blinking with 5-10 second interval.
+LED가 이제 5~10초 간격으로 깜박여야 합니다.
 
-Video guide: [https://www.youtube.com/watch?v=LkbnLPhi5Ts](https://www.youtube.com/watch?v=LkbnLPhi5Ts)
+동영상 가이드: [https://www.youtube.com/watch?v=LkbnLPhi5Ts](https://www.youtube.com/watch?v=LkbnLPhi5Ts)
 
-### Switch type
-QUAD-ZIG-SW has two modes for the four inputs: Switch and multi-click.
+### 스위치 유형
+QUAD-ZIG-SW는 네 개의 입력에 대해 스위치(Switch)와 멀티 클릭(Multi-click) 두 가지 모드를 지원합니다.
 
-Switch turns the input into an on/off switch like a lamp switch.
-Multi-click allows the input to click multiple times. These are the different clicks:
+스위치 모드는 입력을 전등 스위치처럼 켜기/끄기 스위치로 전환합니다.
+멀티 클릭 모드는 입력이 여러 번 클릭될 수 있게 합니다. 다양한 클릭 유형:
 
-- Single (button_X_single)
-- Double (button_X_double)
-- Triple (button_X_triple)
-- Hold (button_X_hold)
-- Release (button_X_release)
+- 단일 클릭 (button_X_single)
+- 더블 클릭 (button_X_double)
+- 트리플 클릭 (button_X_triple)
+- 길게 누르기 (button_X_hold)
+- 놓기 (button_X_release)
 
-Since the device is battery powered, it will not switch mode until it's awake. Make sure to keep the device online when changing mode, by enabling the input with a click.
+기기는 배터리로 동작하기 때문에 깨어 있을 때만 모드를 전환합니다. 모드를 변경할 때는 클릭으로 입력을 활성화하여 기기가 온라인 상태를 유지하도록 하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

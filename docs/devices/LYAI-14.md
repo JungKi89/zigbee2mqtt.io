@@ -25,8 +25,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Countdown
-Support for the shutoff countdown timer is not currently working. This needs further investigation. The default countdown timer to shutoff is 10 minutes, but can be changed using the Tuya app/hub and the device will continue to use the set time even in HA.
+### 카운트다운
+차단 카운트다운 타이머 기능은 현재 정상 작동하지 않습니다. 추가 조사가 필요합니다. 기본 차단 카운트다운 시간은 10분이지만 Tuya 앱/허브를 통해 변경할 수 있으며, 변경된 시간은 Home Assistant에서도 계속 적용됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

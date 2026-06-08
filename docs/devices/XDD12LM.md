@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Switch the lamp on five times until the lamp blinks several times.
+### 페어링
+램프가 여러 번 깜박일 때까지 전원을 다섯 번 켭니다.
 <!-- Notes END: Do not edit below this line -->
 
 

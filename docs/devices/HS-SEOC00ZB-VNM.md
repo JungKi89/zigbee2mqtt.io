@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Put the device in pairing mode by pressing and holding the button on the device for 3 seconds until the LED indicator flashes rapidly.
+### 페어링
+기기의 버튼을 3초간 누르고 있으면 LED 표시등이 빠르게 깜박이면서 페어링 모드로 진입합니다.
 
-### Reset
-To reset the device, press and hold the button for 10 seconds until the LED indicator flashes 3 times.
+### 초기화
+기기를 초기화하려면 버튼을 10초간 누르고 있으면 LED 표시등이 3번 깜박입니다.
 
-### Installation
-- Install the sensor on the ceiling or wall
-- Ensure the sensor has a clear view of the area to be monitored
-- Recommended mounting height: 2.5-3 meters
-- Avoid mounting near air conditioning vents or heating sources
+### 설치
+- 천장 또는 벽에 센서를 설치합니다
+- 센서가 모니터링할 영역을 명확히 볼 수 있는지 확인합니다
+- 권장 설치 높이: 2.5~3미터
+- 에어컨 통풍구나 열원 근처에 설치하지 마세요
 <!-- Notes END: Do not edit below this line -->
 
 

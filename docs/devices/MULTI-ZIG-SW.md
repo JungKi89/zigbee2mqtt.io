@@ -25,27 +25,27 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-[Multi switch from Smarthjemmet.dk](https://smarthjemmet.dk)
-### Pairing
-If the device did not automatically start in pairing mode (LED blinking), you can start it manually by powering on and off the device four times, keeping it on the 4th time.
+[Smarthjemmet.dk의 멀티 스위치](https://smarthjemmet.dk)
+### 페어링
+기기가 자동으로 페어링 모드(LED 깜빡임)로 시작하지 않으면, 기기를 4번 켜고 끄는 방식으로 수동으로 시작할 수 있습니다(4번째에는 켜진 상태 유지).
 
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery and wait one second
-- Pull out battery
-- Plug in battery
+- 배터리를 삽입하고 1초 기다리기
+- 배터리 분리
+- 배터리를 삽입하고 1초 기다리기
+- 배터리 분리
+- 배터리를 삽입하고 1초 기다리기
+- 배터리 분리
+- 배터리 삽입
 
-The LED should now be blinking with 5-10 second interval.
+이제 LED가 5~10초 간격으로 깜빡여야 합니다.
 
-Video guide: [https://www.youtube.com/watch?v=LkbnLPhi5Ts](https://www.youtube.com/watch?v=LkbnLPhi5Ts)
+동영상 가이드: [https://www.youtube.com/watch?v=LkbnLPhi5Ts](https://www.youtube.com/watch?v=LkbnLPhi5Ts)
 
-### Switch type
-MULTI-ZIG-SW has two modes for the four inputs: Switch and multi-click.
+### 스위치 유형
+MULTI-ZIG-SW는 4개의 입력에 대해 두 가지 모드를 지원합니다: Switch와 multi-click.
 
-Switch turns the input into an on/off switch like a lamp switch.
-Multi-click allows the input to click multiple times. These are the different clicks:
+Switch는 입력을 램프 스위치처럼 ON/OFF 스위치로 사용합니다.
+Multi-click은 입력을 여러 번 클릭할 수 있게 합니다. 지원되는 클릭 유형은 다음과 같습니다:
 
 - Single (button_X_single)
 - Double (button_X_double)
@@ -53,7 +53,7 @@ Multi-click allows the input to click multiple times. These are the different cl
 - Hold (button_X_hold)
 - Release (button_X_release)
 
-Since the device is battery powered, it will not switch mode until it's awake. Make sure to keep the device online when changing mode, by enabling the input with a click.
+기기가 배터리로 작동하므로, 깨어있는 동안에만 모드 전환이 가능합니다. 모드를 변경할 때는 클릭으로 입력을 활성화하여 기기를 온라인 상태로 유지하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -28,8 +28,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
+### 페어링
+인디케이터 표시등이 깜박일 때까지 릴레이 모듈의 검은색 페어링 버튼을 5초간 누른 후 페어링 버튼을 놓습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

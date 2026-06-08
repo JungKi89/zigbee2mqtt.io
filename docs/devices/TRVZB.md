@@ -26,16 +26,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair the device you first need to have it powered, attached to the valve and displaying the temperature.
+### 페어링
+디바이스를 페어링하려면 먼저 전원을 켜고, 밸브에 장착하여 온도가 표시되어야 합니다.
 
-If the device is showing `FS` or `RD` press the button on the top of the unit and it should now show `,,7`
+디바이스에 `FS` 또는 `RD`가 표시되면 장치 상단의 버튼을 누르면 `,,7`이 표시됩니다.
 
-Once this stops flashing hold the top button for about 5 seconds at which point the unit should now show the temperature. (If the temperature does not show, the valve calibration might have failed. this can happen if you did not mount it properly. Then you need to remount the thermostat and start with the previous step.)
+깜박임이 멈추면 상단 버튼을 약 5초간 누르면 온도가 표시됩니다. (온도가 표시되지 않으면 밸브 보정이 실패했을 수 있습니다. 이는 제대로 장착되지 않은 경우 발생할 수 있습니다. 이 경우 서모스탯을 다시 장착하고 이전 단계부터 다시 시작해야 합니다.)
 
-Keep turning the dial counter-clockwise unil the display shows `OF` and finally hold down the top button for 3 seconds.
+디스플레이에 `OF`가 표시될 때까지 다이얼을 반시계 방향으로 계속 돌린 다음, 상단 버튼을 3초간 누릅니다.
 
-You should now see a flashing signal icon and it will try and pair.
+이제 깜박이는 신호 아이콘이 표시되며 페어링을 시도합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

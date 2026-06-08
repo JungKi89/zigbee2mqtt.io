@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To reset the device and start pairing, press the button on the device for 8 seconds. The led will turn on in red and then start blinking in blue while the pairing process is active.
+### 페어링
+기기를 초기화하고 페어링을 시작하려면 기기의 버튼을 8초 동안 누릅니다. LED가 빨간색으로 켜진 후 페어링 과정이 진행되는 동안 파란색으로 깜빡이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

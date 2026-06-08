@@ -27,23 +27,23 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### BW-SHP13 sold since 2022
+### 2022년 이후 판매되는 BW-SHP13
 
-Since early 2022, BlitzWolf changed firmware of the BW-SHP13. Those new devices identify as [TS011F_plug_1](TS011F_plug_1.md).
+2022년 초부터 BlitzWolf는 BW-SHP13의 펌웨어를 변경했습니다. 이 새 디바이스들은 [TS011F_plug_1](TS011F_plug_1.md)으로 식별됩니다.
 
-### Pairing
+### 페어링
 
-Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+전원 켜기/끄기 버튼을 길게 누릅니다(5초). 버튼이 파란색으로 깜박여 페어링 모드임을 나타냅니다. 파란색 깜박임이 멈추면 페어링되어 LED가 빨간색으로 표시됩니다. LED가 파란색이면 디바이스가 페어링되지 않았거나 페어링에 실패한 것입니다.
 
-### Reset energy
+### 에너지 초기화
 
-To reset `Sum of consumed energy`, use the Dev console and execute:
+`소비 에너지 합계`를 초기화하려면 Dev 콘솔을 사용하여 다음을 실행합니다:
 `Endpoint`: `1`
 `Cluster`: `0x00` (`genBasic`)
 `Command`: `0` (`resetFactDefault`)
-`Payload`: (don't change this)
+`Payload`: (변경하지 마세요)
 
-Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
+다음에 플러그가 폴링될 때 `소비 에너지 합계`가 다시 0부터 시작됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

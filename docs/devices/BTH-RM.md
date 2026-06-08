@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Known Issues
-There are [multiple](https://github.com/Koenkk/zigbee2mqtt/issues/30048) [reports](https://community.bosch-smarthome.com/t5/technische-probleme/raumthermostat-2-batterie-alle-2-monate-leer/td-p/93359) that firmware version [`0.2.9`](https://github.com/Koenkk/zigbee-OTA/pull/873) causes excessive battery drain. While the offical OTA update hasn't been pulled, we would recommed to not update until a fix from Bosch is available.
+### 알려진 문제
+펌웨어 버전 [`0.2.9`](https://github.com/Koenkk/zigbee-OTA/pull/873)가 과도한 배터리 소모를 유발한다는 [여러](https://github.com/Koenkk/zigbee2mqtt/issues/30048) [보고](https://community.bosch-smarthome.com/t5/technische-probleme/raumthermostat-2-batterie-alle-2-monate-leer/td-p/93359)가 있습니다. 공식 OTA 업데이트가 아직 철회되지 않았으므로, Bosch의 수정 버전이 출시될 때까지 업데이트를 하지 않을 것을 권장합니다.
 
-### Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+### 페어링
+이 디바이스를 페어링하려면 설치 코드를 통해 기기를 등록해야 합니다. 배터리 커버 안쪽의 QR 코드를 스마트폰으로 스캔하여 설치 코드를 얻을 수 있습니다. 그런 다음 디바이스를 페어링 모드로 진입시킵니다. Zigbee2MQTT에서 "Settings" --> "Tools"로 이동한 후 "Add install code"를 클릭합니다. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 다음, 참가 허용(permit joining)이 활성화되어 있는지 확인합니다. 디바이스가 네트워크에 참가할 때까지 기다립니다.
 
 
-### Factory resetting
-To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
+### 공장 초기화
+디바이스를 공장 초기화하려면 배터리 중 하나를 제거합니다. 전면의 메인 버튼을 누른 채로 배터리를 다시 삽입합니다. 디바이스 LED가 "RES"를 표시하며 주황색으로 깜박이기 시작하면 메인 버튼을 놓고, LED가 초록색으로 켜질 때까지 다시 누른 채로 유지합니다. 그러면 디바이스가 보정(calibration) 과정으로 재시작되고 참가할 Zigbee 네트워크를 탐색합니다. 문제가 발생한 경우 LED가 빨간색으로 깜박이기 시작합니다. 이 경우 처음부터 다시 시도해야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

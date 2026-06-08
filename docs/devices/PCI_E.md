@@ -28,9 +28,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Long press the reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode. If buzzer feedback is on then you'll also hear 3 short beeps.
-The reset button can be found on the PCIe card.
+### 페어링
+LED 표시등이 세 번 깜박일 때까지 리셋 버튼을 5초 동안 길게 누르면 기기가 페어링 모드로 진입합니다. 버저 피드백이 활성화된 경우 짧은 비프음 3번도 들립니다.
+리셋 버튼은 PCIe 카드에 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

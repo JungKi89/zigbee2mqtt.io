@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Calibration
-Calibration procedure:
-1. Turn calibration on
-2. Move cover completely up (open)
-3. Press stop
-4. Close cover
-5. Press stop when closed
-6. Turn calibration off
+### 캘리브레이션
+캘리브레이션 절차:
+1. 캘리브레이션 켜기
+2. 커버를 완전히 위로 이동(열기)
+3. 정지 누르기
+4. 커버 닫기
+5. 닫혔을 때 정지 누르기
+6. 캘리브레이션 끄기
 <!-- Notes END: Do not edit below this line -->
 
 

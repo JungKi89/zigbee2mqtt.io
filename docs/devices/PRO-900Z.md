@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-With the device in the 'on' state, press and hold the control knob to turn the unit off. While the knob is pressed, press and hold the 'clock' button for 8 seconds. The device will now enter the pairing mode, and the zigbee signal indicator will start flashing on the display.
+## 페어링
+기기가 'on' 상태일 때 조절 노브를 길게 눌러 기기를 끕니다. 노브를 누른 상태에서 'clock' 버튼을 8초 동안 길게 누릅니다. 기기가 페어링 모드로 진입하며 디스플레이에 Zigbee 신호 표시기가 깜박이기 시작합니다.
 ***
 <!-- Notes END: Do not edit below this line -->
 

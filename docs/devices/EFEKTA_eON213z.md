@@ -28,8 +28,8 @@ pageClass: device-page
 [Temperature and humidity sensor with e-ink2.13](http://efektalab.com/eON213z)
 
 
-### Build guide
-Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Outdoor-long-range-sensor-for-temperature-humidity-and-atmospheric-pressure-Zigbee)
+### 제작 가이드
+이 기기를 제작하는 방법에 대한 설명은 [여기](https://github.com/smartboxchannel/Outdoor-long-range-sensor-for-temperature-humidity-and-atmospheric-pressure-Zigbee)에서 확인할 수 있습니다
 <!-- Notes END: Do not edit below this line -->
 
 

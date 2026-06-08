@@ -27,56 +27,56 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes 
 
-### Battery
-Uses a CR2450 battery
+### 배터리
+CR2450 배터리 사용
 
-### Pairing
-Remove the back plate by using the included tool or a wedge to click it off.
-Press and hold the LINK button inside the device for +- 5 seconds (until the blue light blinks three times).
-After this the device will automatically join, but the interview process may not finish.
-If that happens, keep doing short presses to the LINK button to keep the light flashing, until the interview process finishes successfully.
+### 페어링
+동봉된 도구나 쐐기를 사용하여 뒷판을 분리합니다.
+디바이스 내부의 LINK 버튼을 약 5초간 누르고 있습니다(파란색 LED가 3번 깜박일 때까지).
+이후 디바이스가 자동으로 네트워크에 참가하지만, 인터뷰 과정이 완료되지 않을 수 있습니다.
+그 경우 인터뷰 과정이 성공적으로 완료될 때까지 LINK 버튼을 짧게 눌러 LED가 계속 깜박이도록 유지합니다.
 
-### Mode Switch 
-There are two ways to toggle between scene mode and action mode: 
-1. Hard switch: 
+### 모드 전환 
+씬 모드와 액션 모드 간 전환 방법은 두 가지가 있습니다: 
+1. 하드 스위치: 
 
-    Open lid, and click LINK 5 times in a row. 
+    덮개를 열고 LINK를 연속으로 5번 클릭합니다. 
 
-2. Soft switch (using Zigbee2MQTT frontend): 
+2. 소프트 스위치 (Zigbee2MQTT 프론트엔드 사용): 
 
-    Toggle `operation_mode` in the Exposes tab of the device in Zigbee2MQTT frontend. 
-    Change won't happen right away, the device only responds to mode switch once an hour. 
-    But you can give the device a throw (a forceful shake action without backward motion), which, when done right, will force the device to respond. 
-    Otherwise you can open lid and click LINK button to have it respond immediately. 
+    Zigbee2MQTT 프론트엔드의 디바이스 Exposes 탭에서 `operation_mode`를 토글합니다. 
+    변경이 즉시 적용되지 않으며, 디바이스는 1시간에 한 번 모드 전환에 응답합니다. 
+    던지기 동작(후방 움직임 없이 힘차게 흔들기)을 수행하면 디바이스가 강제로 응답하게 할 수 있습니다. 
+    그렇지 않으면 덮개를 열고 LINK 버튼을 클릭하여 즉시 응답하도록 할 수 있습니다. 
 
-### Supported Actions
+### 지원되는 액션
 
-- Scene mode: 
+- 씬 모드: 
 
-  | Action           | additional attributes in payload |
-  | ---------------- | -------------------------------- |
-  | rotate_left      | action_angle                     |
-  | rotate_right     | action_angle                     |
-  | shake            | -                                |
-  | throw            | -                                |
-  | hold             | -                                |
-  | side_up          | side                             |
-  | flip_to_side     | side                             |
-  | 1_min_inactivity | -                                |
+  | 액션             | 페이로드의 추가 속성 |
+  | ---------------- | -------------------- |
+  | rotate_left      | action_angle         |
+  | rotate_right     | action_angle         |
+  | shake            | -                    |
+  | throw            | -                    |
+  | hold             | -                    |
+  | side_up          | side                 |
+  | flip_to_side     | side                 |
+  | 1_min_inactivity | -                    |
 
-- Action mode: 
+- 액션 모드: 
 
-  | Action           | additional attributes in payload |
-  | ---------------- | -------------------------------- |
-  | rotate_left      | action_angle                     |
-  | rotate_right     | action_angle                     |
-  | shake            | -                                |
-  | throw            | -                                |
-  | slide            | side                             |
-  | tap              | side                             |
-  | flip90           | side, action_from_side           |
-  | flip180          | side, action_from_side           |
-  | 1_min_inactivity | -                                |
+  | 액션             | 페이로드의 추가 속성   |
+  | ---------------- | ---------------------- |
+  | rotate_left      | action_angle           |
+  | rotate_right     | action_angle           |
+  | shake            | -                      |
+  | throw            | -                      |
+  | slide            | side                   |
+  | tap              | side                   |
+  | flip90           | side, action_from_side |
+  | flip180          | side, action_from_side |
+  | 1_min_inactivity | -                      |
 <!-- Notes END: Do not edit below this line -->
 
 

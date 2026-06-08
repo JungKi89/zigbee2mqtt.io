@@ -28,47 +28,47 @@ pageClass: device-page
 Shelly BLU H&T Display ZB Black - SBHT-103C
 https://www.shelly.com/blogs/documentation/shelly-blu-h-t-display-zb
 
-## Device setup
+## 기기 설정
 
-Clock sync does not work over ZigBee.
+ZigBee를 통한 시계 동기화는 지원되지 않습니다.
 
-Update firmware and sync clock:
-1. Use `Shelly BLE Debug` mobile phone app to scan for devices
-1. Click on `Read` in the app
-1. On the device push the button on the backside
-1. To update the firmware click `OTA`, follow instructions
-1. To update the clock enter setup mode on the device (one click, display should say "set")
-1. Press the backside button two times fast (upper left corner of the device should say "sync")
-1. The clock will be synced with timezone GMT+0
-1. Open `Shelly BLE Debug` app
-1. Connect to device with `Read`
-1. Click on `UTC (0 min)` to set your timezone (offset in minutes)
+펌웨어 업데이트 및 시계 동기화:
+1. `Shelly BLE Debug` 모바일 앱으로 기기를 스캔합니다.
+1. 앱에서 `Read`를 클릭합니다.
+1. 기기 뒷면의 버튼을 누릅니다.
+1. 펌웨어를 업데이트하려면 `OTA`를 클릭하고 안내에 따릅니다.
+1. 시계를 업데이트하려면 기기에서 설정 모드로 진입합니다 (한 번 클릭, 화면에 "set"가 표시되어야 함).
+1. 뒷면 버튼을 빠르게 두 번 누릅니다 (기기 왼쪽 상단에 "sync"가 표시되어야 함).
+1. 시계가 GMT+0 시간대로 동기화됩니다.
+1. `Shelly BLE Debug` 앱을 엽니다.
+1. `Read`로 기기에 연결합니다.
+1. `UTC (0 min)`을 클릭하여 시간대를 설정합니다 (오프셋은 분 단위).
 
-Single Button
+단일 버튼
 
-    Press 1 time: Enter setup mode for 3 minutes.
+    1회 누름: 3분 동안 설정 모드 진입.
 
-        Press 1 time: Exit setup mode.
+        1회 누름: 설정 모드 종료.
 
-        Press 2 times rapidly: Force clock synchronization via a Shelly device set as a Bluetooth gateway.
+        빠르게 2회 누름: Bluetooth 게이트웨이로 설정된 Shelly 기기를 통해 강제 시계 동기화.
 
-        Press 4 times rapidly: Enter Bluetooth pairing mode.
+        빠르게 4회 누름: Bluetooth 페어링 모드 진입.
 
-        Press 5 times rapidly: Enter Zigbee pairing mode.
+        빠르게 5회 누름: Zigbee 페어링 모드 진입.
 
-        Press and hold for 5 seconds: Toggle Bluetooth on/off.
+        5초 동안 길게 누름: Bluetooth 켜기/끄기 전환.
 
-        Press and hold for 10 seconds: Toggle Zigbee on/off.
+        10초 동안 길게 누름: Zigbee 켜기/끄기 전환.
 
-        Press and hold for 30 seconds: Resets the device to factory settings.
+        30초 동안 길게 누름: 기기를 공장 초기화.
 
-    Press 2 times rapidly: Toggle the clock display segment between showing the clock or the date.
+    빠르게 2회 누름: 시계 표시를 시간 또는 날짜 표시로 전환.
 
-    Press 3 times rapidly: Switch temperature unit between Celsius and Fahrenheit. When Celsius is selected, the date format is DD.MM; when Fahrenheit is selected, the date format is MM.DD.
+    빠르게 3회 누름: 온도 단위를 섭씨와 화씨 사이에서 전환. 섭씨를 선택하면 날짜 형식은 DD.MM이고, 화씨를 선택하면 날짜 형식은 MM.DD입니다.
 
-    Press 4 times rapidly: Invert the display colors.
+    빠르게 4회 누름: 화면 색상 반전.
 
-    Press 5 times rapidly: Toggle the clock format between 24-hour and 12-hour.
+    빠르게 5회 누름: 시계 형식을 24시간제와 12시간제 사이에서 전환.
 <!-- Notes END: Do not edit below this line -->
 
 

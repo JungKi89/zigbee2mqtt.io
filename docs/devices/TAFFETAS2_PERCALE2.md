@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-- Press and hold the `Mode` button to enter configuration mode
-- If already paired with the Enki box, press and hold the `-` (minus) button until `Off` is displayed (you'll probably also have to first remove the heater from the Enki box using the dedicated app)
-- Press and hold the `+` (plus) button until a code appears on the screen (this is a pairing code used with the Enki box app we don't use here)
-- Turn on pairing mode in zigbee2mqtt
-- Press (and sometimes hold) the `+` button until a "progress bar" appears on the screen 
-- Wait for pairing. The device should show up in zigbee2mqtt in a few seconds and the screen should now display `On`
-- Press and hold the `Mode` button to leave configuration mode (or wait for ~ 30 sec to 1 minute). The device should now display "Box" on the top right corner of the screen and the temperature setpoint
+- `Mode` 버튼을 길게 눌러 설정 모드로 진입합니다
+- Enki 박스와 이미 페어링된 경우, `-` (빼기) 버튼을 `Off`가 표시될 때까지 길게 누릅니다 (전용 앱을 사용하여 Enki 박스에서 히터를 먼저 제거해야 할 수도 있습니다)
+- `+` (더하기) 버튼을 화면에 코드가 나타날 때까지 길게 누릅니다 (이 코드는 여기서는 사용하지 않는 Enki 박스 앱의 페어링 코드입니다)
+- zigbee2mqtt에서 페어링 모드를 켭니다
+- 화면에 "진행 표시줄"이 나타날 때까지 `+` 버튼을 누릅니다 (경우에 따라 길게 누릅니다)
+- 페어링을 기다립니다. 기기가 몇 초 내에 zigbee2mqtt에 표시되고 화면에 `On`이 표시되어야 합니다
+- `Mode` 버튼을 길게 눌러 설정 모드를 종료합니다 (또는 약 30초~1분 기다립니다). 기기 화면 오른쪽 상단에 "Box"와 온도 설정값이 표시되어야 합니다
 <!-- Notes END: Do not edit below this line -->
 
 

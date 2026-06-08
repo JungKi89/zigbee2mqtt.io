@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press down and set simultaneously until LED flashes red.
+### 페어링
+LED가 빨간색으로 깜빡일 때까지 down과 set 버튼을 동시에 누르세요.
  
-### Calibration
-Calibration can be done manually by pressing and holding pause button until it start blinking then press open and wait the time needed then press open again.
+### 캘리브레이션
+캘리브레이션은 일시정지 버튼을 깜빡이기 시작할 때까지 누른 다음, open 버튼을 누르고 필요한 시간을 기다린 후 다시 open 버튼을 눌러 수동으로 수행할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,22 +27,22 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses 1 × CR17450 battery
+### 배터리
+1 × CR17450 배터리 사용
 
-### Pairing
-**Press the button 3 times to enter pairing mode.** Note that pairing may fail on low battery.
+### 페어링
+**버튼을 3번 눌러 페어링 모드로 진입합니다.** 배터리 부족 시 페어링이 실패할 수 있습니다.
 
 ![JY-GZ-01AQ pairing](../images/pairing/JY-GZ-01AQ_pairing.jpg)
 
-### Issues
+### 알려진 문제
 
-#### Coordinator incompatibility
-The Conbee III may not detect state/alarm reports from the smoke detector! See [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/29880) for more information.
+#### 코디네이터 비호환성
+Conbee III는 연기 감지기의 상태/알람 보고를 감지하지 못할 수 있습니다! 자세한 내용은 [이 이슈](https://github.com/Koenkk/zigbee2mqtt/issues/29880)를 참조하세요.
 
-#### Regression in v21 firmware
-When smoke is detected under firmware version 21, the alarm may beep only once! The device automatically mutes itself, and needs unmuting.  
-The version has been [retracted](https://github.com/Koenkk/zigbee-OTA/tree/master/retracted-images) from Zigbee2MQTT. See [this issue](https://github.com/Koenkk/zigbee-OTA/issues/938#issuecomment-3706591752) for more information and downgrading steps.
+#### v21 펌웨어의 회귀 문제
+펌웨어 버전 21에서 연기가 감지되면 알람이 한 번만 비프음을 낼 수 있습니다! 디바이스가 자동으로 음소거되어 음소거 해제가 필요합니다.
+해당 버전은 Zigbee2MQTT에서 [회수](https://github.com/Koenkk/zigbee-OTA/tree/master/retracted-images)되었습니다. 자세한 내용과 다운그레이드 방법은 [이 이슈](https://github.com/Koenkk/zigbee-OTA/issues/938#issuecomment-3706591752)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

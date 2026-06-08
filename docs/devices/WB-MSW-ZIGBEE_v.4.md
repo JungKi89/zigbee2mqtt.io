@@ -26,24 +26,24 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Description
-Wiren Board WB-MSW v.4 — hybrid digital sensor of motion, temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+### 설명
+Wiren Board WB-MSW v.4 — 움직임, 온도, 습도, 조도, 소음, CO2 및 VOC 레벨의 하이브리드 디지털 센서입니다. IR 블라스터(및 학습용 수신기)가 장착되어 있습니다. 주거 및 사무 공간의 기후 제어를 위해 설계되었습니다.
 
-### Switch endpoints
-The device always exposes 3 on/off endpoints named `l1`, `l2` and `l3`. The first two of them only work if illuminance + IR blaster addon is installed. Their functions as follows:
-- `l1` – controls blinking red led
-- `l2` – controls blinking green led
-- `l3` – controls buzzer
+### 스위치 엔드포인트
+기기는 항상 `l1`, `l2`, `l3`이라는 이름의 3개 켜기/끄기 엔드포인트를 제공합니다. 처음 두 개는 조도 + IR 블라스터 애드온이 설치된 경우에만 작동합니다. 기능은 다음과 같습니다:
+- `l1` – 빨간 LED 깜빡임 제어
+- `l2` – 초록 LED 깜빡임 제어
+- `l3` – 버저 제어
 
-Warning, the installed buzzer is very loud.
+주의: 설치된 버저는 매우 큰 소리를 냅니다.
 
-### Configuring IR
-The sensor contains 80 banks for storing IR commands. Training takes place through the built-in IR receiver.
+### IR 설정
+센서는 IR 명령 저장을 위한 80개의 뱅크를 포함합니다. 학습은 내장 IR 수신기를 통해 이루어집니다.
 
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured.
+`zigbee2mqtt/FRIENDLY_NAME/set`에 게시하여 다양한 기기 속성을 설정할 수 있습니다.
 
-#### Start learn to ROM
-Request:
+#### ROM에 학습 시작
+요청:
 
 ```json
 {
@@ -52,10 +52,10 @@ Request:
     }
 }
 ```
-* `rom`: Memory cell number (from 0 to 79)
+* `rom`: 메모리 셀 번호 (0에서 79까지)
 
-#### Stop learn to ROM
-Request:
+#### ROM에 학습 중지
+요청:
 ```json
 {
     "learn_stop": {
@@ -63,10 +63,10 @@ Request:
     }
 }
 ```
-* `rom`: Memory cell number (from 0 to 79)
+* `rom`: 메모리 셀 번호 (0에서 79까지)
 
-#### Play from ROM
-Request:
+#### ROM에서 재생
+요청:
 ```json
 {
     "play_store": {
@@ -74,10 +74,10 @@ Request:
     }
 }
 ```
-* `rom`: Memory cell number (from 0 to 79)
+* `rom`: 메모리 셀 번호 (0에서 79까지)
 
-#### Clear all ROM's
-Request:
+#### 모든 ROM 지우기
+요청:
 
 ```json
 {
@@ -85,8 +85,8 @@ Request:
 }
 ```
 
-#### Start learn to RAM
-Request:
+#### RAM에 학습 시작
+요청:
 
 ```json
 {
@@ -96,16 +96,16 @@ Request:
 }
 ```
 
-#### Stop learn to RAM
-Request:
+#### RAM에 학습 중지
+요청:
 ```json
 {
     "learn_ram_stop": {}
 }
 ```
 
-#### Play from RAM
-Request:
+#### RAM에서 재생
+요청:
 ```json
 {
     "play_ram": {}

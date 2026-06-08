@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Tamper
-Not all versions of this device have the required hardware for deteting tamper. ([link](https://github.com/Koenkk/zigbee2mqtt/issues/12375))
+### 탬퍼 감지
+이 디바이스의 모든 버전에 탬퍼 감지에 필요한 하드웨어가 탑재된 것은 아닙니다. ([링크](https://github.com/Koenkk/zigbee2mqtt/issues/12375))
 <!-- Notes END: Do not edit below this line -->
 
 

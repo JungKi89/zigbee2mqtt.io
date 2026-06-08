@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the button on the device for 3 seconds.
-After this the device will automatically join.
+### 페어링
+기기의 버튼을 3초간 누르고 있습니다.
+그 후 기기가 자동으로 네트워크에 참여합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

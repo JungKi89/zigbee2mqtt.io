@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-To enable pairing, wait for the device led to stop, then press the device button 3 times, led should start blinking green while in pairing mode.
+페어링을 시작하려면 기기 LED가 멈출 때까지 기다린 후, 기기 버튼을 3번 누릅니다. 페어링 모드에서는 LED가 녹색으로 깜박이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

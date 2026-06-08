@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-Device can learn up to 15 devices and up to 30 keycodes for each device.
+기기는 최대 15개의 장치와 각 장치당 최대 30개의 키코드를 학습할 수 있습니다.
 
-### Configuring
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
+### 설정
+`zigbee2mqtt/FRIENDLY_NAME/set`에 게시하여 다양한 기기 속성을 설정할 수 있습니다:
 
-#### Create device
+#### 장치 생성
 
-Request:
+요청:
 ```json
 {
     "create": {
@@ -43,9 +43,9 @@ Request:
 }
 ```
 
-- **model_type**: User-defined model ID. Used just for reference. Can be `1..255`.
+- **model_type**: 사용자 정의 모델 ID. 참조용으로만 사용됩니다. `1..255` 범위.
 
-Response:
+응답:
 ```json
 {
     "action": "create",
@@ -55,15 +55,15 @@ Response:
 }
 ```
 
-- **action_result**: (`success`/`error`). Action result.
-- **action_model_type**: User-defined model ID. `1..255`
-- **action_id**: Internal device slot ID. Total IR transmitter can store up to 15 devices with ID `1..15`
+- **action_result**: (`success`/`error`). 동작 결과.
+- **action_model_type**: 사용자 정의 모델 ID. `1..255`
+- **action_id**: 내부 장치 슬롯 ID. IR 송신기는 ID `1..15`로 최대 15개의 장치를 저장할 수 있습니다.
 
-NOTE: You should call `get_list` manually to refresh `devices` topic.
+참고: `devices` 토픽을 갱신하려면 `get_list`를 수동으로 호출해야 합니다.
 
-#### Learn key
+#### 키 학습
 
-Request:
+요청:
 ```json
 {
     "learn": {
@@ -73,12 +73,12 @@ Request:
 }
 ```
 
-- **id**: Internal device slot ID. `1..15`.
-- **key_code**: Keycode slot ID. `1..30` - Store/replace specific key in specified slot ID. `>=31` - Create slot ID.
+- **id**: 내부 장치 슬롯 ID. `1..15`.
+- **key_code**: 키코드 슬롯 ID. `1..30` - 지정한 슬롯 ID에 특정 키를 저장/교체합니다. `>=31` - 슬롯 ID를 새로 생성합니다.
 
-NOTE: You should store keys one-by-one if you specified `key_code` by yourself.
+참고: `key_code`를 직접 지정했다면 키를 하나씩 저장해야 합니다.
 
-Response:
+응답:
 ```json
 {
     "action": "learn",
@@ -88,15 +88,15 @@ Response:
 }
 ```
 
-- **action_result**: (`success`/`error`). Action result.
-- **action_key_code**: Internal keycode slot ID, where key was stored. `1...30`
-- **action_id**: Internal device slot ID. `1..15`
+- **action_result**: (`success`/`error`). 동작 결과.
+- **action_key_code**: 키가 저장된 내부 키코드 슬롯 ID. `1...30`
+- **action_id**: 내부 장치 슬롯 ID. `1..15`
 
-NOTE: You should call `get_list` manually to refresh `devices` topic after learning key.
+참고: 키 학습 후 `devices` 토픽을 갱신하려면 `get_list`를 수동으로 호출해야 합니다.
 
-#### Send stored key
+#### 저장된 키 전송
 
-Request:
+요청:
 ```json
 {
     "send_key": {
@@ -106,19 +106,19 @@ Request:
 }
 ```
 
-- **id**: Internal device slot ID. `1..15`.
-- **key_code**: Keycode slot ID. `1..30`.
+- **id**: 내부 장치 슬롯 ID. `1..15`.
+- **key_code**: 키코드 슬롯 ID. `1..30`.
 
-#### Get list of the stored devices and keys
+#### 저장된 장치 및 키 목록 가져오기
 
-Request:
+요청:
 ```json
 {
     "get_list": ""
 }
 ```
 
-Response:
+응답:
 
 ```json
 {
@@ -135,9 +135,9 @@ Response:
 ```
 
 
-#### Delete device or keycode
+#### 장치 또는 키코드 삭제
 
-Request:
+요청:
 ```json
 {
     "delete":{
@@ -147,8 +147,8 @@ Request:
 }
 ```
 
-- **id**: `1..15` - Delete specific device with ID. `>=16` - Delete all devices.
-- **key_code**: `1..30` -Delete specific keycode. `>=31` - Delete all keycodes for specified device ID.
+- **id**: `1..15` - 해당 ID의 특정 장치를 삭제합니다. `>=16` - 모든 장치를 삭제합니다.
+- **key_code**: `1..30` - 특정 키코드를 삭제합니다. `>=31` - 지정한 장치 ID의 모든 키코드를 삭제합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,43 +27,43 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Issues with device turning off
-[It's been reported by several people that this plug turns off randomly](https://github.com/Koenkk/zigbee2mqtt/issues/11648).  
-If you're affected by this, try if it can be solved by [installing an OTA update](../guide/usage/ota_updates.md).
+### 디바이스 꺼짐 문제
+[여러 사람이 이 플러그가 무작위로 꺼진다고 보고했습니다](https://github.com/Koenkk/zigbee2mqtt/issues/11648).  
+이 문제가 발생한다면 [OTA 업데이트 설치](../guide/usage/ota_updates.md)로 해결할 수 있는지 시도해 보세요.
 
-### Broken attribute reporting functionality
+### 속성 리포팅 기능 오류
 
-Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has disabled the automatic reporting of power, voltage and current values meaning they need to be polled instead. The poll interval can be controlled through the `measurement_poll_interval` option.
+2021년 4분기 이후에 생산된 플러그에 기본 탑재된 펌웨어 버전 1.0.5부터 이 플러그의 핵심 기능이 손상되었습니다. TuYa가 전력, 전압 및 전류 값의 자동 리포팅을 비활성화하여 대신 폴링이 필요합니다. 폴링 주기는 `measurement_poll_interval` 옵션으로 제어할 수 있습니다.
 
-If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.md) instead of `TS011F_plug_1`.
+플러그가 영향을 받는 경우, `TS011F_plug_1` 대신 [TS011F_plug_3](TS011F_plug_3.md)으로 감지됩니다.
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
-### Broken attribute reporting functionality in devices sold as BW-SHP13
+### BW-SHP13으로 판매되는 디바이스의 속성 리포팅 기능 오류
 
-In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l```. Those devices report power, current and voltage unreliably: Changes in any of those metrics sometimes take a few minutes before being reported and constant loads are reported as 0 for a few minutes just to return to their expected values a few minutes later. There is no known workaround for that behaviour.
+2022년에 BlitzWolf는 ```_TZ3000_amdymr7l```로 식별되는 BW-SHP13을 판매하기 시작했습니다. 해당 디바이스는 전력, 전류 및 전압을 불안정하게 보고합니다: 해당 지표의 변경이 보고되기까지 몇 분이 걸리기도 하고, 지속적인 부하가 몇 분간 0으로 보고되다가 다시 예상 값으로 돌아오기도 합니다. 이 동작에 대한 알려진 해결 방법이 없습니다.
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/11800 -->
 
-### Reset energy
+### 에너지 초기화
 
-To reset `Sum of consumed energy`, use the Dev console and execute:
+`소비 에너지 합계`를 초기화하려면 Dev 콘솔을 사용하여 다음을 실행합니다:
 `Endpoint`: `1`
 `Cluster`: `0x00` (`genBasic`)
 `Command`: `0` (`resetFactDefault`)
-`Payload`: (don't change this)
+`Payload`: (변경하지 마세요)
 
-Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
+다음에 플러그가 폴링될 때 `소비 에너지 합계`가 다시 0부터 시작됩니다.
 
-### Reset lock
+### 잠금 초기화
 
-To reset `Child Lock` without Z2M, quickly press the physical button 4 times
+Z2M 없이 `Child Lock`을 초기화하려면 물리적 버튼을 빠르게 4번 누릅니다
 
-### Pairing
-Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+### 페어링
+전원 켜기/끄기 버튼을 길게 누릅니다(5초). 버튼이 파란색으로 깜박여 페어링 모드임을 나타냅니다. 파란색 깜박임이 멈추면 페어링되어 LED가 빨간색으로 표시됩니다. LED가 파란색이면 디바이스가 페어링되지 않았거나 페어링에 실패한 것입니다.
 
-### Alternative firmware
-An alternative firmware version can be installed by creating a custom my_index.json file and setting zigbee_ota_override_index_location as described in the [guide](../guide/usage/ota_updates.md#local-ota-index-and-firmware-files). This firmware can be used if the plug automatically turns off indeterminably or when the overvoltage protection from later versions is unwanted. To use v1.0.13 use the following json file:
+### 대체 펌웨어
+[가이드](../guide/usage/ota_updates.md#local-ota-index-and-firmware-files)에 설명된 대로 custom my_index.json 파일을 만들고 zigbee_ota_override_index_location을 설정하여 대체 펌웨어 버전을 설치할 수 있습니다. 플러그가 무작위로 꺼지거나 이후 버전의 과전압 보호 기능이 필요하지 않은 경우 이 펌웨어를 사용할 수 있습니다. v1.0.13을 사용하려면 다음 json 파일을 사용하세요:
 
 ```
 [

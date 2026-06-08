@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Pairing
-press down and set simultaneously until LED flashes blue.
+## 페어링
+아래 버튼과 설정 버튼을 동시에 누르고 LED가 파란색으로 깜박일 때까지 유지합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

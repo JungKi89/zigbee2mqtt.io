@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Pairing
-Power switch on, press any button 6 times and hold it down on the 6th.  Keep holding until the lights flash to indicate it's in pairing mode
+### 페어링
+전원을 켠 후 임의의 버튼을 6번 누르되 6번째에는 계속 누르고 있습니다. 표시등이 깜박여 페어링 모드에 진입했음을 알릴 때까지 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

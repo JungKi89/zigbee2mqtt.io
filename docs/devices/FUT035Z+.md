@@ -26,19 +26,19 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button, or power cycling the controller, 3 times in succession.
+### 페어링
+이전에 페어링되지 않은 경우, 기기는 전원이 켜지면 페어링 모드로 진입합니다. SET 버튼을 누르거나 컨트롤러의 전원을 3번 연속으로 껐다 켜서 강제로 페어링 모드로 진입할 수 있습니다.
 
-The lights connected to the controller will fade in and out when the controlled is in pairing mode.
+컨트롤러가 페어링 모드일 때 연결된 조명이 페이드 인/아웃됩니다.
 
-### PUSH Dimming
-PUSH Dimming
-Short press PUSH switch:
-Turn ON/OFF light
-Stepless dimming brightness.
-Long press PUSH switch:
-Long press and release your finger, then repeat long pressing
-to increase or decrease brightness.
+### PUSH 디밍
+PUSH 디밍
+PUSH 스위치 짧게 누르기:
+조명 켜기/끄기
+밝기 무단 조절.
+PUSH 스위치 길게 누르기:
+손가락을 길게 눌렀다가 놓은 후, 다시 길게 눌러서
+밝기를 높이거나 낮춥니다.
 <!-- Notes END: Do not edit below this line -->
 
 

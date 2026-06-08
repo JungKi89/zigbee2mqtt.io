@@ -27,16 +27,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-1. Pull the cover in the direction out from the radiator
-2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it is recommended to wait approx 1 minute before inserting new ones.
-3. Ins will appear on the display - motor is travelling back - to allow easy installation (Ins + rotating n is shown). After few seconds Ada is shown.
-4. Install the thermostat on radiator valve - display whould be on top side.
-5. Insert the cover back to thermostat - Push and Pull symbols should match.
-6. Shortly press the big round button - adaptation to the valve will start (Ada + rotating n is shown).
-7. To pair - long-press the main big rotating button. Make sure the thermostat has a good signal from Zigbee coordinator.
-8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
+1. 커버를 라디에이터 방향 바깥쪽으로 당겨 분리합니다.
+2. AA 배터리 2개를 삽입합니다. 매뉴얼에 따르면 알칼라인 배터리는 약 1.5년 지속됩니다. 배터리 교체 시 새 배터리를 삽입하기 전 약 1분 정도 기다리는 것을 권장합니다.
+3. 디스플레이에 Ins가 표시됩니다 - 쉬운 설치를 위해 모터가 후진합니다 (Ins + 회전하는 n이 표시됨). 몇 초 후 Ada가 표시됩니다.
+4. 라디에이터 밸브에 서모스탯을 설치합니다 - 디스플레이가 위쪽을 향해야 합니다.
+5. 커버를 서모스탯에 다시 삽입합니다 - Push와 Pull 기호가 일치해야 합니다.
+6. 큰 원형 버튼을 짧게 누릅니다 - 밸브 적응이 시작됩니다 (Ada + 회전하는 n이 표시됨).
+7. 페어링하려면 - 메인 큰 회전 버튼을 길게 누릅니다. 서모스탯이 Zigbee 코디네이터와 양호한 신호를 유지하고 있는지 확인하세요.
+8. 커버 아래에 숨겨진 리셋 버튼이 있습니다. 재페어링이나 기타 문제 발생 시 5초간 누르세요.
 <!-- Notes END: Do not edit below this line -->
 
 

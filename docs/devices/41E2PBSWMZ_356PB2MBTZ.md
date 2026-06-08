@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Pair the switch to Zigbee2MQTT by pressing 3 times to enter pairing mode. When the LED is blinking in amber, it is in Zigbee pairing mode. If the LED indication is other than flashing amber, the device is in BLE mode. 
+스위치를 3번 눌러 페어링 모드로 진입하여 Zigbee2MQTT에 페어링합니다. LED가 주황색으로 깜빡이면 Zigbee 페어링 모드입니다. LED 표시가 주황색 점멸 이외의 상태라면 디바이스가 BLE 모드에 있는 것입니다.
 
-Set the device to Zigbee mode by short pressing the push-button for 4 times and hold it for 20 secs, until, the red LED flashes in high frequency.
+푸시 버튼을 4번 짧게 누른 후 20초간 누르고 있으면 빨간 LED가 고주파로 점멸할 때까지 디바이스를 Zigbee 모드로 설정할 수 있습니다.
 
-**NOTE**: Do not release the button when it flashes at a low frequency.
+**주의**: 저주파로 점멸하는 동안에는 버튼을 놓지 마십시오.
 
-Release the button and wait until the LED blinks red and green or there is no LED indication.
+버튼을 놓고 LED가 빨간색과 초록색으로 번갈아 깜빡이거나 LED 표시가 없어질 때까지 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

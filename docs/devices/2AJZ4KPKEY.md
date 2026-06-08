@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+기본적으로 이 장치는 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 장치에 대해 `legacy: false`로 설정하세요. 예시:
 
 ```yaml
 devices:
@@ -40,12 +40,12 @@ devices:
 ```
 
 
-### Pairing
-Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
-You will need a needle or a pin to do it. After this the device will automatically join.
+### 페어링
+장치 측면의 리셋 버튼을 약 5초간 누른 채로 유지합니다(파란색 빛이 깜빡이기 시작할 때까지).
+이 작업에는 바늘이나 핀이 필요합니다. 이후 장치가 자동으로 네트워크에 참가합니다.
 
-### Important
-Konke devices only work on Zigbee channel 15, 20 and 25.
+### 중요
+Konke 장치는 Zigbee 채널 15, 20, 25에서만 작동합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

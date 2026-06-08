@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Indoor / outdoor use
-The sensor has a waterproof level IP45 and therefore is suitable for both indoor and outdoor use. (according manufacturer specification) 
+### 실내/실외 사용
+이 센서는 방수 등급 IP45를 가지고 있어 실내 및 실외 모두에서 사용할 수 있습니다. (제조사 사양 기준)
 
-### Pairing
-To pair this device you have to install the device via its installation code which you can get by scanning the QR-code sticker on the physical device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+### 페어링
+이 기기를 페어링하려면 스마트폰으로 기기의 QR 코드 스티커를 스캔하여 얻은 설치 코드를 통해 기기를 설치해야 합니다. 그런 다음 기기를 페어링 모드로 설정하세요. zigbee2mqtt에서 "Settings" --> "Tools"로 이동하여 "Add install code"를 클릭하세요. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 후, 참여 허용이 활성화되어 있는지 확인하세요. 기기가 연결될 때까지 기다리세요.
 
 
-### Factory resetting
-To factory reset the device remove the batteries. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED is starting to blink orange (approx 3sec), release the device's main button and press and hold it again until the device's LED is lighting up green.
+### 초기화
+기기를 초기화하려면 배터리를 제거하세요. 기기의 메인 버튼을 누른 채로 배터리를 다시 넣으세요. 기기 LED가 주황색으로 깜빡이기 시작하면 (약 3초), 메인 버튼을 놓고 기기 LED가 녹색으로 켜질 때까지 다시 길게 누르세요.
 <!-- Notes END: Do not edit below this line -->
 
 

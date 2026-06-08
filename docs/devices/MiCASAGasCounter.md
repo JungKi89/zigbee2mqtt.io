@@ -25,10 +25,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 >> ## Notes
-Zigbee Gas Counter so it counts gas consumption from the counter directly and reports back the value to the coordinator.
-The idea was to have a device counting without intervention of your server at home.
-This is a DIY device so you have to checkout the documentation.
-To use this device with Zigbee2MQTT a custom firmware has to be flashed which is explained [here](https://github.com/IgnacioHR/ZigbeeGasCounter) and build your own unit.
+Zigbee 가스 카운터로, 카운터에서 직접 가스 소비량을 측정하여 코디네이터에 값을 보고합니다.
+홈 서버의 개입 없이 자체적으로 계량하는 기기를 만드는 것이 목표입니다.
+이 기기는 DIY 장치이므로 문서를 확인해야 합니다.
+이 기기를 Zigbee2MQTT와 함께 사용하려면 커스텀 펌웨어를 플래시해야 하며, 방법은 [여기](https://github.com/IgnacioHR/ZigbeeGasCounter)에 설명되어 있습니다. 직접 유닛을 제작해야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

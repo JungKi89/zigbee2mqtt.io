@@ -26,7 +26,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Let the device beep.
+### 기기를 삐 소리가 나도록 합니다.
 ```json
 {
     "beep": 5
@@ -34,7 +34,7 @@ pageClass: device-page
 ```
 
 
-* `presence_timeout`: Timeout (in seconds) after which `presence: false` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
+* `presence_timeout`: 기기가 체크인하지 않을 때 `presence: false`가 전송되는 타임아웃 (초 단위). 기본값은 100초이며, 30초 이하로 설정하지 마세요.
 <!-- Notes END: Do not edit below this line -->
 
 

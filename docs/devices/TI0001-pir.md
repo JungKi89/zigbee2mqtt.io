@@ -26,14 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
-In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
+페어링 후 디바이스는 "TI0001" 디바이스로 표시됩니다. 페어링 직후 Zigbee2MQTT 웹 프론트엔드 또는 [MQTT 메시지](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure)를 사용하여 디바이스 재구성을 수동으로 트리거해야 합니다.
+문제가 발생한 경우, 디바이스를 제거한 후 페어링 및 재구성을 다시 시도하는 것이 좋습니다.
 
-### Important
-These devices can only be used on channel 26.
-These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../guide/configuration/) must contain the following:
+### 중요
+이 디바이스들은 채널 26에서만 사용할 수 있습니다.
+이 디바이스들은 제조사 네트워크 키(ext_pan_id)에 고정되어 있습니다.
+설정 파일 [data/configuration.yaml](../guide/configuration/)에 다음 내용이 포함되어 있어야 합니다:
 
 ```yaml
 advanced:
@@ -41,9 +40,9 @@ advanced:
   channel: 26
 ```
 
-These devices may not co-exist with other Zigbee devices on the same network.
-You may need to add a dedicated coordinator and create a new network for Livolo.  The Deconz adapter may not work as a coordinator.  Pairing with the Deconz dongle needs to take place immediately after pairing the device with the Livolo hub, but status messages from the device are not then reflected in Zigbee2MQTT (so you can't see when the button has been pressed on the device).  The Sonoff Zigbee 3.0 USB Dongle Plus ZBDongle-P does seem to work once reflashed.  To allow the device to complete its interview, re-pairing needs to be initiated on the device before the device exits pairing mode (ie before the rapid flashing sequence finishes and as soon as the device appears for the first time in Zigbee2MQTT).
-If you decided to create a new network, you should specify another 'pan_id'.
+이 디바이스들은 동일 네트워크의 다른 Zigbee 디바이스와 함께 사용하지 못할 수 있습니다.
+Livolo 전용 코디네이터를 추가하고 새 네트워크를 생성해야 할 수도 있습니다. Deconz 어댑터는 코디네이터로 작동하지 않을 수 있습니다. Deconz 동글로 페어링하려면 Livolo 허브와 디바이스를 페어링한 직후에 진행해야 하지만, 디바이스의 상태 메시지가 Zigbee2MQTT에 반영되지 않습니다(버튼이 눌렸는지 확인 불가). Sonoff Zigbee 3.0 USB Dongle Plus ZBDongle-P는 리플래시 후 작동하는 것으로 보입니다. 디바이스 인터뷰를 완료하려면, 디바이스가 페어링 모드를 종료하기 전에(즉, 빠른 깜박임이 끝나기 전에, 디바이스가 Zigbee2MQTT에 처음 나타나자마자) 재페어링을 시작해야 합니다.
+새 네트워크를 생성하기로 했다면, 다른 'pan_id'를 지정해야 합니다.
 
 ```yaml
 advanced:

@@ -25,8 +25,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-You can pair this device by setting device to manual mode by short press rotary button (until clock symbol is not displayed), setting temperature to "OF" by rotating left, then press and hold rotary button. Network symbol will start to blink.
+### 페어링
+회전 버튼을 짧게 눌러 기기를 수동 모드로 전환(시계 기호가 표시되지 않을 때까지)하고, 왼쪽으로 돌려 온도를 "OF"로 설정한 후, 회전 버튼을 길게 누릅니다. 네트워크 기호가 깜박이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

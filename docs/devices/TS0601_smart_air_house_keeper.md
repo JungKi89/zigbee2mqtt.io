@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The Device only provides an estimated CO2 value (aka eCO2) based on the two Sensors inside KQM6600TA (A chinese TVOC sensor) and the DHT20.
+이 기기는 내부의 두 센서인 KQM6600TA(중국산 TVOC 센서)와 DHT20을 기반으로 계산된 CO2 추정값(eCO2)만 제공합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

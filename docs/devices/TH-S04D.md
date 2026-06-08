@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The device will ship with Thread firmware and in order to pair you will first need to swap it to a Zigbee Firmware.
-To do this you must download the Aqara Home app and sign up.   The device should appear in the app (you may need to ignore attempts to set it up via Thread).
-The device page will state that the current protocol is Thread but ignore the button at the bottom and instead click the link to switch to Zigbee Protocol.
+### 페어링
+기기는 Thread 펌웨어로 출고되므로, 페어링 전에 먼저 Zigbee 펌웨어로 전환해야 합니다.
+이를 위해 Aqara Home 앱을 다운로드하고 가입합니다. 앱에서 기기가 표시될 것입니다 (Thread로 설정하려는 시도는 무시하면 됩니다).
+기기 페이지에서 현재 프로토콜이 Thread로 표시되지만 하단 버튼을 무시하고 대신 Zigbee 프로토콜로 전환하는 링크를 클릭합니다.
 
-Once updated the device should be in pairing mode and can be added.   If it fails to add hold the reset button on the back until the signal strength bar starts flashing and the device will re-enter pairing mode.
+업데이트 후 기기는 페어링 모드로 진입하며 추가할 수 있습니다. 추가에 실패하면 뒷면의 초기화 버튼을 신호 강도 표시줄이 깜빡이기 시작할 때까지 누르면 기기가 페어링 모드로 다시 진입합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

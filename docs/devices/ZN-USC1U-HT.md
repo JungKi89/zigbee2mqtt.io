@@ -25,15 +25,15 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-Press on one of the buttons for 10 seconds to enter pairing mode (All lights should blink)
+### 페어링
+버튼 중 하나를 10초간 눌러 페어링 모드로 진입합니다 (모든 불빛이 깜빡여야 합니다)
 
-### Calibration
+### 캘리브레이션
 
-* Press the close button on the switch, wait until the curtains are completely closed.
-* Press the pause button on the switch.
-* Set the amount of time for the curtain to be opened, see [below](#calibration-time-numeric).
-* If the amount of time is not enough, repeat the process until the curtain can be completely opened.
+* 스위치의 닫기 버튼을 누르고 커튼이 완전히 닫힐 때까지 기다립니다.
+* 스위치의 일시정지 버튼을 누릅니다.
+* 커튼이 열리는 데 걸리는 시간을 설정합니다. [아래](#calibration-time-numeric)를 참고하세요.
+* 시간이 충분하지 않은 경우, 커튼이 완전히 열릴 때까지 과정을 반복합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

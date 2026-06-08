@@ -27,14 +27,13 @@ pageClass: device-page
 ## Notes
 
 
-After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
-In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
+페어링 후 디바이스는 "TI0001" 디바이스로 표시됩니다. 페어링 직후 Zigbee2MQTT 웹 프론트엔드 또는 [MQTT 메시지](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure)를 사용하여 디바이스 재구성을 수동으로 트리거해야 합니다.
+문제가 발생한 경우, 디바이스를 제거한 후 페어링 및 재구성을 다시 시도하는 것이 좋습니다.
 
-### Important
-These devices can only be used on channel 26.
-These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../guide/configuration/) must contain the following:
+### 중요
+이 디바이스들은 채널 26에서만 사용할 수 있습니다.
+이 디바이스들은 제조사 네트워크 키(ext_pan_id)에 고정되어 있습니다.
+설정 파일 [data/configuration.yaml](../guide/configuration/)에 다음 내용이 포함되어 있어야 합니다:
 
 ```yaml
 advanced:
@@ -42,9 +41,9 @@ advanced:
   channel: 26
 ```
 
-Therefore these devices may not co-existence with other Zigbee devices.
-Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
-If you decided to create a new network, you should specify another 'pan_id'.
+따라서 이 디바이스들은 다른 Zigbee 디바이스와 함께 사용하지 못할 수 있습니다.
+Livolo 전용 코디네이터를 추가하고 새 네트워크를 생성해야 할 수도 있습니다.
+새 네트워크를 생성하기로 했다면, 다른 'pan_id'를 지정해야 합니다.
 
 ```yaml
 advanced:

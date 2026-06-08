@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-While the thermostat is off, press and hold the "temperature down" button until the display shows the "network" icon.
+서모스탯이 꺼진 상태에서 디스플레이에 "network" 아이콘이 표시될 때까지 "온도 낮추기" 버튼을 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -28,26 +28,26 @@ pageClass: device-page
 ## Notes
 
 
-### Transmitters Loosing Connection in Zigbee 3 Networks
-With their factory firmware, the transmitters loose network connection after a few hours when Zigbee 3 devices are present in the network (which is a pretty much standard nowadays). For the Jung wall and handheld transmitters there is a firmware update available that fixes this problem (see [OTA updates](#ota-updates) below), but in turn decreases battery lifetime down to a few months.
+### Zigbee 3 네트워크에서 송신기 연결 끊김 문제
+공장 출하 펌웨어를 사용하는 경우, Zigbee 3 디바이스가 네트워크에 있으면(현재 대부분의 환경에서 표준) 몇 시간 후 송신기가 네트워크 연결을 잃게 됩니다. Jung 벽면 및 핸드헬드 송신기의 경우 이 문제를 해결하는 펌웨어 업데이트가 제공됩니다(아래 [OTA updates](#ota-updates) 참조). 단, 배터리 수명이 몇 달 수준으로 감소합니다.
 
-Unfortunately Gira seems to have dropped support for their Zigbee transmitters completely and does not offer any firmware updates at all. For the Gira handheld transmitter the Jung update seems to work (and to fix the problem), but for the Gira wall transmitter this is not the case (it only has 6 buttons instead of 8 on the Jung wall transmitter and would therefore need a different firmware). There does not seem to be real solution for this problem rendering the Gira wall transmitters pretty much useless nowadays.
+안타깝게도 Gira는 Zigbee 송신기에 대한 지원을 완전히 중단한 것으로 보이며 펌웨어 업데이트를 전혀 제공하지 않습니다. Gira 핸드헬드 송신기의 경우 Jung 업데이트가 작동하는 것으로 보이지만(문제를 해결함), Gira 벽면 송신기는 그렇지 않습니다(Jung 벽면 송신기의 8개 버튼과 달리 6개 버튼만 있어 다른 펌웨어가 필요함). 이 문제에 대한 실질적인 해결책이 없어 현재 Gira 벽면 송신기는 거의 사용할 수 없는 상태입니다.
 
-### Factory Reset (8-Button Devices)
-* Press and hold buttons `3` and `4` simultaneously for about 10 seconds until the green LEDs start to flash.
-* Release buttons `3` and `4` and then briefly press button `O` within 10 seconds.
-* The LEDs should light up green for 3 seconds and the transmitter has been reset.
+### 초기화 (8버튼 디바이스)
+* 녹색 LED가 깜박이기 시작할 때까지 버튼 `3`과 `4`를 동시에 약 10초간 길게 누릅니다.
+* 버튼 `3`과 `4`를 놓은 후 10초 이내에 버튼 `O`를 짧게 누릅니다.
+* LED가 3초간 녹색으로 점등되면 송신기가 초기화된 것입니다.
 ![Reset](../images/InstaRemote-reset.jpg)
 
-### Join Network (8-Button Devices)
-* Press and hold buttons `5` and `I` simultaneously until the green LEDs start to flash. Then release the buttons again.
-* After 10 more seconds the transmitter will start to search for an open network in order to join it.
-* If the transmitter was able to join a network, the LEDs will light up green for 3 seconds (otherwise the LEDs will flash red quickly for 3 seconds).
+### 네트워크 참가 (8버튼 디바이스)
+* 녹색 LED가 깜박이기 시작할 때까지 버튼 `5`와 `I`를 동시에 길게 누릅니다. 그런 다음 버튼을 놓습니다.
+* 10초 후 송신기가 참가할 오픈 네트워크를 검색하기 시작합니다.
+* 네트워크 참가에 성공하면 LED가 3초간 녹색으로 점등됩니다(실패하면 LED가 3초간 빠르게 빨간색으로 깜박입니다).
 ![Join Network](../images/InstaRemote-join-network.jpg)
 
 ### OTA
-For the device to ask for/accept OTA updates, it needs to be in "programming mode" (same mode as for joining a network, see above).
-In case the device does still not accept updates or seems to be stuck somehow, it may help to do a factory reset, join the network again and then again enter programming mode before starting the OTA update again.
+디바이스가 OTA 업데이트를 요청하거나 수락하려면 "프로그래밍 모드"에 있어야 합니다(네트워크 참가 모드와 동일, 위 내용 참조).
+디바이스가 업데이트를 수락하지 않거나 어떤 이유로 멈춘 것처럼 보이는 경우, 초기화 후 네트워크에 다시 참가하고 OTA 업데이트를 다시 시작하기 전에 프로그래밍 모드에 진입하면 도움이 될 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

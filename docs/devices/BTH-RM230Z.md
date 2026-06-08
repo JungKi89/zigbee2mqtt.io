@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the back of the cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+## 페어링
+이 디바이스를 페어링하려면 설치 코드를 통해 기기를 등록해야 합니다. 커버 뒷면의 QR 코드를 스마트폰으로 스캔하여 설치 코드를 얻을 수 있습니다. 그런 다음 디바이스를 페어링 모드로 진입시킵니다. Zigbee2MQTT에서 "Settings" --> "Tools"로 이동한 후 "Add install code"를 클릭합니다. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 다음, 참가 허용(permit joining)이 활성화되어 있는지 확인합니다. 디바이스가 네트워크에 참가할 때까지 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

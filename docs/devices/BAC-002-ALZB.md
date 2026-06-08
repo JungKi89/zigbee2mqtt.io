@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Switch the thermostat off. Press and hold the temperature down button for +- 8 seconds to enable the pairing mode (display lights up and a WiFi-like icon is blinking). After successful interview turn the thermostat on again.
+### 페어링
+서모스탯을 끄세요. 온도 낮추기 버튼을 약 8초간 길게 눌러 페어링 모드를 활성화하세요 (디스플레이가 켜지고 WiFi 아이콘이 깜빡입니다). 인터뷰가 성공적으로 완료된 후 서모스탯을 다시 켜세요.
 
-### Stop message flooding
-This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your `configuration.yaml` file:
+### 메시지 과부하 방지
+이 기기에는 업데이트 시 여러 메시지를 전송하는 버그가 있습니다. MQTT 큐에 과부하가 걸리는 것을 방지하려면 `configuration.yaml` 파일에 다음을 추가하세요:
 
 
 devices:

@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-On initial boot, the device will display a message "Waiting for accessing the network" permit join and the device will be added.
+### 페어링
+초기 부팅 시 디바이스에 "네트워크 접속 대기 중" 메시지가 표시됩니다. 참여를 허용하면 디바이스가 추가됩니다.
 
-If the device is already part of a network, swipe down from the top of the screen to access the Settings panel (password may be required), navigate to "Advanced", navigate to "Access New Gateway" and confirm with "Ok".
-Once confirmed, proceed as per initial boot.
+디바이스가 이미 네트워크에 속해 있는 경우, 화면 상단에서 아래로 스와이프하여 설정 패널에 접근하고(비밀번호가 필요할 수 있습니다), "고급"으로 이동한 후 "새 게이트웨이 접속"으로 이동하여 "확인"으로 확인하세요.
+확인 후 초기 부팅과 동일한 절차를 진행하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

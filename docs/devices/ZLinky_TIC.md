@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Pair the sensor to Zigbee2MQTT by long pressing the pair button for more than 10 seconds. The blue light on the front side should flash rapidly.
+### 페어링
+페어 버튼을 10초 이상 길게 눌러 센서를 Zigbee2MQTT에 페어링하세요. 전면의 파란 불빛이 빠르게 깜빡여야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory reset the light bulb by turning the bulb on/off seven times.
-After resetting the bulb will go into pairing mode for 20 seconds.
+### 페어링
+전구를 7번 켰다 꺼서 공장 초기화하세요.
+초기화 후 전구는 20초 동안 페어링 모드로 진입합니다.
 
-While pairing, keep the bulb close to the adapter.
+페어링 중에는 전구를 어댑터 가까이에 두세요.
 <!-- Notes END: Do not edit below this line -->
 
 

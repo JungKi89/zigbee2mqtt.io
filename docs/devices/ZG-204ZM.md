@@ -26,13 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-The manufacturer provides a good [technical in-depth document](https://doc.szalarm.com/zg-205Z/en/) that explains
-what the various settings mean, good default values for those, a recommended method for trimming these values and 
-various other considerations (like installation position) to get good results.
+제조사는 다양한 설정의 의미, 권장 기본값, 값 조정 방법 및 좋은 결과를 얻기 위한 여러 고려사항(설치 위치 등)을 설명하는 상세한 [기술 문서](https://doc.szalarm.com/zg-205Z/en/)를 제공합니다.
 
-There seem to be multiple versions of this device which visually look the same. 
-Devices which are detected as `Zigbee Model=TS0601, Zigbee Manufacturer=_TZE200_kb5noeto` are known to get stuck in "presence detected" state. See this [review](https://smarthomescene.com/reviews/zigbee-battery-powered-presence-sensor-zg-204zm-review/) for more user experiences.
-One of the suggestions is to remove residual solder-flux from the PCB and/or to resolder some components.
+외관이 동일한 여러 버전의 디바이스가 있는 것으로 보입니다. `Zigbee Model=TS0601, Zigbee Manufacturer=_TZE200_kb5noeto`로 감지된 디바이스는 "재실 감지됨" 상태에서 멈추는 것으로 알려져 있습니다. 더 많은 사용자 경험은 이 [리뷰](https://smarthomescene.com/reviews/zigbee-battery-powered-presence-sensor-zg-204zm-review/)를 참고하세요.
+해결 방법 중 하나는 PCB에서 잔류 납땜 플럭스를 제거하거나 일부 부품을 다시 납땜하는 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

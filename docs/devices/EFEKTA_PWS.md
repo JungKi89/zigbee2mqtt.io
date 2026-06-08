@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Build guide
-Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee)
+### 제작 가이드
+이 기기를 제작하는 방법에 대한 설명은 [여기](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee)에서 확인할 수 있습니다
 <!-- Notes END: Do not edit below this line -->
 
 

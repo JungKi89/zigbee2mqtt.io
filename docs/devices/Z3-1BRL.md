@@ -26,36 +26,36 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Enter pairing mode
+### 페어링 모드 진입
 
-For new devices:
-* Quickly double tap the dimmer button.
+신규 기기의 경우:
+* 디머 버튼을 빠르게 두 번 탭합니다.
 
-For previously paired devices:
-1. Quickly tap the dimmer button 4x.
-2. On the fourth tap, hold until the LED begins to blink.
-3. Immediately, quickly tap the dimmer button 3 more times.
+이전에 페어링된 기기의 경우:
+1. 디머 버튼을 빠르게 4번 탭합니다.
+2. 네 번째 탭에서 LED가 깜박이기 시작할 때까지 누르고 있습니다.
+3. 즉시 디머 버튼을 3번 더 빠르게 탭합니다.
 
-See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
+자세한 내용은 이 [설정 가이드](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7)를 참조하세요.
 
-If a red light flashes, the battery is low and must be replaced before pairing.
+빨간 불이 깜박이면 배터리가 부족한 것이므로 페어링 전에 교체해야 합니다.
 
-### Device Binding
+### 기기 바인딩
 
-When binding this device to a device, the dimmer creates a group and associates the targeted device with the group. This dimmer cannot directly control devices that do not support groups.  The dimmer also cannot be bound to a group through the Binding tab in Zigbee2MQTT, even though it uses groups under the hood.
+이 기기를 다른 기기에 바인딩하면, 디머가 그룹을 생성하고 대상 기기를 해당 그룹과 연결합니다. 이 디머는 그룹을 지원하지 않는 기기를 직접 제어할 수 없습니다. 또한 내부적으로 그룹을 사용하더라도 Zigbee2MQTT의 바인딩 탭을 통해 그룹에 바인딩할 수 없습니다.
 
-The dial has been observed creating groups with id `0x2fed` / `12269`. Consider creating that group in Zigbee2MQTT to avoid accidentally creating a conflicting group. If a device is having difficulty with the binding procedure, this can also be used as a workaround to enable direct control of the device.
+다이얼은 `0x2fed` / `12269` ID로 그룹을 생성하는 것이 관찰되었습니다. 충돌하는 그룹이 실수로 생성되지 않도록 Zigbee2MQTT에서 해당 그룹을 먼저 만들어두는 것을 고려하세요. 바인딩 절차에 어려움이 있는 기기의 경우, 이 그룹을 기기의 직접 제어를 가능하게 하는 해결책으로 사용할 수도 있습니다.
 
-If you suspect your dial is using a different group ID, you can find it by following these steps:
+다이얼이 다른 그룹 ID를 사용하고 있다고 의심된다면 다음 단계를 따라 확인할 수 있습니다:
 
-1. Enable debug logging and restarting Zigbee2MQTT.
-2. Open the `Clusters` tab in the Zigbee2MQTT web interface for a device that has been bound to the dimmer.
-3. Find the endpoint number that contains the `genGroups` cluster.
-4. Open the dev console tab, and enter the number from step 3 under `Execute Command`.
-5. Enter `2` for the command (which corresponds to `Get Group Membership`).
-6. Enter `{"groupcount": 0, "grouplist": []}` for the `Payload` and click `Execute`.
-7. In the debug logs, you will see a line with `commandGetMembershipRsp` and the array of group IDs as `grouplist`, in decimal format.
-8. You can now turn off debug logging and restart Zigbee2MQTT.
+1. 디버그 로깅을 활성화하고 Zigbee2MQTT를 재시작합니다.
+2. 디머에 바인딩된 기기의 Zigbee2MQTT 웹 인터페이스에서 `Clusters` 탭을 엽니다.
+3. `genGroups` 클러스터가 포함된 엔드포인트 번호를 찾습니다.
+4. 개발자 콘솔 탭을 열고 `Execute Command` 아래에 3단계의 번호를 입력합니다.
+5. 명령(command)에 `2`를 입력합니다 (`Get Group Membership`에 해당).
+6. `Payload`에 `{"groupcount": 0, "grouplist": []}`를 입력하고 `Execute`를 클릭합니다.
+7. 디버그 로그에서 `commandGetMembershipRsp`가 포함된 줄과 그룹 ID 배열(`grouplist`)이 10진수 형식으로 표시됩니다.
+8. 이제 디버그 로깅을 끄고 Zigbee2MQTT를 재시작할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

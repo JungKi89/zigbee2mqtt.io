@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the button on the device for +- 10 seconds
-(until the blue light starts blinking and stops blinking), release and wait.
+### 페어링
+기기의 버튼을 약 10초간 길게 누릅니다
+(파란 불이 깜빡이기 시작했다가 멈출 때까지). 손을 떼고 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

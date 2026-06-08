@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
+### 페어링
+처음 전원을 켜면 페어링 모드로 진입해야 합니다. 새 네트워크에 페어링하려면 Wi-Fi LED 표시기가 짧은 두 번 깜박임과 긴 한 번 깜박임의 반복 패턴으로 바뀔 때까지 리셋 버튼을 5초 동안 길게 눌렀다가 놓습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

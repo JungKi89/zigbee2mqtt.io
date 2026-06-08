@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+이 기기는 기본적으로 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기의 `legacy: false`를 설정하세요. 예시:
 
 ```yaml
 devices:
@@ -40,10 +40,10 @@ devices:
 ```
 
 
-### Legacy integration
-By default (for backwards compatibility purposes) the legacy integration is enabled.
-For new users it is recommended to **disable** this as it has several fundamental problems.
-To disable the legacy integration add the following to your `configuration.yaml`:
+### 레거시 통합
+기본적으로 (하위 호환성을 위해) 레거시 통합이 활성화되어 있습니다.
+여러 근본적인 문제가 있으므로 새 사용자는 이를 **비활성화**하는 것을 권장합니다.
+레거시 통합을 비활성화하려면 `configuration.yaml`에 다음을 추가하세요:
 
 
 ```yaml

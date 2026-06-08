@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press on stop button for 10 seconds to enter pairing mode
+### 페어링
+정지 버튼을 10초간 눌러 페어링 모드로 진입하세요
 
-### Calibration
+### 보정
 
-* Press the open button on the switch, wait until the curtains are completely open.
-* Press the pause button on the switch.
-* Put the device into calibration mode, see [below](#calibration-binary).
-* Press the close button on the switch, wait until curtains are fully closed.
-* Press the pause button on the switch.
-* Disable the calibration mode, see [below](#calibration-binary).
+* 스위치의 열기 버튼을 누르고 커튼이 완전히 열릴 때까지 기다리세요.
+* 스위치의 일시정지 버튼을 누르세요.
+* 기기를 보정 모드로 전환하세요. [아래](#calibration-binary) 참조.
+* 스위치의 닫기 버튼을 누르고 커튼이 완전히 닫힐 때까지 기다리세요.
+* 스위치의 일시정지 버튼을 누르세요.
+* 보정 모드를 비활성화하세요. [아래](#calibration-binary) 참조.
 <!-- Notes END: Do not edit below this line -->
 
 

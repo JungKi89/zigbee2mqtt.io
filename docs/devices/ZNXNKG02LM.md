@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
-If you're having problems pairing, try keeping the device alive (press the button every second) after pairing started, until pairing completed
+기기의 버튼을 파란색 표시등이 깜박이기 시작할 때까지 누르고 있다가 놓으면 페어링이 시작됩니다.
+페어링에 문제가 있는 경우, 페어링이 완료될 때까지 페어링 시작 후 매 초마다 버튼을 눌러 기기가 활성 상태를 유지하도록 해보세요.
 <!-- Notes END: Do not edit below this line -->
 
 

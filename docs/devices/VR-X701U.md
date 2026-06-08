@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the button on the device for more then 10 seconds (until the led light starts blinking), release and wait.
+### 페어링
+기기의 버튼을 10초 이상 길게 누른 후 (LED가 깜빡이기 시작할 때까지) 손을 떼고 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

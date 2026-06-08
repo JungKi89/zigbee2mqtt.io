@@ -27,22 +27,22 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Re-pairing
-Re-pairing requires the device is removed from any existing network first, this requires a factory reset if the dimmer cannot be gracefully removed from the previous network. Unfortunately the user manual does not cover this procedure, but it is quite simple:
-To perform a factory reset. Turn on the light, press the knob for 5 times and long press the 5th time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
-To start paring, turn on the light, press the knob for 2 times and long press the 2nd time for 3 seconds. Once pairing starts, the lamp will flicker for 2 times. When pairing is complete, the lamp will flash once more.
+### 재페어링
+재페어링을 위해서는 먼저 디바이스를 기존 네트워크에서 제거해야 합니다. 디머를 이전 네트워크에서 정상적으로 제거할 수 없는 경우 초기화가 필요합니다. 안타깝게도 사용자 설명서에는 이 절차가 없지만, 방법은 매우 간단합니다:
+초기화를 수행하려면, 조명을 켠 후 노브를 5번 누르고 5번째에 3초간 길게 누릅니다. 초기화가 성공하면 램프가 5번 깜박입니다.
+페어링을 시작하려면, 조명을 켠 후 노브를 2번 누르고 2번째에 3초간 길게 누릅니다. 페어링이 시작되면 램프가 2번 깜박입니다. 페어링이 완료되면 램프가 한 번 더 깜박입니다.
 
-#### Re-pairing Using the Reset Button
+#### 리셋 버튼을 사용한 재페어링
 
-Follow these steps to manage pairing using the reset button:
+리셋 버튼을 사용하여 페어링을 관리하려면 다음 단계를 따르세요:
 
-- **Graceful Un-pairing:** Press the reset button **3 times quickly** to gracefully remove the device from its current network. The indicator light will flash **purple**, then turn solid purple for **10 seconds**, confirming the un-pairing.
+- **정상 언페어링:** 리셋 버튼을 **빠르게 3번** 눌러 디바이스를 현재 네트워크에서 정상적으로 제거합니다. 표시등이 **보라색**으로 깜박인 후 **10초간** 보라색으로 점등되어 언페어링을 확인합니다.
 
-  > **Note:** If graceful un-pairing is not possible, perform a factory reset.
+  > **참고:** 정상 언페어링이 불가능한 경우 초기화를 수행하세요.
 
-- **Manual Factory Reset:** Press and **hold** the reset button for more than **5 seconds**. The indicator light will turn solid **red** for **10 seconds**, confirming the device has been reset to factory settings.
+- **수동 초기화:** 리셋 버튼을 **5초 이상** 길게 누릅니다. 표시등이 **10초간** 빨간색으로 점등되어 디바이스가 공장 설정으로 초기화되었음을 확인합니다.
 
-- **Start Pairing:** Press the reset button **2 times quickly** to initiate pairing mode. The indicator light will flash **blue**, indicating pairing mode is active. Pairing mode remains active for **15 minutes**.
+- **페어링 시작:** 리셋 버튼을 **빠르게 2번** 눌러 페어링 모드를 시작합니다. 표시등이 **파란색**으로 깜박여 페어링 모드가 활성화되었음을 나타냅니다. 페어링 모드는 **15분간** 활성 상태를 유지합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair the device; permit joining in Zigbee2MQTT, ensure that the ZYA-C4-MOD-S is inserted into the lock, click the button next to the module 3 times (a chime should sound), wait and another chime should sound on success. If the pariring fails, the lock will beep 3 times and flash a red light - if this happens, repeat the process again.
+### 페어링
+기기를 페어링하려면 Zigbee2MQTT에서 참여를 허용하고, ZYA-C4-MOD-S가 잠금장치에 삽입되어 있는지 확인한 후 모듈 옆의 버튼을 3번 클릭합니다(차임음이 들려야 합니다). 잠시 기다리면 성공 시 또 다른 차임음이 들립니다. 페어링에 실패하면 잠금장치가 3번 비프음을 내고 빨간색 표시등이 깜박입니다. 이 경우 과정을 다시 반복하세요.
 
-### Removing
-To remove the device, please do not use the delete device facility in Zigbee2MQTT - this will likely fail. Instead, click the button next to the module 3 times a chime should sound, followed shortly by another. You should then see in Zigbee2MQTT that the device has successfully left the network and should be available for re-pairing.
+### 제거
+기기를 제거할 때는 Zigbee2MQTT의 기기 삭제 기능을 사용하지 마세요. 실패할 가능성이 높습니다. 대신 모듈 옆의 버튼을 3번 클릭하면 차임음이 들리고 잠시 후 또 다른 차임음이 납니다. 그런 다음 Zigbee2MQTT에서 기기가 네트워크에서 성공적으로 이탈했으며 다시 페어링할 수 있다는 것을 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

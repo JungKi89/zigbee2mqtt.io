@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+### 페어링
+디바이스의 리셋 버튼을 약 5초간 길게 누릅니다(파란 불이 깜박이기 시작할 때까지).
+이후 디바이스가 자동으로 네트워크에 참가합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

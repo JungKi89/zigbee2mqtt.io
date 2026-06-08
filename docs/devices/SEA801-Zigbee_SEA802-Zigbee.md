@@ -28,19 +28,19 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-* SEA801-Zigbee (LCD display on the front, several buttons): Long hold the "AUTO/MANU" and "+" Button until the LCD display shows "----"
-* SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
+* SEA801-Zigbee (전면 LCD 디스플레이, 여러 버튼): LCD 화면에 "----"가 표시될 때까지 "AUTO/MANU" 버튼과 "+" 버튼을 길게 누릅니다.
+* SEA802-Z01 (측면 흰색 LED 디스플레이, 회전 플레이트): LED 점들이 "OF"를 표시할 때까지 회전 플레이트를 돌려 온도를 낮춘 후, 화면이 "--"로 변경될 때까지 길게 누릅니다.
 
-### Weekly Schedule
+### 주간 스케줄
 
-It's not possible to read (`/get`) this value.
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
+이 값은 읽기(`/get`)가 불가능합니다.
+다음 페이로드로 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽에 메시지를 발행하여 제어합니다.
 
-`dayofweek` 1-7, 1=sunday
-`transitionTime` Minutes after midnight
-`numoftrans` It seems that the maximum number of transitions is 4 
+`dayofweek` 1-7, 1=일요일
+`transitionTime` 자정 이후 분 단위
+`numoftrans` 최대 전환 횟수는 4인 것으로 보입니다. 
 
 ``` json
 {

@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Factory Reset / Pairing Mode
-- Turn the light off for 3 seconds
-- Turn the light on for 5 seconds
-- Turn the light off and on 6 times with 1 second intervals
-- Blinks twice when reset
+### 공장 초기화 / 페어링 모드
+- 조명을 3초간 끕니다
+- 조명을 5초간 켭니다
+- 1초 간격으로 조명을 6번 껐다 켭니다
+- 초기화 시 두 번 깜빡입니다
 
-[Innr support video of procedure](https://www.youtube.com/watch?v=SRG0gWvkC4Q)
+[Innr 지원 영상](https://www.youtube.com/watch?v=SRG0gWvkC4Q)
 <!-- Notes END: Do not edit below this line -->
 
 

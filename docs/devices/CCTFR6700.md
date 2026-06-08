@@ -27,20 +27,20 @@ pageClass: device-page
 ## Notes
 
 
-### Device info
-This device is a thermostat to drive an electric heater.
-It supports two modes:
-- Contactor mode, that switches the heater power supply on and off
-- Pilot mode, for compatible heaters
+### 디바이스 정보
+이 디바이스는 전기 히터를 구동하는 서모스탯입니다.
+두 가지 모드를 지원합니다:
+- 컨택터 모드: 히터의 전원 공급을 켜고 끔
+- 파일럿 모드: 호환 가능한 히터에 사용
 
-### Pairing and configuring
-After pairing the device requires:
-- the pilot mode to be configured (Contactor/Pilot)
-- an external temperature measurement, either through a bind from a sensor, or report from the coordinator through automation. The temperature must be refreshed at least every 10mn
-- the target thermostat set point
+### 페어링 및 구성
+페어링 후 디바이스에 필요한 설정:
+- 파일럿 모드 구성(Contactor/Pilot)
+- 센서에서 바인딩하거나 자동화를 통해 코디네이터에서 보고하는 외부 온도 측정값. 온도는 최소 10분마다 갱신해야 합니다
+- 목표 서모스탯 설정값
 
-### Local temperature
-In order to provide external temperature measurement from the coordinator through automation, can be set by publishing a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_measured_value": VALUE}` where `VALUE` is the temperature eg: `18`.
+### 현재 온도
+자동화를 통해 코디네이터에서 외부 온도 측정값을 제공하려면, `zigbee2mqtt/FRIENDLY_NAME/set` 토픽에 `{"temperature_measured_value": VALUE}` 페이로드(예: `18`)를 발행하여 설정할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

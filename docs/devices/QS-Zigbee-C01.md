@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-*How to reset*
-* Press the reset key (upper right in hole) for about 10 seconds until the indicator LED inside the module flashes quickly.
-* Alternatively turn on/off the wired switch  for 5 times until the indicator LED inside the module flashes quickly. (The relay should click 10 times, so if you have a momentary switch connected to the module, you should push it 10 times)
+*초기화 방법*
+* 모듈 내부의 표시 LED가 빠르게 깜박일 때까지 리셋 키(오른쪽 상단 구멍)를 약 10초 동안 누릅니다.
+* 또는 모듈 내부의 표시 LED가 빠르게 깜박일 때까지 유선 스위치를 5번 켰다 끕니다. (릴레이가 10번 클릭되어야 하므로 모멘터리 스위치가 모듈에 연결된 경우 10번 눌러야 합니다)
 <!-- Notes END: Do not edit below this line -->
 
 

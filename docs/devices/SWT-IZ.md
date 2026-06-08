@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The device requires firmware version v3.18 or newer to support Zigbee pairing. If your device has an older firmware version, you will need to update it using Glen Dimplex's ConfigR application. Update instructions can be found [here](https://cdn.sanity.io/files/0fq01xzs/production/8d81438f219b1099b35b6c896438bf2cdac1812b.pdf).
+### 페어링
+Zigbee 페어링을 지원하려면 기기의 펌웨어 버전이 v3.18 이상이어야 합니다. 기기의 펌웨어가 이전 버전인 경우 Glen Dimplex의 ConfigR 애플리케이션을 사용하여 업데이트해야 합니다. 업데이트 지침은 [여기](https://cdn.sanity.io/files/0fq01xzs/production/8d81438f219b1099b35b6c896438bf2cdac1812b.pdf)에서 확인할 수 있습니다.
 
-To pair the device:
-1. Navigate to Settings → Comms → RF → Enable on the thermostat
-2. The device will enter pairing mode
-3. Zigbee2MQTT should automatically discover the device
+기기 페어링 방법:
+1. 온도 조절기에서 설정 → 통신 → RF → 활성화로 이동합니다.
+2. 기기가 페어링 모드로 진입합니다.
+3. Zigbee2MQTT가 자동으로 기기를 발견합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

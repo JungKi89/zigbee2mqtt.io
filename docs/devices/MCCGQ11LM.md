@@ -26,31 +26,31 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses a CR1632 battery
+### 배터리
+CR1632 배터리를 사용합니다.
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.  
-If this doesn't work, after starting the pairing process with the long press, keep short pressing the button approximately once a second until the interview process is finished.
+### 페어링
+기기의 초기화 버튼을 약 5초간 길게 누릅니다(파란 LED가 깜빡이기 시작할 때까지).
+이후 기기가 자동으로 네트워크에 참여합니다.
+이 방법이 작동하지 않으면, 길게 눌러 페어링 프로세스를 시작한 후 인터뷰 과정이 완료될 때까지 약 1초에 한 번씩 버튼을 짧게 눌러주세요.
 
-In some cases where users are using a CC2531 USB stick (see https://github.com/Koenkk/zigbee2mqtt/issues/839) performing a shutdown of Zigbee2MQTT, removing and reinserting the USB stick, then restarting Zigbee2MQTT has proven successful for pairing via the above method when it has not been working.
-Switching to the ember adapter after [upgrading the stick firmware](https://darkxst.github.io/silabs-firmware-builder/) might solve this pairing issue.
+CC2531 USB 스틱을 사용하는 경우(https://github.com/Koenkk/zigbee2mqtt/issues/839 참고), Zigbee2MQTT를 종료한 뒤 USB 스틱을 뽑았다가 다시 꽂고 Zigbee2MQTT를 재시작하면 위 방법으로 페어링이 성공한 사례가 있습니다.
+[스틱 펌웨어 업그레이드](https://darkxst.github.io/silabs-firmware-builder/) 후 ember 어댑터로 전환하면 이 페어링 문제가 해결될 수 있습니다.
 
 
-### Troubleshooting: device stops sending messages/disconnects from network
-Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
-Most of the times this happens because of the following reasons:
-- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
-- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
+### 문제 해결: 기기가 메시지 전송을 중단하거나 네트워크에서 연결이 끊어지는 경우
+Xiaomi 기기는 Zigbee 표준을 완전히 준수하지 않기 때문에 때때로 네트워크에서 연결이 끊어지는 경우가 있습니다.
+대부분의 경우 다음과 같은 이유로 발생합니다:
+- 기기의 신호가 약한 경우. 발행된 메시지에서 `linkquality` 값으로 신호 품질을 확인할 수 있습니다. `linkquality` < 20은 약한 신호로 간주됩니다.
+- 배터리 전압이 낮은 경우. 배터리가 충분해 보여도 발생할 수 있습니다. 다른 배터리로 교체해 보세요.
+- Xiaomi 기기와 호환되지 않는 라우터를 통해 연결된 경우. Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi 등의 기기에서 이러한 문제가 발생하는 것으로 알려져 있습니다. 해결 방법으로는 기기를 중앙 코디네이터 가까이에서 초기화 버튼을 눌러 코디네이터에 직접 연결하는 것을 시도해볼 수 있습니다.
 
-More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+더 자세한 정보는 [여기](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)에서 확인할 수 있습니다.
 
-### Recommendation
-If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the `debounce` option in your device specific configuration.
+### 권장 사항
+수평 슬라이드 방식으로 접촉이 이루어지는 경우(예: 센서가 미닫이문 상단에 설치된 경우), 센서가 서로 충돌하는 상태의 메시지를 세 개 이상 전송할 수 있습니다. 이 문제를 해결하려면 기기별 설정에서 `debounce` 옵션 사용을 고려해 보세요.
 
-E.g. (devices.yaml)
+예시 (devices.yaml)
 
 
 ```yaml

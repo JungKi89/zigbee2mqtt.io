@@ -27,20 +27,16 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
-4 times (so the red lights starts blinking).
-After the blinks you might be willing to rotate the dimmer
-like you are trying to control your lights. It will prevent the device
-from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
-See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
+### 페어링
+TRADFRI 무선 디머(ICTC-G-1)를 공장 초기화하려면 버튼을 4번 누릅니다(빨간색 LED가 깜박이기 시작할 때까지).
+깜박임 후에는 조명을 제어하듯이 디머를 회전시키는 것이 좋습니다. 이렇게 하면 기기가 슬립 모드로 전환되지 않아 페어링이 성공적으로 이루어집니다. 디머는 인식되었지만 동작이 감지되지 않는 경우, Zigbee2MQTT를 재시작해 보세요.
+[IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620)을 참조하세요.
 
 
-### Legacy integration
-By default (for backwards compatibility purposes) the legacy integration is enabled.
-For new users it is recommended to **disable** this as it has several fundamental problems.
-To disable the legacy integration add the following to your `configuration.yaml`:
+### 레거시 통합
+기본적으로 (하위 호환성을 위해) 레거시 통합이 활성화되어 있습니다.
+여러 근본적인 문제가 있으므로 새 사용자는 이를 **비활성화**하는 것을 권장합니다.
+레거시 통합을 비활성화하려면 `configuration.yaml`에 다음을 추가하세요:
 
 
 ```yaml
@@ -51,12 +47,12 @@ To disable the legacy integration add the following to your `configuration.yaml`
 
 
 
-The information below only applies to the legacy integration.
+아래 정보는 레거시 통합에만 해당됩니다.
 
-### Recommendation
-This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
+### 권장 사항
+이 기기는 짧은 시간 안에 동일한 페이로드로 여러 메시지를 보냅니다. 고유한 action 페이로드를 잃지 않으면서 처리량을 제한하기 위해 `debounce_ignore: - action`과 함께 `debounce` 옵션을 설정하는 것이 좋습니다.
 
-E.g. (devices.yaml)
+예시 (devices.yaml)
 
 
 ```yaml
@@ -68,7 +64,7 @@ E.g. (devices.yaml)
 ```
 
 
-To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
+최적의 "부드러움"을 찾으려면 debounce 시간을 조정하거나, 모든 고유한 회전 단계가 필요한 경우 `debounce_ignore` 옵션에 `brightness`를 추가하는 것을 고려하세요.
 
 
 ```yaml

@@ -28,15 +28,15 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join, but the interview process may not finish.
-If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
+### 페어링
+기기의 초기화 버튼을 약 5초간 길게 누릅니다(파란 LED가 깜빡이기 시작할 때까지).
+이후 기기가 자동으로 네트워크에 참여하지만, 인터뷰 과정이 완료되지 않을 수 있습니다.
+그런 경우, 인터뷰 과정이 성공적으로 완료될 때까지 초기화 버튼을 짧게 눌러 LED가 계속 깜빡이도록 유지하세요.
 
-### Recommendation
-If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the `debounce` option in your device specific configuration.
+### 권장 사항
+수평 슬라이드 방식으로 접촉이 이루어지는 경우(예: 센서가 미닫이문 상단에 설치된 경우), 센서가 서로 충돌하는 상태의 메시지를 세 개 이상 전송할 수 있습니다. 이 문제를 해결하려면 기기별 설정에서 `debounce` 옵션 사용을 고려해 보세요.
 
-E.g. (devices.yaml)
+예시 (devices.yaml)
 
 
 ```yaml

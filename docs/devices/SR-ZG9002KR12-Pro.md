@@ -26,15 +26,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Home Assistant
 
-For easy integration with Home Assistant, you can use our blueprint. This blueprint helps you:
+Home Assistant와 쉽게 연동하려면 블루프린트를 사용할 수 있습니다. 이 블루프린트는 다음을 도와줍니다:
 
-- Identify and respond to button press events from different buttons on the device
-- Easily distinguish between buttons in your automations
-- Simplify the automation setup process
+- 기기의 다양한 버튼에서 발생하는 버튼 누름 이벤트를 식별하고 응답
+- 자동화에서 버튼을 쉽게 구분
+- 자동화 설정 과정을 간소화
 
 [https://github.com/maginawin/sr_ha_blueprints](https://github.com/maginawin/sr_ha_blueprints)
 
-Find the appropriate badge in the link above to import the blueprint into your Home Assistant instance.
+위 링크에서 적절한 배지를 찾아 블루프린트를 Home Assistant 인스턴스에 가져오세요.
 <!-- Notes END: Do not edit below this line -->
 
 

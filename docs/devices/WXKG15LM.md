@@ -26,14 +26,14 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-Factory reset the switch by pressing and holding left and right rocker for 10 seconds. This will allow put the remote in pairing mode and pair to Zigbee2MQTT.
+### 페어링
+왼쪽과 오른쪽 로커를 10초 동안 누르고 있어 스위치를 공장 초기화합니다. 이렇게 하면 리모컨이 페어링 모드로 전환되어 Zigbee2MQTT에 페어링됩니다.
 
-### Change clickmode
-If you have issues changing the click_mode with Zigbee2MQTT you can switch between click mode physically. This is done by clicking either of the two rockers quickly five times. The click mode will then toggle between fast mode and multi mode.
+### 클릭 모드 변경
+Zigbee2MQTT로 click_mode를 변경하는 데 문제가 있으면 물리적으로 클릭 모드를 전환할 수 있습니다. 두 로커 중 하나를 빠르게 5번 클릭하면 됩니다. 클릭 모드가 fast 모드와 multi 모드 사이에서 전환됩니다.
 
-### Binding
-Please note, that currently you will only get one endpoint for binding even though there are two rockers (see https://github.com/Koenkk/zigbee-herdsman-converters/blob/eed5fde987891f996c428339569dbff1893e62a1/devices/xiaomi.js#L2370). You will always receive the `toggle_1` event no matter which rocker you use.
+### 바인딩
+현재 두 개의 로커가 있더라도 바인딩에는 하나의 엔드포인트만 사용할 수 있습니다 (https://github.com/Koenkk/zigbee-herdsman-converters/blob/eed5fde987891f996c428339569dbff1893e62a1/devices/xiaomi.js#L2370 참조). 어떤 로커를 사용하든 항상 `toggle_1` 이벤트를 받습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,26 +26,26 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-You have 3 possibilities of pairing:
-- With Chacon/DiO radio controller (remote, switch…)
-- With DiO mobile app via Bluetooth
-- With Zigbee
+### 페어링
+페어링 방법은 3가지가 있습니다:
+- Chacon/DiO 무선 컨트롤러(리모컨, 스위치 등)를 사용하는 방법
+- Bluetooth를 통한 DiO 모바일 앱을 사용하는 방법
+- Zigbee를 사용하는 방법
 
-* You can pair a DiO controller and Zigbee on the same device.
-* You can pair a DiO controller and mobile app on the same device.
-* But you cannot pair mobile app and Zigbee on the same device
+* DiO 컨트롤러와 Zigbee를 동일한 기기에 동시에 페어링할 수 있습니다.
+* DiO 컨트롤러와 모바일 앱을 동일한 기기에 동시에 페어링할 수 있습니다.
+* 단, 모바일 앱과 Zigbee는 동일한 기기에 동시에 페어링할 수 없습니다.
 
-### Calibration
-1. Open the roller shutter entirely
-2. Activate calibration mode
-3. Close the shutter by pushing the "close" button every 0.5 seconds until the shutter is totally closed
-4. Exit calibration mode (now the closing time is set)
-5. Activate calibration mode again
-6. Open the shutter by pushing the "open" button every 0.5 seconds until the shutter is totally open
-7. Exit calibration mode (now the opening time is set, calibration is done)
+### 캘리브레이션
+1. 롤러 셔터를 완전히 열어줍니다.
+2. 캘리브레이션 모드를 활성화합니다.
+3. 셔터가 완전히 닫힐 때까지 "닫기" 버튼을 0.5초마다 눌러 셔터를 닫습니다.
+4. 캘리브레이션 모드를 종료합니다 (이제 닫힘 시간이 설정됩니다).
+5. 캘리브레이션 모드를 다시 활성화합니다.
+6. 셔터가 완전히 열릴 때까지 "열기" 버튼을 0.5초마다 눌러 셔터를 엽니다.
+7. 캘리브레이션 모드를 종료합니다 (열림 시간이 설정되고 캘리브레이션이 완료됩니다).
 
-**Caution**: *In calibration mode, any shutter movement command lasts 1 second maximum. For continuous movement, the Zigbee Down/Close command must be sent approximately every 0.5 seconds.*
+**주의**: *캘리브레이션 모드에서는 모든 셔터 이동 명령이 최대 1초 동안 지속됩니다. 연속적인 이동을 위해서는 Zigbee Down/Close 명령을 약 0.5초 간격으로 전송해야 합니다.*
 <!-- Notes END: Do not edit below this line -->
 
 

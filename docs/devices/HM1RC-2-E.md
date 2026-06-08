@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-At the top of the device there is a small hole, insert a thin needle and hold it for around five seconds.
-Green LED should start flashing, and the pairing process will begin.
+### 페어링
+기기 상단에 작은 구멍이 있습니다. 가는 핀을 넣고 약 5초간 누르고 있습니다.
+녹색 LED가 깜박이기 시작하면 페어링 과정이 시작됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

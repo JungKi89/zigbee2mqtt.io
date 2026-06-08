@@ -27,21 +27,21 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-If pairing failed, try the following:
-- Pairing it closer to the coordinator
-- Connecting the CC2531 via an USB extension cable (to avoid interference)
-- Replacing the batteries of the danalock.
+### 페어링
+페어링이 실패하면 다음을 시도해 보세요:
+- 코디네이터에 더 가까이 위치시켜 페어링
+- CC2531을 USB 연장 케이블을 통해 연결 (간섭 방지)
+- Danalock 배터리 교체
 
-### App
-This device also come with an iOS/Android app. It is recommended to do the setups first via the app for better control of the lock.
+### 앱
+이 기기는 iOS/Android 앱과 함께 제공됩니다. 잠금장치를 더 잘 제어하려면 먼저 앱을 통해 설정하는 것을 권장합니다.
 
-If you have a Danapad, you can create/update/remove 20 pin code.
-To create or update code, you have to send MQTT /set request : {"pin_code":{"user":0,"pin_code":123456,"user_type":"unrestricted","user_enabled":true},"user_status":{"user":0,"status":"enabled"}}
-Apparently "user_type":"unrestricted","user_enabled":true is not used by the Danalock.
-The user value can take 0 to 19 (pin 0 to pin 19)
-For the pin code to work, you must also send user_status and set it to enabled.
-To remove a pin code, just send MQTT /set request : {"pin_code":{"user":0}} (user take value 0 to 19)
+Danapad가 있는 경우, PIN 코드 20개를 생성/업데이트/삭제할 수 있습니다.
+코드를 생성하거나 업데이트하려면 MQTT /set 요청을 전송합니다: {"pin_code":{"user":0,"pin_code":123456,"user_type":"unrestricted","user_enabled":true},"user_status":{"user":0,"status":"enabled"}}
+"user_type":"unrestricted","user_enabled":true는 Danalock에서 사용되지 않는 것으로 보입니다.
+user 값은 0에서 19까지 사용 가능합니다 (PIN 0에서 PIN 19).
+PIN 코드가 작동하려면 user_status도 전송하고 enabled로 설정해야 합니다.
+PIN 코드를 삭제하려면 MQTT /set 요청을 전송합니다: {"pin_code":{"user":0}} (user는 0에서 19까지)
 <!-- Notes END: Do not edit below this line -->
 
 

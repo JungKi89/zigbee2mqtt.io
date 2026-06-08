@@ -28,8 +28,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the reset button through the small hole at the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT.
+### 페어링
+새 제품이라면 전원을 켰을 때 Zigbee2MQTT에 자동으로 페어링을 시도합니다. 그렇지 않은 경우(또는 이전에 페어링했던 기기를 다시 페어링해야 하는 경우) - 상단의 작은 구멍을 통해 리셋 버튼을 약 5초간 눌러 표시등이 여러 번 깜박일 때까지 기다립니다. 그러면 디바이스가 페어링 모드로 진입합니다. 이후 Zigbee2MQTT에 연결되어야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

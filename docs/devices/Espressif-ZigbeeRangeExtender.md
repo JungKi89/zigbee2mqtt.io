@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Readme from Arduino IDE
+## Arduino IDE README
 
-[Link to Arduino-ESP32 Zigbee Range Extender (Router) Example](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples/Zigbee_Range_Extender/README.md)
+[Arduino-ESP32 Zigbee 범위 확장기 (라우터) 예제 링크](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples/Zigbee_Range_Extender/README.md)
 
-### Pairing
-power on device via USB and permit join in zigbee2mqtt.
+### 페어링
+USB로 기기에 전원을 공급하고 zigbee2mqtt에서 참여 허용을 설정하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

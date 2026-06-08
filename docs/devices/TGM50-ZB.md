@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-In power on state, press and hold the '^' key (bottom right key) for 5-8 seconds, the Wi-Fi icon flashes on the thermostat display, and the thermostat enters pairing state.
+## 페어링
+전원이 켜진 상태에서 '^' 키(오른쪽 하단 키)를 5~8초 동안 누르고 있으면 온도 조절기 화면에 Wi-Fi 아이콘이 깜빡이며 페어링 상태로 진입합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

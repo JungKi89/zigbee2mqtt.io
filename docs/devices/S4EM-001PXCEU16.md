@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Zigbee / Matter mode & pairing
-The device ships in Matter mode by default. To use the device with Zigbee2MQTT, switching to Zigbee mode is required. This can be done by pressing the button on the back of the device 5 times fast enough (at 0.5 second intervals or so). The blinking red light will pause blinking temporarily. Afterwards, the device will start pairing mode for 2 minutes. To restart pairing mode, press the button three times again.
+### Zigbee / Matter 모드 및 페어링
+기기는 기본적으로 Matter 모드로 출고됩니다. Zigbee2MQTT와 함께 사용하려면 Zigbee 모드로 전환해야 합니다. 기기 뒷면의 버튼을 약 0.5초 간격으로 5번 빠르게 누르면 됩니다. 깜박이는 빨간 불이 잠시 멈춥니다. 이후 기기는 2분 동안 페어링 모드로 진입합니다. 페어링 모드를 다시 시작하려면 버튼을 세 번 다시 누릅니다.
 
-### Maintenance and factory reset
-In Zigbee mode, to enable the on-device access point and bluetooth for maintenance, press and hold the button on the back of the device for 3 seconds. Doing so for 10 seconds will trigger a factory reset.
+### 유지관리 및 공장 초기화
+Zigbee 모드에서 유지관리를 위해 기기 내장 액세스 포인트와 블루투스를 활성화하려면 기기 뒷면의 버튼을 3초 동안 길게 누릅니다. 10초 동안 누르면 공장 초기화가 실행됩니다.
 
-When the access point is enabled, it exposes a Wifi access point that you can access without password. After connecting, open http://192.168.33.1 in your browser to access the maintenance. Recommend setting a password if you keep the access point enabled. You can also see the current voltage, current & power consumption through this interface.
+액세스 포인트가 활성화되면 비밀번호 없이 접근할 수 있는 Wi-Fi 액세스 포인트가 노출됩니다. 연결 후 브라우저에서 http://192.168.33.1 을 열어 유지관리 페이지에 접근합니다. 액세스 포인트를 계속 활성화 상태로 유지할 경우 비밀번호를 설정하는 것을 권장합니다. 이 인터페이스를 통해 현재 전압, 전류 및 소비 전력도 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Power outage memory
-This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
-Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+### 정전 후 상태 기억
+이 옵션을 사용하면 전원이 복구될 때 기기가 마지막 켜짐/꺼짐 상태를 복원합니다.
+이 옵션을 설정하려면 `zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"power_outage_memory": true}` (또는 `false`)를 게시합니다.
+그런 다음 기기의 버튼으로 플러그/스위치를 한 번 토글하면, 이후부터 전원이 복구될 때 상태가 복원됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

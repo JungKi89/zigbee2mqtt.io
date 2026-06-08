@@ -27,28 +27,28 @@ pageClass: device-page
 ## Notes
 
 
-Device can learn IR codes and send already known IR codes.
+기기가 IR 코드를 학습하고 이미 알고 있는 IR 코드를 전송할 수 있습니다.
 
-### Control
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can control the device:
+### 제어
+`zigbee2mqtt/FRIENDLY_NAME/set`에 발행하여 다양한 기기 속성을 제어할 수 있습니다:
 
-#### Switch to a learning mode
+#### 학습 모드로 전환
 
-Request:
+요청:
 ```json
 {
     "learn_ir_code":"ON"
 }
 ```
 
-The command activates the orange light on the device. You have several seconds to take source IR remote, move it closer to the device and press a button. The learned IR code will be exposed as `learned_ir_code`.
+명령을 실행하면 기기의 주황색 표시등이 켜집니다. 몇 초 내에 소스 IR 리모컨을 기기 가까이 가져다 대고 버튼을 누릅니다. 학습된 IR 코드는 `learned_ir_code`로 노출됩니다.
 
-#### Send already learned IR code
+#### 이미 학습된 IR 코드 전송
 
-Request:
+요청:
 ```json
 {
-    "ir_code_to_send": "<previously learned IR code>"
+    "ir_code_to_send": "<이전에 학습한 IR 코드>"
 }
 ```
 <!-- Notes END: Do not edit below this line -->

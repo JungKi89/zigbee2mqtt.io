@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+### 페어링
+기기의 초기화 버튼을 약 5초간 누르고 있으세요 (파란 불이 깜빡이기 시작할 때까지).
+이후 기기가 자동으로 연결됩니다. 작동하지 않으면 버튼을 짧게 한 번 눌러보세요.
 <!-- Notes END: Do not edit below this line -->
 
 

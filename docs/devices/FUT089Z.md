@@ -26,75 +26,75 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair the device:
-- Permit joining in Zigbee2MQTT
-- Press and hold the Master ON and OFF buttons simultaneously until the central red LED begins flashing rapidly
+### 페어링
+기기를 페어링하려면:
+- Zigbee2MQTT에서 연결 허용
+- 중앙 빨간 LED가 빠르게 깜빡이기 시작할 때까지 마스터 ON과 OFF 버튼을 동시에 누르고 있으세요
 
 
-### Device Behavior
+### 기기 동작
 
-The remote reports three sensor values by default:
+리모컨은 기본적으로 세 가지 센서 값을 보고합니다:
 - `Battery` (%)
 - `Voltage` (mV)
 - `Linkquality` (lqi)
 
-The remote features seven numbered pairs of on/off buttons, with each pair controlling a distinct zone. Additionally, there is an eighth button group at the top, comprising dedicated `ON` and `OFF` buttons for zone 8.
-Each zone corresponds to a specific Zigbee group. By default, Zone 1 maps to Zigbee group 101, Zone 2 to 102, and so on.
-Note that when using multiple MiBoxer FUT089Z remotes, they will all control the same Zigbee groups (101-108) by default.
+리모컨에는 7쌍의 번호가 매겨진 켜기/끄기 버튼이 있으며, 각 쌍은 별도의 구역을 제어합니다. 또한 상단에 구역 8 전용 `ON` 및 `OFF` 버튼으로 구성된 8번째 버튼 그룹이 있습니다.
+각 구역은 특정 Zigbee 그룹에 해당합니다. 기본적으로 구역 1은 Zigbee 그룹 101, 구역 2는 102 등으로 매핑됩니다.
+여러 MiBoxer FUT089Z 리모컨을 사용할 경우, 기본적으로 모두 같은 Zigbee 그룹(101-108)을 제어합니다.
 
-On each button press or slider touch, the device sends one or two consecutive actions and a corresponding group ID. The group ID is published along with the device state as `action_group`:
+버튼을 누르거나 슬라이더를 터치할 때마다 기기는 하나 또는 두 개의 연속 액션과 해당 그룹 ID를 전송합니다. 그룹 ID는 기기 상태와 함께 `action_group`으로 게시됩니다:
 
-| Button / Slider | Action | Group ID  |
+| 버튼 / 슬라이더 | 액션 | 그룹 ID  |
 |-----------------|--------|-----------|
-| Button 1-7 `I`  | `on`   | 101 - 107 |
-| Button 1-7 `O`  | `off`  | 101 - 107 |
-| `R`, `G`, `B` | `move_to_hue_and_saturation`, followed by `brightness_move_to_level`  | Group ID of the last on/off button that was pressed |
-| `W` | `color_temperature_move`, followed by `brightness_move_to_level` |Group ID of the last on/off button that was pressed |
+| 버튼 1-7 `I`  | `on`   | 101 - 107 |
+| 버튼 1-7 `O`  | `off`  | 101 - 107 |
+| `R`, `G`, `B` | `move_to_hue_and_saturation`, 이후 `brightness_move_to_level`  | 마지막으로 누른 켜기/끄기 버튼의 그룹 ID |
+| `W` | `color_temperature_move`, 이후 `brightness_move_to_level` |마지막으로 누른 켜기/끄기 버튼의 그룹 ID |
 | `ON` | `on` | 108 |
 | `OFF` | `off` |108  |
-| Color Wheel |`move_to_hue_and_saturation`, followed by `brightness_move_to_level` | 
-| Brightness Slider   | `brightness_move_to_level` | Group ID of the last on/off button that was pressed |
-| Color Temperature / Saturation Slider  | Either `move_to_hue_and_saturation` or `color_temperature_move` (depending on an internal state of the device), followed by  `brightness_move_to_level`. The `move_to_hue_and_saturation` state can be forced by touching the color wheel or by pressing one of the R, G, B buttons first.  `color_temperature_move` can be forced by pressing the W button first. | Group ID of the last on/off button that was pressed |
-|`10S` / `30S Delay OFF` |`off` after a delay of 10 / 30 seconds | Group ID of the last on/off button that was pressed |
+| 색상 휠 |`move_to_hue_and_saturation`, 이후 `brightness_move_to_level` | 
+| 밝기 슬라이더   | `brightness_move_to_level` | 마지막으로 누른 켜기/끄기 버튼의 그룹 ID |
+| 색온도 / 채도 슬라이더  | 기기의 내부 상태에 따라 `move_to_hue_and_saturation` 또는 `color_temperature_move`, 이후 `brightness_move_to_level`. `move_to_hue_and_saturation` 상태는 색상 휠을 터치하거나 R, G, B 버튼 중 하나를 먼저 누르면 강제할 수 있습니다. `color_temperature_move`는 W 버튼을 먼저 누르면 강제할 수 있습니다. | 마지막으로 누른 켜기/끄기 버튼의 그룹 ID |
+|`10S` / `30S Delay OFF` |10 / 30초 지연 후 `off` | 마지막으로 누른 켜기/끄기 버튼의 그룹 ID |
 
-### Device Configuration
+### 기기 설정
 
-#### Exposing Control Values 
+#### 제어 값 노출 
 
-By default, the hue/saturation/level values from the remote's controls are not exposed. To make these controls visible, enable the device-specific `expose_values` option.
+기본적으로 리모컨 제어에서 색조/채도/레벨 값은 노출되지 않습니다. 이 제어 값을 보이게 하려면 기기별 `expose_values` 옵션을 활성화하세요.
 
-This option exposes four additional values representing the most recently requested settings:
-- `level`: brightness level
-- `color_temperature`: color temperature
-- `hue`: color hue
-- `saturation`: color saturation
+이 옵션은 최근 요청된 설정을 나타내는 네 가지 추가 값을 노출합니다:
+- `level`: 밝기 레벨
+- `color_temperature`: 색온도
+- `hue`: 색조
+- `saturation`: 채도
 
-_(Note: If these exposed values don't appear immediately, a restart of Zigbee2MQTT may be necessary for the changes to take effect)_
+_(참고: 노출된 값이 즉시 나타나지 않으면 변경 사항이 적용되도록 Zigbee2MQTT를 재시작해야 할 수 있습니다)_
 
-#### Zone-aware Actions
-The device sends identical `on` / `off` / `move_to_hue_and_saturation` / `brightness_move_to_level` / `color_temperature_move` actions across all zones by default, with the zone's group ID only accessible in the device state. To enable sending of distinct actions for each zone, activate the device-specific `zone_actions` option.
+#### 구역 인식 액션
+기기는 기본적으로 모든 구역에서 동일한 `on` / `off` / `move_to_hue_and_saturation` / `brightness_move_to_level` / `color_temperature_move` 액션을 전송하며, 구역의 그룹 ID는 기기 상태에서만 접근할 수 있습니다. 각 구역에 대한 별도 액션 전송을 활성화하려면 기기별 `zone_actions` 옵션을 활성화하세요.
 
-When enabled, each action includes its corresponding zone ID:
+활성화되면 각 액션에 해당 구역 ID가 포함됩니다:
 - `on_zone_1`, `on_zone_2`, ...
 - `off_zone_1`, `off_zone_2`, ...
 - `move_to_hue_and_saturation_zone_1`, `move_to_hue_and_saturation_zone_2`, ...
 - ...
 
-#### Changing Group IDs
+#### 그룹 ID 변경
 
-The remote is configured to use group IDs 101-107 for the seven on/off button pairs and group ID 108 for the master `ON`/`OFF` buttons by default. As a result, all FUT089Z devices on your network will control the same lights unless configured otherwise.
-To customize this behavior or resolve conflicts with existing group IDs, you can override the default assignments by configuring the device-specific `zone_[0-8]_group_id` option with your preferred ID.
+리모컨은 기본적으로 7쌍의 켜기/끄기 버튼에 그룹 ID 101-107을, 마스터 `ON`/`OFF` 버튼에 그룹 ID 108을 사용하도록 설정되어 있습니다. 따라서 다르게 설정하지 않는 한 네트워크의 모든 FUT089Z 기기가 같은 조명을 제어합니다.
+이 동작을 사용자 정의하거나 기존 그룹 ID와의 충돌을 해결하려면 기기별 `zone_[0-8]_group_id` 옵션에 원하는 ID를 설정하여 기본 할당을 재정의할 수 있습니다.
 
-To apply the new group ID settings to the device, press any button after making the changes.
+새 그룹 ID 설정을 기기에 적용하려면 변경 후 임의의 버튼을 누르세요.
 
-### Controlling Lights and Switches
+### 조명 및 스위치 제어
 
-#### Home Assistant Automations
+#### Home Assistant 자동화
 
-By default, it is neither possible to use Home Assistant `device` triggers nor `state` triggers. This is due to the non-standard way the remote communicates. However, it is possible to use an `mqtt` trigger to react on any message from the device, parse the payload and decide what to do inside Home Assistant. 
+기본적으로 Home Assistant `device` 트리거와 `state` 트리거를 모두 사용할 수 없습니다. 이는 리모컨의 비표준 통신 방식 때문입니다. 그러나 `mqtt` 트리거를 사용하여 기기의 메시지에 반응하고, 페이로드를 파싱한 후 Home Assistant 내에서 수행할 작업을 결정할 수 있습니다.
 
-Below is an example with full functionality to control `kitchen_light` with button 4 of `MiBoxerRemote1`: 
+다음은 `MiBoxerRemote1`의 버튼 4로 `kitchen_light`를 제어하는 전체 기능 예시입니다: 
 
 ``` YAML
 triggers:
@@ -155,9 +155,9 @@ actions:
 mode: single
 ```
 
-If you enable both the `expose_values` and `zone_actions` options, you can also use `device` and `state` triggers for your automations (which you can easily create automatically by going to the Device in Home Assistant and adding an Automation from there):
+`expose_values`와 `zone_actions` 옵션을 모두 활성화하면 자동화에 `device` 및 `state` 트리거도 사용할 수 있습니다 (Home Assistant에서 디바이스로 이동하여 자동화를 추가하면 자동으로 쉽게 생성할 수 있습니다):
 
-On/off button:
+켜기/끄기 버튼:
 
 ``` YAML
 alias: MiBoxerRemote1_Button_Zone_8_On
@@ -176,7 +176,7 @@ action:
       device_id: 0887f3aa92fa71265fcb5f1d7021c2a7
 mode: restart
 ```
-Brightness slider:  
+밝기 슬라이더:  
 
 ``` YAML
 alias: MiBoxerRemote1_BrightnessSlider
@@ -200,31 +200,31 @@ action:
 mode: restart
 ```
 
-#### Direct Control via Zigbee Groups
+#### Zigbee 그룹을 통한 직접 제어
 
-Alternatively, or in addition to the approach described above, you can also directly control Zigbee lights etc. with this remote.
+위에서 설명한 방법의 대안으로, 또는 그 방법에 추가하여 이 리모컨으로 Zigbee 조명 등을 직접 제어할 수도 있습니다.
 
-To directly control lights or smartplugs without going through MQTT (and Home Assistant or whatever), 
-- first create a Zigbee group with the correct ID (10X), 
-- name it like you wish,
-- then add the devices you intend to control to that group (pay attention to use the right termination point).
-  Very important: do NOT add the remote itself to the group.
+MQTT(및 Home Assistant 등)를 거치지 않고 조명이나 스마트 플러그를 직접 제어하려면:
+- 먼저 올바른 ID(10X)로 Zigbee 그룹을 생성하고,
+- 원하는 이름을 붙인 후,
+- 제어하려는 기기를 해당 그룹에 추가합니다 (올바른 종단점을 사용하도록 주의하세요).
+  매우 중요: 리모컨 자체는 그룹에 추가하지 마세요.
 
-The `ON` and `OFF` Master Buttons on top of the remote control an extra zone with Group ID 108. 
-You can for instance use it as a master switch or for just another light/smartplug etc...
+리모컨 상단의 `ON` 및 `OFF` 마스터 버튼은 그룹 ID 108의 추가 구역을 제어합니다.
+예를 들어 마스터 스위치나 다른 조명/스마트 플러그로 사용할 수 있습니다.
 
-The beauty of this approach is that the remote will work even with Zigbee2MQTT down, ... even better without any alive Zigbee controller.  
-It looks like a perfect emergency backup.
+이 방식의 장점은 Zigbee2MQTT가 다운되어도 리모컨이 작동한다는 것입니다. Zigbee 컨트롤러 없이도 작동합니다.
+완벽한 비상 백업처럼 보입니다.
 
 
-### Technical Notes
+### 기술 참고사항
 
-- The saturation / color temperature slider control exhibits behavior which is not yet fully understood. The slider alternates between sending saturation and color temperature values based on an internal state of the device. You can force "saturation mode" by pressing any `R`, `G`, `B` button or touching the color wheel, while pressing the `W` button forces "color temperature mode". When pressing any on/off button, the slider reverts to its default behavior (either saturation or color temperature mode). The mechanism for changing this default behavior remains unknown.  
-- As with most battery-powered devices, this remote does not continuously listen for Zigbee commands after its initial configuration. When sending commands to the device (such as Leave, Configure, or group ID changes), you should press any button afterward to ensure the command is received.
-- The remote does not support light output cluster binding or manual group joining (it relies solely on its internal zone/group mapping).
+- 채도/색온도 슬라이더 제어는 아직 완전히 이해되지 않은 동작을 나타냅니다. 슬라이더는 기기의 내부 상태에 따라 채도와 색온도 값 전송을 번갈아 가며 수행합니다. `R`, `G`, `B` 버튼을 누르거나 색상 휠을 터치하면 "채도 모드"를 강제할 수 있으며, `W` 버튼을 누르면 "색온도 모드"가 강제됩니다. 켜기/끄기 버튼을 누르면 슬라이더가 기본 동작(채도 또는 색온도 모드 중 하나)으로 되돌아갑니다. 이 기본 동작을 변경하는 메커니즘은 아직 알려지지 않았습니다.  
+- 대부분의 배터리 구동 기기와 마찬가지로, 이 리모컨은 초기 설정 후 Zigbee 명령을 지속적으로 수신하지 않습니다. 기기에 명령을 보낼 때(Leave, Configure 또는 그룹 ID 변경 등), 명령이 수신되도록 이후에 임의의 버튼을 누르세요.
+- 리모컨은 조명 출력 클러스터 바인딩이나 수동 그룹 참여를 지원하지 않습니다 (내부 구역/그룹 매핑에만 의존합니다).
 
 ### Touchlink
-The remote supports Touchlink. It is unclear how the Touchlink configuration interacts with the regular group configuration so if you intend to use Touchlink it would probably best not to pair it to a network.
+리모컨은 Touchlink를 지원합니다. Touchlink 설정이 일반 그룹 설정과 어떻게 상호작용하는지 명확하지 않으므로, Touchlink를 사용하려면 네트워크에 페어링하지 않는 것이 좋습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

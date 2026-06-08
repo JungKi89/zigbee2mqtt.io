@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Binding
-Mount the valve on a radiator so the motor can detect resistance or simulate resistence manually. Perform a factory reset (hold main button while inserting the last battery until FAC blinks). After the motor self-test, hold the main button again until the display blinks continuously to enter pairing mode.
+## 바인딩
+밸브를 라디에이터에 장착하여 모터가 저항을 감지하거나 수동으로 저항을 시뮬레이션할 수 있도록 합니다. 공장 초기화를 수행합니다(FAC가 깜박일 때까지 마지막 배터리를 삽입하는 동안 주 버튼을 누르고 있습니다). 모터 자가 테스트 후, 디스플레이가 지속적으로 깜박일 때까지 주 버튼을 다시 눌러 페어링 모드로 진입합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

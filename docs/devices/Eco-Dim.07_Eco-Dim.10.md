@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-1. Remove the device from a previous Zigbee network. If it has already been added to one otherwise pairing will fail (light blinks fast).
-2. Press reset button twice. The indicator will start blinking blue (slow) and stays solid for 10s when it succeeds.
+### 페어링
+1. 이전 Zigbee 네트워크에서 기기를 제거하세요. 이미 추가되어 있으면 페어링이 실패합니다 (빠르게 깜빡임).
+2. 리셋 버튼을 두 번 누르세요. 표시등이 파란색으로 천천히 깜빡이기 시작하고 성공하면 10초간 고정됩니다.
 
-### Remove from Zigbee network
-There are two methods to remove the device from the Zigbee Network:
-Method 1. From your Zigbee hub interface, choose to delete or reset the device as instructed.
-Method 2. Press the reset button 3 times, the indicator starts blinking purple and will stay solid for 10s when removing the dimmer from the network is finished. Timeout 3 mins.
+### Zigbee 네트워크에서 제거
+기기를 Zigbee 네트워크에서 제거하는 두 가지 방법이 있습니다:
+방법 1. Zigbee 허브 인터페이스에서 기기 삭제 또는 초기화를 선택하세요.
+방법 2. 리셋 버튼을 3번 누르면 표시등이 보라색으로 깜빡이기 시작하고, 디머가 네트워크에서 제거되면 10초간 고정됩니다. 타임아웃 3분.
 
-### Factory reset
-Press and hold the reset button for at least 5 seconds, the indicator will stay red for 10s when the reset is complete. Please note that all configuration parameters will be reset after the device is reset or removed from the network.
+### 공장 초기화
+리셋 버튼을 최소 5초간 누르세요. 초기화 완료 시 표시등이 10초간 빨간색으로 유지됩니다. 기기가 초기화되거나 네트워크에서 제거된 후 모든 설정 매개변수가 초기화됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

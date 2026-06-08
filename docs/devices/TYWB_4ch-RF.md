@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold any of the manual switch buttons for 8 seconds to initiate pairing mode.
+### 페어링
+수동 스위치 버튼 중 하나를 8초간 길게 눌러 페어링 모드를 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

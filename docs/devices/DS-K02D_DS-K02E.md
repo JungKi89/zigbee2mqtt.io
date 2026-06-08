@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Metering
-Only `energy` is exposed for the Aqara Shutter Switch H2 EU. `power`, `current`, and `voltage` are intentionally not exposed because they could not be validated reliably on this model.
+### 전력 측정
+Aqara Shutter Switch H2 EU에서는 `energy`만 노출됩니다. `power`, `current`, `voltage`는 이 모델에서 신뢰성 있게 검증할 수 없어 의도적으로 노출하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

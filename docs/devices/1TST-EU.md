@@ -26,99 +26,98 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Controlling
-Get local temperature in degrees Celsius (in the range 0x954d to 0x7fff, i.e. -273.15°C to 327.67 ºC)
+### 제어
+섭씨로 현재 온도 조회 (범위 0x954d ~ 0x7fff, 즉 -273.15°C ~ 327.67°C)
 ```json
 {
     "local_temperature": ""
 }
 ```
 
-Get or set offset added to/subtracted from the actual displayed room temperature to NUMBER, in steps of 0.1°C
+실제 표시된 실내 온도에 더하거나 뺄 오프셋을 0.1°C 단위로 조회 또는 설정
 ```js
 {
-    "local_temperature_calibration": "NUMBER"       // Possible values: –2.5 to +2.5; leave empty to read
+    "local_temperature_calibration": "NUMBER"       // 가능한 값: –2.5 ~ +2.5; 읽기 시 비워두기
 }
 ```
 
-Set temperature display mode
+온도 표시 모드 설정
 ```js
 {
-    "temperature_display_mode": ""      // Possible values: 0 to set °C or 1 so set °F
+    "temperature_display_mode": ""      // 가능한 값: 0 = °C 설정, 1 = °F 설정
 }
 ```
 
-Get room occupancy. Specifies whether the heated/cooled space is occupied or not. If 1, the space is occupied,
-else it is unoccupied.
+실내 점유 상태 조회. 냉난방 공간이 점유되어 있는지 여부를 지정합니다. 1이면 공간 점유, 0이면 미점유.
 ```json
 {
     "thermostat_occupancy": ""
 }
 ```
 
-Get or set occupied heating setpoint to NUMBER in degrees Celsius.
+점유 시 난방 설정값을 NUMBER(섭씨)로 조회 또는 설정
 ```js
 {
-    "occupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to  MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
+    "occupied_heating_setpoint": "NUMBER"       // 가능한 값: MinHeatSetpointLimit ~ MaxHeatSetpointLimit, 기본 7 ~ 30; 읽기 시 비워두기
 }
 ```
 
-Get or set unoccupied heating setpoint to NUMBER in degrees Celsius
+미점유 시 난방 설정값을 NUMBER(섭씨)로 조회 또는 설정
 ```js
 {
-    "unoccupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
+    "unoccupied_heating_setpoint": "NUMBER"       // 가능한 값: MinHeatSetpointLimit ~ MaxHeatSetpointLimit, 기본 7 ~ 30; 읽기 시 비워두기
 }
 ```
 
-Increase or decrease heating setpoint by NUMBER degrees in °C.
+난방 설정값을 NUMBER(°C 단위)만큼 증가 또는 감소
 ```js
 {
     "setpoint_raise_lower": {
-    "mode": "0x00",       // Possible values: see table below
-    "amount": "NUMBER"    // Possible values: signed 8-bit integer that specifies the amount the setpoint(s) are to be increased (or decreased) by, in steps of 0.1°C
+    "mode": "0x00",       // 가능한 값: 아래 표 참조
+    "amount": "NUMBER"    // 가능한 값: 설정값을 0.1°C 단위로 증가(또는 감소)할 양을 지정하는 부호 있는 8비트 정수
     }
 }
 ```
 
 Attribute Value | Description
 ----------------|-----------------------------------------------
-0x00            | Heat (adjust Heat Setpoint)
-0x01            | Cool (adjust Cool Setpoint)
-0x02            | Both (adjust Heat Setpoint and Cool Setpoint)
+0x00            | 난방 (난방 설정값 조정)
+0x01            | 냉방 (냉방 설정값 조정)
+0x02            | 모두 (난방 및 냉방 설정값 조정)
 
-Get or set whether the local temperature, outdoor temperature and occupancy are being sensed by internal sensors or remote networked sensors
+현지 온도, 외부 온도 및 점유가 내부 센서에 의해 측정되는지 원격 네트워크 센서에 의해 측정되는지 조회 또는 설정
 ```js
 {
-    "remote_sensing": "NUMBER"      // Possible values: see table below; leave empty to read
+    "remote_sensing": "NUMBER"      // 가능한 값: 아래 표 참조; 읽기 시 비워두기
 }
 ```
 
 Bit Number | Description
 -----------|-----------------------------------------
-0          | 0 – local temperature sensed internally / 1 – local temperature sensed remotely
-1          | 0 – outdoor temperature sensed internally / 1 – outdoor temperature sensed remotely
-2          | 0 – occupancy sensed internally / 1 – occupancy sensed remotely
+0          | 0 – 현지 온도 내부 측정 / 1 – 현지 온도 원격 측정
+1          | 0 – 외부 온도 내부 측정 / 1 – 외부 온도 원격 측정
+2          | 0 – 점유 내부 감지 / 1 – 점유 원격 감지
 
-Get or set control sequence of operation
+제어 동작 순서 조회 또는 설정
 ```js
 {
-    "control_sequence_of_operation": "VALUE"       // Possible values: see table below; leave empty to read
+    "control_sequence_of_operation": "VALUE"       // 가능한 값: 아래 표 참조; 읽기 시 비워두기
 }
 ```
 
-Values                                    | Possible Values of SystemMode
+Values                                    | SystemMode 가능한 값
 ------------------------------------------|-------------------------------------
-`cooling only`                            | Heat and Emergency are not possible
-`cooling with reheat`                     | Heat and Emergency are not possible
-`heating only`                            | Cool and precooling are not possible
-`heating with reheat`                     | Cool and precooling are not possible
-`cooling and heating 4-pipes`             | All modes are possible
-`cooling and heating 4-pipes with reheat` | All modes are possible
+`cooling only`                            | 난방 및 긴급 모드 불가
+`cooling with reheat`                     | 난방 및 긴급 모드 불가
+`heating only`                            | 냉방 및 예냉 불가
+`heating with reheat`                     | 냉방 및 예냉 불가
+`cooling and heating 4-pipes`             | 모든 모드 가능
+`cooling and heating 4-pipes with reheat` | 모든 모드 가능
 
-Get or set system mode
+시스템 모드 조회 또는 설정
 ```js
 {
-    "system_mode": "VALUE"       // Possible values: see table below; leave empty to read
+    "system_mode": "VALUE"       // 가능한 값: 아래 표 참조; 읽기 시 비워두기
 }
 ```
 
@@ -134,13 +133,13 @@ Values              |
 `dry`               |
 `sleep`             |
 
-Get running state
+실행 상태 조회
 ```js
 {
-    "running_state": ""       // leave empty when reading
+    "running_state": ""       // 읽기 시 비워두기
 }
 ```
-Possible values:
+가능한 값:
 
 Values |
 -------|
@@ -148,32 +147,32 @@ Values |
 `cool` |
 `heat` |
 
-Valve position / heating demand
+밸브 위치 / 난방 요구량
 ```
 {
-    "pi_heating_demand": 0       // leave empty when reading
+    "pi_heating_demand": 0       // 읽기 시 비워두기
 }
 ```
-Will report the valve position or heating amount depending on device. 0=min, 255=max
+장치에 따라 밸브 위치 또는 난방량을 보고합니다. 0=최소, 255=최대
 
-Get or set weekly schedule
+주간 스케줄 조회 또는 설정
 ```js
 {
     "weekly_schedule": {
-    "TemperatureSetpointHold": "0x00",                // 0x00 setpoint hold off or 0x01 on
-    "TemperatureSetpointHoldDuration": "0xffff",      // 0xffff to 0x05a0
-    "ThermostatProgrammingOperationMode": "00xxxxxx"  //see table below
-    }                                                   // leave empty to read
+    "TemperatureSetpointHold": "0x00",                // 0x00 설정값 유지 해제 또는 0x01 유지
+    "TemperatureSetpointHoldDuration": "0xffff",      // 0xffff ~ 0x05a0
+    "ThermostatProgrammingOperationMode": "00xxxxxx"  // 아래 표 참조
+    }                                                   // 읽기 시 비워두기
 }
 ```
 
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
-0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. / 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. *Note: It does not clear or delete previous weekly schedule programming configurations.*
-1               | 0 - Auto/recovery mode set to OFF / 1 – Auto/recovery mode set to ON
-2               | 0 – Economy/EnergyStar mode set to OFF / 1 – Economy/EnergyStar mode set to ON
+0               | 0 – 단순/설정값 모드. 온도조절기 설정값은 온도조절기나 원격에서 수동으로 올리거나 내릴 때만 변경됨(내부 스케줄 프로그래밍 제외). / 1 – 스케줄 프로그래밍 모드. 프로그래밍된 주간 스케줄 설정을 활성화하거나 비활성화. *참고: 이전 주간 스케줄 프로그래밍 설정을 지우거나 삭제하지 않습니다.*
+1               | 0 - 자동/복구 모드 OFF / 1 – 자동/복구 모드 ON
+2               | 0 – 절전/EnergyStar 모드 OFF / 1 – 절전/EnergyStar 모드 ON
 
-Clear weekly schedule
+주간 스케줄 초기화
 ```json
 {
     "clear_weekly_schedule": ""

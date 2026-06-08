@@ -24,17 +24,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Operation mode
-You can switch between the "command" and "event" operation mode with a triple click
+## 동작 모드
+세 번 클릭으로 "command"와 "event" 동작 모드를 전환할 수 있습니다.
 
-Command mode enables on/off mode :
-single click : on
-double click : off
-long press (>5s) and release : brightness_move_to_level
+Command 모드에서는 켜기/끄기 모드가 활성화됩니다:
+한 번 클릭 : 켜기
+두 번 클릭 : 끄기
+길게 누르기 (>5초) 후 놓기 : brightness_move_to_level
 
-You can then use OnOff and LevelCtrl binding in this mode
+이 모드에서는 OnOff 및 LevelCtrl 바인딩을 사용할 수 있습니다.
 
-Event mode enables click : single/double/hold
+Event 모드에서는 클릭 활성화: single/double/hold
 <!-- Notes END: Do not edit below this line -->
 
 

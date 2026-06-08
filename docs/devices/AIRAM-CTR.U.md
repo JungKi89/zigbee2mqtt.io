@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+이 기기는 기본적으로 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 해당 기기에 `legacy: false`를 설정하세요. 예시:
 
 ```yaml
 devices:
@@ -40,15 +40,14 @@ devices:
 ```
 
 
-### Pairing
-Hold small reset button pressed (located under battery cover on the backside of remote) for 4
-seconds and device will reset and will attempt to join network.
-Keep clicking any button on the frontside of the device to keep device awake while pairing.
-You should be clicking every two seconds until pairing is complete.
+### 페어링
+리모컨 뒷면 배터리 커버 아래에 있는 작은 리셋 버튼을 4초간 누르면 기기가 초기화되고 네트워크 접속을 시도합니다.
+페어링 중에는 기기가 깨어 있도록 앞면의 버튼을 계속 클릭하세요.
+페어링이 완료될 때까지 2초마다 클릭해야 합니다.
 
-Device seems to join network also when it is paired directly to Airam bulb (which is joined to network already)
-(https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
-within 5 centimeters away from Airam bulb.
+이미 네트워크에 연결된 Airam 전구에 직접 페어링하는 방법으로도 네트워크에 접속되는 것으로 보입니다
+(https://www.zigbee2mqtt.io/devices/4713407.html). ON과 DIM 버튼을 누른 채로 리모컨을 Airam 전구에서
+5센티미터 이내로 가까이 대면 됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Factory resetting and pairing
-1. Turn off the device and wait until the light has fully gone out.
-2. Turn it on and back off within 2 seconds.
-3. Wait longer than 10 seconds.
-4. Repeat steps 2–3 three more times.
-5. Turn it on again and leave it on.
-6. The LED will blink three times to confirm the reset is complete.
-7. The device will now start pairing with any open Zigbee network.
+### 공장 초기화 및 페어링
+1. 장치를 끄고 조명이 완전히 꺼질 때까지 기다리세요.
+2. 2초 이내에 켰다가 끄세요.
+3. 10초 이상 기다리세요.
+4. 2~3단계를 세 번 더 반복하세요.
+5. 다시 켜고 그대로 두세요.
+6. LED가 세 번 깜박이면 초기화가 완료된 것입니다.
+7. 이제 장치가 열려 있는 Zigbee 네트워크와 페어링을 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

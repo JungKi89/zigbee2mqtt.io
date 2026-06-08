@@ -26,24 +26,24 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Information
+### 정보
 
-- [SONOFF knowledge center](https://help.sonoff.tech/docs/zbmicro)
-- Device is a Zigbee router
+- [SONOFF 지식 센터](https://help.sonoff.tech/docs/zbmicro)
+- 기기는 Zigbee 라우터입니다.
 
-### Pairing
+### 페어링
 
-**Press and hold the button for 5s** to factory reset the device and start pairing.  
-The green network indicator will slowly flash until it connects.
+**버튼을 5초 동안 길게 누르면** 기기가 공장 초기화되고 페어링이 시작됩니다.  
+연결될 때까지 녹색 네트워크 표시등이 천천히 깜박입니다.
 
-### Issues
+### 알려진 문제
 
-#### Network spam  
+#### 네트워크 스팸  
   
-The device does not automatically clear stale entries from its routing table.  
-As a result, it might broadcast unnecessary *Network address requests*.  
-This happens when you remove one of its children without notifying it (e.g. *force-remove*).  
-**Factory reset the device** to solve the issue.
+기기가 라우팅 테이블에서 오래된 항목을 자동으로 제거하지 않습니다.  
+이로 인해 불필요한 *네트워크 주소 요청*을 브로드캐스트할 수 있습니다.  
+이는 기기에 알리지 않고 하위 기기를 제거할 때(예: *강제 제거*) 발생합니다.  
+문제를 해결하려면 **기기를 공장 초기화**하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

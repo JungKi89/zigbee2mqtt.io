@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-1. Hold button until LED start flashing (about 6 seconds), then release.
-2. Pairing is done when LED stop flashing.
+### 페어링
+1. LED가 깜박이기 시작할 때까지 버튼을 누르고 있습니다 (약 6초), 그런 다음 손을 뗍니다.
+2. LED가 깜박임을 멈추면 페어링이 완료됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

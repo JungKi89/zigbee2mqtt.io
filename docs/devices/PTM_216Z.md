@@ -28,63 +28,63 @@ pageClass: device-page
 
 
 ### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.
-Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+이 기기는 Zigbee Green Power 기기로 매우 에너지 효율적입니다.
+Green Power 기기의 메시지는 일반 Zigbee 기기가 직접 “이해”할 수 없어 먼저 “변환”이 필요합니다.
+모든 Zigbee 기기가 이 변환을 지원하는 것은 아니며, 현재 이를 지원하는 기기는 Philips Hue 기기만 알려져 있습니다. 따라서 Green Power 기기는 Philips Hue 기기의 범위 내에 있어야 사용할 수 있습니다.
 
-Green Power devices don't support binding and are not included in network scans.
+Green Power 기기는 바인딩을 지원하지 않으며 네트워크 스캔에 포함되지 않습니다.
 
-Binding may work between this module and the actuator, depending if the actuator supports the Zigbee Green Power standard & if the actuators user interface supports "Finding & binding" or "EZ-mode". For more information, contact the supplier of the actuator.
+이 모듈과 액추에이터 간의 바인딩은 액추에이터가 Zigbee Green Power 표준을 지원하고 액추에이터의 사용자 인터페이스가 “Finding & binding” 또는 “EZ-mode”를 지원하는 경우 작동할 수 있습니다. 자세한 내용은 액추에이터 공급업체에 문의하세요.
 
 
-### Pairing
-Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+### 페어링
+페어링을 시작하기 전에 **[문서](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**의 해당 섹션을 주의 깊게 읽어보세요.
 
-For model built after 2020, pairing may be done via NFC or the physical buttons.
+2020년 이후에 제조된 모델은 NFC 또는 물리적 버튼으로 페어링할 수 있습니다.
 
 #### NFC
-The easiest way is to use a compatible smartphone (iOS, android) with NFC capability.
+가장 간단한 방법은 NFC 기능이 있는 호환 스마트폰(iOS, Android)을 사용하는 것입니다.
 
-The required tool “EnOcean Tool” is available from the [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en) and from the [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202).
+필요한 도구 “EnOcean Tool”은 [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en)와 [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202)에서 다운로드할 수 있습니다.
 
-For the first configuration, the QR-Code behind the PTM 216Z shall be scanned in order to get the built-in NFC pin to unlock the device. Then, the user may define a specific one if required. More details are available in the documentation [EnOcean PTM 216Z manual chapter 4 (NFC interface)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf).
+첫 번째 설정 시 기기를 잠금 해제할 내장 NFC PIN을 얻기 위해 PTM 216Z 뒷면의 QR 코드를 스캔합니다. 이후 필요한 경우 사용자가 특정 PIN을 지정할 수 있습니다. 자세한 내용은 문서 [EnOcean PTM 216Z 매뉴얼 4장 (NFC 인터페이스)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf)를 참고하세요.
 
 
-#### Physical buttons
-This device has 4 buttons:
+#### 물리적 버튼
+이 기기에는 4개의 버튼이 있습니다:
 
-| Number | Button | Position |
+| 번호 | 버튼 | 위치 |
 |-|-|-|
-| 1 | A0 | top left |
-| 2 | A1 | bottom left |
-| 3 | B0 | top right |
-| 4 | B1 | bottom right |
+| 1 | A0 | 왼쪽 상단 |
+| 2 | A1 | 왼쪽 하단 |
+| 3 | B0 | 오른쪽 상단 |
+| 4 | B1 | 오른쪽 하단 |
 
-In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+모듈이 단일 로커 스위치에 통합된 경우 모든 버튼을 노출하려면 캡을 제거해야 합니다. 버튼은 해당 버튼의 접점을 잡고 에너지 바를 밀면 누를 수 있습니다.
 
-To pair it hold the corresponding button for that channel for 7 seconds or more.
+페어링하려면 해당 채널에 맞는 버튼을 7초 이상 길게 누릅니다.
 
-| Button | Channel |
+| 버튼 | 채널 |
 |-|-|
 | A0 | 15 |
 | A1 | 20 |
 | B0 | 11 |
 | B1 | 25 |
 
-Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
+기기가 페어링되면 채널을 확인해야 합니다. A1과 B0을 함께 누릅니다. 중요: 페어링과 이 단계 사이에 다른 버튼을 누르지 마세요.
 
-In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+다른 채널에 페어링하려면 기기를 공장 초기화해야 합니다. 모든 버튼(A0, A1, B0, B1)을 동시에 7초 이상 눌러 초기화할 수 있습니다.
 
-This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 3.6.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf).
+이 기기는 11, 15, 20, 25 채널 외에도 어떤 채널에서도 작동할 수 있습니다. 이에 대해서는 [EnOcean PTM 216Z 매뉴얼 3.6.3장](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf)을 참고하세요.
 
 
 ## Home Assistant
-In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
+Home Assistant 커뮤니티 포럼에서 이 기기와 잘 작동하는 자동화 블루프린트를 찾을 수 있습니다:
 
 @chris-1243
 https://community.home-assistant.io/t/zigbee2mqtt-ptm215z-ze-and-ptm216z/873595
 
-They add functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
+예를 들어 조명의 밝기를 높이거나 낮추는 데 유용한 `held_#` 같은 기능을 추가합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

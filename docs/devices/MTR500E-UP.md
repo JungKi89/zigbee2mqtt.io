@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-- [CSA product page](https://csa-iot.org/csa_product/mtr500e-up/)
-- `On with timed off` is not supported by this device. Use `OnTimer` instead.
-- `powerOnBehavior` from the OnOff cluster is not supported but `powerFailureMode` has the same purpose.
+- [CSA 제품 페이지](https://csa-iot.org/csa_product/mtr500e-up/)
+- 이 기기는 `On with timed off`를 지원하지 않습니다. 대신 `OnTimer`를 사용하세요.
+- OnOff 클러스터의 `powerOnBehavior`는 지원되지 않지만, `powerFailureMode`가 동일한 목적으로 사용됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

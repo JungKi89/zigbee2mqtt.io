@@ -26,9 +26,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
+### 페어링
 
-Press any button 5 times, after this, click the button one more and hold the button.
+아무 버튼이나 5번 누른 후, 한 번 더 클릭하고 버튼을 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

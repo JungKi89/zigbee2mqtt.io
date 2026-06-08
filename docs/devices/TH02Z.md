@@ -25,8 +25,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-Press button for 5 seconds.
+### 페어링
+버튼을 5초 동안 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

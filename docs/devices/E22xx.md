@@ -27,11 +27,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Pair the plug to Zigbee2MQTT by pressing the pair button (small hole below the round toggle button) using a needle or a paperclip for about two seconds.
-The white light next to the button should flash four times times and then turn off.
-After a few seconds it turns back on and pulsate.
-When connected, the light turns off.
+### 페어링
+둥근 토글 버튼 아래의 작은 구멍에 있는 페어링 버튼을 바늘이나 클립으로 약 2초간 눌러 Zigbee2MQTT에 플러그를 페어링하세요.
+버튼 옆의 흰색 LED가 네 번 깜빡인 후 꺼집니다.
+몇 초 후 다시 켜지며 맥동합니다.
+연결이 완료되면 불이 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

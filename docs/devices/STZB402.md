@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Setting outdoor temperature
-To set *outdoor temperature*, you need to send the value to the following MQTT topic:
+### 실외 온도 설정
+*실외 온도*를 설정하려면 다음 MQTT 토픽으로 값을 전송해야 합니다:
 ```
 zigbee2mqtt/<FRIENDLY_NAME>/set/outdoor_temperature_display
 ```
 
-If you want to automate the publishing of the outdoor temperature using Home Assistant, you may create an automation like this:
+Home Assistant를 사용하여 실외 온도 발행을 자동화하려면 다음과 같은 자동화를 만들 수 있습니다:
 
 ``` yaml
 - id: auto_publish_outdoor_temp
@@ -48,7 +48,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
       topic: 'zigbee2mqtt/THERMOSTAT_FRIENDLY_NAME/set/outdoor_temperature_display'
 ```
 
-**IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.
+**중요**: 실외 온도는 최소 4시간마다 갱신해야 합니다. 그렇지 않으면 온도 조절기의 `EXT` 표시가 지워집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

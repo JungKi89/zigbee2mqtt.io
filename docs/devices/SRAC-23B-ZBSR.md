@@ -27,33 +27,33 @@ pageClass: device-page
 ## Notes
 
 
-### Warning usage
-Warning only support a single mode, `burglar`
+### warning 사용법
+Warning은 단일 모드 `burglar`만 지원합니다.
 
-Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 300 seconds
+`warning` 사용 시간은 `max_duration`보다 짧을 수 있지만 더 길 수는 없습니다. `max_duration`이 60초로 설정된 경우 `duration`을 90초로 설정하려 해도 경고는 60초 동안만 적용됩니다. `max_duration`의 기본값은 300초입니다.
 
-This device do not support the `strobe_duty_cycle` functionality
+이 기기는 `strobe_duty_cycle` 기능을 지원하지 않습니다.
 
 
-### Triggering alarm, Advanced
-This siren can be triggered manually by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with the payloads:
+### 알람 트리거 (고급)
+이 사이렌은 다음 페이로드로 `zigbee2mqtt/FRIENDLY_NAME/set`에 발행하여 수동으로 트리거할 수 있습니다:
 
-To start :
+시작:
 * `{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}`
-Where:
-- `duration`: the number of seconds the alarm will be on
+여기서:
+- `duration`: 알람이 켜져 있을 초 수
 - `level`: `low`, `medium`, `high`, `very_high`
 - `mode`: `stop`, `burglar`
 - `strobe`: `true`, `false`
-- `strobe_duty_cycle`: not supported
+- `strobe_duty_cycle`: 지원되지 않음
 
-To stop:
+중지:
 * `{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}`
 
-### Triggering alarm, Simple
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
-Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
-This alarm are preset to highest volume
+### 알람 트리거 (간단)
+`zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"alarm": "START"}` 및 `{"alarm": "OFF"}`를 발행하여 설정할 수 있습니다.
+Zigbee2MQTT UI에서 또는 `{"max_duration": NEW_VALUE}`를 발행하여 `max_duration`을 설정하세요.
+이 알람은 최대 볼륨으로 사전 설정되어 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

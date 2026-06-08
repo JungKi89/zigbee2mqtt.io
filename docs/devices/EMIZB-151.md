@@ -24,11 +24,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Steps for resetting
-1. Open the casing of the device
-2. Press and hold the reset button for approximately 14-16 seconds.
-3. While holding down the button, the LED first flashes once, then two times in a row, and finally numerous times in a row.
-4. After a succesful reset, the yellow LED will start flashing which indicates network search.
+초기화 단계
+1. 기기의 케이스를 여세요
+2. 리셋 버튼을 약 14~16초간 누르세요.
+3. 버튼을 누르는 동안 LED가 처음에 한 번, 그 다음 두 번, 마지막으로 여러 번 연속으로 깜빡입니다.
+4. 초기화 성공 후 노란 LED가 깜빡이기 시작하며 네트워크 검색 중임을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

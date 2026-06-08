@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-Power-cycle the bulb 3 times to put it in pairing mode:  
-Turn off - on - off - on - off - on. The light should start flashing.
+전구를 3번 껐다 켜서 페어링 모드로 진입합니다:  
+끄기 - 켜기 - 끄기 - 켜기 - 끄기 - 켜기 순서로 합니다. 조명이 깜박이기 시작해야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

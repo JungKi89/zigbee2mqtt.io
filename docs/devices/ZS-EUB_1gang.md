@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-This device does not act as a Zigbee router, even when the optional neutral connection is used. In addition the vendor does not provide a firmware update to enable the router functionality.
+이 기기는 선택적 중성선 연결을 사용하더라도 Zigbee 라우터로 동작하지 않습니다. 또한 제조사에서 라우터 기능을 활성화하는 펌웨어 업데이트를 제공하지 않습니다.
 
-### Pairing
-Press and hold the switch for 7 seconds, until the indicator on the switch flashes fast. After about 3 seconds pairing should be complete
+### 페어링
+스위치를 7초간 누르고 있어 스위치의 표시등이 빠르게 깜박이면 놓습니다. 약 3초 후 페어링이 완료됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

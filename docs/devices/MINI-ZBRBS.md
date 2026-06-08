@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-- Pairing the device is done by pressing the back button of the device for around 5 seconds
-- Auto calibration is done by pressing the button of the device for around 10 seconds. There is currently no way in Zigbee2Mqtt to auto calibrate the device.
+- 기기 뒷면 버튼을 약 5초간 눌러 페어링합니다.
+- 기기 버튼을 약 10초간 눌러 자동 캘리브레이션을 수행합니다. 현재 Zigbee2MQTT에서는 기기를 자동으로 캘리브레이션하는 방법이 없습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

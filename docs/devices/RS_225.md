@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
+### 페어링
+전구를 공장 초기화합니다([동영상](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 <!-- Notes END: Do not edit below this line -->
 
 

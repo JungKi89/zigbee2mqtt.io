@@ -26,34 +26,34 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing Instructions
-Press and hold the button on the backside of the device until the blue light starts blinking; release it, and the pairing should begin.
+### 페어링 방법
+기기 뒷면의 버튼을 파란 불이 깜빡이기 시작할 때까지 길게 누릅니다. 손을 떼면 페어링이 시작됩니다.
 
-### Binding
-By default, the device is bound to the coordinator, but it can also be used to directly control other lights and switches in the network (see [guide on binding](https://www.zigbee2mqtt.io/guide/usage/binding.html)).
+### 바인딩
+기본적으로 기기는 코디네이터에 바인딩되어 있지만, 네트워크의 다른 조명이나 스위치를 직접 제어하는 데도 사용할 수 있습니다 ([바인딩 가이드](https://www.zigbee2mqtt.io/guide/usage/binding.html) 참조).
 
-Note that this device can only be bound to one device or group at a time.
+이 기기는 한 번에 하나의 기기 또는 그룹에만 바인딩할 수 있습니다.
 
-For proper commands, you will need to change the operation mode of the device; by default, it is in `event` mode, but when binding, we need to change it to `command` mode.
-To do this, send the `{"operation_mode": "command"}` payload to `zigbee2mqtt/FRIENDLY_NAME/set` (or use the `operation_mode` parameter in the GUI). Right before doing this, make sure to wake up the device.
+올바른 명령을 위해서는 기기의 작동 모드를 변경해야 합니다. 기본적으로 `event` 모드이지만 바인딩 시 `command` 모드로 변경해야 합니다.
+변경하려면 `{"operation_mode": "command"}` 페이로드를 `zigbee2mqtt/FRIENDLY_NAME/set`에 전송합니다 (또는 GUI의 `operation_mode` 매개변수 사용). 변경 전에 기기를 깨워 두세요.
 
-As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
+기기가 기본적으로 절전 모드이므로, 바인딩/언바인딩 명령을 전송한 후 리셋 버튼을 한 번 눌러 기기를 깨워야 합니다.
 
-When endpoint `1` is bound to a light or a group of lights, the behavior is as follows (for a double band model):
-| Button | Click | Action | Comment |
+엔드포인트 `1`이 조명 또는 조명 그룹에 바인딩되면 동작은 다음과 같습니다 (더블 밴드 모델):
+| 버튼 | 클릭 | 동작 | 설명 |
 |-----|-----|-----|-----|
-| Top, Left | Single, Double, Long  | Turn off | Using the `commandOff` command |
-| Top, Right | Single, Double, Long  | Turn on | Using the `commandOn` command |
-| Bottom, Left | Single | Step down the brightness | In steps of 85 points (33%), using the `step` command  |
-| Bottom, Right | Single | Step up the brightness | In steps of 85 points (33%), using the `step` command  |
-| Bottom, Left | Double | Step the color temperature down | In steps of 69 mired, using the `stepColorTemp` command (make it warmer) |
-| Bottom, Right | Double | Step the color temperature up | In steps of 69 mired, using the `stepColorTemp` command (make it colder) |
+| 상단, 왼쪽 | 단일/더블/길게 | 끄기 | `commandOff` 명령 사용 |
+| 상단, 오른쪽 | 단일/더블/길게 | 켜기 | `commandOn` 명령 사용 |
+| 하단, 왼쪽 | 단일 클릭 | 밝기 감소 | 85포인트(33%) 단위로, `step` 명령 사용 |
+| 하단, 오른쪽 | 단일 클릭 | 밝기 증가 | 85포인트(33%) 단위로, `step` 명령 사용 |
+| 하단, 왼쪽 | 더블 클릭 | 색온도 감소 | 69 mired 단위로 `stepColorTemp` 명령 사용 (더 따뜻하게) |
+| 하단, 오른쪽 | 더블 클릭 | 색온도 증가 | 69 mired 단위로 `stepColorTemp` 명령 사용 (더 차갑게) |
 
-### Battery Replacement
-All devices in the Opple line share the same internal design. First, you will need to remove the wireless switch part from its mount.
-Then use a long and thin object (preferably a plastic spudger, as the plastic is soft) to unclip the front button(s) from the frame by reaching underneath and carefully prying up.
-For the triple-band model, removing the side buttons will help with the center one. After removing buttons, the black frame must be unscrewed using a small Phillips screwdriver and then unclipped from the device case on the sides.
-When the logic board is exposed, simply remove it and turn it upside down, where a **single CR2032** battery is located. Be careful with the logic board removed, as it also holds a small pairing button in place on the other side.
+### 배터리 교체
+Opple 라인의 모든 기기는 동일한 내부 설계를 공유합니다. 먼저 무선 스위치 부분을 거치대에서 분리해야 합니다.
+긴 얇은 물체(플라스틱이 부드러우므로 플라스틱 스퍼저가 좋음)를 사용하여 아래에서 도달하여 조심스럽게 들어 올려 전면 버튼을 프레임에서 분리합니다.
+트리플 밴드 모델의 경우 사이드 버튼을 먼저 제거하면 가운데 버튼 제거에 도움이 됩니다. 버튼을 제거한 후 작은 십자 드라이버로 검은 프레임의 나사를 풀고 기기 케이스 측면에서 분리합니다.
+로직 보드가 보이면 제거하여 뒤집으면 **CR2032** 배터리 1개가 있습니다. 로직 보드를 제거할 때 반대편에 작은 페어링 버튼이 고정되어 있으니 주의하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

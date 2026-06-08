@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
+### 페어링
+플러그를 공장 초기화합니다(스위치 버튼을 10초 이상 길게 누릅니다). 초기화 후 스위치가 자동으로 연결됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

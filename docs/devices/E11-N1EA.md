@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To factory reset the light bulb, first start with the light bulb ON and then quickly turn it OFF and ON at least 10 times, ending in an ON state. If the reset is successful, the light bulb will flash five times, indicating that it is in pairing mode. If the light bulb does not flash, please try again.
+### 페어링
+전구를 공장 초기화하려면 전구가 켜진 상태에서 시작하여 적어도 10번 빠르게 껐다 켜고 켜진 상태로 끝내세요. 초기화가 성공하면 전구가 5번 깜빡이며 페어링 모드에 진입합니다. 전구가 깜빡이지 않으면 다시 시도하세요.
 <!-- Notes END: Do not edit below this line -->
 
 ## Device Type

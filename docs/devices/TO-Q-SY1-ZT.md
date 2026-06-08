@@ -25,10 +25,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-It functions as an end-device instead of a router.
+이 디바이스는 라우터가 아닌 엔드 디바이스로 동작합니다.
 
-### Pairing
-Press and hold the on/off button for around 8 seconds, until the LED starts blinking.
+### 페어링
+LED가 깜박이기 시작할 때까지 전원 켜기/끄기 버튼을 약 8초간 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

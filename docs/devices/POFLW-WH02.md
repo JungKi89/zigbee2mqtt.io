@@ -26,7 +26,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-It can be quite finicky to pair this device. The first interview will likely fail. After the first interview fails, take out the batteries and put them back in, then click interview (blue `i` on the device dashboard in z2m). Do this once or twice until the device successfully pairs.
+이 기기는 페어링이 다소 까다로울 수 있습니다. 첫 번째 인터뷰는 실패할 가능성이 높습니다. 첫 번째 인터뷰가 실패하면 배터리를 빼었다가 다시 넣은 후, 인터뷰 버튼(z2m 기기 대시보드의 파란색 `i`)을 클릭하세요. 기기가 성공적으로 페어링될 때까지 이 과정을 한두 번 반복합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

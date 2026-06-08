@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Build guide
-Instructions on how to build this device, configure firmware can be found [here](https://dzen.ru/a/ZUnKTY3_Dkue45gb)
+### 빌드 가이드
+이 기기의 제작 방법 및 펌웨어 설정 지침은 [여기](https://dzen.ru/a/ZUnKTY3_Dkue45gb)에서 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

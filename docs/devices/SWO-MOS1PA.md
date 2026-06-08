@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Temperature not supported
-Device is listed as having temperature detection. This feature is still being investigated.
+### 온도 미지원
+기기는 온도 감지 기능이 있는 것으로 표시되어 있습니다. 이 기능은 아직 조사 중입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

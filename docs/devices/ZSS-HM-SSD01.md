@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press the test button three times in a row and a LED should be flashing green to indicate pairing mode.
+### 페어링
+테스트 버튼을 연속으로 세 번 누르면 LED가 초록색으로 깜박이며 페어링 모드를 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

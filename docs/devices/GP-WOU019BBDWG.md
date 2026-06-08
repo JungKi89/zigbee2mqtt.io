@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### No current and voltage
-This plug does not support voltage and current reporting, see [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/5198) for more information.
+### 전류 및 전압 미지원
+이 플러그는 전압 및 전류 리포팅을 지원하지 않습니다. 자세한 내용은 [이 이슈](https://github.com/Koenkk/zigbee2mqtt/issues/5198)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

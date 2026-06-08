@@ -26,12 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 [Original project description](https://github.com/slacky1965/tuya_thermostat_zrd)
 
-## Pairing Procedure
-1. Press the **green leaf** button to power on the device.  
-2. Press the **green leaf** button again to switch the device to **standby mode**.  
-3. Press and hold the **Down (double arrow)** button for approximately **8 seconds**, until the **wireless icon** begins flashing on the display.  
+## 페어링 절차
+1. **녹색 잎** 버튼을 눌러 기기를 켭니다.
+2. **녹색 잎** 버튼을 다시 눌러 기기를 **대기 모드**로 전환합니다.
+3. **아래(이중 화살표)** 버튼을 약 **8초** 동안 길게 누릅니다. 화면에 **무선 아이콘**이 깜빡이기 시작할 때까지 누릅니다.
 
-The flashing wireless icon indicates that the device is now in **pairing mode** and ready to be connected to a network or controller.
+깜빡이는 무선 아이콘은 기기가 현재 **페어링 모드**에 있으며 네트워크 또는 컨트롤러에 연결할 준비가 되었음을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

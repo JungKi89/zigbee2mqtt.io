@@ -27,14 +27,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes 
 
-### Battery
-Uses a CR2450 battery
+### 배터리
+CR2450 배터리를 사용합니다.
 
-### Pairing
-Remove the back plate by using the included tool or a wedge to click it off.
-Press and hold the LINK button inside the device for +- 5 seconds (until the blue light blinks three times).
-After this the device will automatically join, but the interview process may not finish.
-If that happens, keep doing short presses to the LINK button to keep the light flashing, until the interview process finishes successfully.
+### 페어링
+동봉된 도구나 쐐기를 사용하여 뒷면 커버를 분리합니다.
+기기 내부의 LINK 버튼을 약 5초간 길게 누릅니다(파란 LED가 세 번 깜빡이기 시작할 때까지).
+이후 기기가 자동으로 네트워크에 참여하지만, 인터뷰 과정이 완료되지 않을 수 있습니다.
+그런 경우, 인터뷰 과정이 성공적으로 완료될 때까지 LINK 버튼을 짧게 눌러 LED가 계속 깜빡이도록 유지하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

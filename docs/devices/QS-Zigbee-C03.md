@@ -26,18 +26,18 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-Note, that some devices are marked as "CP03" instead of "C03", althoug identical.
+일부 기기는 동일하지만 "C03" 대신 "CP03"으로 표시될 수 있습니다.
 
-*How to reset*
-* Press the reset key (upper right in hole) 5 times until the indicator LED inside the module flashes quickly.
-* Alternatively turn on/off the wired switch for 5 times until the indicator LED inside the module flashes quickly.
+*초기화 방법*
+* 모듈 내부의 표시 LED가 빠르게 깜박일 때까지 리셋 키(오른쪽 상단 구멍)를 5번 누릅니다.
+* 또는 모듈 내부의 표시 LED가 빠르게 깜박일 때까지 유선 스위치를 5번 켰다 끕니다.
 
-*How to use calibration*
-* Activate calibration mode
-* Open the shutter completely and press stop
-* Set the number to 100 and press the refresh button
-* Close the shutter completely and when it comes to an end, press STOP.
-* Set the position to 0, press the refresh button and deactivate the calibration.
+*보정 사용 방법*
+* 보정 모드 활성화
+* 셔터를 완전히 열고 정지 버튼 누르기
+* 숫자를 100으로 설정하고 새로 고침 버튼 누르기
+* 셔터를 완전히 닫고 끝에 도달하면 STOP 버튼 누르기
+* 위치를 0으로 설정하고 새로 고침 버튼을 누른 후 보정 비활성화
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,44 +26,44 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Put the device in pairing mode by pressing and holding the button on the device for 5 seconds until the LED indicator flashes rapidly.
+### 페어링
+기기의 버튼을 5초간 누르고 있으면 LED 표시등이 빠르게 깜박이면서 페어링 모드로 진입합니다.
 
-### Reset
-To reset the device, press and hold the button for 10 seconds until the LED indicator flashes 3 times.
+### 초기화
+기기를 초기화하려면 버튼을 10초간 누르고 있으면 LED 표시등이 3번 깜박입니다.
 
-### Installation
-- Turn off power at the circuit breaker before installation
-- Remove existing switch and connect wires according to the wiring diagram
-- Ensure proper grounding
-- Maximum load: 10A resistive, 6A inductive
+### 설치
+- 설치 전에 차단기에서 전원을 차단합니다
+- 기존 스위치를 제거하고 배선도에 따라 전선을 연결합니다
+- 적절한 접지를 확인합니다
+- 최대 부하: 저항성 10A, 유도성 6A
 
-### LED Indicator Features
-- **led_indicator_color_on**: Set LED color when switch is ON (hex format: #RRGGBB, e.g., #ff0000 for red)
-- **led_indicator_color_off**: Set LED color when switch is OFF (hex format: #RRGGBB, e.g., #ffffff for white)
-- **morning_led_intensity**: LED intensity for morning period (0-100%)
-- **evening_led_intensity**: LED intensity for evening period (0-100%)
-- **night_led_intensity**: LED intensity for night period (0-100%)
-- **led_brightness_levels**: Configure low/medium/high brightness levels
+### LED 표시등 기능
+- **led_indicator_color_on**: 스위치가 ON일 때 LED 색상 설정 (16진수 형식: #RRGGBB, 예: 빨간색 #ff0000)
+- **led_indicator_color_off**: 스위치가 OFF일 때 LED 색상 설정 (16진수 형식: #RRGGBB, 예: 흰색 #ffffff)
+- **morning_led_intensity**: 아침 시간대 LED 밝기 (0~100%)
+- **evening_led_intensity**: 저녁 시간대 LED 밝기 (0~100%)
+- **night_led_intensity**: 야간 시간대 LED 밝기 (0~100%)
+- **led_brightness_levels**: 낮음/중간/높음 밝기 수준 설정
 
-### Vibration Feedback
-- **vibration_intensity**: Button vibration intensity (0-100%)
-- Provides tactile feedback when button is pressed
+### 진동 피드백
+- **vibration_intensity**: 버튼 진동 강도 (0~100%)
+- 버튼을 누를 때 촉각 피드백을 제공합니다
 
-### Time Period Settings
-- **time_periods**: Configure morning, evening, and night periods
-- **morning_start_hour**: Morning period start hour (0-23)
-- **evening_start_hour**: Evening period start hour (0-23)
-- **night_start_hour**: Night period start hour (0-23)
-- Morning must start before evening, evening must start before night
-- LED behavior changes based on time periods
+### 시간대 설정
+- **time_periods**: 아침, 저녁, 야간 시간대 설정
+- **morning_start_hour**: 아침 시간대 시작 시각 (0~23)
+- **evening_start_hour**: 저녁 시간대 시작 시각 (0~23)
+- **night_start_hour**: 야간 시간대 시작 시각 (0~23)
+- 아침은 저녁 이전에, 저녁은 야간 이전에 시작해야 합니다
+- LED 동작이 시간대에 따라 변경됩니다
 
-### LED Brightness Levels
-- **led_brightness_levels**: Configure brightness levels for different intensity settings
-- **low_brightness_percent**: Low brightness level percentage (0-100%)
-- **medium_brightness_percent**: Medium brightness level percentage (0-100%)
-- **high_brightness_percent**: High brightness level percentage (0-100%)
-- Low must be lower than medium, Medium must be lower than high
+### LED 밝기 수준
+- **led_brightness_levels**: 다양한 밝기 설정을 위한 밝기 수준 구성
+- **low_brightness_percent**: 낮은 밝기 수준 비율 (0~100%)
+- **medium_brightness_percent**: 중간 밝기 수준 비율 (0~100%)
+- **high_brightness_percent**: 높은 밝기 수준 비율 (0~100%)
+- 낮음은 중간보다, 중간은 높음보다 낮아야 합니다
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-- Click the button on the motor 3 times to add or remove from zigbee network.
-- The device will enter pairing mode (LED blinks orange).
-- When device is paired, led will turn solid green, then turn off.
+### 페어링
+- 모터 버튼을 3번 클릭하면 Zigbee 네트워크에 추가 또는 제거됩니다.
+- 디바이스가 페어링 모드로 진입합니다(LED가 주황색으로 깜빡임).
+- 디바이스가 페어링되면 LED가 녹색으로 켜진 후 꺼집니다.
 
-### Factory Rest
-- Long press motor button for 12 seconds, motor jogbs 3 times restoring to factory settings.
+### 공장 초기화
+- 모터 버튼을 12초간 길게 누르면 모터가 3번 움직이며 공장 설정으로 복원됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

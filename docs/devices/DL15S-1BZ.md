@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
+### 페어링
+이 기기를 페어링하려면 빨간 불빛이 깜빡일 때까지 ON 버튼을 몇 초간 누르고 있으세요. 그런 다음 ON 버튼을 한 번 더 눌러 페어링 프로세스를 시작하세요.
 
-Note: This device doesn't support Zigbee channels 25 & 26.
+참고: 이 기기는 Zigbee 채널 25 및 26을 지원하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

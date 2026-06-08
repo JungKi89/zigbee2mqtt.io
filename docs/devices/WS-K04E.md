@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-All functions working except for ability to control indicator on fourth, wireless, button.
+네 번째 무선 버튼의 인디케이터 제어를 제외한 모든 기능이 정상 작동합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

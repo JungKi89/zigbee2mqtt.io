@@ -27,8 +27,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Long press left button (Auto/Manual Mode) AND right button (Comfort/Energy Saving Mode) until "Zigbee connection status"-light (the wifi icon) flashes
+### 페어링
+왼쪽 버튼(자동/수동 모드)과 오른쪽 버튼(쾌적/절전 모드)을 동시에 길게 누르면 "Zigbee 연결 상태" 표시등(WiFi 아이콘)이 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

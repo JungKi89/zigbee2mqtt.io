@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Warning
-At least one batch of these remotes has been identified as using the same IEEE address. Multiple devices with the same IEEE address cannot be added to the same network.
+### 주의
+이 리모컨 중 적어도 한 배치(batch)에서 동일한 IEEE 주소를 사용하는 것이 확인되었습니다. 동일한 IEEE 주소를 가진 여러 기기는 동일한 네트워크에 추가할 수 없습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

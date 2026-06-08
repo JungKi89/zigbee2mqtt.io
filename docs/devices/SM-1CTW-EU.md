@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Pairing
-Press and release the middle (stop) button 5 times and hold for a 6th time until you hear a beep and see the light flashing.
+가운데(정지) 버튼을 5번 누르고 뗀 후, 6번째에는 삐 소리와 함께 표시등이 깜박일 때까지 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

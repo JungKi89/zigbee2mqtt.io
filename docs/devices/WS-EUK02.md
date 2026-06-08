@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the right button for 5 seconds to enter pairing mode. The blue LED will start to blink when in pairing mode.
+### 페어링
+오른쪽 버튼을 5초간 길게 눌러 페어링 모드로 진입합니다. 페어링 모드에서는 파란 LED가 깜빡이기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

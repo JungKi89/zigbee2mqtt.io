@@ -25,18 +25,18 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Device type
-Active device with router functionality.
+### 기기 유형
+라우터 기능이 있는 액티브 기기입니다.
 
-### Physical size
+### 물리적 크기
 100x100x35 mm.
 
-### Power requirements
-Requires external power source, DC 5V1A.
-In december 2025, the device was equipped with a Micro USB connector.
+### 전원 요구사항
+외부 전원 공급이 필요합니다, DC 5V1A.
+2025년 12월부터 기기에 Micro USB 커넥터가 장착되었습니다.
 
-### Pairing
-There is a button underneath the device to activate the pairing activity.
+### 페어링
+기기 하단에 페어링 활성화 버튼이 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

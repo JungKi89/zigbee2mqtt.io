@@ -25,9 +25,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-* This device exposes a CO2 value, but [does not contain a CO2 sensor](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). The CO2 value seems to be calculated from the VOC value and is completely wrong when compared to a real CO2 sensor.
+* 이 기기는 CO2 값을 노출하지만 [실제 CO2 센서는 내장되어 있지 않습니다](https://community.home-assistant.io/t/blitzwolf-bw-ar01-air-quality-meter/338396). CO2 값은 VOC 값으로부터 계산된 것으로 보이며, 실제 CO2 센서와 비교했을 때 완전히 잘못된 값을 나타냅니다.
 
-* This device sends multiple value updates per second and poses a significant load for the Zigbee network.
+* 이 기기는 초당 여러 번 값 업데이트를 전송하여 Zigbee 네트워크에 상당한 부하를 줍니다.
 <!-- Notes END: Do not edit below this line -->
 
 

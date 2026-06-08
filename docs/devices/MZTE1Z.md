@@ -24,7 +24,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-You've to open the device and switch the internal switch to choose the radiator type to control : || No Wire Pilot || 4 Wire Pilot Signal (Comfort,Eco,AntiFrost,Standby) || 6 Wire Pilot Signal (Comfort,Eco,AntiFrost,StandBy,Comfort-1,Comfort-2) >
+기기를 열고 내부 스위치를 변경하여 제어할 라디에이터 유형을 선택해야 합니다: || 파일럿 선 없음 || 4선 파일럿 신호 (Comfort, Eco, AntiFrost, Standby) || 6선 파일럿 신호 (Comfort, Eco, AntiFrost, StandBy, Comfort-1, Comfort-2) >
 <!-- Notes END: Do not edit below this line -->
 
 

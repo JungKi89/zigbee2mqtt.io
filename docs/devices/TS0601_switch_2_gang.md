@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To pair press any button 5 times and on the 6th time hold it until you hear beep, then release button and wait for pairing process.
+### 페어링
+아무 버튼이나 5번 누르고 6번째에는 삐 소리가 날 때까지 누르고 있다가, 버튼을 놓고 페어링 과정이 완료될 때까지 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

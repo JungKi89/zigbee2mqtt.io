@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To pair the dimmer, press and hold the knob for 6 seconds.
-The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
-The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paired successfully.
+### 페어링
+조광기를 페어링하려면 노브를 6초간 길게 누르세요.
+연결된 부하와 조광기 노브 뒤의 빨간색 LED 표시등이 두 번 깜빡여 페어링 모드 진입을 알립니다.
+연결된 부하와 조광기 노브 뒤의 빨간색 LED 표시등이 세 번째로 깜빡이면 페어링에 성공한 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

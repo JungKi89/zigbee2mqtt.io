@@ -26,17 +26,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To start pairing, press the button (pinhole on the side of the device) using a
-pin/paperclip for approx. 10 seconds. The led will turn on, then start blinking while the
-pairing process is in progress.
+### 페어링
+페어링을 시작하려면 핀이나 종이클립으로 기기 측면의 핀홀 버튼을 약 10초간 누르세요. LED가 켜진 후 페어링 과정이 진행되는 동안 깜박이기 시작합니다.
 
-### Reading and Setting Values
+### 값 읽기 및 설정
 
-As a low power device, the motion sensor isn't reachable most of the time, but
-only when active (e.g. because it detected motion). Therefore, requests to read
-or set values (i.e. `sensitivity` or `keep_time`) won't be processed right away,
-typically. Instead, they will be queued and sent on the next occasion.
+저전력 기기인 모션 센서는 대부분의 시간 동안 도달할 수 없으며, 활성 상태(예: 모션 감지 시)일 때만 통신 가능합니다. 따라서 값 읽기 또는 설정 요청(예: `sensitivity` 또는 `keep_time`)은 즉시 처리되지 않을 수 있습니다. 대신 대기열에 추가되어 다음 기회에 전송됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

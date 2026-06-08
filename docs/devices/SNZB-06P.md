@@ -25,26 +25,26 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Firmware 1.0.3 can be misbehaving, as of December 2023 upgrade to 1.0.5 is recommended.
+펌웨어 1.0.3은 오동작할 수 있으며, 2023년 12월 기준으로 1.0.5로 업그레이드하는 것을 권장합니다.
 
-Additional settings currently not exposed in Z2M can be adjusted via the Dev console:
-### Sensitivity
-Select the msOccupancySensing Cluster, ultrasonicUToOThreshold Attribute is the sensitivity setting.
-
-
-1 represents low sensitivity with a detection distance of 2.5m.  
-2 represents medium sensitivity with a detection distance of 3.5m.  
-3 represents high sensitivity with a detection distance of 4m.
-
-### Detection duration
-Select the msOccupancySensing Cluster, ultrasonicOToUDelay is the detection duration setting.
+Z2M에서 현재 노출되지 않는 추가 설정은 Dev 콘솔에서 조정할 수 있습니다:
+### 감도
+msOccupancySensing 클러스터를 선택하면 ultrasonicUToOThreshold 속성이 감도 설정입니다.
 
 
-On firmware versions lower than 1.0.5, the shortest detection duration is 30 (seconds), otherwise, the sensor will stay permanently on detected status.
+1은 감지 거리 2.5m의 낮은 감도를 나타냅니다.  
+2는 감지 거리 3.5m의 중간 감도를 나타냅니다.  
+3은 감지 거리 4m의 높은 감도를 나타냅니다.
 
-Firmware version 1.0.5 and above allows setting the shortest detection duration to 15 (seconds).
+### 감지 지속 시간
+msOccupancySensing 클러스터를 선택하면 ultrasonicOToUDelay가 감지 지속 시간 설정입니다.
 
-[Source - Sonoff documentation](https://www.sonoff.in/blog/product-guides-3/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide-111)
+
+1.0.5 미만의 펌웨어 버전에서는 최단 감지 지속 시간이 30초이며, 그렇지 않으면 센서가 감지 상태로 영구적으로 유지됩니다.
+
+펌웨어 1.0.5 이상에서는 최단 감지 지속 시간을 15초로 설정할 수 있습니다.
+
+[출처 - Sonoff 문서](https://www.sonoff.in/blog/product-guides-3/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide-111)
 <!-- Notes END: Do not edit below this line -->
 
 

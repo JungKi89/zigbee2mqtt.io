@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+### 페어링
+1. 장치를 켜세요.
+2. 2초 이내에 껐다 켜세요.
+3. 껐다 켜기를 4번 반복하세요.
+4. 다섯 번째로 장치가 켜지고 4번 깜박인 후 불이 계속 켜져 있으면 초기화가 완료된 것입니다.
 
-### Binding
-The device allows zigbee [binding](../guide/usage/binding.html).
+### 바인딩
+이 장치는 Zigbee [바인딩](../guide/usage/binding.html)을 지원합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

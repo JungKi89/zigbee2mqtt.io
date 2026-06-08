@@ -25,16 +25,16 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Manual in the box with device may have wrong instruction for pairing [see](https://github.com/Koenkk/zigbee2mqtt/discussions/7634).
+기기 박스 안의 설명서에 페어링 방법이 잘못 기재되어 있을 수 있습니다([참고](https://github.com/Koenkk/zigbee2mqtt/discussions/7634)).
 
-Working instructions below.
+아래에 올바른 방법을 안내합니다.
 
-### Pairing
+### 페어링
 
-1. Short push and release -> 1 beep
-2. Push and hold -> 2 beeps
-3. Don't release, keep pushing -> continuous beeping
-4. Release, device is in pairing mode
+1. 짧게 누르고 놓기 -> 1번 비프음
+2. 길게 누르기 -> 2번 비프음
+3. 놓지 않고 계속 누르기 -> 연속 비프음
+4. 놓으면 기기가 페어링 모드로 진입
 <!-- Notes END: Do not edit below this line -->
 
 

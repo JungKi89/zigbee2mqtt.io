@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
+### 페어링
+기기를 분리한 상태(또는 소켓을 끈 상태)에서 페어링 버튼을 약 4초 동안 누르고 있습니다. 버튼을 누른 채로 기기를 연결하거나(소켓을 켜거나) 2초 더 누르고 있습니다. 페어링이 성공하면 빨간색 LED가 약 2초 동안 꺼졌다가 깜빡입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

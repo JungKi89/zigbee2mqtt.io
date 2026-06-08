@@ -28,8 +28,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+### 페어링
+LED 표시등이 세 번 깜박일 때까지 리셋 버튼을 5초간 길게 누릅니다. 이는 디바이스가 페어링 모드에 진입했음을 의미합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

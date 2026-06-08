@@ -27,15 +27,15 @@ pageClass: device-page
 ## Notes
 RMshebei zigbee circuit breaker tuya power meter 220v
 
-### Re-pair / starting pairing mode again
-Long press 15 seconds.
+### 재페어링 / 페어링 모드 재시작
+15초 동안 길게 누릅니다.
 
-### Functions
-- Remote Control ON/OFF
-- Reclosing
-- Energy Monitor
-- Current Litmit(1-63A adjustable)
-- Over current (abjustable)
+### 기능
+- 원격 제어 켜기/끄기
+- 재투입(재폐로)
+- 전력 모니터링
+- 전류 제한 (1-63A 조절 가능)
+- 과전류 보호 (조절 가능)
 <!-- Notes END: Do not edit below this line -->
 
 

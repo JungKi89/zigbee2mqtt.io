@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Link
-More information about this devices can be found here: https://databyte.ch/project/zigbee-touch-key
+### 링크
+이 기기에 대한 자세한 정보는 여기에서 확인할 수 있습니다: https://databyte.ch/project/zigbee-touch-key
 <!-- Notes END: Do not edit below this line -->
 
 

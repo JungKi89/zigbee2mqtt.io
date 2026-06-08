@@ -26,43 +26,43 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair, press the reset button on the back until the green LED flashes.
+### 페어링
+초록 LED가 깜빡일 때까지 뒷면의 리셋 버튼을 누르세요.
 
-> Note: When you release the reset button, the green LED should keep flashing until the device is paired. If it only flashes a few times and then stops, your battery level is most likely too low (<3v) and you need to replace the battery.
+> 참고: 리셋 버튼을 놓은 후 기기가 페어링될 때까지 초록 LED가 계속 깜빡여야 합니다. 몇 번만 깜빡이다가 멈추면 배터리 잔량이 너무 낮은 것(<3V)이므로 배터리를 교체해야 합니다.
 
-### The `toggle` action switches on/off an unexpected zigbee device
-The source of the problem is that manufactures of the knob and another device placed them into group 0 by default. To bypass it, you should manually create a group in Z2M with different ID (ID=1, for example) and add your knob inside.
-For more details take a look at [the issue](https://github.com/Koenkk/zigbee2mqtt/issues/12397).
+### `toggle` 액션이 예상치 못한 Zigbee 기기를 켜고 끔
+문제의 원인은 노브 제조사와 다른 기기가 기본적으로 그룹 0에 배치되어 있기 때문입니다. 이를 해결하려면 Z2M에서 다른 ID (예: ID=1)로 그룹을 수동으로 생성하고 노브를 추가하세요.
+자세한 내용은 [이 이슈](https://github.com/Koenkk/zigbee2mqtt/issues/12397)를 참조하세요.
 
-### Device operation
-Device can be set in two modes : COMMAND and EVENT (Current Mode is published on the operation_mode property). A triple click seems firmware dependend (no action shown) and will toggle between COMMAND and EVENT mode.
+### 기기 작동
+기기는 두 가지 모드로 설정 가능합니다: COMMAND와 EVENT (현재 모드는 operation_mode 속성에 게시됨). 세 번 누르기는 펌웨어에 따라 다를 수 있으며 (액션 없음) COMMAND와 EVENT 모드 간에 전환됩니다.
 
-- `COMMAND` mode
+- `COMMAND` 모드
 
-| User Action  | `action` property |
+| 사용자 동작 | `action` 속성 |
 | ------------- | ------------- |
-| Rotate Left | brightness_step_down|
-| Rotate Right | brightness_step_up|
-| Single Click | toggle|
-| Push+Hold > 3s | hue_move|
-| Release | hue_stop|
-| Push+Hold and Rotate Left | color_temperature_step_down|
-| Push+Hold and Rotate Right | color_temperature_step_up|
+| 왼쪽 회전 | brightness_step_down|
+| 오른쪽 회전 | brightness_step_up|
+| 한 번 클릭 | toggle|
+| 누름+길게 누르기 > 3초 | hue_move|
+| 놓기 | hue_stop|
+| 누름+길게 누르기 + 왼쪽 회전 | color_temperature_step_down|
+| 누름+길게 누르기 + 오른쪽 회전 | color_temperature_step_up|
 
-Action_Step_Size = %Numeric_Value (0_255)
-Action_Rate = Keeps "No value" all the time
-- `EVENT` mode
+Action_Step_Size = %숫자값 (0_255)
+Action_Rate = 항상 "값 없음" 유지
+- `EVENT` 모드
 
-| User Action  | `action` property |
+| 사용자 동작 | `action` 속성 |
 |--------------| ------------- |
-| Rotate Left  | rotate_left |
-| Rotate Right | rotate_right |
-| Single Click | single |
-| Double Click | double |
-| Hold         | hold |
+| 왼쪽 회전 | rotate_left |
+| 오른쪽 회전 | rotate_right |
+| 한 번 클릭 | single |
+| 두 번 클릭 | double |
+| 길게 누르기 | hold |
 
-action_step_size, action_transition_time, action_rate are still present but show "no value"
+action_step_size, action_transition_time, action_rate는 여전히 존재하지만 "값 없음"으로 표시됩니다
 <!-- Notes END: Do not edit below this line -->
 
 

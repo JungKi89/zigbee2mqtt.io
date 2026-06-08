@@ -24,9 +24,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Re-Pairing
-- long press Button until the indicator light flashes 
-- if there is a physical switch connected, you can turn on/off 5 times, then the indicator light will flash
+### 재페어링
+- 인디케이터 표시등이 깜박일 때까지 버튼을 길게 누릅니다
+- 물리적 스위치가 연결된 경우, 5번 켜고 끄면 인디케이터 표시등이 깜박입니다
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Important
-Konke devices only work on Zigbee channel 15, 20 and 25.
+### 중요
+Konke 기기는 Zigbee 채널 15, 20, 25에서만 작동합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,21 +26,21 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-1. Remove the thermostat (SLT) from the wall and remove a battery to turn it off.
-2. Turn boiler off at the mains in order to turn off the hive receiver (SLR).
-3. Turn the boiler on and receiver.
-4. Hold down the central heating button for 10 seconds on the Hive receiver until light turns pink, then release.
-5. Hold down the central heating button again until the light turns amber with double flashing.
-6. Pair with Zigbee2mqtt using "Permit Join (all)".
-7. The amber double flash may change to a single flash.
-8. The receiver will be added to zigbee2mqtt. Rename it to something like "Hive Receiver".
-9. Replace the battery in the thermostat and allow to boot.
-10. Press and hold the menu and back buttons to factory reset the device. Allow the countdown to finish and release when you see the device information display followed by the 'Hive' logo, it will now enter pairing mode.
-11. In Zigbee2Mqtt use the dropdown arrow next to "Permit Join" to select the Hive receiver device you added earlier.
-12. Start pairing with the newly labelled "Permit join (Hive Receiver)" button.
-13. Wait around 30 seconds
-14. The thermostat should now pair to the boiler receiver. The amber light should turn green, and the thermostat will go through the getting started wizard.
+### 페어링
+1. 온도조절기(SLT)를 벽에서 분리하고 배터리를 제거하여 끕니다.
+2. 주 전원 차단기에서 보일러를 꺼서 Hive 리시버(SLR)를 끕니다.
+3. 보일러와 리시버를 켭니다.
+4. Hive 리시버의 중앙 난방 버튼을 10초간 눌러 표시등이 분홍색으로 바뀔 때까지 기다린 후 놓습니다.
+5. 중앙 난방 버튼을 다시 눌러 표시등이 이중 깜박임으로 황색이 될 때까지 기다립니다.
+6. "Permit Join (all)"을 사용하여 Zigbee2mqtt에 페어링합니다.
+7. 황색 이중 깜박임이 단일 깜박임으로 바뀔 수 있습니다.
+8. 리시버가 zigbee2mqtt에 추가됩니다. "Hive Receiver"와 같이 이름을 변경합니다.
+9. 온도조절기에 배터리를 다시 넣고 부팅되도록 합니다.
+10. 메뉴 버튼과 뒤로 가기 버튼을 누른 채로 디바이스를 공장 초기화합니다. 카운트다운이 끝날 때까지 기다리다가 디바이스 정보 화면 다음에 'Hive' 로고가 표시되면 버튼을 놓습니다. 이제 페어링 모드로 진입합니다.
+11. Zigbee2Mqtt에서 "Permit Join" 옆의 드롭다운 화살표를 사용하여 이전에 추가한 Hive 리시버 디바이스를 선택합니다.
+12. 새로 표시된 "Permit join (Hive Receiver)" 버튼으로 페어링을 시작합니다.
+13. 약 30초를 기다립니다.
+14. 온도조절기가 보일러 리시버에 페어링되어야 합니다. 황색 표시등이 녹색으로 바뀌고, 온도조절기가 시작 마법사를 실행합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

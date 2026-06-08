@@ -25,34 +25,34 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The device has an indicator LED (red/orange/green) on the front and a button on the back.
+기기 전면에는 표시 LED(빨간색/주황색/녹색)가 있고 뒷면에는 버튼이 있습니다.
 
-Device supports Zigbee 3.0, is powered by a CR2450 battery, has a temperature accuracy of plus minus 1.5 K and a humidity accuracy of 5 percent. The stated battery life is two years and the operating temperature is from -10C to +45C. The physical dimensions are 45 x 45 x 17.1 mm.
+기기는 Zigbee 3.0을 지원하고 CR2450 배터리로 동작하며, 온도 정확도 ±1.5K, 습도 정확도 5%입니다. 공시 배터리 수명은 2년이며 동작 온도는 -10°C~+45°C입니다. 크기는 45 x 45 x 17.1mm입니다.
 
-### Factory Reset
-Push the button three short and one long time. After about 10 seconds, the LED will blink quickly in red. Then release the button. The LED will stay solid red for three seconds and reset.
+### 공장 초기화
+버튼을 세 번 짧게 누르고 한 번 길게 누릅니다. 약 10초 후 LED가 빨간색으로 빠르게 깜박입니다. 그런 다음 버튼을 놓습니다. LED가 3초 동안 빨간색으로 유지되다가 초기화됩니다.
 
-### Pairing
-Push the button three times.
+### 페어링
+버튼을 세 번 누릅니다.
 
-If the device is not paired, the LED will blink slowly in orange and the device will attempt to pair.
+기기가 페어링되지 않은 경우 LED가 주황색으로 천천히 깜박이고 기기가 페어링을 시도합니다.
 
-If the device is paired but can't connect, the LED will blink quickly in orange for three seconds.
+기기가 페어링되었지만 연결할 수 없는 경우 LED가 3초 동안 주황색으로 빠르게 깜박입니다.
 
-If the device is paired, the LED will blink slowly in green for five seconds.
+기기가 페어링된 경우 LED가 5초 동안 녹색으로 천천히 깜박입니다.
 
-### LED indicators
-The LED blinks slowly 7 times when powered on.
+### LED 표시
+전원 켜짐 시 LED가 천천히 7번 깜박입니다.
 
-When pairing, the LED will blink slowly in orange while searching for a network. The search will timeout after two minutes.
+페어링 중 LED가 네트워크를 검색하는 동안 주황색으로 천천히 깜박입니다. 검색은 2분 후 타임아웃됩니다.
 
-When pairing is in progress, the LED will stay on in green. The official documentation is very unclear on what this actually means.
+페어링 진행 중 LED가 녹색으로 켜진 상태를 유지합니다. 공식 문서에서 이것이 실제로 무엇을 의미하는지 매우 불명확합니다.
 
-After successfuly pairing, the LED will turn off.
+페어링에 성공하면 LED가 꺼집니다.
 
-If pairing failed, the LED will stay solidly orange for three seconds.
+페어링이 실패하면 LED가 3초 동안 주황색으로 고정됩니다.
 
-If the battery is below 10 % the LED will blink orange once a minute.
+배터리가 10% 미만이면 LED가 1분에 한 번 주황색으로 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

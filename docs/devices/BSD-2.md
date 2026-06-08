@@ -25,11 +25,11 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Pairing
-This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (Attention: The install code printed in plain text on the device is not sufficient!) . In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+### 페어링
+이 기기는 설치 코드를 사용하여 페어링해야 합니다. 설치 코드는 스마트폰으로 기기의 QR 코드를 스캔하여 얻을 수 있습니다 (주의: 기기에 일반 텍스트로 인쇄된 설치 코드는 충분하지 않습니다!). zigbee2mqtt에서 "Settings" --> "Tools"로 이동하여 "Add install code"를 클릭하세요. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 후, 참여 허용이 활성화되어 있는지 확인하세요. 기기가 연결될 때까지 기다리세요.
 
-### Factory resetting
-To factory reset the device remove the battery and wait 20 seconds or briefly press the device's main button. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED on the front is starting to blink red, release the device's main button and press and hold it again until the device beeps. The device will reboot, which can take up to a minute. [Watch on Youtube](https://www.youtube.com/watch?v=PRAIsw4PoqE)
+### 초기화
+기기를 초기화하려면 배터리를 제거하고 20초 기다리거나 기기의 메인 버튼을 잠깐 누르세요. 기기의 메인 버튼을 누른 채로 배터리를 다시 넣으세요. 전면의 기기 LED가 빨간색으로 깜빡이기 시작하면 메인 버튼을 놓고 기기에서 비프음이 날 때까지 다시 길게 누르세요. 기기가 재부팅되며 최대 1분이 소요될 수 있습니다. [유튜브에서 보기](https://www.youtube.com/watch?v=PRAIsw4PoqE)
 <!-- Notes END: Do not edit below this line -->
 
 

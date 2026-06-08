@@ -26,18 +26,18 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Issues
+### 알려진 문제
 
-#### Groups not supported
+#### 그룹 미지원
 
-This device can be added to groups, but it does **not** respond to any group commands. Tested on v1.0.5
+이 기기는 그룹에 추가할 수 있지만, 어떠한 그룹 명령에도 **응답하지 않습니다**. v1.0.5에서 확인된 내용입니다.
 
-#### Inverted moving
+#### 이동 방향 반전
 
-This device performs inverse effects on receipt of *Move*  
-(whether it's sent through Zigbee2MQTT, or a bound remote). Tested on version v1.0.5
+이 기기는 *Move* 명령을 수신할 때 반대 효과가 발생합니다
+(Zigbee2MQTT를 통해 전송되든 바인딩된 리모컨을 통해 전송되든 동일). v1.0.5에서 확인된 내용입니다.
 
-For example `{"brightness_move": -40}` will start **increasing** the brightness (instead of decreasing it).
+예를 들어, `{"brightness_move": -40}`을 보내면 밝기가 줄어드는 대신 **증가**하기 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

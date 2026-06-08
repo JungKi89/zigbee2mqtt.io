@@ -27,10 +27,10 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-When pairing the sensor with Zigbee2MQTT,
-keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
-otherwise device will fall asleep before it gets fully configured and will not send state changes.
+### 페어링
+센서를 Zigbee2MQTT에 페어링할 때,
+기기가 완전히 구성되기 전에 절전 모드로 진입하지 않도록 10초 동안 센서를 계속 열고 닫아야(서로 인접한 센서 부품을 당겼다 삽입하기 반복) 합니다.
+그렇지 않으면 기기가 상태 변화를 전송하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

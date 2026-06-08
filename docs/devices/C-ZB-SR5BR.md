@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair, press the centre button 5 times quickly, followed by a long 6th press (3 seconds). The device will reset and then remain in pairing mode for 3 minutes, during which time the LED will flash red.
+### 페어링
+페어링하려면 중앙 버튼을 5회 빠르게 누른 후, 6번째에 3초간 길게 누릅니다. 디바이스가 초기화되고 3분간 페어링 모드를 유지하며, 이 동안 LED가 빨간색으로 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

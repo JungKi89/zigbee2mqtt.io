@@ -27,11 +27,11 @@ pageClass: device-page
 ## Notes
 
 
-### Interlock
-This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
+### 인터록
+이 옵션은 릴레이 간 연결을 통해 한 번에 하나의 릴레이만 켜지도록 합니다. 이 기능을 사용하려면 `zigbee2mqtt/FRIENDLY_NAME/set`에 `{"interlock": true}` 또는 `{"interlock": false}` 페이로드를 게시하세요. 기본값은 `false`입니다.
 
-### Binding
-The device allows zigbee [binding](../guide/usage/binding.html) and can be bound to, meaning it can be be controlled by other devices supporting output clusters. For example this remote [IKEA E2001/E2002/E2313](https://www.zigbee2mqtt.io/devices/E2001_E2002_E2313.html) could be used to control this device.
+### 바인딩
+이 기기는 Zigbee [바인딩](../guide/usage/binding.html)을 지원하며, 출력 클러스터를 지원하는 다른 기기에 의해 제어될 수 있습니다. 예를 들어 [IKEA E2001/E2002/E2313](https://www.zigbee2mqtt.io/devices/E2001_E2002_E2313.html) 리모컨으로 이 기기를 제어할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

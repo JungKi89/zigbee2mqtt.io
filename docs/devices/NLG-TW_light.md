@@ -25,19 +25,19 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Options
-### Pairing
-You can reset the light either with a Q-remote (recommended) or via a click sequence with a connected switch to the light. After the light has been resetted, it automatically starts the pairing process. This should be the same for all Paul Neuhaus Q-lights (though untested!).
-#### Pairing with Q-remote
-1. Hold the Q-remote VERY close to the light. The distance to the light's antenna must be less than 10cm.
-2. Press the ON and OFF switch of the Q-remote simultaneously for more than 5 secondes.
+### 페어링
+조명을 초기화하려면 Q-remote(권장) 또는 조명에 연결된 스위치로 클릭 시퀀스를 사용합니다. 조명이 초기화된 후에는 자동으로 페어링 프로세스가 시작됩니다. 이 방법은 모든 Paul Neuhaus Q-lights에 동일하게 적용됩니다 (미검증).
+#### Q-remote를 이용한 페어링
+1. Q-remote를 조명에 매우 가까이 가져다 댑니다. 조명의 안테나까지 거리가 10cm 미만이어야 합니다.
+2. Q-remote의 ON과 OFF 스위치를 동시에 5초 이상 누릅니다.
 
-The status LED of the Q-remote flashes once per second. After 5 seconds the (ceiling) light flashes multiple times to signal the successful reset. A new flash sequence signals the pairing process. If the flashing ends the light should be paired successfully.  
-#### Pairing with a click sequence
-I got the pairing right with this method once. However, it is extremley difficult to get the timing right. Therefore the pairing with the Q-remote is recommended.
+Q-remote의 상태 LED가 1초에 한 번 깜박입니다. 5초 후 (천장) 조명이 여러 번 깜박여 초기화 성공을 알립니다. 새로운 깜박임 시퀀스가 페어링 프로세스를 신호합니다. 깜박임이 끝나면 조명이 성공적으로 페어링됩니다.  
+#### 클릭 시퀀스를 이용한 페어링
+이 방법으로 한 번 페어링에 성공했습니다. 그러나 타이밍을 맞추기가 매우 어렵습니다. 따라서 Q-remote를 이용한 페어링을 권장합니다.
 
-1. Switch on the light for 5 to 10 seconds.
-2. Switch off the light.
-3. Switch on and off the light at least 4 times until the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
+1. 조명을 5~10초 동안 켭니다.
+2. 조명을 끕니다.
+3. 조명이 여러 번 깜박이기 시작할 때까지 최소 4번 켜고 끕니다. 이 시퀀스에서 각 새 전원 켜기 사이에 1~2초를 기다리세요.
 <!-- Notes END: Do not edit below this line -->
 
 

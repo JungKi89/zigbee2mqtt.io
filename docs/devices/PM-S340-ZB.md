@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Routing functionality
-This device does **not** act as a router.
+### 라우팅 기능
+이 기기는 라우터 역할을 **하지 않습니다**.
 <!-- Notes END: Do not edit below this line -->
 
 

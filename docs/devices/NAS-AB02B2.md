@@ -25,7 +25,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Alarm melodies sounds/tunes: 1 - fuer elise 2 - big ben 3 - ring ring 4 - lone ranger 5 - turkish march 6 - high pitch siren 7 - red alert 8 - cricket 9 - beep beep 10 - dogs 11 - police 12 - chime 13 - phone ring 14 - firetruck 15 - clock chime 16 - alarm clock 17 - psycho 18 - doorbell
+알람 멜로디 목록: 1 - 엘리제를 위하여 2 - 빅벤 3 - 전화벨 4 - 론 레인저 5 - 터키 행진곡 6 - 고음 사이렌 7 - 적색 경보 8 - 귀뚜라미 9 - 비프 비프 10 - 개 짖는 소리 11 - 경찰 12 - 차임벨 13 - 전화 벨소리 14 - 소방차 15 - 시계 차임 16 - 알람 시계 17 - 사이코 18 - 초인종
 <!-- Notes END: Do not edit below this line -->
 
 

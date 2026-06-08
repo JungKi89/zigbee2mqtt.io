@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To pair the thermostat controller to both Zigbee2MQTT and the thermostat, a factory reset will need to be performed. To begin a factory reset, press and hold both the menu and back buttons together. Allow the countdown to finish before releasing to factory reset the device. After the device has reset and a language has been selected, Zigbee2MQTT should find the device. The device should be able to control the boiler whilst still reporting to Zigbee2MQTT.
+### 페어링
+온도조절기 컨트롤러를 Zigbee2MQTT와 온도조절기 모두에 페어링하려면 공장 초기화가 필요합니다. 공장 초기화를 시작하려면 메뉴 버튼과 뒤로 가기 버튼을 동시에 누르고 유지합니다. 디바이스를 공장 초기화하려면 카운트다운이 끝날 때까지 기다린 후 버튼을 놓습니다. 디바이스가 초기화되고 언어가 선택되면 Zigbee2MQTT가 디바이스를 찾아야 합니다. 디바이스는 Zigbee2MQTT에 보고하는 동시에 보일러를 제어할 수 있어야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

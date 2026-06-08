@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-To pair the thermostat controller to both Zigbee2MQTT and the thermostat receiver, a factory reset will need to be performed. To begin a factory reset:
+온도조절기 컨트롤러를 Zigbee2MQTT와 온도조절기 리시버 모두에 페어링하려면 공장 초기화가 필요합니다. 공장 초기화를 시작하려면:
 
-1. remove a battery
-2. press and hold both the "+" and "-" buttons together
-3. reinsert the battery (with the buttons remained pressed)
-4. wait until the word "FIND" appears on screen (around 10 seconds)
-5. once paired, the word "FIND" disappears and the temperature will be displayed
+1. 배터리를 제거합니다.
+2. "+" 버튼과 "-" 버튼을 동시에 누른 채로 유지합니다.
+3. 버튼을 누른 상태에서 배터리를 다시 삽입합니다.
+4. 화면에 "FIND" 문구가 나타날 때까지 기다립니다(약 10초).
+5. 페어링이 완료되면 "FIND" 문구가 사라지고 온도가 표시됩니다.
 
-Zigbee2MQTT should have found the thermostat. If the word "REJOIN" appears on screen, the buttons were released too early and the process must be repeated. The controller should be able to control the boiler whilst still reporting to Zigbee2MQTT.
+Zigbee2MQTT가 온도조절기를 찾아야 합니다. 화면에 "REJOIN" 문구가 나타나면 버튼을 너무 일찍 놓은 것이므로 과정을 반복해야 합니다. 컨트롤러는 Zigbee2MQTT에 보고하는 동시에 보일러를 제어할 수 있어야 합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

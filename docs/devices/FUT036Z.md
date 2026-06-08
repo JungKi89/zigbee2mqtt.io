@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button, or power cycling the controller, 3 times in succession.
+### 페어링
+이전에 페어링되지 않은 경우, 기기는 전원이 켜지면 페어링 모드로 진입합니다. SET 버튼을 누르거나 컨트롤러의 전원을 3번 연속으로 껐다 켜서 강제로 페어링 모드로 진입할 수 있습니다.
 
-The lights connected to the controller will fade in and out when the controlled is in pairing mode.
+컨트롤러가 페어링 모드일 때 연결된 조명이 페이드 인/아웃됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

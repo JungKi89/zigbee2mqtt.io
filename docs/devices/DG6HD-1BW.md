@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-1. Hold the top of the paddle for 7 seconds. Status light will turn amber.
-2. To start joining mode tap the top of the paddle 1 time. The status light will ﬂash green rapidly to indicate it is in joining mode.
-3. To stop joining mode tap the top of the paddle 1 time. The dimmer will leave joining mode.
+1. 패들 상단을 7초간 누르고 있습니다. 상태 표시등이 주황색으로 바뀝니다.
+2. 참가 모드를 시작하려면 패들 상단을 1회 탭합니다. 상태 표시등이 빠르게 녹색으로 깜박여 참가 모드임을 알립니다.
+3. 참가 모드를 중지하려면 패들 상단을 1회 탭합니다. 디머가 참가 모드를 종료합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

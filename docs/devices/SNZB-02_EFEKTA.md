@@ -25,13 +25,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Additional functions: 
-binding to clusters of temperature, air humidity, OnOff,
-direct control of external relays by data on temperature and humidity,
-direct sending of data on temperature and humidity to other devices.
+### 추가 기능: 
+온도, 공기 습도, OnOff 클러스터 바인딩,
+온도 및 습도 데이터에 의한 외부 릴레이 직접 제어,
+온도 및 습도 데이터를 다른 디바이스에 직접 전송.
 
-### Build guide
-Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/SONOFF-SNZB-02-Temperature-and-humidity-sensor)
+### 빌드 가이드
+이 디바이스를 빌드하는 방법에 대한 안내는 [여기](https://github.com/smartboxchannel/SONOFF-SNZB-02-Temperature-and-humidity-sensor)에서 찾을 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

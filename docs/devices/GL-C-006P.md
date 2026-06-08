@@ -27,22 +27,22 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+### 페어링
+1. 기기를 켜세요.
+2. 2초 이내에 껐다 켜세요.
+3. 켜기/끄기를 4번 반복하세요.
+4. 다섯 번째 켜졌을 때 불이 4번 깜빡인 후 계속 켜져 있으면 초기화 완료입니다
 
-## Multi-mode 5-in-1 devices
-Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+## 멀티 모드 5-in-1 기기
+Gledopto는 최대 5가지 다른 LED 컨트롤러 유형 중 하나를 선택할 수 있는 기기를 제공하며, 각 모드마다 다른 [표시등] **색상**을 표시합니다.
 
-* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
-* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
-* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
-* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
-* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [흰색]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [노란색]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [파란색]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [초록색]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [빨간색]
 
-This `GL-C-006P` mode is available as a `modelId` in the following models:
+이 `GL-C-006P` 모드는 다음 모델에서 `modelId`로 사용할 수 있습니다:
 
 * **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
 * **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
@@ -50,25 +50,25 @@ This `GL-C-006P` mode is available as a `modelId` in the following models:
 * **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
 * **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
 
-You can switch to this `GL-C-006P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Green`.
+기기의 `Opt` 버튼을 표시등이 `초록색`이 될 때까지 짧게 눌러 이 `GL-C-006P` 모드로 전환할 수 있습니다.
 
-To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+Zigbee2MQTT와 페어링하거나 모드를 변경하려면 `Reset` 버튼을 4번 누르세요.
 
-## Dual-mode 2-in-1 devices
-Gledopto produces devices that allow you to select one of up to 2 different LED Controller types with each mode displaying a different [Indicator Light] **status**.
+## 듀얼 모드 2-in-1 기기
+Gledopto는 최대 2가지 다른 LED 컨트롤러 유형 중 하나를 선택할 수 있는 기기를 제공하며, 각 모드마다 다른 [표시등] **상태**를 표시합니다.
 
-* `CCT` [GL-C-006P](./GL-C-006P.md) [Indicator Light Off]
-* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Indicator Light On]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [표시등 꺼짐]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [표시등 켜짐]
 
-This `GL-C-006P` mode is available as a `modelId` in the following models:
+이 `GL-C-006P` 모드는 다음 모델에서 `modelId`로 사용할 수 있습니다:
 * **GL-C-003P**† - Zigbee Pro 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
 * **GL-C-203P** - Zigbee Pro+ 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
 
-You can switch to this `GL-C-009P` mode by short pressing the `Reset` button on the device until the Indicator Light is `Off`.
+표시등이 `꺼짐` 상태가 될 때까지 기기의 `Reset` 버튼을 짧게 눌러 이 `GL-C-009P` 모드로 전환할 수 있습니다.
 
-To pair with, or change modes on, Zigbee2MQTT, long press the `Reset` button for more that 2 seconds.
+Zigbee2MQTT와 페어링하거나 모드를 변경하려면 `Reset` 버튼을 2초 이상 길게 누르세요.
 
-† Note that this **GL-C-003P** Model is not an RGB Controller and not capable of being selected as an `RGB` controller or sending the `GL-C-003P` ModelId to Zigbee2MQTT. See [GL-C-003P](./GL-C-003P.md) for devices that can do this.
+† 이 **GL-C-003P** 모델은 RGB 컨트롤러가 아니며 `RGB` 컨트롤러로 선택하거나 Zigbee2MQTT로 `GL-C-003P` ModelId를 전송할 수 없습니다. 이를 지원하는 기기는 [GL-C-003P](./GL-C-003P.md)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

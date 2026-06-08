@@ -24,7 +24,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-The pairing requires 19 steps, here's how to enter pairing mode: https://imgbox.com/LxxyRYiD
+페어링에는 19단계가 필요합니다. 페어링 모드 진입 방법은 다음을 참조하세요: https://imgbox.com/LxxyRYiD
 <!-- Notes END: Do not edit below this line -->
 
 

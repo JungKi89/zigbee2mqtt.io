@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses 1 x CR2450 battery
+### 배터리
+CR2450 배터리 1개 사용
 
-### Issues
-#### Network spam
-This device may generate very frequent Zigbee traffic (multiple messages per second), even when no sensor state changes occur. This can result in significantly reduced battery life (a few weeks).
-#### Low light sensor sensitivity
-The device uses the PIR sensor area as its light sensor and reports `lux=0` even when the environment is not yet dark (`lux>1000` on other sensors in the same location). This can be improved slightly by drilling a small hole, around 1 mm, in the center of the opaque Fresnel lens dome. However, even with this modification, the device is still not suitable for locations where you want to trigger lights only when a hallway is genuinely dark.
+### 문제점
+#### 네트워크 스팸
+이 디바이스는 센서 상태 변화가 없을 때에도 매우 빈번한 Zigbee 트래픽(초당 여러 메시지)을 발생시킬 수 있습니다. 이로 인해 배터리 수명이 크게 단축될 수 있습니다(몇 주).
+#### 조도 센서 감도 낮음
+이 디바이스는 PIR 센서 영역을 조도 센서로 사용하며, 주변이 아직 어둡지 않은 경우에도 `lux=0`을 보고합니다(같은 위치의 다른 센서에서는 `lux>1000`). 불투명한 프레넬 렌즈 돔 중앙에 약 1mm의 작은 구멍을 뚫으면 약간 개선할 수 있습니다. 그러나 이 수정 후에도 복도가 실제로 어두울 때만 조명을 켜고 싶은 위치에는 적합하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

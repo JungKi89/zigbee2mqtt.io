@@ -24,19 +24,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Put dimmer into pairing mode
-Remove the device from the previous Zigbee network if it has already been added,
-otherwise pairing will fail. Press the reset button twice. The indicator light starts
-flashing blue and stays on for 10 seconds when pairing is successful. Timeout
-3minutes.
+### 디머 페어링 모드 진입
+이미 다른 Zigbee 네트워크에 추가된 경우 먼저 해당 네트워크에서 기기를 제거해야 합니다.
+그렇지 않으면 페어링이 실패합니다. 리셋 버튼을 두 번 누릅니다. 페어링이 성공하면 표시등이
+파란색으로 깜박이다가 10초 동안 켜진 상태를 유지합니다. 타임아웃은 3분입니다.
 
-Note: If the indicator flashes 3 times after pressing the reset button twice, it shows
-that dimmer has been paired.
+참고: 리셋 버튼을 두 번 눌렀을 때 표시등이 3번 깜박이면 디머가 이미 페어링되어 있는 것입니다.
 
-### Reset the dimmer
-Press and hold the reset button for 5 seconds, the indicator will remain red for 10
-seconds. Timeout 3minutes. Please note that all configuration parameters will be
-reset after the device is reset or removed from the network
+### 디머 초기화
+리셋 버튼을 5초간 길게 누르면 표시등이 10초 동안 빨간색으로 유지됩니다. 타임아웃은 3분입니다.
+기기를 초기화하거나 네트워크에서 제거하면 모든 설정 매개변수가 초기화됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

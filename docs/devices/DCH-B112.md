@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Hold front button for five seconds until red light flashes.
+### 페어링
+빨간색 표시등이 깜박일 때까지 전면 버튼을 5초간 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

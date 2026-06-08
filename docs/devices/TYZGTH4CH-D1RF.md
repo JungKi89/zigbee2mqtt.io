@@ -25,18 +25,18 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-### Warning!
+### 경고!
 
-The device has a potentially deathly flaw.
-The mains power supply is based on a simple buck converter 
-where neutral of the mains input is referencing GND on the sensor connector.
+이 기기에는 치명적일 수 있는 결함이 있습니다.
+메인 전원 공급 장치는 단순 벅 컨버터를 기반으로 하며,
+메인 입력의 중성선이 센서 커넥터의 GND를 참조합니다.
 
-This device should only be powered by an isolated power supply via the micro-USB port.
+이 기기는 반드시 micro-USB 포트를 통해 절연된 전원 공급 장치로만 전원을 공급해야 합니다.
 
-### Temperature and Humidity sensing
+### 온도 및 습도 센싱
 
-The device comes in bundles with what looks like a DHT-22
-and a DS18B20 style temperature probe is also offered in a bundle.
+이 기기는 DHT-22처럼 생긴 센서와 함께 번들로 제공되며,
+DS18B20 스타일의 온도 프로브도 번들로 제공됩니다.
 <!-- Notes END: Do not edit below this line -->
 
 

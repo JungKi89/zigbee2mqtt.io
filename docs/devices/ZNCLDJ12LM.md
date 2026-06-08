@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Adapter firmware
-In order for this device to work (fully), at least the following firmware is required on your adapter:
+### 어댑터 펌웨어
+이 디바이스가 완전히 작동하려면 어댑터에 최소한 다음 펌웨어가 필요합니다:
 - CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
 - CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
 - CC2538: [`20211222`](https://github.com/jethome-ru/zigbee-firmware/tree/master/ti/coordinator/cc2538_cc2592)
 - Conbee II: [`0x26720700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26720700.bin.GCF)
 
-*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
+*이미 디바이스를 페어링한 경우 어댑터 펌웨어를 업그레이드한 후 다시 페어링해야 합니다.*
 
-### Configuration of device attributes
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
+### 디바이스 속성 설정
+`zigbee2mqtt/FRIENDLY_NAME/set`에 게시하면 다양한 디바이스 속성을 설정할 수 있습니다:
 ```json
 {
     "options":{
@@ -47,22 +47,22 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 }
 ```
 
-- **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
-- **hand_open**: (`true`/`false`, default: `true`). By default motor starts rotating when you pull the curtain by hand. You can disable this behaviour.
-- **reset_limits**: (`true`/`false`, default: `false`). Reset the motor. When a path was cleared from obstacles.
+- **reverse_direction**: (`true`/`false`, 기본값: `false`). 디바이스가 반대 방향으로 작동하도록 설정할 수 있습니다.
+- **hand_open**: (`true`/`false`, 기본값: `true`). 기본적으로 손으로 커튼을 당기면 모터가 회전하기 시작합니다. 이 동작을 비활성화할 수 있습니다.
+- **reset_limits**: (`true`/`false`, 기본값: `false`). 모터를 초기화합니다. 경로에서 장애물이 제거된 경우 사용합니다.
 
-You can send a subset of options, all options that won't be specified will be revered to default.
+옵션의 일부만 전송할 수 있으며, 지정되지 않은 모든 옵션은 기본값으로 돌아갑니다.
 
-After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
+`reverse_direction`을 변경한 후에는 모터가 끝점을 재감지할 수 있도록 커튼을 완전히 열고 닫아야 합니다. `reverse_direction`은 이 재캘리브레이션 후에만 새 상태가 적용됩니다.
 
-### Lost configuration on long power outage
-If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 장기 정전 시 설정 손실
+모터를 배터리 없이 사용하는 경우 장기 정전 후 설정이 손실될 수 있습니다. 이 경우 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 명령 순서를 게시하여 끝점 캘리브레이션을 다시 수행해야 합니다:
 1. `{ "options": { "reset_limits": true } }`
 2. `{ "state": "close" }`
-3. Wait here for curtain closure.
+3. 커튼이 닫힐 때까지 기다립니다.
 4. `{ "state": "open" }`
 
-Home Assistant automation example:
+Home Assistant 자동화 예시:
 ```yaml
 - alias: Calibrate curtain
   trigger:
@@ -81,7 +81,7 @@ Home Assistant automation example:
     entity_id: cover.<COVER_ID>
 ```
 
-Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
+모터는 커튼의 열림 및 닫힘 위치 한계점에 도달하면 자동으로 캘리브레이션 모드를 종료합니다. 올바른 위치 보고 및 중간 위치 설정 기능을 위해 캘리브레이션은 필수입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

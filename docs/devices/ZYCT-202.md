@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Binding
-This device does not support binding.
+### 바인딩
+이 기기는 바인딩을 지원하지 않습니다.
 
 
-### Pairing
-Factory reset the remote by holding the 0 (off) button for +-20 seconds.
-To establish a connection keep the remote within 2 meters from the hub.
-Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
+### 페어링
+0(끄기) 버튼을 약 20초간 누르고 있어 리모컨을 공장 초기화합니다.
+연결을 설정하려면 리모컨을 허브 2미터 이내에 유지합니다.
+스마트 그룹 버튼(전구 두 개 모양의 버튼)을 누르고 있어 채널 아래의 표시등이 깜박일 때까지 기다립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

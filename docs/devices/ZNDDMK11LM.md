@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Device mode
+### 기기 모드
 
-The device itself supports two modes: `RGBW mode` and `Dual color temperature mode`. When the device works under `Dual color temperature mode`, it can control two color temperature lightstrips individually at the same time, and this is the only mode being supported by Zigbee2MQTT currently. More details can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/8510).
+기기 자체는 `RGBW 모드`와 `듀얼 색온도 모드` 두 가지 모드를 지원합니다. 기기가 `듀얼 색온도 모드`로 작동할 때 두 개의 색온도 조명 스트립을 동시에 개별적으로 제어할 수 있으며, 이것이 현재 Zigbee2MQTT에서 지원되는 유일한 모드입니다. 자세한 내용은 [여기](https://github.com/Koenkk/zigbee2mqtt/issues/8510)에서 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

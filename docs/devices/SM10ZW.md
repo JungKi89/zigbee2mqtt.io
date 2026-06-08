@@ -27,10 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Interview fails
-Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
-`ssIasZone:iasCieAddr` can not be read or written, all messages go to the coordinator
-even without proper enrolment. Device correctly reports open or closed status.
+### 인터뷰 실패
+`ssIasZone:iasCieAddr`를 읽거나 쓸 수 없어서 `modelId: 75a4bfe8ef9c4350830a25d13e3ab068`에 대한 인터뷰가 실패합니다. 정상적인 등록 없이도 모든 메시지가 코디네이터로 전달됩니다. 디바이스는 열림/닫힘 상태를 올바르게 보고합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

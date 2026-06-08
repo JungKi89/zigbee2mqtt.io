@@ -26,14 +26,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-The thermostat needs to be flashed with the correct firmware before it can be used with Zigbee. This works without using a proprietary hub, but requires a iOS/Android device with Bluetooth and an Aqara account.
+이 서모스탯은 Zigbee와 함께 사용하기 전에 올바른 펌웨어로 플래싱이 필요합니다. 독점 허브 없이도 가능하지만 Bluetooth가 지원되는 iOS/Android 기기와 Aqara 계정이 필요합니다.
 
-1. Download the Aqara app, sign in and proceed to adding a new device.
-2. (Skip this step in case of a new device) Put the thermostat into pairing mode by pressing and holding the center button for 10 seconds until the display starts flashing. The device should now show up in the app.
-3. Select the thermostat in the app and when prompted, choose Zigbee as the connection method. The app will then flash the correct firmware.
-4. Once the flashing process is complete, the thermostat will start pairing using Zigbee.
+1. Aqara 앱을 다운로드하여 로그인하고 새 기기 추가로 진행합니다.
+2. (새 기기인 경우 이 단계 건너뜀) 가운데 버튼을 10초간 누르면 디스플레이가 깜빡이기 시작하며 서모스탯이 페어링 모드로 전환됩니다. 이제 앱에서 기기가 표시됩니다.
+3. 앱에서 서모스탯을 선택하고 연결 방법을 묻는 메시지가 표시되면 Zigbee를 선택합니다. 앱이 올바른 펌웨어를 플래싱합니다.
+4. 플래싱 과정이 완료되면 서모스탯이 Zigbee를 사용하여 페어링을 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

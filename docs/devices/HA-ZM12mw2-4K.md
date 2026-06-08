@@ -25,19 +25,19 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-4-channel LED driver from Halemeier. Each channel is exposed as a separate Zigbee light.
+Halemeier의 4채널 LED 드라이버입니다. 각 채널은 독립적인 Zigbee 조명으로 표시됩니다.
 
-## Features
+## 기능
 
-- 4 independent channels (endpoint 1 to 4)
-- Supports on/off, brightness, and color temperature
-- Uses `light_onoff_brightness_colortemp` with `multiEndpoint` mapping
-- Works with Home Assistant via Zigbee2MQTT
+- 4개의 독립 채널 (엔드포인트 1~4)
+- 켜기/끄기, 밝기, 색온도 지원
+- `multiEndpoint` 매핑과 함께 `light_onoff_brightness_colortemp` 사용
+- Zigbee2MQTT를 통해 Home Assistant와 연동 가능
 
-## Notes
+## 참고 사항
 
-For full support of per-channel color temperature, Zigbee2MQTT v1.38+ is recommended.  
-Advanced features like `effect`, `color_temp_startup`, and `power_on_behavior` are not exposed per endpoint, but can be controlled via MQTT.
+채널별 색온도 완전 지원을 위해 Zigbee2MQTT v1.38 이상을 권장합니다.  
+`effect`, `color_temp_startup`, `power_on_behavior` 등 고급 기능은 엔드포인트별로 노출되지 않지만 MQTT를 통해 제어할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

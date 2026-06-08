@@ -24,9 +24,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-### Notes on OTA updates
+### OTA 업데이트 주의사항
 
-When updating using OTA, please be aware of the requirement to physically turn the amp wheel on the device to complete the update! Please see the [official update instructions](https://doc.clickup.com/9004130215/p/h/8cb07x7-30795/12688a97b1dfa55).
+OTA를 사용하여 업데이트할 때는 업데이트를 완료하기 위해 기기의 앰프 휠을 물리적으로 돌려야 한다는 점에 주의하세요! [공식 업데이트 지침](https://doc.clickup.com/9004130215/p/h/8cb07x7-30795/12688a97b1dfa55)을 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

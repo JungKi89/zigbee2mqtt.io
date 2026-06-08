@@ -26,9 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### AC Power
-If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
-The battery level indicator is only relevant to if you are using the solar panel.
+### AC 전원
+AC 벽면 어댑터를 사용하는 경우, 콘센트에서 지속적으로 전력을 공급받기 때문에 배터리 잔량이 항상 25~35% 범위 내에 유지됩니다.
+배터리 잔량 표시기는 태양광 패널을 사용하는 경우에만 관련이 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

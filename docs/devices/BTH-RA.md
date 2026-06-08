@@ -26,27 +26,27 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair this device you have to install the device via its installation code. Since this TRV comes in two different flavors (Zigbee only vs. Zigbee and Matter), the pairing process slightly differs between the two.
+### 페어링
+이 디바이스를 페어링하려면 설치 코드를 통해 기기를 등록해야 합니다. 이 TRV는 Zigbee 전용 버전과 Zigbee + Matter 버전 두 가지로 출시되어 있으며, 버전에 따라 페어링 과정이 약간 다릅니다.
 
-#### Pairing Zigbee Only TRV (Non-Matter variant)
-The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. Now proceed to section "Zigbee2MQTT Install Code" below.
+#### Zigbee 전용 TRV 페어링 (Matter 미지원 버전)
+배터리 커버 안쪽의 QR 코드를 스마트폰으로 스캔하여 설치 코드를 얻을 수 있습니다. 그런 다음 배터리를 재삽입하여 디바이스를 페어링 모드로 진입시킵니다. 디스플레이에 ">o<"가 표시되면 페어링 모드 상태입니다. 페어링이 완료되기 전에 밸브의 버튼을 누르지 마세요. 이후 아래의 "Zigbee2MQTT 설치 코드 입력" 섹션으로 진행하세요.
 
-#### Pairing Zigbee and Matter TRV (`Smart radiator thermostat II [+M]`)
-In case you are trying to pair the variant with Matter-support, the QR code is for Matter only. You can construct Install code from the IEEE Address and Install code (it is next to QR code): Bosch prefix (40 characters), IEEE Address (16), DLK, Install code (36). Example of Install code: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
-The device also needs to be in Zigbee-pairing mode. After resetting it, it will indicate its pairing mode by LED-flash:
-- Blue flashing: Matter pairing Mode
-- Orange flashing: Zigbee pairing Mode
-To leave Matter pairing Mode and enter Zigbee pairing mode, hold the main button for 3 seconds after Factory reset. The display should confirm with a "Z" that you switched to Zigbee paring Mode. Now proceed to section "Zigbee2MQTT Install Code" below.
+#### Zigbee + Matter TRV 페어링 (`Smart radiator thermostat II [+M]`)
+Matter 지원 버전을 페어링하려는 경우, QR 코드는 Matter 전용입니다. IEEE 주소와 설치 코드(QR 코드 옆에 표시됨)를 조합하여 설치 코드를 구성할 수 있습니다: Bosch 접두사(40자), IEEE 주소(16자), DLK, 설치 코드(36자). 설치 코드 예시: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+디바이스도 Zigbee 페어링 모드로 진입해야 합니다. 초기화 후 LED 점멸로 페어링 모드를 표시합니다:
+- 파란색 점멸: Matter 페어링 모드
+- 주황색 점멸: Zigbee 페어링 모드
+Matter 페어링 모드에서 Zigbee 페어링 모드로 전환하려면 공장 초기화 후 메인 버튼을 3초간 누르세요. 디스플레이에 "Z"가 표시되면 Zigbee 페어링 모드로 전환된 것입니다. 이후 아래의 "Zigbee2MQTT 설치 코드 입력" 섹션으로 진행하세요.
 
-### Enter Install Code in Zigbee2MQTT
-In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the Install Code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption.
+### Zigbee2MQTT에 설치 코드 입력
+Zigbee2MQTT에서 "Settings" --> "Tools"로 이동한 후 "Add install code"를 클릭합니다. 설치 코드를 붙여넣고 "OK"를 클릭하여 확인한 다음, 참가 허용(permit joining)이 활성화되어 있는지 확인합니다. 디바이스가 네트워크에 참가할 때까지 기다립니다. 밸브 디스플레이에는 여전히 ">o<"가 표시되어 있어야 합니다. 이제 밸브의 버튼을 눌러 밸브 적응(valve adaption) 과정을 시작할 수 있습니다.
 
-### Factory resetting
-To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
+### 공장 초기화
+디바이스를 공장 초기화하려면 배터리 중 하나를 제거합니다. 전면의 메인 버튼을 누른 채로 배터리를 다시 삽입합니다. 디바이스 LED가 "RES"를 표시하며 주황색으로 깜박이기 시작하면 메인 버튼을 놓고, LED가 초록색으로 켜질 때까지 다시 누른 채로 유지합니다. 그러면 디바이스가 보정(calibration) 과정으로 재시작되고 참가할 Zigbee 네트워크를 탐색합니다. 문제가 발생한 경우 LED가 빨간색으로 깜박이기 시작합니다. 이 경우 처음부터 다시 시도해야 합니다.
 
-### Using the manufacturer specific operation mode
-The `system_mode` exposed by the device according to zigbee specification is always 'heat'. To set or read the actual operation mode of the device, use the manufacturer-specific feature 'operating mode' (see below)
+### 제조사 전용 동작 모드 사용
+Zigbee 사양에 따라 디바이스가 노출하는 `system_mode`는 항상 'heat'입니다. 디바이스의 실제 동작 모드를 설정하거나 읽으려면 제조사 전용 기능인 'operating mode'를 사용하세요(아래 참고).
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -25,8 +25,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-The inputs of the device are only for toggle switches and do not work with momentary buttons. Therfore only switching the light on and off is possible with the input. Dimming is only available by zigbee commands.
-For details: https://github.com/Koenkk/zigbee2mqtt/issues/27364
+기기의 입력은 토글 스위치 전용으로, 모멘터리 버튼에서는 동작하지 않습니다. 따라서 입력으로는 조명 켜기/끄기만 가능합니다. 밝기 조절은 Zigbee 명령으로만 가능합니다.
+자세한 내용: https://github.com/Koenkk/zigbee2mqtt/issues/27364
 <!-- Notes END: Do not edit below this line -->
 
 

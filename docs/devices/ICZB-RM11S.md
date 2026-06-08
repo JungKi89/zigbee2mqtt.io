@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold All On button on the Remote until the Status LED turns on.
-Then immediately press the All Off button.
-The Status LED will blink 5 times quickly to indicate a successful pairing.
+### 페어링
+리모컨의 All On 버튼을 상태 LED가 켜질 때까지 길게 누릅니다.
+그런 다음 즉시 All Off 버튼을 누릅니다.
+상태 LED가 5번 빠르게 깜박이면 페어링 성공을 나타냅니다.
 
-### Resetting
-Press and hold the All On button on the Remote until the Status LED turns on.
-Then immediately press 5 times the All On button.
+### 초기화
+리모컨의 All On 버튼을 상태 LED가 켜질 때까지 길게 누릅니다.
+그런 다음 즉시 All On 버튼을 5번 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

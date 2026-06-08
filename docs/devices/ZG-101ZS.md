@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-To enter pairing mode hold bottom left button for 10 seconds until all 4 LEDs start flashing. Good batteries are required, see [known issue](https://github.com/Koenkk/zigbee2mqtt/issues/15749).
+### 페어링
+4개의 LED가 모두 깜박이기 시작할 때까지 왼쪽 하단 버튼을 10초 동안 길게 눌러 페어링 모드로 진입합니다. 충분한 배터리가 필요합니다. [알려진 문제](https://github.com/Koenkk/zigbee2mqtt/issues/15749)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

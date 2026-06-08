@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Debounce
-It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
+### 디바운스
+이 기기에는 `debounce` 옵션을 사용하지 않는 것을 권장합니다. 사용하면 `single` 및 `hold_release` 액션이 전송되지 않을 수 있습니다.
 
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+### 더 이상 사용되지 않는 click 이벤트
+기본적으로 이 기기는 더 이상 사용되지 않는 `click` 이벤트를 노출합니다. 대신 `action` 이벤트를 사용하는 것을 권장합니다.
 
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+`click` 이벤트를 비활성화하려면 `configuration.yaml`에서 이 기기에 `legacy: false`를 설정합니다. 예시:
 
 ```yaml
 devices:

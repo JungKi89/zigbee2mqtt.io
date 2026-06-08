@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
+### 페어링
 
-**Power-cycle the bulb 3 times to put it in pairing mode:**  
-Turn off - on - off - on - off - on. The light should start flashing.  
-If you don't see the *fade-in* transition at each *on*, you are doing it too fast.
+**전구의 전원을 3번 껐다 켜서 페어링 모드로 진입합니다:**  
+끄기 - 켜기 - 끄기 - 켜기 - 끄기 - 켜기. 조명이 깜박이기 시작해야 합니다.  
+*켜기* 시 *페이드인* 전환이 보이지 않는다면 너무 빨리 하고 있는 것입니다.
 
-Alternatively, reset it with [Touchlink](../guide/usage/touchlink.md).
+또는 [Touchlink](../guide/usage/touchlink.md)를 사용하여 초기화할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

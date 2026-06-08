@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory reset the drivers by holding the dedicated reset button for few seconds, connected ligts will start pulsing after factory reset.
+### 페어링
+전용 리셋 버튼을 몇 초간 누르고 있으면 드라이버가 공장 초기화됩니다. 공장 초기화 후 연결된 조명이 펄스 깜박임을 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 ## Transition

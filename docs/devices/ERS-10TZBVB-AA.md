@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-A triple click of the button switches operation modes.
-This is indicated by the received payload `{"action": null, "operation_mode": NEW_VALUE}` with values rotating between the modes listed in the respective section below.
-Depending on mode, the actions emitted by single click, double click and hold differ.
+버튼을 세 번 누르면 작동 모드가 전환됩니다.
+이는 수신된 페이로드 `{"action": null, "operation_mode": NEW_VALUE}`로 표시되며, 아래 각 섹션에 나열된 모드 간에 순환합니다.
+모드에 따라 한 번 누르기, 두 번 누르기, 길게 누르기로 전송되는 액션이 다릅니다.
 
-### Pairing
+### 페어링
 
-Open the backcover with a screwdriver. Hold the reset button for 6s until the green LED starts flashing.
+드라이버로 뒤 커버를 여세요. 초록 LED가 깜빡이기 시작할 때까지 리셋 버튼을 6초간 누르세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -28,18 +28,18 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small button on the 'top' of the device. After this the device will automatically join. Please be close to the Zigbee gateway when pairing the device.
+### 페어링
+기기의 리셋 버튼을 약 5초간 길게 누릅니다 (파란 불이 깜빡이기 시작할 때까지). 리셋 버튼은 기기 상단에 있는 작은 버튼입니다. 이후 기기가 자동으로 네트워크에 합류합니다. 기기 페어링 시 Zigbee 게이트웨이 근처에 있어 주세요.
 
 
-### Troubleshooting: device stops sending messages/disconnects from network
-Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
-Most of the times this happens because of the following reasons:
-- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
-- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
+### 문제 해결: 기기가 메시지 전송 중지/네트워크 연결 끊김
+Xiaomi 기기는 Zigbee 표준을 완전히 준수하지 않기 때문에, 네트워크에서 연결이 끊어지는 경우가 있습니다.
+대부분의 경우 다음과 같은 이유로 발생합니다:
+- 기기의 신호가 약합니다. 게시된 메시지에서 `linkquality`로 신호 품질을 확인할 수 있습니다. linkquality < 20은 약한 신호로 간주됩니다.
+- 배터리 전압이 낮습니다. 배터리가 아직 가득 차 보여도 발생할 수 있습니다. 다른 배터리로 교체해 보세요.
+- Xiaomi 기기를 처리하지 못하는 라우터를 통해 연결되어 있습니다. Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi 기기에서 이 문제가 발생하는 것으로 알려져 있습니다. 가능한 해결책은 리셋 버튼을 누르면서 코디네이터 근처에 물리적으로 위치하여 기기를 코디네이터에 직접 연결하는 것입니다.
 
-More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+이에 대한 더 자세한 정보는 [여기](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)에서 확인할 수 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -28,21 +28,21 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Plug the device in and wait for around 5mins, while it performs its self-tests.
-A successful self-test is indicated by couple of beeps and a steady green led.
-Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
+### 페어링
+디바이스를 전원에 연결하고 자가 진단을 수행하는 동안 약 5분간 기다립니다.
+자가 진단 성공은 몇 번의 비프음과 녹색 LED 점등으로 표시됩니다.
+이제 디바이스가 페어링 준비가 완료됩니다. 페어링을 시작하려면 버튼을 빠르게 연속으로 세 번 누릅니다.
 
 
-### Sensitivity
-The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
-`{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
-values: `low`, `medium`,  `high`.
+### 감도
+감도는 `zigbee2mqtt/FRIENDLY_NAME/set`에
+`{"sensitivity": "SENSITIVITY"}`를 게시하여 변경할 수 있습니다. `SENSITIVITY`는 다음 값 중 하나입니다:
+`low`, `medium`, `high`.
 
-### Self-test
-A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
-`{"selftest": ""}`.
-If the selftest is executed successfully you will hear the device beep in 30 seconds.
+### 자가 진단
+자가 진단은 `zigbee2mqtt/FRIENDLY_NAME/set`에
+`{"selftest": ""}`를 게시하여 트리거할 수 있습니다.
+자가 진단이 성공적으로 실행되면 30초 후 디바이스에서 비프음이 들립니다.
 <!-- Notes END: Do not edit below this line -->
 
 

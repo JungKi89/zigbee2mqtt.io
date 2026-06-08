@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Calibration
-Press the open button on the switch, wait until the curtains are completely open.
-Press the pause/stop button on the switch.
-Put the device into calibration mode via software.
-Press the close button on the switch, wait until curtains are fully closed.
-Press the pause/stop button on the switch.
-Disable the calibration mode.
+## 캘리브레이션
+스위치의 열기 버튼을 눌러 커튼이 완전히 열릴 때까지 기다립니다.
+스위치의 일시정지/정지 버튼을 누릅니다.
+소프트웨어를 통해 기기를 캘리브레이션 모드로 전환합니다.
+스위치의 닫기 버튼을 눌러 커튼이 완전히 닫힐 때까지 기다립니다.
+스위치의 일시정지/정지 버튼을 누릅니다.
+캘리브레이션 모드를 비활성화합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

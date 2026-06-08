@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-To pair or reset this device for Zigbee pairing mode:
-1. Open the casing of the device.
-2. Press and hold the menu button until the LED flashes numerous times in a row, and then release the button again.
-3. After a successful reset the yellow LED will start flashing which indicates network search.
+### 페어링
+Zigbee 페어링 모드로 기기를 페어링하거나 초기화하려면:
+1. 기기의 케이스를 여세요.
+2. LED가 연속으로 여러 번 깜빡일 때까지 메뉴 버튼을 누른 후 버튼을 놓으세요.
+3. 초기화 성공 후 노란 LED가 깜빡이기 시작하며 네트워크 검색 중임을 나타냅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

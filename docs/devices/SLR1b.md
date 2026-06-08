@@ -27,21 +27,21 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
+### 페어링
 
-To pair the thermostat with Zigbee2MQTT, follow these steps:
+온도조절기를 Zigbee2MQTT에 페어링하려면 다음 단계를 따르세요:
 
-1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
-2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
-3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
-4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.
-5. You can now re-insert the battery back into any thermostat controllers disconnected in step 1 and pair them to the boiler (and optionally Zigbee2MQTT). For information on pairing the thermostat controllers see the pairing instructions for the [Hive SLT3B](./SLT3.md). Note that the thermostat's Central heating light will remain amber until a controller is paired with the thermostat, however the thermostat will still function correctly.
+1. 온도조절기에 연결된 컨트롤러의 배터리를 제거하여 일시적으로 연결을 끊습니다.
+2. 온도조절기와 보일러를 껐다가 다시 켜서 컨트롤러에 연결을 시도하지 않는 상태로 만듭니다.
+3. 온도조절기와 보일러가 켜지면, 디바이스의 중앙 난방(Central heating) 버튼을 중앙 난방 표시등이 흰색/분홍색으로 바뀔 때까지 누른 후 버튼을 놓습니다. 이렇게 하면 온도조절기가 독립 실행 모드로 전환됩니다.
+4. 중앙 난방 버튼을 다시 눌러 중앙 난방 표시등이 황색으로 깜박이기 시작할 때까지 기다립니다. 이제 디바이스가 페어링 모드에 진입하여 Zigbee2MQTT에서 검색됩니다.
+5. 이제 1단계에서 분리한 컨트롤러에 배터리를 다시 삽입하고 보일러(및 선택적으로 Zigbee2MQTT)에 페어링할 수 있습니다. 컨트롤러 페어링 방법은 [Hive SLT3B](./SLT3.md) 페어링 안내를 참조하세요. 컨트롤러가 온도조절기에 페어링될 때까지 중앙 난방 표시등은 황색으로 유지되지만, 온도조절기는 정상적으로 작동합니다.
 
 
-### How to start/edit native boost
-The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+### 네이티브 부스트 시작/편집 방법
+리시버는 네이티브 Boost를 지원하며, 호환되는 리모컨에 남은 시간을 표시할 수 있습니다.
 
-To start one, or modify an already active one, send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+부스트를 시작하거나 이미 활성화된 부스트를 수정하려면 `zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 
 ```js
 {
@@ -51,12 +51,12 @@ To start one, or modify an already active one, send the following payload to the
    "occupied_heating_setpoint":18  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+참고: 디바이스 타이밍 문제로 인해 페이로드를 하나의 단일 명령으로 전송해야 합니다. 개별 명령 전송이나 Frontend에서 속성을 수동으로 설정하는 방식은 작동하지 않습니다.
 
-Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+네이티브 부스트는 난방을 일시 중지하는 방법으로도 사용할 수 있습니다. 이 경우 온도를 낮은 값으로 설정하세요.
 
-### Set heating mode to MANUAL
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 MANUAL로 설정
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode":"heat",
@@ -64,34 +64,34 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
    "occupied_heating_setpoint":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `null` which means `undefined` (indefinite).
+참고: `temperature_setpoint_hold_duration`이 자동으로 `null`로 변경되는데, 이는 `undefined`(무기한)를 의미합니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
 
-### Set heating mode to OFF
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 OFF로 설정
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode":"off",
    "temperature_setpoint_hold":0
 }
 ```
-Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
+참고: `temperature_setpoint_hold_duration`이 자동으로 `0`으로 변경되는데, 이는 `설정 안 됨`을 의미합니다. `occupied_heating_setpoint`는 자동으로 1°C로 변경됩니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 
-### Set heating mode to SCHEDULE
-Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+### 난방 모드를 SCHEDULE로 설정
+`zigbee2mqtt/FRIENDLY_NAME/set` 토픽으로 다음 페이로드를 전송하세요:
 ```js
 {
    "system_mode":"heat",
    "temperature_setpoint_hold":0
 }
 ```
-Note: This will revert any deviation of ```occupied_heating_setpoint``` previously set to what is defined in the schedule of the thermostat.
+참고: 이전에 설정된 ```occupied_heating_setpoint```의 편차가 온도조절기 스케줄에 정의된 값으로 되돌아갑니다.
 
-This will also stop any native boosts that are currently active.
+이 명령은 현재 활성화된 모든 네이티브 부스트도 중지합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

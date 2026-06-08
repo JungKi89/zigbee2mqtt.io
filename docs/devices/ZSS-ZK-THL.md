@@ -25,19 +25,18 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-This device is not recommended, as it has a critical design flaw involving the temperature sensor used vs the available power source - for more details, see here: [https://pvvx.github.io/ZSS-ZK-THL/](https://pvvx.github.io/ZSS-ZK-THL/)
+이 기기는 사용 가능한 전원과 온도 센서 간의 심각한 설계 결함이 있어 권장하지 않습니다. 자세한 내용은 [https://pvvx.github.io/ZSS-ZK-THL/](https://pvvx.github.io/ZSS-ZK-THL/)을 참조하세요.
 
-### Pairing
-Press the Orange button on the side until 3 dots appear on the screen.
+### 페어링
+화면에 점 3개가 나타날 때까지 측면의 주황색 버튼을 누릅니다.
 
-### Compatibility issue
+### 호환성 문제
 
-This device freeze after a while when not connected with a Tuya Hub. See [#7535](https://github.com/Koenkk/zigbee2mqtt/issues/7535). Some users report that
-this device work fine when connected to any hub through a relay device.
+이 기기는 Tuya Hub에 연결되지 않으면 잠시 후 멈춥니다. [#7535](https://github.com/Koenkk/zigbee2mqtt/issues/7535)를 참조하세요. 일부 사용자는 릴레이 기기를 통해 허브에 연결하면 정상 동작한다고 보고합니다.
 
-### Usage limitation
+### 사용 제한
 
-The device reports illuminance variations instantly. Therefore temperature is reported each hour making this device useless for building a thermostat.
+기기는 조도 변화를 즉시 보고합니다. 반면 온도는 한 시간마다 보고되므로 이 기기는 온도 조절기 구축에는 적합하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

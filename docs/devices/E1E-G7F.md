@@ -27,15 +27,15 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Factory reset the switch by pressing and holding the on and off buttons at the same time for at least 3 seconds. The indicator will start flashing, indicating a successful reset. The device will enter pairing mode for one minute. If the device is not connected in one minute, you must restart the pairing process.
+### 페어링
+on 버튼과 off 버튼을 동시에 3초 이상 누르고 있어 스위치를 공장 초기화하세요. 인디케이터가 깜빡이기 시작하면 성공적으로 초기화된 것입니다. 기기는 1분 동안 페어링 모드로 진입합니다. 1분 내에 연결되지 않으면 페어링 프로세스를 다시 시작해야 합니다.
 
-If device won't go in to pairing mode, try installing a fresh battery.
+기기가 페어링 모드로 진입하지 않으면 새 배터리를 교체해 보세요.
 
-### Long press action
-The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*.
+### 길게 누르기 동작
+기기가 때때로 길게 누르기와 함께 단일 누르기를 출력할 수 있습니다. 기기 디바운스 설정을 사용하여 이를 완화할 수 있습니다. *[기기 유형별 설정 사용 방법](../guide/configuration/devices-groups.md#specific-device-options)*을 참조하세요.
 
-For the `up` and `down` buttons, they will first output the action, and then output `{action}_long` every approximately 1 second, repeating until the button is released.
+`up` 및 `down` 버튼의 경우, 먼저 동작을 출력한 다음 버튼을 놓을 때까지 약 1초마다 `{action}_long`을 반복해서 출력합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

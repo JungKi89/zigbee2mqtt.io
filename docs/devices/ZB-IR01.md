@@ -25,13 +25,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-## 1. Protocol Overview
+## 1. 프로토콜 개요
 
-### 1.1 Description of ZCL Communication for Custom Gateway Access
+### 1.1 커스텀 게이트웨이 연동을 위한 ZCL 통신 설명
 
-To integrate the smart infrared remote control with a custom gateway, users should refer to the standard cluster specifications in the [07-5123-07-ZigbeeClusterLibrary_Revision_7.pdf](https://csa-iot.org/developer-resource/specifications-download-request/) protocol document.
+스마트 적외선 리모컨을 커스텀 게이트웨이에 연동하려면 [07-5123-07-ZigbeeClusterLibrary_Revision_7.pdf](https://csa-iot.org/developer-resource/specifications-download-request/) 프로토콜 문서의 표준 클러스터 사양을 참조하세요.
 
-#### 1.1.1 Cluster Identifier
+#### 1.1.1 클러스터 식별자
 
 | **Identifier** | **Name**                |
 | -------------- | ----------------------- |
@@ -39,15 +39,15 @@ To integrate the smart infrared remote control with a custom gateway, users shou
 
 Table 1
 
-#### 1.1.2 Protocol Process Description
+#### 1.1.2 프로토콜 프로세스 설명
 
-To simplify communication, the creation of transparent transmission channels required by the cluster is omitted. Transparent transmission commands are used directly to send and receive commands, with the channel ID fixed at 0.
+통신 간소화를 위해 클러스터에서 필요한 투명 전송 채널 생성이 생략되었습니다. 채널 ID를 0으로 고정하여 투명 전송 명령을 직접 사용하여 명령을 송수신합니다.
 
-##### 1.1.2.1 Sending Data
+##### 1.1.2.1 데이터 전송
 
-Use the [10.6.2.4.3 TransferData Command], with the following key parameters:
+[10.6.2.4.3 TransferData Command]를 사용하며, 주요 파라미터는 다음과 같습니다:
 
-Direction: Client -> Server
+방향: Client -> Server
 
 | **Description**                      | **Length** | **Value**                       |
 | ------------------------------------ | ---------- | ------------------------------- |
@@ -57,11 +57,11 @@ Direction: Client -> Server
 
 Table 2
 
-##### 1.1.2.2 Receiving Data from the Infrared Remote Control
+##### 1.1.2.2 적외선 리모컨에서 데이터 수신
 
-Use the [10.6.2.5.2 TransferData Command] with the following parameters:
+[10.6.2.5.2 TransferData Command]를 사용하며, 파라미터는 다음과 같습니다:
 
-Direction: Server -> Client
+방향: Server -> Client
 
 | **Description**                      | **Length** | **Value**                       |
 | ------------------------------------ | ---------- | ------------------------------- |
@@ -71,30 +71,30 @@ Direction: Server -> Client
 
 Table 3
 
-### 1.2 Infrared Remote Control Protocol Overview
+### 1.2 적외선 리모컨 프로토콜 개요
 
-#### 1.2.1 Request Data Frame
+#### 1.2.1 요청 데이터 프레임
 
 | Command | Data 1 | Data 2 | Data 3 | Data 4 | XOR Check |
 | ------- | ------ | ------ | ------ | ------ | --------- |
 | 0x##    | 0x##   | 0x##   | 0x##   | 0x##   | 0x##      |
 
-#### 1.2.2 Response Data Frame
+#### 1.2.2 응답 데이터 프레임
 
 | Command | Data 1 | Data 2 | Data 3 | Data 4 | XOR Check |
 | ------- | ------ | ------ | ------ | ------ | --------- |
 | 0x06    | 0x##   | 0x##   | 0x##   | 0x##   | 0x##      |
 
-Detailed Explanation of Frame Data
+프레임 데이터 상세 설명
 
-- **Command**: The request frame ranges from 0x80 to 0x92, with reserved data in between.
-- **Data**: The response frame is fixed at 0x06. Each request frame sent will receive a response frame.
-- **Reporting Frame**: The data reporting frame is fixed at 0x08, used to report the status of the air conditioner after remote control.
-- **XOR Check**: A simple XOR-based checksum.
+- **Command**: 요청 프레임은 0x80부터 0x92 범위이며, 중간에 예약된 데이터가 있습니다.
+- **Data**: 응답 프레임은 0x06으로 고정됩니다. 전송된 각 요청 프레임은 응답 프레임을 받습니다.
+- **Reporting Frame**: 데이터 보고 프레임은 0x08로 고정되며, 원격 제어 후 에어컨 상태를 실시간 보고하는 데 사용됩니다.
+- **XOR Check**: 간단한 XOR 기반 체크섬입니다.
 
-#### 1.2.3 XOR Verification Algorithm (XOR and Validation)
+#### 1.2.3 XOR 검증 알고리즘 (XOR 합산 검증)
 
-* Pseudo-code for BCC check:
+* BCC 체크의 의사 코드:
 
 ```c
 Function CalcXOR(msgPtr, len):
@@ -107,17 +107,17 @@ Function CalcXOR(msgPtr, len):
     Return xorResult
 ```
 
-* Generate a checksum using the BCC calculation tool
+* BCC 계산 도구를 사용하여 체크섬 생성
 
 [bcc tools download](https://drive.google.com/file/d/1TD01Xk96JKfwNW9OtdslQOVTc1yHSI47/view?usp=drive_link)
 
-## 2 Basic functions
+## 2 기본 기능
 
-### 2.1 Device type definition
+### 2.1 기기 유형 정의
 
-This infrared remote control defines 8 device remote control types (2 of which are custom learning types), and they can be switched freely with commands during use.
+이 적외선 리모컨은 8가지 기기 리모컨 유형(그 중 2개는 커스텀 학습 유형)을 정의하며, 사용 중에 명령으로 자유롭게 전환할 수 있습니다.
 
-Among them, the custom learning type can learn 32 buttons each. The button names are saved by the host, and the remote control does not distinguish between button functions.
+커스텀 학습 유형은 각각 32개의 버튼을 학습할 수 있습니다. 버튼 이름은 호스트에서 저장하며, 리모컨은 버튼 기능을 구별하지 않습니다.
 
 | **Device Type** | **Type Definition**    |
 | --------------- | ---------------------- |
@@ -132,289 +132,288 @@ Among them, the custom learning type can learn 32 buttons each. The button names
 
 Table 4
 
-## 3 Control command payload
+## 3 제어 명령 페이로드
 
-### 3.1 Create a new remote control
+### 3.1 새 리모컨 만들기
 
 | Command | Device type | Kfid_H | Kfid_L | Reserved | XOR check |
 | ------- | ----------- | ------ | ------ | -------- | --------- |
 | 0x80    | 0x##        | 0x##   | 0x##   | 0x00     | 0x##      |
 
-**Function**: Create a new remote control. You must create a remote control before using it, otherwise other calls will fail or return incorrect results.
+**기능**: 새 리모컨을 만듭니다. 사용하기 전에 반드시 리모컨을 만들어야 하며, 그렇지 않으면 다른 호출이 실패하거나 잘못된 결과를 반환합니다.
 
 **Command**: 0x80
 
-**Device type**: For the type of remote control to be created, refer to Table 4.
+**Device type**: 만들 리모컨 유형은 Table 4를 참조하세요.
 
-**Kfid**: A 16-bit remote control ID
+**Kfid**: 16비트 리모컨 ID
 
-To generate the checksum (XOR check), you can use the **BCC calculation tool** from the provided link:
+체크섬(XOR check)을 생성하려면 제공된 링크의 **BCC 계산 도구**를 사용하세요:
 
-- [BCC tools download](https://drive.google.com/file/d/1TD01Xk96JKfwNW9OtdslQOVTc1yHSI47/view?usp=drive_link)
+- [BCC 도구 다운로드](https://drive.google.com/file/d/1TD01Xk96JKfwNW9OtdslQOVTc1yHSI47/view?usp=drive_link)
 
 
-Obtain Kfid: 
-a. Call the one-click matching interface to obtain  
-b. Obtain by consulting the brand and model correspondence table (table 11 - table 14).
+Kfid 획득 방법:
+a. 원클릭 매칭 인터페이스를 호출하여 획득  
+b. 브랜드 및 모델 대응표 (table 11 - table 14)를 참조하여 획득
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F  
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07  
-Error code: 0xE1 The meaning is shown in Table 5
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F  
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07  
+오류 코드: 0xE1 의미는 Table 5 참조
 
-### 3.2 One-click matching
+### 3.2 원클릭 매칭
 
 | Command | Device type | Kfid_H | Kfid_L | Reserved | XOR check |
 | ------- | ----------- | ------ | ------ | -------- | --------- |
 | 0x81    | 0x##        | 0x00   | 0x00   | 0x00     | 0x##      |
 
-**Function**: Use the original remote control to send the power on button to the Zigbee infrared remote control to search for the ID corresponding to the local code library. After the Zigbee infrared remote control receives the matching command, the indicator light will flash, prompting the user to press the power button of the remote control. After the search is successful, a 16-bit value (Kfid_H, Kfid_L) will be returned. If no signal is received for more than 10 seconds, a failure will be returned.
+**기능**: 원본 리모컨으로 전원 켜기 버튼을 Zigbee 적외선 리모컨에 전송하여 로컬 코드 라이브러리에서 해당 ID를 검색합니다. Zigbee 적외선 리모컨이 매칭 명령을 수신하면 표시등이 깜박이며 사용자에게 리모컨의 전원 버튼을 누르도록 안내합니다. 검색에 성공하면 16비트 값(Kfid_H, Kfid_L)이 반환됩니다. 10초 이상 신호가 수신되지 않으면 실패가 반환됩니다.
 
-Command word: 0x81
+명령어: 0x81
 
-Device type: the type of remote control that needs to be matched
+Device type: 매칭이 필요한 리모컨 유형
 
-Return: Success: 0x06,0x89,kfidH,kfidL,0x00,XOR  
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07  
-Error code: 0xE1 The meaning is shown in Table 5
+Return: 성공: 0x06,0x89,kfidH,kfidL,0x00,XOR  
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07  
+오류 코드: 0xE1 의미는 Table 5 참조
 
-Note: One-click matching may not work well when there are duplicate codes (for example, a button of brand A and brand B have almost identical remote control codes). It is recommended to search by brand to match devices.
+참고: 코드가 중복되는 경우 원클릭 매칭이 잘 작동하지 않을 수 있습니다 (예: A 브랜드와 B 브랜드 버튼의 리모컨 코드가 거의 동일한 경우). 기기를 매칭하려면 브랜드별로 검색하는 것을 권장합니다.
 
-### 3.3 Transmit Infrared Signal
+### 3.3 적외선 신호 전송
 
 | Command | Device type | Button ID | Button value | Reserved | XOR check |
 | ------- | ----------- | --------- | ------------ | -------- | --------- |
 | 0x86    | 0x##        | 0x##      | 0x##         | 0x00     | 0x##      |
 
-Function: Transmit infrared control signal
+기능: 적외선 제어 신호 전송
 
 Command: 0x86
 
-Device type: remote control ID
+Device type: 리모컨 ID
 
-Button ID: Button ID. For details, please refer to Table 6-Table 10.
+Button ID: 버튼 ID. 자세한 내용은 Table 6-Table 10을 참조하세요.
 
-Key value: key parameter value, please refer to Table 6-Table 10 for details. If there is no key value, fill in 0 directly.
+Key value: 키 파라미터 값, 자세한 내용은 Table 6-Table 10을 참조하세요. 키 값이 없으면 0을 입력합니다.
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F  
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07  
-Error code: 0xE1 The meaning is shown in Table 5
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F  
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07  
+오류 코드: 0xE1 의미는 Table 5 참조
 
-### 3.4 Infrared learning
+### 3.4 적외선 학습
 
 | Command | Device Type | Learning Number | Reserved | Reserved | XOR Check |
 | ------- | ----------- | --------------- | -------- | -------- | --------- |
 | 0x88    | 0x00/0x0C   | 0x##            | 0x00     | 0x00     | 0x##      |
 
-Function: Learn a string of infrared signals and save them to the location specified by the learning number. After the Zigbee infrared remote control receives the learning command, the indicator light flashes, prompting the user to press the remote control button.
+기능: 적외선 신호 문자열을 학습하여 학습 번호로 지정된 위치에 저장합니다. Zigbee 적외선 리모컨이 학습 명령을 수신하면 표시등이 깜박이며 사용자에게 리모컨 버튼을 누르도록 안내합니다.
 
 Command: 0x88
 
-Device type: The type of remote control that needs to be learned (only device type 0 or 12 has the learning function)
+Device type: 학습이 필요한 리모컨 유형 (기기 유형 0 또는 12만 학습 기능을 지원)
 
-Learning number: Learn and store the package number. After successful learning, the data saved by the original number will be overwritten. The value range is 1-32.
+Learning number: 학습 저장 패킷 번호. 학습에 성공하면 원래 번호에 저장된 데이터가 덮어쓰여집니다. 값 범위는 1-32입니다.
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F
 
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07 Error code: 0xE1. The meaning is shown in Table 5.
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07 오류 코드: 0xE1. 의미는 Table 5 참조.
 
-Note: 
-1. There is no need to create a new remote control when using this command.
-2. If it is a matching remote control, please use one-key matching.
+참고:
+1. 이 명령을 사용할 때 새 리모컨을 만들 필요가 없습니다.
+2. 매칭 리모컨인 경우 원클릭 매칭을 사용하세요.
 
-### 3.5 Emitting infrared learning data
+### 3.5 적외선 학습 데이터 전송
 
 | Command | Device Type | Learning Number | Reserved | Reserved | XOR Check |
 | ------- | ----------- | --------------- | -------- | -------- | --------- |
 | 0x87    | 0x00/0x0C   | 0x##            | 0x00     | 0x00     | 0x##      |
 
-**Function**: Send the learned infrared signal (0x88 learned data)
-
+**기능**: 학습된 적외선 신호 전송 (0x88로 학습된 데이터)
 
 Command: 0x87
 
-Device type: Only device type 0 or 12 has learning function.
+Device type: 기기 유형 0 또는 12만 학습 기능을 지원합니다.
 
-Learning number: Learning storage packet number, the number corresponding to the infrared data learned by the 0x88 command. The value range is 1-32.
+Learning number: 학습 저장 패킷 번호, 0x88 명령으로 학습된 적외선 데이터에 해당하는 번호. 값 범위는 1-32입니다.
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F
 
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07 Error code: 0xE1. The meaning is shown in Table 5.
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07 오류 코드: 0xE1. 의미는 Table 5 참조.
 
-### 3.6 Air conditioning status initialization
+### 3.6 에어컨 상태 초기화
 
 | Command | Device type | Button ID | Button value | Reserved | XOR check |
 | ------- | ----------- | --------- | ------------ | -------- | --------- |
 | 0x8F    | 0x01        | 0x##      | 0x##         | 0x00     | 0x##      |
 
-Function: Change the air conditioner status recorded by the chip, create a new air conditioner remote control status as: open-24-cooling-automatic fan speed.
+기능: 칩이 기록한 에어컨 상태를 변경하고, 새 에어컨 리모컨 상태를 초기화합니다: 켜짐-24도-냉방-자동 풍속.
 
 Command: 0x8F
 
-Device type: Equipment remote control type (refer to Table 4), or use air conditioner 0x01.
+Device type: 기기 리모컨 유형 (Table 4 참조), 또는 에어컨 0x01을 사용합니다.
 
-Button ID: Button ID. For details, please refer to Table 6-Table 10.
+Button ID: 버튼 ID. 자세한 내용은 Table 6-Table 10을 참조하세요.
 
-Key value: Key parameter value, please refer to Table 6-Table 10 for details.
+Key value: 키 파라미터 값, 자세한 내용은 Table 6-Table 10을 참조하세요.
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F
 
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07 Error code: 0xE1. The meaning is shown in Table 5.
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07 오류 코드: 0xE1. 의미는 Table 5 참조.
 
-Note: This command has the same parameters as the infrared emission command, except that this command will not emit infrared signals, but only changes the internal state of the chip.
+참고: 이 명령은 적외선 전송 명령과 동일한 파라미터를 가지지만, 이 명령은 적외선 신호를 전송하지 않고 칩의 내부 상태만 변경합니다.
 
-### 3.7 Set air conditioning status feedback
+### 3.7 에어컨 상태 피드백 설정
 
 | Command | Feedback | Reserved | Reserved | Reserved | XOR Check |
 | ------- | -------- | -------- | -------- | -------- | --------- |
 | 0x82    | 0/1      | 0x00     | 0x00     | 0x00     | 0x##      |
 
-Function: Set air conditioner status feedback enable and disable.
+기능: 에어컨 상태 피드백 활성화 및 비활성화를 설정합니다.
 
 Command: 0x82
 
-Feedback: 1=enabled, 0=disabled.
+Feedback: 1=활성화, 0=비활성화.
 
-Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F
+Return: 성공: 0x06,0x89,0x00,0x00,0x00,0x8F
 
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07 Error code: 0xE1. The meaning is shown in Table 5.
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07 오류 코드: 0xE1. 의미는 Table 5 참조.
 
-### 3.8 Read ZIGBEE infrared remote control version
+### 3.8 ZIGBEE 적외선 리모컨 버전 읽기
 
 | Command | Reserve | Reserve | Reserve | Reserve | XOR Check |
 | ------- | ------- | ------- | ------- | ------- | --------- |
 | 0x92    | 0x00    | 0x00    | 0x00    | 0x00    | 0x##      |
 
-Function: Read the version number of ZIGBEE infrared remote control.
+기능: ZIGBEE 적외선 리모컨의 버전 번호를 읽습니다.
 
 Command: 0x92
 
-Return: Success: 0x06,0x89,0x01,0x00,0x00,0x8E. The third byte returned, 0x1, is the version number.
+Return: 성공: 0x06,0x89,0x01,0x00,0x00,0x8E. 세 번째 반환 바이트 0x1이 버전 번호입니다.
 
-Failure: 0x06,0xE0,0xE1,0x00,0x00,0x07 Error code: 0xE1. The meaning is shown in Table 5.
+실패: 0x06,0xE0,0xE1,0x00,0x00,0x07 오류 코드: 0xE1. 의미는 Table 5 참조.
 
-### 3.9 Execution status return
+### 3.9 실행 상태 반환
 
 | Command | Status    | Return Value | Reserved | Reserved | XOR Check |
 | ------- | --------- | ------------ | -------- | -------- | --------- |
 | 0x06    | 0x89/0xE0 | 0x##         | 0x00     | 0x00     | 0x##      |
 
-Function: Return to execution status.
+기능: 실행 상태를 반환합니다.
 
 Command: 0x06
 
-Status: Success: 0x89 Failure: 0xE0
+Status: 성공: 0x89, 실패: 0xE0
 
-Return value: 
-- When status = 0x89: the return value is the value that needs to be returned.
-- When status = 0xE0: the return value is an error code.
+Return value:
+- status = 0x89인 경우: 반환 값은 반환이 필요한 값입니다.
+- status = 0xE0인 경우: 반환 값은 오류 코드입니다.
 
-| **Error code** | **Error code meaning**                                       |
+| **오류 코드** | **오류 코드 의미**                                           |
 | -------------- | ------------------------------------------------------------ |
-| 01             | Undefined other exception                                    |
-| E0             | No remote control created                                    |
-| E1             | The state of this button is not supported                    |
-| E2             | The current mode of the air conditioner does not support this button operation |
-| E3             | Abnormal loading of data packet                              |
-| E4             | Wrong kfid                                                   |
-| E5             | rmt.status is incorrect                                      |
-| E6             | The current remote control does not have this button         |
-| E7             | Non-learning device type, does not support learning          |
-| E8             | No learning data for keys                                    |
-| E9             | The received length is inconsistent with the specified length of the data packet |
-| EA             | Incorrect validation                                         |
-| EB             | The packet is too large and cannot be saved                  |
-| EE             | One-click code matching and waiting timeout                  |
+| 01             | 정의되지 않은 기타 예외                                      |
+| E0             | 리모컨이 생성되지 않음                                       |
+| E1             | 이 버튼의 상태가 지원되지 않음                               |
+| E2             | 에어컨의 현재 모드가 이 버튼 작업을 지원하지 않음            |
+| E3             | 데이터 패킷 로딩 이상                                        |
+| E4             | 잘못된 kfid                                                  |
+| E5             | rmt.status가 잘못됨                                          |
+| E6             | 현재 리모컨에 이 버튼이 없음                                 |
+| E7             | 학습 불가 기기 유형, 학습 미지원                             |
+| E8             | 키의 학습 데이터 없음                                        |
+| E9             | 수신된 길이가 데이터 패킷의 지정된 길이와 일치하지 않음      |
+| EA             | 잘못된 검증                                                  |
+| EB             | 패킷이 너무 커서 저장할 수 없음                              |
+| EE             | 원클릭 코드 매칭 대기 타임아웃                               |
 
 Table 5
 
-### 3.10 Report Air Conditioning Status Parameter Feedback
+### 3.10 에어컨 상태 파라미터 피드백 보고
 
 | Command | Switch | Mode | Temperature | Air Volume | XOR Check |
 | ------- | ------ | ---- | ----------- | ---------- | --------- |
 | 0x08    | 0      | 1    | 1           | 0          | 0x##      |
 
-**Function**: When a valid air conditioner remote control signal is received (for example, when the user presses the power button on the remote control to control the air conditioner), the air conditioner working status parameters are fed back in real time. Since the infrared signal is one-way, the data from the air conditioner, when controlled directly via the air conditioner's panel, cannot be fed back.
+**기능**: 유효한 에어컨 리모컨 신호를 수신하면 (예: 사용자가 리모컨의 전원 버튼을 눌러 에어컨을 제어할 때) 에어컨 작동 상태 파라미터가 실시간으로 피드백됩니다. 적외선 신호는 단방향이므로, 에어컨 패널을 직접 조작할 때 에어컨의 데이터는 피드백되지 않습니다.
 
 **Command**: 0x08
 
-- **Switch**: 0 = ON, 1 = OFF
-- **Mode**: 0 = Auto, 1 = Cooling, 2 = Dehumidification, 3 = Air Supply, 4 = Heating
+- **Switch**: 0 = 켜짐, 1 = 꺼짐
+- **Mode**: 0 = 자동, 1 = 냉방, 2 = 제습, 3 = 송풍, 4 = 난방
 - **Temperature**: 0 = 16℃, 1 = 17℃, …, 14 = 30℃
-- **Air Volume**: 0 = Automatic, 1 = Low Speed, 2 = Medium Speed, 3 = High Speed
+- **Air Volume**: 0 = 자동, 1 = 저속, 2 = 중속, 3 = 고속
 
-## 4 Infrared Access Flow Chart
+## 4 적외선 연동 흐름도
 
-Note: If you need detailed command explanations, please refer to [6.1 Infrared Data Description].
+참고: 자세한 명령 설명이 필요하면 [6.1 적외선 데이터 설명]을 참조하세요.
 
-### 4.1 Match by Brand
+### 4.1 브랜드별 매칭
 
-1. Find the corresponding device types in Table 11–Table 14.
-2. Find the code table corresponding to the relevant brand.
-3. Use [3.1 New Remote Control] to create a new remote control.
-4. Use [3.3 Transmit Infrared Signal] to send key data (e.g., [Power On]) and confirm that the device powers on.
-5. Repeat step 4 1–2 times to test if the other button functions are working correctly.
-6. The gateway/server saves the remote control kfid (the corresponding remote control number), and the matching process ends.
-7. If the device is an air conditioner, also send [3.6 Air Conditioner Status Initialization] to initialize the air conditioner status.
+1. Table 11–Table 14에서 해당 기기 유형을 찾습니다.
+2. 관련 브랜드에 해당하는 코드 표를 찾습니다.
+3. [3.1 새 리모컨 만들기]를 사용하여 새 리모컨을 만듭니다.
+4. [3.3 적외선 신호 전송]을 사용하여 키 데이터 (예: [전원 켜기])를 전송하고 기기가 켜지는지 확인합니다.
+5. 다른 버튼 기능이 정상 작동하는지 확인하기 위해 단계 4를 1~2회 반복합니다.
+6. 게이트웨이/서버가 리모컨 kfid (해당 리모컨 번호)를 저장하면 매칭 과정이 종료됩니다.
+7. 기기가 에어컨인 경우 [3.6 에어컨 상태 초기화]도 전송하여 에어컨 상태를 초기화합니다.
 
-### 4.2 One-click matching
+### 4.2 원클릭 매칭
 
-1. Send [3.2 One-click matching] to enter matching mode.
-2. The user presses the [Power] button on the remote control.
-3. Parse the kfid in [3.9 Execution Status Return] and save it.
-4. Use [3.1 New Remote Control] to create a new remote control.
-5. If it is an air conditioner, you also need to send [3.6 Air Conditioner Status Initialization] to initialize the air conditioner status.
+1. [3.2 원클릭 매칭]을 전송하여 매칭 모드로 진입합니다.
+2. 사용자가 리모컨의 [전원] 버튼을 누릅니다.
+3. [3.9 실행 상태 반환]에서 kfid를 파싱하여 저장합니다.
+4. [3.1 새 리모컨 만들기]를 사용하여 새 리모컨을 만듭니다.
+5. 에어컨인 경우 [3.6 에어컨 상태 초기화]도 전송하여 에어컨 상태를 초기화해야 합니다.
 
-### 4.3 Infrared learning
+### 4.3 적외선 학습
 
-1. Use [3.4 infrared learning] to learn remote control data.
-2. Use [3.5 Transmit infrared learning data] to send infrared data.
+1. [3.4 적외선 학습]을 사용하여 리모컨 데이터를 학습합니다.
+2. [3.5 적외선 학습 데이터 전송]을 사용하여 적외선 데이터를 전송합니다.
 
-## 5 Button ID and status ID
+## 5 버튼 ID 및 상태 ID
 
-| Button ID                                       | Button name          | Button status ID (starting from 0)                           |
+| 버튼 ID                                         | 버튼 이름            | 버튼 상태 ID (0부터 시작)                                    |
 | ------------------------------------------- | -------------------- | ------------------------------------------------------ |
-| 0                                               | Power                | On [Power], Off                                              |
-| 1                                               | Mode                 | Automatic [mode], cooling, dehumidification, air supply, heating, |
-| 2                                               | Temperature+         | 16[Temperature+],17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 |
-| 3                                               | Temperature-         | 16[Temperature-],17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 |
-| 4                                               | Wind speed           | Auto [wind speed], low [wind speed -], medium, high [wind speed +], strong wind, hurricane, super hurricane |
-| 5                                               | Automatic sweep      | On, off                                                      |
-| 6                                               | Manual sweep         | On, off, 1, 2, 3, 4                                          |
-| 7                                               | Up and down sweep    | On, off, up, middle, down, up middle, middle down, middle-middle, up-middle, middle-down, automatic, 1, 2, 3, 4, 5 |
-| 8                                               | Left and right sweep | On, off, left, center, right, left center, center right, left-right, center-center, automatic, 1, 2, 3, 4, 5, 6, 7 |
-| 9                                               | Strong               | On, Off                                                      |
-| A                                               | Auxiliary heat       | On, off                                                      |
-| B                                               | Sleep                | On, off, sleep 1, sleep 2, sleep 3                           |
-| C                                               | Lights               | On, off                                                      |
-| D                                               | Mute                 | On, off, mute 1, mute 2                                      |
-| E                                               | Energy Saving        | On, Off                                                      |
-| F                                               | Ventilation          | On, off                                                      |
-| 10                                              | Health               | On, Off                                                      |
-| 11                                              | Scheduled opening    | 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21, 22,23,24 |
-| 12                                              | Timing off           | 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21, 22,23,24 |
-| 13                                              | Custom 1             | Turn on natural wind, turn off natural wind, turn on cleaning, turn off cleaning, turn on formaldehyde removal, turn off formaldehyde removal, turn on purification, turn off purification, turn on drying, turn off drying, turn on mildew prevention, turn off mildew prevention, turn on 3D Wind, turn off 3D wind, turn on negative ions, turn off negative ions |
-| 14                                              | Custom 2             | Turn on natural wind, turn off natural wind, turn on cleaning, turn off cleaning, turn on formaldehyde removal, turn off formaldehyde removal, turn on purification, turn off purification, turn on drying, turn off drying, turn on anti-mold, turn off anti-mold, turn on sterilization , off sterilization |
+| 0                                               | 전원                 | 켜짐 [전원], 꺼짐                                            |
+| 1                                               | 모드                 | 자동 [모드], 냉방, 제습, 송풍, 난방,                         |
+| 2                                               | 온도+                | 16[온도+],17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 |
+| 3                                               | 온도-                | 16[온도-],17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 |
+| 4                                               | 풍속                 | 자동 [풍속], 저속 [풍속 -], 중속, 고속 [풍속 +], 강풍, 허리케인, 슈퍼 허리케인 |
+| 5                                               | 자동 스윙            | 켜짐, 꺼짐                                                   |
+| 6                                               | 수동 스윙            | 켜짐, 꺼짐, 1, 2, 3, 4                                       |
+| 7                                               | 상하 스윙            | 켜짐, 꺼짐, 위, 중간, 아래, 위-중간, 중간-아래, 중간-중간, 위-중간, 중간-아래, 자동, 1, 2, 3, 4, 5 |
+| 8                                               | 좌우 스윙            | 켜짐, 꺼짐, 왼쪽, 중앙, 오른쪽, 왼쪽-중앙, 중앙-오른쪽, 좌-우, 중앙-중앙, 자동, 1, 2, 3, 4, 5, 6, 7 |
+| 9                                               | 강풍                 | 켜짐, 꺼짐                                                   |
+| A                                               | 보조 난방            | 켜짐, 꺼짐                                                   |
+| B                                               | 수면                 | 켜짐, 꺼짐, 수면 1, 수면 2, 수면 3                           |
+| C                                               | 조명                 | 켜짐, 꺼짐                                                   |
+| D                                               | 무음                 | 켜짐, 꺼짐, 무음 1, 무음 2                                   |
+| E                                               | 절전                 | 켜짐, 꺼짐                                                   |
+| F                                               | 환기                 | 켜짐, 꺼짐                                                   |
+| 10                                              | 건강                 | 켜짐, 꺼짐                                                   |
+| 11                                              | 예약 켜기            | 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21, 22,23,24 |
+| 12                                              | 예약 끄기            | 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21, 22,23,24 |
+| 13                                              | 커스텀 1             | 자연풍 켜기, 자연풍 끄기, 청정 켜기, 청정 끄기, 포름알데히드 제거 켜기, 포름알데히드 제거 끄기, 정화 켜기, 정화 끄기, 건조 켜기, 건조 끄기, 곰팡이 방지 켜기, 곰팡이 방지 끄기, 3D 바람 켜기, 3D 바람 끄기, 음이온 켜기, 음이온 끄기 |
+| 14                                              | 커스텀 2             | 자연풍 켜기, 자연풍 끄기, 청정 켜기, 청정 끄기, 포름알데히드 제거 켜기, 포름알데히드 제거 끄기, 정화 켜기, 정화 끄기, 건조 켜기, 건조 끄기, 항곰팡이 켜기, 항곰팡이 끄기, 살균 켜기, 살균 끄기 |
 
 Table 6
 
-### 5.2 TV button ID
-| Button ID        | Button name           | Description        |
+### 5.2 TV 버튼 ID
+| 버튼 ID          | 버튼 이름             | 설명               |
 | ---------------- | --------------------- | ------------------------------------------------------------ |
-| 0x00             | Power on              |                                                              |
-| 0x01             | Power off             | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
-| 0x02             | Signal source         |                                                              |
-| 0x03             | Home Page             |                                                              |
-| 0x04             | Menu                  |                                                              |
-| 0x05             | Volume +              |                                                              |
-| 0x06             | Volume -              |                                                              |
-| 0x07             | Channel+              |                                                              |
-| 0x08             | Channel -             |                                                              |
-| 0x09             | Return                |                                                              |
-| 0x0A             | Mute                  |                                                              |
-| 0x0B             | Previous              |                                                              |
-| 0x0C             | Next                  |                                                              |
-| 0x0D             | Left                  |                                                              |
-| 0x0E             | Right                 |                                                              |
+| 0x00             | 전원 켜기             |                                                              |
+| 0x01             | 전원 끄기             | 일반적으로 전원 끄기와 켜기는 동일한 코드를 사용하므로 켜짐/꺼짐 상태를 정확히 구분할 수 없습니다 |
+| 0x02             | 신호 소스             |                                                              |
+| 0x03             | 홈 화면               |                                                              |
+| 0x04             | 메뉴                  |                                                              |
+| 0x05             | 볼륨 +                |                                                              |
+| 0x06             | 볼륨 -                |                                                              |
+| 0x07             | 채널+                 |                                                              |
+| 0x08             | 채널 -                |                                                              |
+| 0x09             | 뒤로                  |                                                              |
+| 0x0A             | 음소거                |                                                              |
+| 0x0B             | 이전                  |                                                              |
+| 0x0C             | 다음                  |                                                              |
+| 0x0D             | 왼쪽                  |                                                              |
+| 0x0E             | 오른쪽                |                                                              |
 | 0x0F             | OK                    |                                                              |
 | 0x10             | 1                     |                                                              |
 | 0x11             | 2                     |                                                              |
@@ -427,44 +426,44 @@ Table 6
 | 0x18             | 9                     |                                                              |
 | 0x19             | 0                     |                                                              |
 | 0x1A             | -/--                  |                                                              |
-| 0x1B             | Review                |                                                              |
-| 0x1C             | Alternate             |                                                              |
-| 0x1D             | Play/Pause            |                                                              |
-| 0x1E             | Pause                 | The pause button often has the same code as "play/pause", so play and pause cannot be accurately distinguished |
-| 0x1F             | Stop                  |                                                              |
-| 0x20             | Previous song         |                                                              |
-| 0x21             | Next song             |                                                              |
-| 0x22             | Fast forward          |                                                              |
-| 0x23             | Fast rewind           |                                                              |
-| 0x24             | Video                 |                                                              |
-| 0x25             | TV/Live Broadcast     |                                                              |
-| 0x26             | Program List          |                                                              |
+| 0x1B             | 되감기                |                                                              |
+| 0x1C             | 전환                  |                                                              |
+| 0x1D             | 재생/일시정지         |                                                              |
+| 0x1E             | 일시정지              | 일시정지 버튼은 종종 "재생/일시정지"와 동일한 코드를 가지므로 재생과 일시정지를 정확히 구분할 수 없습니다 |
+| 0x1F             | 정지                  |                                                              |
+| 0x20             | 이전 곡               |                                                              |
+| 0x21             | 다음 곡               |                                                              |
+| 0x22             | 빨리 감기             |                                                              |
+| 0x23             | 빨리 되감기           |                                                              |
+| 0x24             | 비디오                |                                                              |
+| 0x25             | TV/생방송             |                                                              |
+| 0x26             | 프로그램 목록         |                                                              |
 | 0x27             | 3D                    |                                                              |
-| 0x28             | Favorites/Collections |                                                              |
+| 0x28             | 즐겨찾기/컬렉션       |                                                              |
 | 0x29             | HD                    |                                                              |
 | 0x2A             | USB                   |                                                              |
-| 0x2B             | Screen display        |                                                              |
+| 0x2B             | 화면 표시             |                                                              |
 
 Table 7
 
-### 5.3 Set-top box button ID
+### 5.3 셋톱박스 버튼 ID
 
-| Button ID                 | Button name           | Description                                                  |
+| 버튼 ID                   | 버튼 이름             | 설명                                                         |
 | ------------------------- | --------------------- | ------------------------------------------------------------ |
-| 0x00                      | Power on              |                                                              |
-| 0x01                      | Power off             | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
-| 0x02                      | Home Page             |                                                              |
-| 0x03                      | Menu                  |                                                              |
-| 0x04                      | Volume +              |                                                              |
-| 0x05                      | Volume -              |                                                              |
-| 0x06                      | Channel+              |                                                              |
-| 0x07                      | Channel -             |                                                              |
-| 0x08                      | Return                |                                                              |
-| 0x09                      | Mute                  |                                                              |
-| 0x0A                      | Previous              |                                                              |
-| 0x0B                      | Next                  |                                                              |
-| 0x0C                      | Left                  |                                                              |
-| 0x0D                      | Right                 |                                                              |
+| 0x00                      | 전원 켜기             |                                                              |
+| 0x01                      | 전원 끄기             | 일반적으로 전원 끄기와 켜기는 동일한 코드를 사용하므로 켜짐/꺼짐 상태를 정확히 구분할 수 없습니다 |
+| 0x02                      | 홈 화면               |                                                              |
+| 0x03                      | 메뉴                  |                                                              |
+| 0x04                      | 볼륨 +                |                                                              |
+| 0x05                      | 볼륨 -                |                                                              |
+| 0x06                      | 채널+                 |                                                              |
+| 0x07                      | 채널 -                |                                                              |
+| 0x08                      | 뒤로                  |                                                              |
+| 0x09                      | 음소거                |                                                              |
+| 0x0A                      | 이전                  |                                                              |
+| 0x0B                      | 다음                  |                                                              |
+| 0x0C                      | 왼쪽                  |                                                              |
+| 0x0D                      | 오른쪽                |                                                              |
 | 0x0E                      | OK                    |                                                              |
 | 0x0F                      | 1                     |                                                              |
 | 0x10                      | 2                     |                                                              |
@@ -477,38 +476,38 @@ Table 7
 | 0x17                      | 9                     |                                                              |
 | 0x18                      | 0                     |                                                              |
 | 0x19                      | -/--                  |                                                              |
-| 0x1A                      | Review                |                                                              |
-| 0x1B                      | Alternate             |                                                              |
-| 0x1C                      | Play/Pause            |                                                              |
-| 0x1D                      | Signal source         |                                                              |
-| 0x1E                      | Stop                  |                                                              |
-| 0x1F                      | Previous song         |                                                              |
-| 0x20                      | Next song             |                                                              |
-| 0x21                      | Fast forward          |                                                              |
-| 0x22                      | Fast rewind           |                                                              |
-| 0x23                      | Video                 |                                                              |
-| 0x24                      | TV/Live Broadcast     |                                                              |
-| 0x25                      | On Demand/Movies      |                                                              |
-| 0x26                      | Program List          |                                                              |
-| 0x27                      | Favorites/Collections |                                                              |
+| 0x1A                      | 되감기                |                                                              |
+| 0x1B                      | 전환                  |                                                              |
+| 0x1C                      | 재생/일시정지         |                                                              |
+| 0x1D                      | 신호 소스             |                                                              |
+| 0x1E                      | 정지                  |                                                              |
+| 0x1F                      | 이전 곡               |                                                              |
+| 0x20                      | 다음 곡               |                                                              |
+| 0x21                      | 빨리 감기             |                                                              |
+| 0x22                      | 빨리 되감기           |                                                              |
+| 0x23                      | 비디오                |                                                              |
+| 0x24                      | TV/생방송             |                                                              |
+| 0x25                      | 주문형/영화           |                                                              |
+| 0x26                      | 프로그램 목록         |                                                              |
+| 0x27                      | 즐겨찾기/컬렉션       |                                                              |
 
 Table 8
 
-### 5.4 TV box button ID
-| Button ID            | Button name   | Description          |
+### 5.4 TV 박스 버튼 ID
+| 버튼 ID              | 버튼 이름     | 설명                 |
 | -------------------- | ------------- | ------------------------------------------------------------ |
-| 0x00                 | Power on      |                                                              |
-| 0x01                 | Power off     | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
-| 0x02                 | Home Page     |                                                              |
-| 0x03                 | Menu          |                                                              |
-| 0x04                 | Return        |                                                              |
-| 0x05                 | Volume +      |                                                              |
-| 0x06                 | Volume -      |                                                              |
-| 0x07                 | Mute          |                                                              |
-| 0x08                 | Previous      |                                                              |
-| 0x09                 | Next          |                                                              |
-| 0x0A                 | Left          |                                                              |
-| 0x0B                 | Right         |                                                              |
+| 0x00                 | 전원 켜기     |                                                              |
+| 0x01                 | 전원 끄기     | 일반적으로 전원 끄기와 켜기는 동일한 코드를 사용하므로 켜짐/꺼짐 상태를 정확히 구분할 수 없습니다 |
+| 0x02                 | 홈 화면       |                                                              |
+| 0x03                 | 메뉴          |                                                              |
+| 0x04                 | 뒤로          |                                                              |
+| 0x05                 | 볼륨 +        |                                                              |
+| 0x06                 | 볼륨 -        |                                                              |
+| 0x07                 | 음소거        |                                                              |
+| 0x08                 | 이전          |                                                              |
+| 0x09                 | 다음          |                                                              |
+| 0x0A                 | 왼쪽          |                                                              |
+| 0x0B                 | 오른쪽        |                                                              |
 | 0x0C                 | OK            |                                                              |
 | 0x0D                 | 1             |                                                              |
 | 0x0E                 | 2             |                                                              |
@@ -520,183 +519,183 @@ Table 8
 | 0x14                 | 8             |                                                              |
 | 0x15                 | 9             |                                                              |
 | 0x16                 | 0             |                                                              |
-| 0x17                 | Live TV       |                                                              |
-| 0x18                 | On Demand     |                                                              |
-| 0x19                 | Channel+      |                                                              |
-| 0x1A                 | Channel-      |                                                              |
-| 0x1B                 | Play          |                                                              |
-| 0x1C                 | Pause         |                                                              |
-| 0x1D                 | Video         |                                                              |
-| 0x1E                 | Fast forward  |                                                              |
-| 0x1F                 | Fast rewind   |                                                              |
-| 0x20                 | Stop          |                                                              |
-| 0x21                 | Previous song |                                                              |
-| 0x22                 | Next song     |                                                              |
-| 0x23                 | Review        |                                                              |
-| 0x24                 | Settings      |                                                              |
+| 0x17                 | 생방송 TV     |                                                              |
+| 0x18                 | 주문형        |                                                              |
+| 0x19                 | 채널+         |                                                              |
+| 0x1A                 | 채널-         |                                                              |
+| 0x1B                 | 재생          |                                                              |
+| 0x1C                 | 일시정지      |                                                              |
+| 0x1D                 | 비디오        |                                                              |
+| 0x1E                 | 빨리 감기     |                                                              |
+| 0x1F                 | 빨리 되감기   |                                                              |
+| 0x20                 | 정지          |                                                              |
+| 0x21                 | 이전 곡       |                                                              |
+| 0x22                 | 다음 곡       |                                                              |
+| 0x23                 | 되감기        |                                                              |
+| 0x24                 | 설정          |                                                              |
 | 0x25                 | APP           |                                                              |
-| 0x26                 | Alternate     |                                                              |
+| 0x26                 | 전환          |                                                              |
 
 Table 9
 
-### 5.5 Fan button ID
-| Button ID         | Button name       | Description                                                  |
+### 5.5 선풍기 버튼 ID
+| 버튼 ID           | 버튼 이름         | 설명                                                         |
 | ----------------- | ----------------- | ------------------------------------------------------------ |
-| 0x00              | Power on          |                                                              |
-| 0x01              | Power off         | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
-| 0x02              | Timing            |                                                              |
-| 0x03              | Swinging the Wind |                                                              |
-| 0x04              | Wind speed        |                                                              |
-| 0x05              | Wind speed +      |                                                              |
-| 0x06              | Wind speed -      |                                                              |
-| 0x07              | Wind type         |                                                              |
-| 0x08              | Negative ions     |                                                              |
-| 0x09              | Low speed wind    |                                                              |
-| 0x0A              | Wind speed        |                                                              |
-| 0x0B              | High wind speed   |                                                              |
-| 0x0C              | Wind speed 4      |                                                              |
-| 0x0D              | Wind speed 5      |                                                              |
-| 0x0E              | Mute              |                                                              |
-| 0x0F              | Humidification    |                                                              |
-| 0x10              | Heating           |                                                              |
-| 0x11              | Refrigeration     |                                                              |
-| 0x12              | Timing +          |                                                              |
-| 0x13              | Timing-           |                                                              |
-| 0x14              | Air purification  |                                                              |
-| 0x15              | natural wind      |                                                              |
-| 0x16              | Lighting          |                                                              |
-| 0x17              | Up and down swing |                                                              |
+| 0x00              | 전원 켜기         |                                                              |
+| 0x01              | 전원 끄기         | 일반적으로 전원 끄기와 켜기는 동일한 코드를 사용하므로 켜짐/꺼짐 상태를 정확히 구분할 수 없습니다 |
+| 0x02              | 타이머            |                                                              |
+| 0x03              | 바람 스윙         |                                                              |
+| 0x04              | 풍속              |                                                              |
+| 0x05              | 풍속 +            |                                                              |
+| 0x06              | 풍속 -            |                                                              |
+| 0x07              | 바람 유형         |                                                              |
+| 0x08              | 음이온            |                                                              |
+| 0x09              | 저속 바람         |                                                              |
+| 0x0A              | 풍속              |                                                              |
+| 0x0B              | 고속 바람         |                                                              |
+| 0x0C              | 풍속 4            |                                                              |
+| 0x0D              | 풍속 5            |                                                              |
+| 0x0E              | 무음              |                                                              |
+| 0x0F              | 가습              |                                                              |
+| 0x10              | 난방              |                                                              |
+| 0x11              | 냉방              |                                                              |
+| 0x12              | 타이머 +          |                                                              |
+| 0x13              | 타이머-           |                                                              |
+| 0x14              | 공기 정화         |                                                              |
+| 0x15              | 자연풍            |                                                              |
+| 0x16              | 조명              |                                                              |
+| 0x17              | 상하 스윙         |                                                              |
 
 Table 10
 
-## 6 Infrared Remote Control Access Routine
+## 6 적외선 리모컨 연동 루틴
 
-### 6.1 Infrared Data Description(Match by Brand)
+### 6.1 적외선 데이터 설명(브랜드별 매칭)
 
-1. Newly built [Midea] air conditioner remote control: `80 01 00 28 00 A9`
+1. [미디어(Midea)] 에어컨 리모컨 새로 만들기: `80 01 00 28 00 A9`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x80**    | Command (create new remote control)                          |
-| **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | High 8 bits of Kfid                                          |
-| **0x28**    | Low 8 bits of Kfid                                              |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0xA9**    | Checksum (XOR sum calculation based on the previous data). Reference Chapter [1.4.3 XOR Check Algorithm (XOR Sum Check)] |
+| **0x80**    | 명령 (새 리모컨 만들기)                                      |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함                            |
+| **0x00**    | Kfid 상위 8비트                                              |
+| **0x28**    | Kfid 하위 8비트                                              |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0xA9**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산). [1.4.3 XOR 검사 알고리즘 (XOR 합계 검사)] 챕터 참조 |
 
-**Kfid Acquisition**: Find Table 11, search for [Midea], and determine that Midea's kfid range is from decimal [40-59], which corresponds to hexadecimal [0x28-0x3B].
+**Kfid 획득**: Table 11을 찾아 [Midea]를 검색하면 Midea의 kfid 범위가 10진수 [40-59]이며, 이는 16진수 [0x28-0x3B]에 해당합니다.
 
-Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 are all Midea code values. In actual use, there may be situations where a certain button cannot be simulated and other buttons are normal, such as switches, temperature, or wind speed being normal, but the mode cannot be controlled. In such cases, you can change other code values for testing.
+참고: 적외선 리모컨의 kfid는 여러 값을 가질 수 있으며, 40, 41, 42...59는 모두 Midea 코드 값입니다. 실제 사용 시 특정 버튼은 작동하지 않고 다른 버튼은 정상인 경우가 있을 수 있습니다. 예를 들어 전원, 온도, 풍속은 정상이지만 모드를 제어할 수 없는 경우, 다른 코드 값으로 변경하여 테스트할 수 있습니다.
 
-2. Send power on command `86 01 00 00 00 87`
+2. 전원 켜기 명령 전송 `86 01 00 00 00 87`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner (Table 4)            |
-| **0x00**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x00**    | Key value, corresponding to air conditioner Table 6          |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x87**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함 (Table 4)                  |
+| **0x00**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x00**    | 키 값, 에어컨 Table 6 해당                                   |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x87**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
-3. Send power off command: `86 01 00 01 00 86`
+3. 전원 끄기 명령 전송: `86 01 00 01 00 86`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner (Table 4)            |
-| **0x00**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x01**    | Key value, corresponding to air conditioner Table 6          |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x86**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함 (Table 4)                  |
+| **0x00**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x01**    | 키 값, 에어컨 Table 6 해당                                   |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x86**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
-4. Set the temperature to 25℃: `86 01 02 09 00 8C`
+4. 온도를 25℃로 설정: `86 01 02 09 00 8C`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner (Table 4)            |
-| **0x02**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x09**    | Key value, corresponding to air conditioner Table 6 (counting from 0, 25℃ corresponds to the 9th one) |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x8C**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함 (Table 4)                  |
+| **0x02**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x09**    | 키 값, 에어컨 Table 6 해당 (0부터 세어 25℃는 9번째에 해당)  |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x8C**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
-### 6.2 Infrared Data Description(One-click matching)
+### 6.2 적외선 데이터 설명(원클릭 매칭)
 
-**One-click matching is not the infrared learning (copying infrared signals) that everyone used before. Our remote control (ZB-IR01) is a remote control with a built-in infrared database. You can imagine it as a box with many remote controls in it. He will look in his infrared database for a remote control that best matches your remote control, then he will give you a number, and you will use the number to create the remote control.**
+**원클릭 매칭은 기존에 사용하던 적외선 학습(적외선 신호 복사)이 아닙니다. 저희 리모컨(ZB-IR01)은 적외선 데이터베이스가 내장된 리모컨입니다. 많은 리모컨이 들어 있는 상자라고 생각하시면 됩니다. 적외선 데이터베이스에서 사용자의 리모컨과 가장 잘 맞는 리모컨을 찾아 번호를 제공하며, 사용자는 그 번호를 사용하여 리모컨을 만들 수 있습니다.**
 
 
-1. Send the one-click matching command: `81 01 00 00 00 80`
+1. 원클릭 매칭 명령 전송: `81 01 00 00 00 80`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x81**    | Command (one-click matching command)                         |
-| **0x01**    | Device type, 0x01 means air conditioner (Table 4)            |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x80**    | Checksum (XOR sum calculation based on the previous data). Reference Chapter [1.4.3 XOR Check Algorithm (XOR Sum Check)] |
+| **0x81**    | 명령 (원클릭 매칭 명령)                                      |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함 (Table 4)                  |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x80**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산). [1.4.3 XOR 검사 알고리즘 (XOR 합계 검사)] 챕터 참조 |
 
-At this time you can see the green light on the infrared remote control flashing, you press the switch button of your original remote control, then you can receive the following command `06 89 00 28 00 A7`
+이때 적외선 리모컨의 녹색 표시등이 깜박이는 것을 볼 수 있으며, 원래 리모컨의 전원 버튼을 누르면 다음 명령 `06 89 00 28 00 A7`을 수신할 수 있습니다.
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x06**    | Command (one-click matching command)                         |
-| **0x89**    | status Code (Table 5)                                        |
-| **0x00**    | High 8 bits of Kfid                                          |
-| **0x28**    | Low 8 bits of Kfid                                           |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x80**    | Checksum (XOR sum calculation based on the previous data). Reference Chapter [1.4.3 XOR Check Algorithm (XOR Sum Check)] |
+| **0x06**    | 명령 (원클릭 매칭 명령)                                      |
+| **0x89**    | 상태 코드 (Table 5)                                          |
+| **0x00**    | Kfid 상위 8비트                                              |
+| **0x28**    | Kfid 하위 8비트                                              |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x80**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산). [1.4.3 XOR 검사 알고리즘 (XOR 합계 검사)] 챕터 참조 |
 
-Now that we have our kfid, let's build a new remote.
+이제 kfid를 얻었으므로 새 리모컨을 만들어 보겠습니다.
 
 
 
-2. New remote control: `80 01 00 28 00 A9`
+2. 새 리모컨 만들기: `80 01 00 28 00 A9`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x80**    | Command (create new remote control)                          |
-| **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | High 8 bits of Kfid                                          |
-| **0x28**    | Low 8 bits of Kfid                                           |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0xA9**    | Checksum (XOR sum calculation based on the previous data). Reference Chapter [1.4.3 XOR Check Algorithm (XOR Sum Check)] |
+| **0x80**    | 명령 (새 리모컨 만들기)                                      |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함                            |
+| **0x00**    | Kfid 상위 8비트                                              |
+| **0x28**    | Kfid 하위 8비트                                              |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0xA9**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산). [1.4.3 XOR 검사 알고리즘 (XOR 합계 검사)] 챕터 참조 |
 
-Next we can send commands to control our device.
+이제 기기를 제어하는 명령을 전송할 수 있습니다.
 
-3. Send on command `86 01 00 00 00 87`
+3. 켜기 명령 전송 `86 01 00 00 00 87`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x00**    | Key value, corresponding to air conditioner Table 6          |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x87**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함                            |
+| **0x00**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x00**    | 키 값, 에어컨 Table 6 해당                                   |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x87**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
-4. Send off command: `86 01 00 01 00 86`
+4. 끄기 명령 전송: `86 01 00 01 00 86`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x01**    | Key value, corresponding to air conditioner Table 6          |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x86**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함                            |
+| **0x00**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x01**    | 키 값, 에어컨 Table 6 해당                                   |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x86**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
-4. Set the temperature to 25℃: `86 01 02 09 00 8C`
+4. 온도를 25℃로 설정: `86 01 02 09 00 8C`
 
-| **Command** | **Description**                                              |
+| **명령** | **설명**                                                     |
 | ----------- | ------------------------------------------------------------ |
-| **0x86**    | Command (send infrared data)                                 |
-| **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x02**    | Remote control ID, air conditioner corresponding Table 6     |
-| **0x09**    | Key value, corresponding to air conditioner Table 6 (counting from 0, 25℃ corresponds to the 9th one) |
-| **0x00**    | Reserved bit, fixed to 0                                     |
-| **0x8C**    | Checksum (XOR and calculation based on the previous data)    |
+| **0x86**    | 명령 (적외선 데이터 전송)                                    |
+| **0x01**    | 기기 유형, 0x01은 에어컨을 의미함                            |
+| **0x02**    | 리모컨 ID, 에어컨 해당 Table 6                               |
+| **0x09**    | 키 값, 에어컨 Table 6 해당 (0부터 세어 25℃는 9번째에 해당)  |
+| **0x00**    | 예약 비트, 0으로 고정                                        |
+| **0x8C**    | 체크섬 (이전 데이터를 기반으로 XOR 합계 계산)                |
 
 ### Air conditioner brand code table (kfid)
 | 品牌(brand)                   | 代码(kfid code) | 品牌(brand)                         | 代码(kfid code) | 品牌(brand)          | 代码(kfid code) |
@@ -1078,10 +1077,10 @@ Table 14
 
 # Notes
 
-* If you have additional technical problems, please email Technical support at [support@easyiot.tech](mailto:support@easyiot.tech)
+* 추가적인 기술적 문제가 있으면 기술 지원 이메일로 문의하세요: [support@easyiot.tech](mailto:support@easyiot.tech)
 
 
-* This is a UI interface of ZB-IR01 in HA. Thank you very much @shing6326
+* 이것은 HA에서 ZB-IR01의 UI 인터페이스입니다. @shing6326에게 감사드립니다.
 [https://github.com/shing6326/hacs-zb-ir01-to-climate/tree/master](https://github.com/shing6326/hacs-zb-ir01-to-climate/tree/master)
 <!-- Notes END: Do not edit below this line -->
 

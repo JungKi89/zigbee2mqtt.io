@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-In order to pair the device to your zigbee coordinator, first press the "Permit Join" button in the Zigbee2MQTT screen. While the device is unplugged, press and hold one of the buttons on the side. While holding the button, plug the device in. Once plugged into the power socket, release the button. The blue LED will flash briefly and the device will begin pairing.
+## 페어링
+기기를 Zigbee 코디네이터에 페어링하려면 먼저 Zigbee2MQTT 화면에서 "Permit Join" 버튼을 누르세요. 기기가 플러그가 뽑혀 있는 동안 측면 버튼 중 하나를 누른 채로 기기를 전원에 연결하세요. 전원 소켓에 연결된 후 버튼을 놓으세요. 파란 LED가 잠깐 깜빡이며 기기가 페어링을 시작합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

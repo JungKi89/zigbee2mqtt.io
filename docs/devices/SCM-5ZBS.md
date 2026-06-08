@@ -26,13 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Calibration
-1. Before calibration, the external local switches must be connected to the Shutter Control.
-2. Press and hold the Function button for 3~10 seconds and release to enter Calibration mode. The Shutter Controller will roll toward the "Open" direction for 4 minutes upon entering Calibration mode.
-3. Wait for 4 minutes for Shutter Control to stop rolling to "Open" direction, then activate the connected external local "Close" switch to close the shutter.
-4. Activate the "Open" external local switch the moment the shutter is fully closed. The Shutter control will record the time it took between step 3 and 4 as the new "close time"
-5. The Shutter control will roll toward an open direction after step 4
-6. Activate the "Close" external local switch the moment the shutter is fully opened. The Shutter control will record the time it took between step 5 and 6 as the new "open time"
+### 보정
+1. 보정 전에 외부 로컬 스위치를 셔터 컨트롤에 연결해야 합니다.
+2. 기능 버튼을 3~10초 동안 누르고 있다가 놓으면 보정 모드로 진입합니다. 셔터 컨트롤러는 보정 모드 진입 시 4분 동안 "열림" 방향으로 이동합니다.
+3. 셔터 컨트롤이 "열림" 방향으로 이동을 멈출 때까지 4분 동안 기다린 후, 연결된 외부 로컬 "닫힘" 스위치를 작동하여 셔터를 닫습니다.
+4. 셔터가 완전히 닫히는 순간 "열림" 외부 로컬 스위치를 작동합니다. 셔터 컨트롤은 3단계와 4단계 사이의 소요 시간을 새로운 "닫힘 시간"으로 기록합니다.
+5. 4단계 이후 셔터 컨트롤이 열림 방향으로 이동합니다.
+6. 셔터가 완전히 열리는 순간 "닫힘" 외부 로컬 스위치를 작동합니다. 셔터 컨트롤은 5단계와 6단계 사이의 소요 시간을 새로운 "열림 시간"으로 기록합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

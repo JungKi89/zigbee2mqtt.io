@@ -23,37 +23,37 @@ pageClass: device-page
 
 
 
-<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
-Press a button on the transmitter 5 times quickly.
+<!-- Notes BEGIN: You can edit here. Add “## Notes” headline if not already present. -->
+## 페어링
+송신기의 버튼을 5번 빠르게 누릅니다.
 
 ## Notes
-- [CSA product page](https://csa-iot.org/csa_product/tlc2-up/)
-- In "direct mode", the signal is only sent to the paired device and does not appear in zigbee2mqtt. To set the desired button to "radio bus" mode, see configuration options below.
-- The "lightning mode" is switching lights or lights AND roller shutters on the bus. When this sends a signal in radio bus mode, it does so to ALL lights in the Zigbee network. However, no other device responds to open, close. To set the desired button to "roller shutter" mode, see configuration options below.
+- [CSA 제품 페이지](https://csa-iot.org/csa_product/tlc2-up/)
+- “직접 모드”에서는 신호가 페어링된 디바이스에만 전송되며 zigbee2mqtt에 표시되지 않습니다. 원하는 버튼을 “라디오 버스” 모드로 설정하려면 아래 구성 옵션을 참조하세요.
+- “조명 모드”는 버스에서 조명 또는 조명과 롤러 셔터를 동시에 전환합니다. 라디오 버스 모드에서 신호를 보내면 Zigbee 네트워크의 모든 조명에 신호가 전달됩니다. 단, open/close에 응답하는 다른 디바이스는 없습니다. 원하는 버튼을 “롤러 셔터” 모드로 설정하려면 아래 구성 옵션을 참조하세요.
 
-## Configuration Options
-To configure a transmitter, you must first enter the configuration menu.
-To do this, quickly press any button on the transmitter 10 times: the transmitter's LED will start flashing rapidly.
-While the LED is flashing, press the button you want to configure as many times as necessary.
+## 구성 옵션
+송신기를 구성하려면 먼저 구성 메뉴에 진입해야 합니다.
+이를 위해 송신기의 임의 버튼을 10번 빠르게 누르면: 송신기의 LED가 빠르게 깜박이기 시작합니다.
+LED가 깜박이는 동안, 구성하려는 버튼을 필요한 횟수만큼 누릅니다.
 
-| Number of actuations | Possible settings |
+| 누름 횟수 | 가능한 설정 |
 |-----|-----|
-|  | *Button function* | 
-| 1 | Switch on/off or start open/stop/close |
-| 2 | Switch on memory or intermediate position |
-| 3 | Switch on or start open/stop |
-| 4 | Switch off or shut close/stop |
-| | *Radio modes* |
-| 5 | Direct mode |
-| 6 | “Radio bus” mode |
-|  | *Affected products on the radio bus* |
-| 10 | Lighting (factory settings) |
-| 11 | Roller shutters |
-|  | *Copying or deleting the connections of a button or the entire transmitter* |
-| 15 | Restoration of the factory configuration of a button |
-| 24 | Restoration of the access point. Delete all access points to the radio bus |
-| 25 | Restore the factory settings of the remote control |
+|  | *버튼 기능* | 
+| 1 | 켜기/끄기 또는 열기/정지/닫기 시작 |
+| 2 | 메모리 켜기 또는 중간 위치 |
+| 3 | 켜기 또는 열기/정지 시작 |
+| 4 | 끄기 또는 닫기/정지 |
+| | *라디오 모드* |
+| 5 | 직접 모드 |
+| 6 | “라디오 버스” 모드 |
+|  | *라디오 버스에서 영향받는 제품* |
+| 10 | 조명 (공장 초기 설정) |
+| 11 | 롤러 셔터 |
+|  | *버튼 또는 전체 송신기 연결 복사/삭제* |
+| 15 | 버튼 공장 구성 복원 |
+| 24 | 액세스 포인트 복원. 라디오 버스의 모든 액세스 포인트 삭제 |
+| 25 | 리모컨 공장 초기화 복원 |
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,26 +27,26 @@ pageClass: device-page
 ## Notes
 
 
-### Configuring interface mode
-In order to get measurements, after pairing the device you need to configure the interface mode.
+### 인터페이스 모드 설정
+측정값을 얻으려면 기기를 페어링한 후 인터페이스 모드를 설정해야 합니다.
 
-To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interface_mode": "INTERFACE_MODE"}`.
+`zigbee2mqtt/FRIENDLY_NAME/set`으로 페이로드 `{"interface_mode": "INTERFACE_MODE"}`를 전송하세요.
 
-Possible values for `INTERFACE_MODE` are:
+`INTERFACE_MODE`에 가능한 값:
 
-| Value | Description |
+| 값 | 설명 |
 | - | - |
-| `norwegian_han` | Norwegian HAN  |
-| `norwegian_han_extra_load` | Norwegian HAN – Enable extra load. This is need to enable Adion meter communication |
-| `aidon_meter` | Aidon Meter supporting Norwegian HAN HW interface. SW protocol is Aidon Manufacture Specific |
-| `kaifa_and_kamstrup` | Kaifa meter and Kamstrup meters running old firmware |
+| `norwegian_han` | 노르웨이 HAN  |
+| `norwegian_han_extra_load` | 노르웨이 HAN – 추가 부하 활성화. Adion 미터 통신 활성화에 필요 |
+| `aidon_meter` | 노르웨이 HAN HW 인터페이스를 지원하는 Aidon 미터. SW 프로토콜은 Aidon 제조사 전용 |
+| `kaifa_and_kamstrup` | 구형 펌웨어를 실행하는 Kaifa 미터 및 Kamstrup 미터 |
 
-Example of payload: `{"interface_mode": "norwegian_han_extra_load"}`
+페이로드 예시: `{"interface_mode": "norwegian_han_extra_load"}`
 
-### Not getting measurements
-In case you are not getting any measurements, it could be that your firmware is too old. You can ask Wattle for a replacement.
+### 측정값이 나오지 않는 경우
+측정값을 받지 못하는 경우 펌웨어가 너무 오래되었을 수 있습니다. Wattle에 교체를 요청할 수 있습니다.
 
-Related issues:
+관련 이슈:
 - https://github.com/Koenkk/zigbee-herdsman-converters/issues/974#issuecomment-590450035
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
 <!-- Notes END: Do not edit below this line -->

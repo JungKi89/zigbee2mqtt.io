@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pair
-To pair this device, push the little hole for a few seconds on the backside of the driver. The on/off sequence you might read about, doesn't work.
+## 페어링
+이 기기를 페어링하려면 드라이버 뒷면의 작은 구멍을 몇 초간 누릅니다. 일부 문서에 나와 있는 전원 켜기/끄기 순서 방법은 작동하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 ## Transition

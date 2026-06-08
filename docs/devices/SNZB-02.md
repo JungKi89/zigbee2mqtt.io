@@ -27,17 +27,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Troubleshoot
-In case the sensor got stucked and will not send data anymore, try the following steps to restore it.
-1. Force remove the device via the frontend
-2. Restart Zigbee2MQTT
-3. Re-pair the device
+### 문제 해결
+센서가 멈춰서 더 이상 데이터를 전송하지 않는 경우, 다음 단계로 복구를 시도하세요.
+1. 프론트엔드에서 디바이스를 강제 제거합니다.
+2. Zigbee2MQTT를 재시작합니다.
+3. 디바이스를 다시 페어링합니다.
 
-### Pairing
-Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+### 페어링
+LED 표시등이 세 번 깜박일 때까지 리셋 버튼을 5초간 길게 누릅니다. 이는 디바이스가 페어링 모드에 진입했음을 의미합니다.
 
-### Battery
-Uses a CR2450 battery
+### 배터리
+CR2450 배터리를 사용합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

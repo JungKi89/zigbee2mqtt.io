@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses CR2032 battery.
+### 배터리
+CR2032 배터리를 사용합니다.
 
-### Pairing
-Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
+### 페어링
+디바이스 상단(물방울 로고)을 세게 누르는 방식으로 리셋 버튼을 약 5초간 길게 누릅니다(물방울 아래 디바이스 내부의 파란 불빛이 깜박이기 시작할 때까지). 이후 디바이스가 자동으로 네트워크에 참가합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

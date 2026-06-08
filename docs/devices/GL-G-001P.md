@@ -27,14 +27,14 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+### 페어링
+1. 장치를 켜세요.
+2. 2초 이내에 껐다 켜세요.
+3. 껐다 켜기를 4번 반복하세요.
+4. 다섯 번째로 장치가 켜지고 4번 깜박인 후 불이 계속 켜져 있으면 초기화가 완료된 것입니다.
 
-### Remark
-This devices is similar to GL-G-001Z, except that Zigbee routing should work for this one.
+### 참고
+이 장치는 GL-G-001Z와 유사하지만, Zigbee 라우팅이 작동해야 한다는 점이 다릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

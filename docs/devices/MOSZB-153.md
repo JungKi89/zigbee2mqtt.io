@@ -27,13 +27,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Reset Instructions
-1. Remove the sensor from its bracket or open the casing.
-2. Ensure batteries are correctly inserted.
-3. Press and hold the round menu button located inside the device.
-4. Watch the LED indicators: It will flash once, then twice, and finally flash several times in rapid succession.
-5. At the point when the LED is flashing several times in succession, release the button.
-6. The LED will then emit one long flash, indicating that the reset is successful and complete.
+### 초기화 방법
+1. 브래킷에서 센서를 분리하거나 케이스를 엽니다.
+2. 배터리가 올바르게 삽입되어 있는지 확인합니다.
+3. 기기 내부에 있는 둥근 메뉴 버튼을 길게 누릅니다.
+4. LED 표시등을 관찰합니다: 한 번 깜빡인 후 두 번, 그리고 마지막으로 빠르게 여러 번 깜빡입니다.
+5. LED가 빠르게 여러 번 깜빡이는 시점에 버튼을 놓습니다.
+6. LED가 긴 플래시 한 번을 발하면 초기화가 성공적으로 완료된 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,24 +26,24 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### LED status
+### LED 상태
 
-RED LED off = No network
-RED LED blink = Connecting to the network
-RED LED on = Joined to the network
+빨간 LED 꺼짐 = 네트워크 없음
+빨간 LED 깜빡임 = 네트워크 연결 중
+빨간 LED 켜짐 = 네트워크에 연결됨
 
-### Pairing
+### 페어링
 
-1) Power on
-2) Press BOOT for 5 seconds until the RED LED flashes.
-3) Coordinator allows access to the network.
-4) If the RED LED is always on, then the router has joined the network successfully.
+1) 전원 켜기
+2) 빨간 LED가 깜빡일 때까지 BOOT 버튼을 5초간 누르세요.
+3) 코디네이터가 네트워크 접근을 허용합니다.
+4) 빨간 LED가 항상 켜져 있으면 라우터가 네트워크에 성공적으로 연결된 것입니다.
 
-### Firmware
+### 펌웨어
 
-Firmware can be used with Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E and easyiot Zigbee 3.0 USB dongle.
+펌웨어는 Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E 및 easyiot Zigbee 3.0 USB 동글과 함께 사용할 수 있습니다.
 
-Link: https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
+링크: https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
 <!-- Notes END: Do not edit below this line -->
 
 

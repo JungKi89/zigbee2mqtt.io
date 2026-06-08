@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Press and hold the center ring for 10 seconds until the blue network indicator flashes.
+### 페어링
+파란색 네트워크 표시등이 깜빡일 때까지 중앙 링을 10초 동안 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

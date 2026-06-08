@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-/|\ Important Information /|\
-Some of these devices (if not all) randomly switch off.
-Recommendation is not to use these for critical appliances as freezers or fridges, nor appliances which would be stopped during a programs like washing machines.
-Only solution found so far is to monitor them and setup some automations to restart these when their status is off for a certain duration.
-As of Jan 2025, no OTA update is available.
+/|\ 중요 정보 /|\
+이 기기들 중 일부(또는 전부)가 무작위로 꺼지는 현상이 발생합니다.
+냉동고나 냉장고 같은 중요 가전제품, 또는 세탁기처럼 프로그램 중간에 멈추면 안 되는 기기에는 사용하지 않는 것을 권장합니다.
+현재까지 알려진 유일한 해결 방법은 기기를 모니터링하면서 일정 시간 동안 상태가 off일 때 재시작하는 자동화를 설정하는 것입니다.
+2025년 1월 기준, OTA 업데이트는 제공되지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

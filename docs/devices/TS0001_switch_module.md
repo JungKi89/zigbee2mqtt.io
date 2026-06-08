@@ -27,15 +27,15 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Binding
+### 바인딩
 
-No sensible [binding](../guide/usage/binding.md) functionality available. 
+유용한 [바인딩](../guide/usage/binding.md) 기능이 없습니다.
 
-Only the genOta and genTime clusters can be bound.
+genOta 및 genTime 클러스터만 바인딩할 수 있습니다.
 
 ### OTA
 
-No over the air firmware update support.
+무선 펌웨어 업데이트를 지원하지 않습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

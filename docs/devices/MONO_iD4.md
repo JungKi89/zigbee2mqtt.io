@@ -26,46 +26,46 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Leaving procedure
+### 연결 해제 절차
 
-#### Step 1
+#### 1단계
 
-Open the shutter completely
+셔터를 완전히 엽니다.
 
-#### Step 2
+#### 2단계
 
-- Press simultaneously `↑`, `↓` and `BUBENDORFF` buttons on the remote during at least 4 seconds and wait for the led blinking fast, the shutter should move a bit as an acknowledgment
-- Then press `↓` button on the remote during at least 2 seconds, the shutter should move a bit as an acknowledgment
+- 리모컨의 `↑`, `↓`, `BUBENDORFF` 버튼을 동시에 4초 이상 누른 후 LED가 빠르게 깜빡이기를 기다립니다. 셔터가 확인 신호로 약간 움직입니다.
+- 그런 다음 리모컨의 `↓` 버튼을 2초 이상 누릅니다. 셔터가 확인 신호로 약간 움직입니다.
 
 
-### Pairing procedure
+### 페어링 절차
 
-> ⚠️ In case you are re-pairing the device, you should have to use the leaving procedure before.
+> ⚠️ 기기를 다시 페어링하는 경우에는 먼저 연결 해제 절차를 수행해야 합니다.
 
-#### Step 1
+#### 1단계
 
-Open the shutter completely
+셔터를 완전히 엽니다.
 
-#### Step 2
+#### 2단계
 
-These roller shutters could be paired only for 40 minutes until the programming window has been activated, here are steps to start a new programming window :
-- Cut shutters power during at lest 7 seconds and then restore it
-- Press `↓` remote button during at least 4 seconds, the shutter should down for 3 seconds to aknowledge action
+이 롤러 셔터는 프로그래밍 창이 활성화된 후 40분 동안만 페어링할 수 있습니다. 새 프로그래밍 창을 시작하는 단계는 다음과 같습니다:
+- 셔터 전원을 최소 7초간 차단한 후 다시 공급합니다.
+- 리모컨의 `↓` 버튼을 4초 이상 누릅니다. 작업 확인 신호로 셔터가 3초간 내려갑니다.
 
-#### Step 3
+#### 3단계
 
-Enable permit join on the coordinator using Z2M interface.
+Z2M 인터페이스를 사용하여 코디네이터에서 참여 허용(permit join)을 활성화합니다.
 
-#### Step 4
+#### 4단계
 
-Enter shutter in programming mode with the following procedure :
-- Press simultaneously `↑`, `↓` and `BUBENDORFF` buttons on the remote during at least 4 seconds and wait for the led blinking fast, the shutter should move a bit as an acknowledgment
-- Then press `↑` button on the remote during at least 2 seconds, the shutter should move during 3 seconds as an acknowledgment
+다음 절차를 통해 셔터를 프로그래밍 모드로 진입합니다:
+- 리모컨의 `↑`, `↓`, `BUBENDORFF` 버튼을 동시에 4초 이상 누른 후 LED가 빠르게 깜빡이기를 기다립니다. 셔터가 확인 신호로 약간 움직입니다.
+- 그런 다음 리모컨의 `↑` 버튼을 2초 이상 누릅니다. 셔터가 확인 신호로 3초간 움직입니다.
 
-#### Step 5
+#### 5단계
 
-The shutter should appear in Z2M devices, so now you can exit the programming mode using the following procedure :
-- Press `↓` remote button during less than 0.5 seconds, the shutter should move to aknowledge action
+Z2M 기기 목록에 셔터가 나타나면, 다음 절차를 통해 프로그래밍 모드를 종료합니다:
+- 리모컨의 `↓` 버튼을 0.5초 미만으로 짧게 누릅니다. 셔터가 확인 신호로 움직입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

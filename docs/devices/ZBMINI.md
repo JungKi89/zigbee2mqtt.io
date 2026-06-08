@@ -26,20 +26,20 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing the Device
+### 기기 페어링
 
-To manually pair the device, press and hold the pairing button for approximately 5 seconds until the Zigbee LED indicator starts flashing, then release the button.
+수동으로 기기를 페어링하려면, Zigbee LED 표시등이 깜박이기 시작할 때까지 페어링 버튼을 약 5초 동안 길게 누른 후 버튼을 놓습니다.
 
-Be aware that the device also enters pairing mode automatically after a power cycle. Therefore, whenever power is restored, make sure pairing mode is active.
+기기는 전원 사이클 후에도 자동으로 페어링 모드로 진입한다는 점에 유의하세요. 따라서 전원이 복원될 때마다 페어링 모드가 활성화되어 있는지 확인하세요.
 
-### Device Stuck After Coordinator Change
+### 코디네이터 변경 후 기기가 멈추는 경우
 
-When switching Zigbee coordinators, the device may enter an error state—indicated by a slow blinking light (approximately one flash per second).
-To resolve this, power off the device for at least 10 seconds. Upon powering it back on, the device will automatically enter pairing mode.
+Zigbee 코디네이터를 교체할 때, 기기가 오류 상태로 진입할 수 있습니다. 이는 느린 깜박임(약 초당 한 번)으로 확인할 수 있습니다.
+이 문제를 해결하려면 기기를 10초 이상 전원을 끄세요. 전원을 다시 켜면 기기가 자동으로 페어링 모드로 진입합니다.
 
-### Re-pairing with a Hue Dimmer Remote
+### Hue 디머 리모컨으로 재페어링
 
-If the ZBMINI is not easily accessible (e.g. mounted inside a wall box), it can be reset or re-paired using a Hue dimmer switch. For detailed instructions, refer to the [Hue dimmer reset guide](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices).
+ZBMINI에 쉽게 접근할 수 없는 경우(예: 벽 박스 내부에 장착된 경우), Hue 디머 스위치를 사용하여 초기화하거나 재페어링할 수 있습니다. 자세한 내용은 [Hue 디머 초기화 가이드](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices)를 참조하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

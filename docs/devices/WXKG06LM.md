@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses a CR2032 battery
+### 배터리
+CR2032 배터리를 사용합니다.
 
-### Pairing
-Hold the button for 10s until the LED start to flash.
+### 페어링
+LED가 깜박이기 시작할 때까지 버튼을 10초 동안 누르고 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

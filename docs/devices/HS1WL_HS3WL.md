@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Push the reset button of the device with a paperclip for 5 seconds close to the coordinator. While pairing the LED on the front is flashing green. Once the pairing is finished, the LED stays off.
+### 페어링
+코디네이터 근처에서 클립으로 기기의 리셋 버튼을 5초간 누릅니다. 페어링 중에는 전면 LED가 녹색으로 깜박입니다. 페어링이 완료되면 LED가 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

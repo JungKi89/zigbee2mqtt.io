@@ -26,18 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing 
+### 페어링
 
-Push the included pin in the small hole on the case of the device and hold for ~5 seconds until the LED starts flashing.
+기기 케이스의 작은 구멍에 동봉된 핀을 넣고 LED가 깜박이기 시작할 때까지 약 5초간 누르고 있습니다.
 
-### Triggering the alarm
-The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
-`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.
+### 알람 작동
+`zigbee2mqtt/FRIENDLY_NAME/set`에 메시지 `{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`를 게시하여 알람을 작동시킬 수 있습니다.
 
-Where:
-- `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
-- `mode`: `stop` or `emergency`
-- `strobe`: `true` or `false` will let the strobe flash once during the alarm
+여기서:
+- `duration`: 알람이 울리는 시간(초) (최대 1800초)
+- `mode`: `stop` 또는 `emergency`
+- `strobe`: `true` 또는 `false`로 알람 중 스트로브가 한 번 번쩍이도록 설정
 <!-- Notes END: Do not edit below this line -->
 
 

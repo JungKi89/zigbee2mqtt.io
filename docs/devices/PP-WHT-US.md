@@ -27,32 +27,25 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Additional steps are required because the Peanut Smart Plug does not provide a `modelId` in its database entry,
-and thus Zigbee2MQTT cannot identify the product or how to handle it.
+### 페어링
+Peanut Smart Plug은 데이터베이스 항목에 `modelId`를 제공하지 않아 Zigbee2MQTT가 제품을 식별하거나 처리 방법을 파악할 수 없으므로, 추가 단계가 필요합니다.
 
-Reset the device and initiate pairing mode by holding the pairing button
-(the small button next to the on/off button) for ten seconds, releasing the button,
-and unplugging the device.
-When plugged back in, the front LED will be blinking red and ready to receive a pairing request.
-When paired successfully, the red LED on the plug will stop blinking.
+페어링 버튼(켜기/끄기 버튼 옆의 작은 버튼)을 10초 동안 길게 눌렀다가 버튼을 놓고 기기 플러그를 뽑아 기기를 초기화하고 페어링 모드로 진입합니다.
+다시 꽂으면 전면 LED가 빨간색으로 깜박이며 페어링 요청을 받을 준비가 됩니다.
+페어링이 완료되면 플러그의 빨간색 LED가 깜박임을 멈춥니다.
 
-After pairing, you must stop Zigbee2MQTT and manually edit the Zigbee2MQTT `database.db` file with a
-text editor (note that the file may be owned by root).
-Find each line where the Peanut Smart Plug is listed (look for "SecuriFi Ltd." in the `ManufName` field)
-and **add** `"modelId":"PP-WHT-US",` between two existing fields.
+페어링 후 Zigbee2MQTT를 중지하고 텍스트 편집기로 Zigbee2MQTT `database.db` 파일을 직접 수정해야 합니다(파일이 root 소유일 수 있습니다).
+Peanut Smart Plug이 나열된 각 줄(`ManufName` 필드에서 "SecuriFi Ltd." 검색)을 찾아 기존 필드 사이에 `"modelId":"PP-WHT-US",`를 **추가**합니다.
 
-*For example,* change `..."manufId":4098,"manufName":"Securifi Ltd....`
-to `..."manufId":4098,"modelId":"PP-WHT-US","manufName":"Securifi Ltd....`
-on each line for the device.
+*예를 들어,* `..."manufId":4098,"manufName":"Securifi Ltd....`를
+각 기기 줄에서 `..."manufId":4098,"modelId":"PP-WHT-US","manufName":"Securifi Ltd....`로 변경합니다.
 
-Save the file and restart Zigbee2MQTT.
+파일을 저장하고 Zigbee2MQTT를 재시작합니다.
 
 
-### Power measurements
-This device only support power measurements with an up-to-date firmware on the plug which can only be done
-via the original hub. In case of an older firmware you will only see 0 values in the measurements.
-Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
+### 전력 측정
+이 기기는 원래 허브를 통해서만 가능한 최신 펌웨어가 있어야 전력 측정을 지원합니다. 구형 펌웨어의 경우 측정값에서 0만 표시됩니다.
+토론: https://github.com/Koenkk/zigbee2mqtt/issues/809
 <!-- Notes END: Do not edit below this line -->
 
 

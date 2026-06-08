@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Reset/Re-pairing
-Long press any key for about 10 seconds until the indicator light starts to flash.
+### 초기화/재페어링
+인디케이터 표시등이 깜박이기 시작할 때까지 임의의 키를 약 10초간 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

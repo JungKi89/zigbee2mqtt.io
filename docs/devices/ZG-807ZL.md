@@ -25,9 +25,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-To pair: 
-1. Press and hold the button for 3 seconds until the LED flash rapidly.
-2. LED will turn off when paired.
+페어링 방법:
+1. LED가 빠르게 깜빡일 때까지 버튼을 3초간 누르고 있습니다.
+2. 페어링이 완료되면 LED가 꺼집니다.
 <!-- Notes END: Do not edit below this line -->
 
 

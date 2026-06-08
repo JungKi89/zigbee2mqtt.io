@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-When pairing, make sure to keep the sensor awake for 20 seconds by opening and closing the contact every second.
+### 페어링
+페어링 시 1초마다 접점을 열고 닫아 센서를 20초간 깨어있는 상태로 유지하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Connect a switch between L and S1 or S2 according to user manual. Once device is powered shortly switch ON and OFF the switch for at least five times to start pairing. Once paired the device will do one long beep.
+### 페어링
+사용 설명서에 따라 L과 S1 또는 S2 사이에 스위치를 연결합니다. 디바이스에 전원이 공급된 상태에서 페어링을 시작하려면 스위치를 최소 5회 빠르게 ON/OFF 전환합니다. 페어링이 완료되면 디바이스에서 긴 삐 소리가 한 번 납니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -27,12 +27,12 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the button on the device for +- 10 seconds
-(until the blue light starts blinking and stops blinking), release and wait.
+### 페어링
+기기의 버튼을 약 10초 동안 길게 누릅니다
+(파란 불빛이 깜박이기 시작했다가 멈출 때까지), 버튼을 놓고 기다립니다.
 
-You may have to unpair the switch from an existing coordinator before the pairing process will start.
-If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
+페어링 과정을 시작하기 전에 기존 코디네이터에서 스위치를 언페어링해야 할 수도 있습니다.
+불가능한 경우 배터리를 빼고(배터리가 있는 경우) 버튼을 눌러(기기를 완전히 방전시키기 위해) 배터리를 다시 넣은 후 페어링을 다시 시도해 보세요.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -31,9 +31,9 @@ As a result, the Zigbee firmware is stripped-down to the essentials, and could e
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Information
+### 정보
 
-- [FCC - emissions and teardown](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=0RhiFi1AgPpUH1D8gXZJww%3D%3D&fcc_id=FHO-LED2402C3NA)
+- [FCC - 전자파 및 분해](https://apps.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=0RhiFi1AgPpUH1D8gXZJww%3D%3D&fcc_id=FHO-LED2402C3NA)
 <!-- Notes END: Do not edit below this line -->
 
 ## Related

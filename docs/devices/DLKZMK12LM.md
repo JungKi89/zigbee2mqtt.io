@@ -26,11 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Router functionality
-This device **does not** work as a Zigbee router.
+### 라우터 기능
+이 기기는 Zigbee 라우터로 **작동하지 않습니다**.
 
-### Power meter functionality
-This device **does not** support power metering.
+### 전력 측정 기능
+이 기기는 전력 측정을 **지원하지 않습니다**.
 <!-- Notes END: Do not edit below this line -->
 
 

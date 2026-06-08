@@ -26,10 +26,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Important
-These devices can only be used on channel 26.
-These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../guide/configuration/) must contain the following:
+### 중요
+이 디바이스들은 채널 26에서만 사용할 수 있습니다.
+이 디바이스들은 제조사 네트워크 키(ext_pan_id)에 고정되어 있습니다.
+설정 파일 [data/configuration.yaml](../guide/configuration/)에 다음 내용이 포함되어 있어야 합니다:
 
 ```yaml
 advanced:
@@ -37,17 +37,17 @@ advanced:
   channel: 26
 ```
 
-Therefore these devices may not co-existence with other Zigbee devices.
-Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
-If you decided to create a new network, you should specify another 'pan_id'.
+따라서 이 디바이스들은 다른 Zigbee 디바이스와 함께 사용하지 못할 수 있습니다.
+Livolo 전용 코디네이터를 추가하고 새 네트워크를 생성해야 할 수도 있습니다.
+새 네트워크를 생성하기로 했다면, 다른 'pan_id'를 지정해야 합니다.
 
 ```yaml
 advanced:
   pan_id: 6756
 ```
 
-### Pairing
-Press the buttons "down" and "settings" together for 3 seconds and it blinks red and blue in pairing mode.
+### 페어링
+"아래" 버튼과 "설정" 버튼을 동시에 3초간 누르면 페어링 모드에서 빨간색과 파란색으로 깜박입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

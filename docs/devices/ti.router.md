@@ -27,8 +27,8 @@ pageClass: device-page
 ## Notes
 
 
-### Firmware
-This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the following firmware: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
+### 펌웨어
+이 기기는 Texas Instruments CC1352P-2, CC2652RB 또는 CC2652R에 다음 펌웨어를 플래싱한 것입니다: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
 <!-- Notes END: Do not edit below this line -->
 
 

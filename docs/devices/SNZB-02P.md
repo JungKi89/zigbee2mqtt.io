@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Battery
-Uses a CR2477 battery
+### 배터리
+CR2477 배터리를 사용합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,8 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-Long press the button for more than 10s, until blue light blinks quickly.
+### 페어링
+파란 불이 빠르게 깜빡일 때까지 버튼을 10초 이상 길게 누릅니다.
 <!-- Notes END: Do not edit below this line -->
 
 

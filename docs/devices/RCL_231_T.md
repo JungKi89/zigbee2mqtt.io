@@ -27,9 +27,9 @@ pageClass: device-page
 ## Notes
 
 
-### Factory Reset / Paring Mode
-Switch the light off an on 6 times, with each off and on interval between 0.5-1 seconds.
-After the 6th time on it will blink twice to indicate it is factory reset.
+### 공장 초기화 / 페어링 모드
+0.5~1초 간격으로 조명을 6번 껐다 켭니다.
+6번째 켠 후 두 번 깜빡이면 공장 초기화가 완료된 것입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -26,56 +26,56 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Channel
-This sensor [does not work](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1064063808) on Zigbee channel 21-24.
+### 채널
+이 센서는 Zigbee 채널 21-24에서 [작동하지 않습니다](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1064063808).
 
-### Adapter firmware
-In order for this device to work, at least the following firmware is required on your adapter:
+### 어댑터 펌웨어
+이 기기가 작동하려면 어댑터에 최소한 다음 펌웨어가 필요합니다:
 - CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
 - CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
 - CC2538: [`20211222`](https://github.com/jethome-ru/zigbee-firmware/tree/master/ti/coordinator/cc2538_cc2592)
 - Conbee II: [`0x26580700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26580700.bin.GCF)
 
-*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
+*이미 기기를 페어링한 경우 어댑터 펌웨어를 업그레이드한 후 다시 페어링해야 합니다.*
 
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+### 페어링
+기기의 리셋 버튼을 약 5초 동안 길게 누릅니다(파란 불빛이 깜박이기 시작할 때까지).
+이후 기기가 자동으로 연결됩니다. 작동하지 않으면 버튼을 짧게 한 번 눌러보세요.
 
-Sometimes the device gets stuck. You have to pay attention to the LED when the device boots - it needs to flash once, then shortly after flash twice. If you only see the single flash, it's stuck and needs a special reset. One method is to keep pressing the button for 12 seconds after plugging it into a power source, till you see the double flash - it often takes a few tries to get it right. Directly after it's unstuck, put it into pairing-mode.
+기기가 멈추는 경우가 있습니다. 기기 부팅 시 LED를 주의 깊게 확인해야 합니다 - 한 번 깜박이고 잠시 후 두 번 깜박여야 합니다. 한 번만 깜박이면 기기가 멈춘 것이며 특별한 초기화가 필요합니다. 한 가지 방법은 전원을 연결한 후 두 번 깜박이는 것이 보일 때까지 버튼을 12초 동안 계속 누르는 것입니다 - 여러 번 시도해야 성공할 수 있습니다. 기기가 정상화된 직후 페어링 모드로 진입하세요.
 
 ![RTCZCGQ11LM pairing](../images/pairing/RTCZCGQ11LM_pairing.jpg)
 
-### Feature support
+### 기능 지원
 
-#### Detection regions (configuration)
+#### 감지 영역 (설정)
 
-Device allows to add up to `10` detection regions, each composed of any number of zones in a `4x7` detection grid, visualized below:  
+기기는 `4x7` 감지 그리드에서 여러 구역으로 구성된 최대 `10`개의 감지 영역을 추가할 수 있습니다. 아래에 시각화되어 있습니다:
 ![RTCZCGQ11LM pairing](../images/device_specific/RTCZCGQ11LM_detection_regions.jpg)
 
-Each zone can be added to any region, for example you can add zone `X1 Y1` to both `Region 1` & `Region 2` at the same time.
+각 구역은 어떤 영역에도 추가할 수 있습니다. 예를 들어 구역 `X1 Y1`을 `영역 1`과 `영역 2` 모두에 동시에 추가할 수 있습니다.
 
-Region 1 with X1 and Y[1,2,3] can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{ "region_upsert": { "region_id": 1, "zones": [{"x": 1, "y": 1},{"x": 1, "y": 2},{"x": 1, "y": 3}]}}`
+X1과 Y[1,2,3]을 포함한 영역 1은 `zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{ "region_upsert": { "region_id": 1, "zones": [{"x": 1, "y": 1},{"x": 1, "y": 2},{"x": 1, "y": 3}]}}`를 게시하여 설정할 수 있습니다.
 
-**Note**: multiple zones are in `[]`
+**참고**: 여러 구역은 `[]`에 있습니다.
 
 
-#### Detection regions (events)
+#### 감지 영역 (이벤트)
 
-Once the device detects an event in any of created regions, it exposes this event in `action` expose.  
-The events follow the schema of `region_<REGION_ID>_<EVENT_NAME>`, where:
-- `<REGION_ID>` is a region identifier, as specified by the user, from `1` to `10`.
-- `<EVENT_NAME>` is one of:
-  - `enter` - triggered on region enter, quick to trigger
-  - `leave` - triggered on region leave, quick to trigger
-  - `occupied` - triggered when device is sure about region occupancy, slow to trigger
-  - `unoccupied` - triggered when device is sure about region no longer being occupied, slow to trigger
+기기가 생성된 영역 중 하나에서 이벤트를 감지하면 `action` expose에 이 이벤트를 노출합니다.
+이벤트는 `region_<REGION_ID>_<EVENT_NAME>` 스키마를 따릅니다:
+- `<REGION_ID>`는 사용자가 지정한 `1`~`10`의 영역 식별자입니다.
+- `<EVENT_NAME>`은 다음 중 하나입니다:
+  - `enter` - 영역 진입 시 발생, 빠른 반응
+  - `leave` - 영역 이탈 시 발생, 빠른 반응
+  - `occupied` - 기기가 영역 점유를 확인했을 때 발생, 느린 반응
+  - `unoccupied` - 기기가 영역이 더 이상 점유되지 않음을 확인했을 때 발생, 느린 반응
 
-Eg. `region_1_enter` is triggered when a person enters `Region 1`.
+예: `region_1_enter`는 사람이 `영역 1`에 진입할 때 발생합니다.
 
-#### Other regions
+#### 기타 영역
 
-`Other regions` (exits, entrances, interference sources, edges) currently not supported. Reverse engineering efforts documented [here](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5928#issuecomment-1166545226).
+`기타 영역` (출구, 입구, 간섭원, 경계)은 현재 지원되지 않습니다. 리버스 엔지니어링 작업은 [여기](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5928#issuecomment-1166545226)에 문서화되어 있습니다.
 <!-- Notes END: Do not edit below this line -->
 
 

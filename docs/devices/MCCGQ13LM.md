@@ -24,14 +24,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
+## 페어링
 
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). After this the device will automatically join.
-If this doesn't work, after starting the pairing process with the long press, keep short pressing the button approximately once a second until the interview process is finished.
+기기의 초기화 버튼을 약 5초간 길게 누릅니다(파란 LED가 깜빡이기 시작할 때까지). 이후 기기가 자동으로 네트워크에 참여합니다.
+이 방법이 작동하지 않으면, 길게 눌러 페어링 프로세스를 시작한 후 인터뷰 과정이 완료될 때까지 약 1초에 한 번씩 버튼을 짧게 눌러주세요.
 
-## Battery
+## 배터리
 
-Uses a CR123A battery
+CR123A 배터리를 사용합니다.
 <!-- Notes END: Do not edit below this line -->
 
 

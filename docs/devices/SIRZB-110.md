@@ -27,43 +27,43 @@ pageClass: device-page
 ## Notes
 
 
-### Firmware version warning
+### 펌웨어 버전 주의
 
-Only works with firmware 1.7.1 and lower (whatever hardware version). Firmware version 1.9.3 uses a different framework and these commands no longer work.
-
-
-### Warning usage
-
-Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 900 seconds
-
-This device do not support the `strobe` and `strobe_duty_cycle` functionality
+하드웨어 버전에 관계없이 펌웨어 1.7.1 이하에서만 작동합니다. 펌웨어 버전 1.9.3은 다른 프레임워크를 사용하여 이 명령들이 더 이상 작동하지 않습니다.
 
 
-### Triggering the alarm, Advanced
-This siren can be triggered manually by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with the payloads:
+### warning 사용법
 
-To start :
+`warning` 사용 시간은 `max_duration`보다 짧을 수 있지만 더 길 수는 없습니다. `max_duration`이 60초로 설정된 경우 `duration`을 90초로 설정하려 해도 경고는 60초 동안만 적용됩니다. `max_duration`의 기본값은 900초입니다.
+
+이 기기는 `strobe` 및 `strobe_duty_cycle` 기능을 지원하지 않습니다.
+
+
+### 알람 트리거 (고급)
+이 사이렌은 다음 페이로드로 `zigbee2mqtt/FRIENDLY_NAME/set`에 발행하여 수동으로 트리거할 수 있습니다:
+
+시작:
 * `{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}`
-Where:
-- `duration`: the number of seconds the alarm will be on
+여기서:
+- `duration`: 알람이 켜져 있을 초 수
 - `level`: `low`, `medium`, `high`, `very_high`
 - `mode`: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
-- `strobe`: not supported
-- `strobe_duty_cycle`: not supported
+- `strobe`: 지원되지 않음
+- `strobe_duty_cycle`: 지원되지 않음
 
-To stop:
+중지:
 * `{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}`
 
 
-### Triggering alarm, Simple
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
-Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
-This alarm are preset to highest volume and using the mode `police_panic`
+### 알람 트리거 (간단)
+`zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"alarm": "START"}` 및 `{"alarm": "OFF"}`를 발행하여 설정할 수 있습니다.
+Zigbee2MQTT UI에서 또는 `{"max_duration": NEW_VALUE}`를 발행하여 `max_duration`을 설정하세요.
+이 알람은 최대 볼륨으로 사전 설정되며 `police_panic` 모드를 사용합니다.
 
 ### Squawk
-Squawk are normally used to indicate activation and deactivation of an alarm system
+Squawk는 일반적으로 경보 시스템의 활성화 및 비활성화를 나타내는 데 사용됩니다.
 
-Examples:
+예시:
 `{"squawk":{"level":"low","state":"system_is_armed","strobe":false}}`
 `{"squawk":{"level":"low","state":"system_is_disarmed","strobe":false}}`
 <!-- Notes END: Do not edit below this line -->

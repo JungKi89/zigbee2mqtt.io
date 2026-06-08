@@ -28,23 +28,23 @@ pageClass: device-page
 
 
 ### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.
-Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+이 디바이스는 Zigbee Green Power 디바이스로, 매우 에너지 효율적입니다.
+Green Power 디바이스의 메시지는 일반 Zigbee 디바이스에서 "이해"할 수 없으므로 먼저 "번역"이 필요합니다.
+모든 Zigbee 디바이스가 이 번역을 수행할 수 있는 것은 아니며, 현재 이를 수행할 수 있는 유일한 디바이스는 Philips Hue 디바이스입니다. 따라서 Green Power 디바이스를 사용하려면 Philips Hue 디바이스의 통신 범위 내에 있어야 합니다.
 
-Green Power devices don't support binding and are not included in network scans.
+Green Power 디바이스는 바인딩을 지원하지 않으며 네트워크 스캔에 포함되지 않습니다.
 
-### Pairing ZLGP17
-To pair this device on channel 11, hold the configuration button (on the back of the device) and press the main button (up or down).
+### ZLGP17 페어링
+채널 11에서 이 디바이스를 페어링하려면 설정 버튼(디바이스 뒷면)을 누른 상태에서 메인 버튼(위 또는 아래)을 누르세요.
 
-This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP17 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000111963EN-00.pdf).
+이 디바이스는 채널 11뿐만 아니라 모든 채널에서 작동할 수 있습니다. 이에 대해서는 [Legrand ZLGP17 매뉴얼 챕터 6.2](https://www.admin.legrandoc.com/files/documents/S000111963EN-00.pdf)를 참고하세요.
 
-### Pairing ZLGP18
-To pair this device on channel 11, hold the configuration button (on the back of the device) and press the button (up or down) on the first side, then do the same for the second side.
+### ZLGP18 페어링
+채널 11에서 이 디바이스를 페어링하려면 설정 버튼(디바이스 뒷면)을 누른 상태에서 첫 번째 면의 버튼(위 또는 아래)을 누른 다음, 두 번째 면도 동일하게 수행하세요.
 
-Note: each side of the device is treated as a single ZLGP17.
+참고: 디바이스의 각 면은 개별 ZLGP17로 취급됩니다.
 
-This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP18 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf).
+이 디바이스는 채널 11뿐만 아니라 모든 채널에서 작동할 수 있습니다. 이에 대해서는 [Legrand ZLGP18 매뉴얼 챕터 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf)를 참고하세요.
 <!-- Notes END: Do not edit below this line -->
 
 

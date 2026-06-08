@@ -26,17 +26,17 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Pairing
-This device needs to be paired using the installation code, which can be obtained by scanning the QR-code on the device with your smartphone (95 digits, alphanumerical). The device will activate pairing mode for 3 minutes after power on or factory reset. To re-activate pairing mode, press any button while the device is not yet paired. In zigbee2mqtt, navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK", then ensure permit joining is active. Wait for your device to be joined.
+### 페어링
+이 기기는 설치 코드를 사용하여 페어링해야 합니다. 설치 코드는 스마트폰으로 기기의 QR 코드를 스캔하여 얻을 수 있습니다 (95자리, 영숫자). 기기는 전원이 켜지거나 초기화된 후 3분 동안 페어링 모드가 활성화됩니다. 페어링 모드를 다시 활성화하려면 기기가 아직 페어링되지 않은 상태에서 아무 버튼이나 누르세요. zigbee2mqtt에서 "Settings" --> "Tools"로 이동하여 "Add install code"를 클릭하세요. QR 코드에서 얻은 코드를 붙여넣고 "OK"를 클릭하여 확인한 후, 참여 허용이 활성화되어 있는지 확인하세요. 기기가 연결될 때까지 기다리세요.
 
-#### Failed pairing after device removal
-When the device re-joins the network after being removed, pairing may fail. In this case, the device will be listed in zigbee2mqtt, but discovery fails, and an error message occurs. To fix this issue, just add the installation code again. The device should be correctly rediscovered automatically.
+#### 기기 제거 후 페어링 실패
+기기가 제거된 후 네트워크에 다시 접속할 때 페어링이 실패할 수 있습니다. 이 경우 zigbee2mqtt에 기기가 나열되지만 검색이 실패하고 오류 메시지가 발생합니다. 이 문제를 해결하려면 설치 코드를 다시 추가하세요. 기기가 자동으로 올바르게 재검색됩니다.
 
-### Configuration
-The device can operate either as a two-channel light switch or as roller shutter/window blind. After pairing, the device mode is initially set to 'disabled' and will not accept any switching or open/close commands. The device mode must be set to 'light' or 'shutter' via the frontend or by publishing `{"device_mode": "shutter"}` or `{"device_mode": "light"}` to `zigbee2mqtt/FRIENDLY_NAME/set`.
+### 설정
+기기는 2채널 조명 스위치 또는 롤러 셔터/윈도우 블라인드로 작동할 수 있습니다. 페어링 후 기기 모드는 처음에 'disabled'로 설정되어 있어 스위칭이나 열기/닫기 명령을 수락하지 않습니다. 프런트엔드를 통해 또는 `zigbee2mqtt/FRIENDLY_NAME/set`에 `{"device_mode": "shutter"}` 또는 `{"device_mode": "light"}`를 게시하여 기기 모드를 'light' 또는 'shutter'로 설정해야 합니다.
 
-### Factory reset
-To reset the device to factory settings, press and hold the device's system button next to the LED until the device's LED starts flashing yellow. Release the system button and press and hold it again until the LED is lighting up green. The device will then restart and look for a Zigbee network to join. In case something went wrong, e.g. if the second button press was too short, the device's LED will flash red.
+### 초기화
+기기를 초기 설정으로 초기화하려면 LED 옆에 있는 시스템 버튼을 기기 LED가 노란색으로 깜빡이기 시작할 때까지 길게 누르세요. 시스템 버튼을 놓고 LED가 녹색으로 켜질 때까지 다시 길게 누르세요. 그러면 기기가 재시작되고 접속할 Zigbee 네트워크를 검색합니다. 문제가 발생한 경우 (예: 두 번째 버튼 누름이 너무 짧은 경우) 기기 LED가 빨간색으로 깜빡입니다.
 <!-- Notes END: Do not edit below this line -->
 
 

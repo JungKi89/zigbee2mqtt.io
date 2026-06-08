@@ -27,22 +27,22 @@ pageClass: device-page
 ## Notes
 
 
-### Pairing
-Press and hold the button on the device for +- 10 seconds
-(until the blue light starts blinking and stops blinking), release and wait.
+### 페어링
+기기의 버튼을 약 10초 동안 길게 누릅니다
+(파란 불빛이 깜박이기 시작했다가 멈출 때까지), 버튼을 놓고 기다립니다.
 
-You may have to unpair the switch from an existing coordinator before the pairing process will start.
-If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
+페어링 과정을 시작하기 전에 기존 코디네이터에서 스위치를 언페어링해야 할 수도 있습니다.
+불가능한 경우 배터리를 빼고(배터리가 있는 경우) 버튼을 눌러(기기를 완전히 방전시키기 위해) 배터리를 다시 넣은 후 페어링을 다시 시도해 보세요.
 
-### Power outage memory
-This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
-Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+### 정전 후 상태 기억
+이 옵션을 사용하면 전원이 복구될 때 기기가 마지막 켜짐/꺼짐 상태를 복원합니다.
+이 옵션을 설정하려면 `zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"power_outage_memory": true}` (또는 `false`)를 게시합니다.
+그런 다음 기기의 버튼으로 플러그/스위치를 한 번 토글하면, 이후부터 전원이 복구될 때 상태가 복원됩니다.
 
 
-### Do not disturb mode
-This option allows to turn off the indicator lights between 21:00 and 09:00.
-To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"do_not_disturb": true}` (or `false`).
+### 방해 금지 모드
+이 옵션을 사용하면 21:00~09:00 사이에 표시 LED를 끌 수 있습니다.
+이 옵션을 설정하려면 `zigbee2mqtt/FRIENDLY_NAME/set`에 페이로드 `{"do_not_disturb": true}` (또는 `false`)를 게시합니다.
 <!-- Notes END: Do not edit below this line -->
 
 
