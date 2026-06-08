@@ -2,18 +2,18 @@
 sidebarDepth: 1
 ---
 
-# Device blocklist / passlist
+# 장치 차단 목록 / 허용 목록
 
-You can define blocked devices as well as a list of devices allowed joining the network.
+차단된 장치와 네트워크 참여가 허용된 장치 목록을 정의할 수 있습니다.
 
 ```yaml
-# Optional: Block devices from the network (by ieeeAddr) (default: empty)
+# 선택 사항: 네트워크에서 장치 차단 (ieeeAddr 기준) (기본값: 비어 있음)
 blocklist:
     - '0x000b57fffec6a5b2'
 
-# Optional: Allow only certain devices to join the network (by ieeeAddr)
-# Note that all devices not on the passlist will be removed from the network!
-# (default: empty)
+# 선택 사항: 특정 장치만 네트워크 참여 허용 (ieeeAddr 기준)
+# 허용 목록에 없는 모든 장치는 네트워크에서 제거됩니다!
+# (기본값: 비어 있음)
 passlist:
     - '0x000b57fffec6a5b3'
 ```

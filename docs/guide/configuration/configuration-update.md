@@ -2,29 +2,29 @@
 sidebarDepth: 1
 ---
 
-# Configuration update
+# 설정 업데이트
 
-Starting with v2.0.0 Zigbee2MQTT includes an automatic settings migration system. This system will take care of adjusting your `configuration.yaml` according to your previous one, and the requirements of the new Zigbee2MQTT version. If necessary, the migration process is repeated until your `configuration.yaml` is up to the current version.
+v2.0.0부터 Zigbee2MQTT에는 자동 설정 마이그레이션 시스템이 포함되어 있습니다. 이 시스템은 이전 설정과 새 Zigbee2MQTT 버전의 요구 사항에 맞게 `configuration.yaml`을 조정합니다. 필요한 경우 `configuration.yaml`이 현재 버전에 맞을 때까지 마이그레이션 프로세스가 반복됩니다.
 
-The migration system will automatically make a backup of your current `data/configuration.yaml` before starting a migration. The backup file will be named according to its version, for example `data/configuration_backup_v1.yaml`.
+마이그레이션 시스템은 마이그레이션을 시작하기 전에 현재 `data/configuration.yaml`을 자동으로 백업합니다. 백업 파일은 버전에 따라 이름이 지정됩니다. 예: `data/configuration_backup_v1.yaml`.
 
-:::warning IMPORTANT
-Configuration values set through Home Assistant add-on configuration page, or through [environment variables](./README.md#environment-variables) are not persisted to the `configuration.yaml`. As such, they cannot be processed by the migration system and will require your intervention if a migration is required for any of them.
+:::warning 중요
+Home Assistant 애드온 설정 페이지 또는 [환경 변수](./README.md#환경-변수)를 통해 설정된 값은 `configuration.yaml`에 저장되지 않습니다. 따라서 마이그레이션 시스템에서 처리할 수 없으며, 마이그레이션이 필요한 경우 직접 조치가 필요합니다.
 :::
 
-:::warning IMPORTANT
-While this automatically migrates Zigbee2MQTT settings, it **cannot** migrate side-effects on third parties (like Home Assistant). Make sure you go over the [migration notes](#migration-notes) and the link given to adjust things accordingly on that front.
+:::warning 중요
+이 시스템은 Zigbee2MQTT 설정을 자동으로 마이그레이션하지만, 서드파티(Home Assistant 등)에 대한 부작용은 **마이그레이션할 수 없습니다**. [마이그레이션 노트](#마이그레이션-노트)와 링크를 검토하여 해당 부분을 직접 조정하세요.
 :::
 
-:::caution CAUTION
-Do not edit the `version` setting manually. If you do, you run the risk of corrupting your `configuration.yaml`, the migration system may no longer work properly.
+:::caution 주의
+`version` 설정을 수동으로 편집하지 마세요. 그렇게 하면 `configuration.yaml`이 손상될 위험이 있으며, 마이그레이션 시스템이 올바르게 작동하지 않을 수 있습니다.
 :::
 
-## Migration notes
+## 마이그레이션 노트
 
-The migration system will consider every migrations required for a particular version and build a log for you to easily identify what needed changing in your `configuration.yaml` and has an impact on your new configuration. The file will be named according to the Zigbee2MQTT version change, for example `data/migration-1-to-2.log`.
+마이그레이션 시스템은 특정 버전에 필요한 모든 마이그레이션을 고려하여 `configuration.yaml`에서 변경이 필요한 사항과 새 설정에 영향을 미치는 사항을 쉽게 파악할 수 있는 로그를 생성합니다. 파일 이름은 Zigbee2MQTT 버전 변경에 따라 지정됩니다. 예: `data/migration-1-to-2.log`.
 
-### Example migration notes from v1 to v2
+### v1에서 v2로의 마이그레이션 노트 예시
 
 ```
 [REMOVAL] HA discovery_topic was moved from advanced.homeassistant_discovery_topic to homeassistant.discovery_topic.
@@ -46,13 +46,13 @@ The migration system will consider every migrations required for a particular ve
 For more details, see https://github.com/Koenkk/zigbee2mqtt/discussions/24198
 ```
 
-In this scenario:
+이 시나리오에서:
 
-- You had set both `advanced.homeassistant_discovery_topic` and `homeassistant.discovery_topic`, the latter was retained, the former removed.
-- You had set `advanced.baudrate`, it was moved to `serial.baudrate`.
-- You had set both `advanced.rtscts` and `serial.rtscts`, the latter was retained, the former removed.
-- You had set `ban`, it was merged into `passlist`.
-- You had set `log_level` to `warn`, it was renamed to `warning`.
-- `version: 2` was added (future migrations will automatically update it).
-- You had set `advanced.legacy_api` to true. This is no longer supported, the setting was removed.
-- You had set `retrieve_state` to true for one or more devices or groups under `devices` or `groups`. This is no longer supported, the setting was removed.
+- `advanced.homeassistant_discovery_topic`과 `homeassistant.discovery_topic` 모두 설정되어 있었으며, 후자가 유지되고 전자는 제거되었습니다.
+- `advanced.baudrate`가 설정되어 있었으며, `serial.baudrate`로 이동되었습니다.
+- `advanced.rtscts`와 `serial.rtscts` 모두 설정되어 있었으며, 후자가 유지되고 전자는 제거되었습니다.
+- `ban`이 설정되어 있었으며, `passlist`로 병합되었습니다.
+- `log_level`이 `warn`으로 설정되어 있었으며, `warning`으로 이름이 변경되었습니다.
+- `version: 2`가 추가되었습니다 (향후 마이그레이션 시 자동으로 업데이트됩니다).
+- `advanced.legacy_api`가 true로 설정되어 있었습니다. 더 이상 지원되지 않으며 설정이 제거되었습니다.
+- `devices` 또는 `groups` 아래의 하나 이상의 장치 또는 그룹에 대해 `retrieve_state`가 true로 설정되어 있었습니다. 더 이상 지원되지 않으며 설정이 제거되었습니다.

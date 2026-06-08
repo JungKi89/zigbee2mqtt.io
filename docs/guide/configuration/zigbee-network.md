@@ -2,51 +2,52 @@
 sidebarDepth: 1
 ---
 
-# Zigbee network
+# Zigbee 네트워크
 
-## Network config
+## 네트워크 설정
 
 ```yaml
 advanced:
-    # Optional: Zigbee pan ID (default: shown below)
-    # Setting pan_id: GENERATE will make Zigbee2MQTT generate a new panID on next startup
+    # 선택 사항: Zigbee pan ID (기본값: 아래 표시)
+    # pan_id: GENERATE 로 설정하면 다음 시작 시 Zigbee2MQTT가 새 panID를 생성합니다
     pan_id: 0x1a62
-    # Optional: Zigbee extended pan ID, GENERATE will make Zigbee2MQTT generate a new extended panID on next startup (default: shown below)
+    # 선택 사항: Zigbee 확장 pan ID, GENERATE로 설정하면 다음 시작 시 새 확장 panID를 생성합니다 (기본값: 아래 표시)
     ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
-    # Optional: Zigbee channel, changing might require re-pairing of some devices (see docs below). (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid problems)
-    # (default: 11)
+    # 선택 사항: Zigbee 채널, 변경 시 일부 장치의 재페어링이 필요할 수 있습니다 (아래 문서 참고).
+    # (참고: 문제를 피하려면 ZLL 채널 사용: 11, 15, 20, 또는 25)
+    # (기본값: 11)
     channel: 11
-    # Optional: network encryption key
-    # GENERATE will make Zigbee2MQTT generate a new network key on next startup
-    # Note: changing requires repairing of all devices (default: shown below)
+    # 선택 사항: 네트워크 암호화 키
+    # GENERATE로 설정하면 다음 시작 시 새 네트워크 키를 생성합니다
+    # 참고: 변경 시 모든 장치의 재페어링이 필요합니다 (기본값: 아래 표시)
     network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
 
 ::: tip
-Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the first start. The `configuration.yml` gets updated with the new key. Changing the network_key requires re-pairing of all devices.
+`network_key: GENERATE`로 설정하면 처음 시작 시 Zigbee2MQTT가 새로운 무작위 키를 생성합니다. `configuration.yml`이 새 키로 업데이트됩니다. network_key를 변경하면 모든 장치의 재페어링이 필요합니다.
 :::
 
 ::: tip
-[Reduce Wi-Fi interference by changing the Zigbee channel](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
+[Zigbee 채널 변경으로 Wi-Fi 간섭 줄이기](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
 :::
 
 ### Configurator
 
 <Configurator />
 
-### Changing the Zigbee channel
+### Zigbee 채널 변경
 
-Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. Devices that are asleep during the broadcast (usually battery powered end devices) will not switch immediately, but the next time they wake-up. It is therefore advised to trigger them after the channel change.
+기존 Zigbee 네트워크의 채널 변경이 지원됩니다. Zigbee에서는 채널 변경을 알리는 네트워크 업데이트를 브로드캐스트하여 변경합니다. 브로드캐스트 중 절전 상태인 장치(보통 배터리로 동작하는 종단 장치)는 즉시 전환되지 않고, 다음에 깨어날 때 전환됩니다. 따라서 채널 변경 후 해당 장치들을 트리거하는 것을 권장합니다.
 
 ::: warning
-Some Zigbee devices do not support changing channels. In case a device remains unresponsive several minutes after the change, and after having been triggered/woken up, you may have to re-pair it manually.
+일부 Zigbee 장치는 채널 변경을 지원하지 않습니다. 변경 후 몇 분이 지나도 장치가 응답하지 않고 트리거/깨우기를 시도해도 반응이 없다면 수동으로 재페어링해야 할 수 있습니다.
 :::
 
 ::: warning
-Changing channels is only supported for the `zstack` and `ember` adapter.
+채널 변경은 `zstack` 및 `ember` adapter에서만 지원됩니다.
 :::
 
-Zigbee2MQTT will send this broadcast during startup if the channel in the configuration has been changed. The following logging will be produced:
+설정에서 채널이 변경된 경우 Zigbee2MQTT는 시작 시 이 브로드캐스트를 전송합니다. 다음과 같은 로그가 생성됩니다:
 
 ```
 [2024-07-12 16:28:27] info: 	z2m: Starting Zigbee2MQTT version 1.39.0 (commit #e3fa0bfb)
@@ -58,14 +59,14 @@ Zigbee2MQTT will send this broadcast during startup if the channel in the config
 [2024-07-12 16:28:37] info: 	z2m: Zigbee2MQTT started!
 ```
 
-### Specifying network_key in a different file
+### network_key를 다른 파일에 지정하기
 
-To specify the network_key in a different file, e.g `secret.yaml`, use the following configuration.
+network_key를 다른 파일(예: `secret.yaml`)에 지정하려면 다음 설정을 사용하세요.
 
 **configuration.yaml**
 
 ```yaml
-# IMPORTANT: Don't forget the quotes!
+# 중요: 따옴표를 잊지 마세요!
 advanced:
     network_key: '!secret.yaml network_key'
 ```

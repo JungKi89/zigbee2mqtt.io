@@ -2,59 +2,59 @@
 redirectFrom: /information/groups.md
 ---
 
-# Groups
+# 그룹(Groups)
 
-Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
+Zigbee2MQTT는 Zigbee 그룹을 지원합니다. Zigbee 그룹을 사용하면 하나의 명령으로 여러 기기를 동시에 제어할 수 있습니다.
 
 ::: tip
-Groups are much more efficient than controlling devices separately as it significantly reduces the stress on a network when controlling multiple devices at once.
+그룹은 여러 기기를 개별적으로 제어하는 것보다 훨씬 효율적입니다. 여러 기기를 동시에 제어할 때 네트워크 부하를 크게 줄여줍니다.
 :::
 
-## Creating a group
+## 그룹 만들기
 
-Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) or by adding them to the `configuration.yaml` as shown below.
+그룹은 프론트엔드(가장 쉬운 방법), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) 또는 아래와 같이 `configuration.yaml`에 추가하는 방법으로 만들 수 있습니다.
 
-## Configuration
+## 설정
 
-Add the following to your `configuration.yaml`.
+`configuration.yaml`에 다음을 추가하세요.
 
 ```yaml
 groups:
-    # ID, each group should have a different numerical ID
+    # ID, 각 그룹은 서로 다른 숫자 ID를 가져야 합니다
     '1':
-        # Required: Name which will be used to control the group
+        # 필수: 그룹을 제어하는 데 사용할 이름
         friendly_name: group_1
-        # Required: Retain messages (true/false) (default: false)
+        # 필수: 메시지 유지 여부 (true/false) (기본값: false)
         retain: false
-        # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
+        # 선택사항: 예를 들어 밝기를 변경할 때 사용할 기본 전환 시간(초) (기본값: 0)
         transition: 2
-        # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
+        # 선택사항: 그룹 내 기기 중 하나가 상태를 변경할 때 그룹 상태 업데이트 여부. 아래 '상태 변경' 참조 (기본값: true)
         optimistic: true
-        # Optional: Control when state OFF is published for a group, see "State changes" below (default: all_members_off)
+        # 선택사항: 그룹에 대해 OFF 상태가 게시되는 시점 제어. 아래 "상태 변경" 참조 (기본값: all_members_off)
         off_state: 'all_members_off'
 ```
 
-The groupID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal groupID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).
+그룹 ID(위 예시에서 `'1'`)는 숫자 문자열이어야 합니다. 16진수 그룹 ID(예: `0xe24c`)를 사용하려면 먼저 숫자 문자열(예: `57932`)로 변환해야 합니다.
 
-If using the Home Assistant add-on, restart it after modifying your `configuration.yaml` as above.
+Home Assistant 애드온을 사용하는 경우, 위와 같이 `configuration.yaml`을 수정한 후 재시작하세요.
 
-## MQTT commands
+## MQTT 명령어
 
-To add, remove, rename and change the options of a group, see [MQTT Topics and Messages groups section](./mqtt_topics_and_messages.md#group)
+그룹을 추가, 제거, 이름 변경 및 옵션 변경하려면 [MQTT Topics and Messages 그룹 섹션](./mqtt_topics_and_messages.md#group)을 참조하세요.
 
-Devices can also be added/removed from groups via MQTT, the possible topics are:
+기기는 MQTT를 통해 그룹에 추가/제거할 수도 있으며, 가능한 topic은 다음과 같습니다:
 
-- `zigbee2mqtt/bridge/request/group/members/add`: add a device to a group
-- `zigbee2mqtt/bridge/request/group/members/remove` remove a device from a group
-- `zigbee2mqtt/bridge/request/group/members/remove_all` remove a device from all groups
+- `zigbee2mqtt/bridge/request/group/members/add`: 그룹에 기기 추가
+- `zigbee2mqtt/bridge/request/group/members/remove`: 그룹에서 기기 제거
+- `zigbee2mqtt/bridge/request/group/members/remove_all`: 모든 그룹에서 기기 제거
 
-The payload should be `{"group": GROUP, "device": DEVICE}` where `GROUP` is the `friendly_name` of the group you want to add/remove the device from, `DEVICE` is the `friendly_name` of the device you want to add/remove from the group. Example payload: `{"group":"my_group","device":"my_bulb"}`, example response: `{"data":{"device":"my_bulb","endpoint":"default","group":"my_group"},"status":"ok"}`. In case of executing a `remove_all` the `group` property in the request can be omitted.
+페이로드는 `{"group": GROUP, "device": DEVICE}`이어야 하며, `GROUP`은 추가/제거할 그룹의 `friendly_name`, `DEVICE`는 그룹에 추가/제거할 기기의 `friendly_name`입니다. 페이로드 예시: `{"group":"my_group","device":"my_bulb"}`, 응답 예시: `{"data":{"device":"my_bulb","endpoint":"default","group":"my_group"},"status":"ok"}`. `remove_all`을 실행하는 경우 요청에서 `group` 속성을 생략할 수 있습니다.
 
-When removing a device from a group and when the group has any devices bound to it. The reporting of this members will be disabled, if you want to skip this use `skip_disable_reporting` (e.g. `{"group":"my_group","device":"my_bulb", "skip_disable_reporting": true}`).
+그룹에서 기기를 제거할 때 해당 그룹에 binding된 기기가 있는 경우, 해당 멤버의 리포팅이 비활성화됩니다. 이를 건너뛰려면 `skip_disable_reporting`을 사용하세요(예: `{"group":"my_group","device":"my_bulb", "skip_disable_reporting": true}`).
 
-## Controlling
+## 제어
 
-Controlling a group is similar to controlling a single device. For example to turn on all devices that are part of group send a MQTT message to `zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set` with payload:
+그룹 제어는 단일 기기 제어와 유사합니다. 예를 들어 그룹에 속한 모든 기기를 켜려면 `zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set`에 다음 페이로드를 담아 MQTT 메시지를 전송하세요:
 
 ```json
 {
@@ -62,21 +62,21 @@ Controlling a group is similar to controlling a single device. For example to tu
 }
 ```
 
-## State changes
+## 상태 변경
 
-By default when one of the devices in a group changes its state, the group state will update to reflect the change. The behaviour of the `state` property can be controlled through the `off_state` option. There are 2 possible options:
+기본적으로 그룹 내 기기 중 하나가 상태를 변경하면 그룹 상태가 변경을 반영하여 업데이트됩니다. `state` 속성의 동작은 `off_state` 옵션을 통해 제어할 수 있습니다. 두 가지 옵션이 있습니다:
 
-- `all_members_off` (default): The group `state` will stay `ON` if at least one of the group member is in `state` `ON`.
-- `last_member_state`: The group `state` will equal the `state` of the member who last changed state.
+- `all_members_off` (기본값): 그룹 멤버 중 최소 하나라도 `state`가 `ON`이면 그룹 `state`는 `ON`을 유지합니다.
+- `last_member_state`: 그룹 `state`는 마지막으로 상태를 변경한 멤버의 `state`와 같아집니다.
 
-When the state of a group is changed by a command (so not via a state change of a device in it), all devices in the group will also change its state. This behavior can be disabled by setting `optimistic: false` for the group.
+명령에 의해 그룹 상태가 변경되면(그룹 내 기기의 상태 변경을 통한 것이 아닌), 그룹 내 모든 기기도 상태를 변경합니다. 이 동작은 그룹에 `optimistic: false`를 설정하여 비활성화할 수 있습니다.
 
-## How do groups work?
+## 그룹은 어떻게 작동하나요?
 
-By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which groups a device belongs.
+위의 `add` 명령을 사용하면 기기가 그룹에 추가됩니다. 기기 자체가 속한 그룹을 저장합니다. 코디네이터 등 다른 기기는 어떤 기기가 어느 그룹에 속하는지 알 수 없습니다.
 
-When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all** devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
+`set` 명령을 사용하여 예를 들어 그룹의 모든 기기를 켤 때, 브로드캐스트 요청이 네트워크의 **모든** 기기에 전송됩니다. 기기 자체가 해당 그룹에 속하는지 확인하고 명령을 실행해야 하는지 결정합니다.
 
-## Adding a specific endpoint
+## 특정 엔드포인트 추가하기
 
-In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons, you can specify it with the request payload `{"group": GROUP, "device": DEVICE, "endpoint": ENDPOINT}` where `ENDPOINT` is the desired endpoint name or ID. Example request payload `{"group":"my_group","device":"my_switch","endpoint":"right"}`.
+예를 들어 버튼 2개가 있는 QBKG03LM처럼 여러 엔드포인트가 있는 기기를 그룹에 추가하려면, 요청 페이로드 `{"group": GROUP, "device": DEVICE, "endpoint": ENDPOINT}`로 지정할 수 있습니다. 여기서 `ENDPOINT`는 원하는 엔드포인트 이름 또는 ID입니다. 요청 페이로드 예시: `{"group":"my_group","device":"my_switch","endpoint":"right"}`.

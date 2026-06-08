@@ -3,68 +3,68 @@ sidebar: auto
 redirectFrom: /how_tos/how-to-switch-to-dev-branch.md
 ---
 
-# Switch to the dev branch
+# Dev 브랜치로 전환하기
 
-The Zigbee2MQTT dev branch contains the latest features, improvements and supported devices.
-In case you want to try this, you can checkout the dev branch.
+Zigbee2MQTT dev 브랜치에는 최신 기능, 개선 사항 및 지원 기기가 포함되어 있습니다.
+시도해 보려면 dev 브랜치를 체크아웃할 수 있습니다.
 
 ::: warning
-This branch is a development branch! It could be less stable than the release version!
+이 브랜치는 개발 브랜치입니다! 릴리스 버전보다 불안정할 수 있습니다!
 :::
 
 ## Linux
 
 ```bash
-# Stop Zigbee2MQTT and go to directory
+# Zigbee2MQTT 중지 및 디렉토리 이동
 sudo systemctl stop zigbee2mqtt
 cd /opt/zigbee2mqtt
 
-# Backup configuration
+# 설정 백업
 cp -R data data-backup
 
-# Update
+# 업데이트
 git fetch origin dev:dev
-# If you get an `error: pathspec 'dev' did not match any file(s) known to git` execute: `git fetch origin --unshallow`
-git checkout dev  # Change 'dev' to 'master' to switch back to the release version
+# `error: pathspec 'dev' did not match any file(s) known to git` 오류가 발생하면 실행: `git fetch origin --unshallow`
+git checkout dev  # 릴리스 버전으로 돌아가려면 'dev'를 'master'로 변경
 git pull
 pnpm install --frozen-lockfile
 
-# Restore configuration
+# 설정 복원
 cp -R data-backup/* data
 rm -rf data-backup
 
-# Start Zigbee2MQTT
+# Zigbee2MQTT 시작
 sudo systemctl start zigbee2mqtt
 ```
 
 ## Docker
 
-Use the Docker image with the `latest-dev` tag.
+`latest-dev` 태그가 있는 Docker 이미지를 사용하세요.
 
-## Home Assistant addon
+## Home Assistant 애드온
 
-Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.
+[`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) 버전을 사용하세요.
 
-- Stop the "regular" add-on
-- Disable `Start on boot` for the "regular" add-on
-- Disable `Watchdog` for the "regular" add-on
-- Go to the Add-on store
-- Select and install `Zigbee2MQTT Edge`
-- If you have any settings in the `Configuration` page of the "regular" add-on, copy them over to that of the `Edge` add-on
-- Start the `Edge` add-on (and configure `Start on boot`, `Watchdog` & `Show in sidebar` as desired)
+- "일반" 애드온 중지
+- "일반" 애드온에서 `Start on boot` 비활성화
+- "일반" 애드온에서 `Watchdog` 비활성화
+- 애드온 스토어로 이동
+- `Zigbee2MQTT Edge` 선택 및 설치
+- "일반" 애드온의 `Configuration` 페이지에 설정이 있으면 `Edge` 애드온으로 복사
+- `Edge` 애드온 시작 (원하는 대로 `Start on boot`, `Watchdog` 및 `Show in sidebar` 설정)
 
-:::caution CAUTION
-Do not start both add-ons with the same configuration at the same time. That will fail.
+:::caution 주의
+동일한 설정으로 두 애드온을 동시에 시작하지 마세요. 실패합니다.
 :::
 
-:::tip TIP
-To update the `Edge` add-on, simply uninstall it (**do not delete data**), and re-install it.
+:::tip 팁
+`Edge` 애드온을 업데이트하려면 간단히 제거하고(**데이터는 삭제하지 말 것**) 다시 설치하세요.
 :::
 
-:::tip TIP
-If you intend to stay on the `Edge` add-on permanently, once you've confirmed that `Edge` is working, you can then uninstall the "regular" add-on (**do not delete data**).
+:::tip 팁
+`Edge` 애드온을 영구적으로 사용하려면 `Edge`가 작동하는 것을 확인한 후 "일반" 애드온을 제거할 수 있습니다(**데이터는 삭제하지 말 것**).
 :::
 
-:::tip TIP
-When switching add-ons regularly, you might want to always use the `configuration.yaml` directly instead of the add-on `Configuration` page to avoid mismatching settings by mistake. Once settings are successfully moved to the `configuration.yaml`, you can just empty the corresponding boxes (`mqtt`, `serial`) in the add-on `Configuration` page and start Zigbee2MQTT again.
+:::tip 팁
+애드온을 자주 전환하는 경우, 실수로 설정이 일치하지 않는 것을 방지하기 위해 애드온 `Configuration` 페이지 대신 항상 `configuration.yaml`을 직접 사용하는 것이 좋습니다. 설정을 `configuration.yaml`로 성공적으로 이동한 후 애드온 `Configuration` 페이지의 해당 상자(`mqtt`, `serial`)를 비우고 Zigbee2MQTT를 다시 시작할 수 있습니다.
 :::

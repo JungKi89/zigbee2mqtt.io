@@ -5,26 +5,26 @@ redirectFrom: /information/docker.md
 
 # Docker
 
-It is possible to run Zigbee2MQTT in a Docker container using the official [Zigbee2MQTT Docker image](https://github.com/Koenkk/zigbee2mqtt/pkgs/container/zigbee2mqtt).
+공식 [Zigbee2MQTT Docker 이미지](https://github.com/Koenkk/zigbee2mqtt/pkgs/container/zigbee2mqtt)를 사용하여 Docker 컨테이너에서 Zigbee2MQTT를 실행할 수 있습니다.
 
-This image support the following architectures: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64` and `linux/riscv64`.
+이 이미지는 다음 아키텍처를 지원합니다: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64`, `linux/riscv64`.
 
-The following tags are available:
+사용 가능한 태그:
 
-- Latest release version: `latest`
-- Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
-- Specific release version, e.g: `2.0.0`, `2.0`, `2`
+- 최신 릴리즈 버전: `latest`
+- 최신 개발 버전 ([`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) 브랜치 기반): `latest-dev`
+- 특정 릴리즈 버전, 예: `2.0.0`, `2.0`, `2`
 
 ::: warning
-For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-Before running the container pull the correct image with `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6`.
+Raspberry Pi 1 및 zero 사용자: Docker에서 잘못된 이미지 아키텍처를 선택하는 버그가 있습니다.
+컨테이너를 실행하기 전에 `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6` 명령으로 올바른 이미지를 가져오세요.
 :::
 
-## Running the container
+## 컨테이너 실행
 
-Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
+먼저 [여기](../configuration/adapter-settings.md#determine-location-of-the-adapter)에 설명된 대로 adapter의 위치를 파악합니다.
 
-Execute the following command, update the `--device` parameter to match the location of your adapter.
+다음 명령을 실행하되, `--device` 파라미터를 adapter 위치에 맞게 수정하세요.
 
 ```bash
 $ docker run \
@@ -38,46 +38,45 @@ $ docker run \
    ghcr.io/koenkk/zigbee2mqtt
 ```
 
-**Parameters explanation:**
+**파라미터 설명:**
 
-- `--name zigbee2mqtt`: Name of container
-- `--restart=unless-stopped`: Automatically start on boot and restart after a crash
-- `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter. The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
-- `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
-- `-v /run/udev:/run/udev:ro`: required for auto-detecting the adapter
-- `-e TZ=Europe/Amsterdam`: configure the timezone
-- `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
+- `--name zigbee2mqtt`: 컨테이너 이름
+- `--restart=unless-stopped`: 부팅 시 자동 시작 및 충돌 후 자동 재시작
+- `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: adapter 위치. `:` 앞의 경로는 호스트의 경로이고, 뒤의 경로는 컨테이너 내부로 매핑되는 경로입니다. 호스트에서는 항상 `/dev/serial/by-id/` 경로를 사용해야 합니다.
+- `-v $(pwd)/data:/app/data`: Zigbee2MQTT가 설정을 저장하는 디렉토리 (pwd는 현재 작업 디렉토리로 매핑됩니다)
+- `-v /run/udev:/run/udev:ro`: adapter 자동 감지에 필요합니다
+- `-e TZ=Europe/Amsterdam`: 타임존 설정
+- `-p 8080:8080`: Docker 컨테이너 내부에서 호스트로 포트 포워딩 (frontend용)
 
 ::: tip
-If you run the MQTT-Server on the same host (localhost) you could use the IP
-of the `docker0` bridge to establish the connection: `server: mqtt://172.17.0.1`.
+같은 호스트(localhost)에서 MQTT 서버를 실행하는 경우, `docker0` 브리지의 IP를 사용하여 연결할 수 있습니다: `server: mqtt://172.17.0.1`.
 :::
 
-On first start, Zigbee2MQTT will start the onboarding on port 8080.
-Navigate to this board and configure accordingly.
-More information about [onboarding](../getting-started/README.md#onboarding).
+처음 시작 시, Zigbee2MQTT는 포트 8080에서 온보딩을 시작합니다.
+해당 페이지로 이동하여 설정을 진행하세요.
+[온보딩](../getting-started/README.md#onboarding)에 대한 자세한 정보를 참고하세요.
 
-Once the onboarding is completed Zigbee2MQTT will start.
+온보딩이 완료되면 Zigbee2MQTT가 시작됩니다.
 
-::: details (Alternative) Rootless container with Docker
+::: details (대안) Docker를 사용한 rootless 컨테이너
 
-To improve the security of the deployment you may want to run Zigbee2MQTT as a _non-root_ user.
+배포 보안을 향상시키기 위해 Zigbee2MQTT를 _non-root_ 사용자로 실행할 수 있습니다.
 
-1. Identify the group that has access to the adapter (in Ubuntu, e.g. it might be assigned to `dialout`). Update `ttyACM0` to match your adapter location.
+1. adapter에 접근 권한이 있는 그룹을 확인합니다 (Ubuntu에서는 `dialout`에 할당될 수 있습니다). `ttyACM0`을 adapter 위치에 맞게 수정하세요.
 
 ```
 $ ls -l /dev/ttyACM0
 crw-rw---- 1 root dialout 166, 0 Nov 5 16:31 /dev/ttyACM0
 ```
 
-2. If you want to run Zigbee2MQTT using your current user find the `uid` (UserID) and `gid` (GroupID):
+2. 현재 사용자로 Zigbee2MQTT를 실행하려면 `uid` (UserID)와 `gid` (GroupID)를 확인합니다:
 
 ```
 $ id
 uid=1001(pi) gid=1001(pi) Groups=...
 ```
 
-3. Start the docker container after updating `device`, `user` (uid:gid) and `group-add`:
+3. `device`, `user` (uid:gid), `group-add`를 업데이트한 후 docker 컨테이너를 시작합니다:
 
 ```
 $ sudo docker run \
@@ -93,14 +92,14 @@ $ sudo docker run \
    ghcr.io/koenkk/zigbee2mqtt
 ```
 
-**Parameters explanation:**
+**파라미터 설명:**
 
-- `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
-- `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device
+- `--user 1001:1001`: 제공된 UserID와 GroupID를 사용하여 컨테이너 내에서 Zigbee2MQTT 프로세스를 실행합니다
+- `--group-add dialout`: 사용자에게 `dialout` 그룹을 할당하여 장치에 접근할 수 있도록 합니다
 
 :::
 
-::: details (Alternative) Rootless with Podman (>3.2)
+::: details (대안) Podman (>3.2)을 사용한 rootless
 
 ```
 $ podman run \
@@ -116,22 +115,22 @@ $ podman run \
 ```
 
 ::: tip
-With SELinux enabled you may need to append a `:z` suffix to the volume mount: `-v $(pwd)/data:/app/data:z`
+SELinux가 활성화된 경우 볼륨 마운트에 `:z` 접미사를 추가해야 할 수 있습니다: `-v $(pwd)/data:/app/data:z`
 :::
 
-### Updating
+### 업데이트
 
-To update to the latest Docker image:
+최신 Docker 이미지로 업데이트하려면:
 
 ```bash
 docker pull ghcr.io/koenkk/zigbee2mqtt:latest
 docker rm -f zigbee2mqtt
-# Now run the container again with the instructions above
+# 위의 안내에 따라 컨테이너를 다시 실행합니다
 ```
 
 ## Docker Compose
 
-Example of a Docker Compose file:
+Docker Compose 파일 예시:
 
 ```yaml
 services:
@@ -143,16 +142,16 @@ services:
             - ./data:/app/data
             - /run/udev:/run/udev:ro
         ports:
-            # Frontend port
+            # Frontend 포트
             - 8080:8080
         environment:
             - TZ=Europe/Berlin
         devices:
-            # Make sure this matched your adapter location
+            # adapter 위치와 일치하는지 확인하세요
             - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
 ```
 
-You can also run a rootless container with Docker Compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
+`docker-compose.yml`의 `zigbee2mqtt` 서비스 블록에 필요한 속성을 추가하여 Docker Compose로 rootless 컨테이너를 실행할 수도 있습니다:
 
 ```yaml
 group_add:
@@ -160,28 +159,28 @@ group_add:
 user: 1000:1000
 ```
 
-### Starting the container
+### 컨테이너 시작
 
-To start the Docker container:
+Docker 컨테이너를 시작하려면:
 
 ```bash
 docker compose up -d zigbee2mqtt
 ```
 
-You can optionally skip `zigbee2mqtt` and it will start all containers listed in the compose file.
+선택적으로 `zigbee2mqtt`를 생략하면 compose 파일에 나열된 모든 컨테이너를 시작합니다.
 
-### Updating
+### 업데이트
 
-To update to the latest Docker image:
+최신 Docker 이미지로 업데이트하려면:
 
 ```bash
 docker compose pull zigbee2mqtt
 docker compose up -d zigbee2mqtt
 ```
 
-You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
+선택적으로 `zigbee2mqtt`를 생략하면 compose 파일의 모든 컨테이너에 대한 새 이미지를 가져오고, 업데이트된 컨테이너를 재시작합니다.
 
-## Additional links
+## 추가 링크
 
-- [Docker Stack device mapping](./docker//docker_stack.md)
-- [Docker on Synology DSM 7.0](./docker//docker_synology.md)
+- [Docker Stack 장치 매핑](./docker//docker_stack.md)
+- [Synology DSM 7.0에서 Docker](./docker//docker_synology.md)

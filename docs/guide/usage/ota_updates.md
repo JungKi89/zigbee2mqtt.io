@@ -2,132 +2,132 @@
 redirectFrom: /information/ota_updates.md
 ---
 
-# OTA updates
+# OTA 업데이트
 
-This feature allows updating the firmware of Zigbee devices over-the-air.
+이 기능을 사용하면 Zigbee 기기의 펌웨어를 무선으로(over-the-air) 업데이트할 수 있습니다.
 
 ::: warning
-Firmware updates can provide bug fixes, security updates and other welcomed features.
-However, they can also change device behavior in ways that may affect Zigbee2MQTT compatibility and potentially introduce buggy, or even malicious functionality.
-**Review the release notes before applying a firmware update.**
+펌웨어 업데이트는 버그 수정, 보안 업데이트 및 기타 유용한 기능을 제공할 수 있습니다.
+하지만 기기 동작을 변경하여 Zigbee2MQTT 호환성에 영향을 줄 수 있으며, 버그가 있거나 심지어 악성 기능이 도입될 수도 있습니다.
+**펌웨어 업데이트를 적용하기 전에 릴리즈 노트를 검토하세요.**
 :::
 
-By default, Zigbee2MQTT matches and retrieves OTA images from the [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository (if it has internet access).
-This repository is a mirror of manufacturer-provided firmware updates, both manually and automatically curated.
-[Using custom/local sources](#using-custom-firmware-files-or-index) is explained further down the page.
+기본적으로 Zigbee2MQTT는 [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) 저장소에서 OTA 이미지를 검색하고 가져옵니다(인터넷 접속이 가능한 경우).
+이 저장소는 제조사가 제공하는 펌웨어 업데이트의 미러로, 수동 및 자동으로 관리됩니다.
+[사용자 지정/로컬 소스 사용](#using-custom-firmware-files-or-index)은 페이지 아래에 설명되어 있습니다.
 
 ::: tip
-Most actions and configurations on this page can be done via the frontend.
+이 페이지의 대부분의 작업과 설정은 프론트엔드에서 수행할 수 있습니다.
 :::
 
-## Update status
+## 업데이트 상태
 
-The update state is published to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME]`, example payload: `{"update":{"state":"available"}}`.
-The possible states are:
+업데이트 상태는 `zigbee2mqtt/[DEVICE_FRIENDLY_NAME]`에 게시됩니다. 페이로드 예시: `{"update":{"state":"available"}}`.
+가능한 상태는 다음과 같습니다:
 
-- `idle`: No update available/in progress
-- `available`: An update is available for this device
-- `scheduled`: An update may start on the next update check requested by the device
-- `updating`: An update is in progress
-    - During this the progress in % and remaining time in seconds is also added to the payload (reported every 30sec), example: `{"update":{"state":"updating","progress":13.37,"remaining":219}}`
-    - The first progress report (at 0%) gives an estimated remaining time based on the OTA settings. The actual remaining time will adjust with each progress report based on the current state (greatly affected by the network)
+- `idle`: 업데이트가 없거나 진행 중이 아님
+- `available`: 이 기기에 대한 업데이트가 가능함
+- `scheduled`: 기기의 다음 업데이트 확인 요청 시 업데이트가 시작될 수 있음
+- `updating`: 업데이트 진행 중
+    - 이 동안 진행률(%)과 남은 시간(초)도 페이로드에 추가됩니다(30초마다 보고). 예: `{"update":{"state":"updating","progress":13.37,"remaining":219}}`
+    - 첫 번째 진행률 보고(0%)는 OTA 설정을 기반으로 예상 남은 시간을 제공합니다. 실제 남은 시간은 각 진행률 보고 시 현재 상태(네트워크의 영향을 크게 받음)에 따라 조정됩니다.
 
-## Checking for updates
+## 업데이트 확인
 
-### Automatic checking
+### 자동 확인
 
-Zigbee devices supporting OTA can periodically request a firmware update check. Upon reception of such a request, Zigbee2MQTT will check for updates (on the default source) and publish the result to MQTT.
+OTA를 지원하는 Zigbee 기기는 주기적으로 펌웨어 업데이트 확인을 요청할 수 있습니다. 이러한 요청을 수신하면 Zigbee2MQTT가 업데이트를 확인(기본 소스에서)하고 결과를 MQTT에 게시합니다.
 
-Some devices request updates too often. Zigbee2MQTT limits the checks to once per day (1440 min). The **update check interval** is configurable, but it does not prevent a device from requesting. Zigbee2MQTT will just ignore these messages if within that interval.  
-Here it is set to check at most once every two days, in `configuration.yaml`:
+일부 기기는 너무 자주 업데이트를 요청합니다. Zigbee2MQTT는 하루 한 번(1440분)으로 확인을 제한합니다. **업데이트 확인 간격**은 설정 가능하지만, 기기의 요청 자체를 막지는 않습니다. Zigbee2MQTT는 해당 간격 내의 메시지를 무시합니다.  
+여기서는 `configuration.yaml`에서 최대 2일에 한 번 확인하도록 설정합니다:
 
 ```yaml
 ota:
     update_check_interval: 2880
 ```
 
-It is also possible to completely **ignore the update checks** initiated by devices (Zigbee2MQTT will always reply "no image available"). If `configuration.yaml` is modified like this, only manual checks will proceed:
+기기가 시작하는 업데이트 확인을 완전히 **무시**할 수도 있습니다(Zigbee2MQTT가 항상 "사용 가능한 이미지 없음"으로 응답). `configuration.yaml`을 이렇게 수정하면 수동 확인만 진행됩니다:
 
 ```yaml
 ota:
     disable_automatic_update_check: true
 ```
 
-This is also available per-device. See [Device options](../configuration/devices-groups.md).
+이 옵션은 기기별로도 설정 가능합니다. [기기 옵션](../configuration/devices-groups.md)을 참조하세요.
 
-Disabling automatic update checks does not prevent [scheduled OTA](#scheduling-update-on-next-device-request).
+자동 업데이트 확인 비활성화는 [예약된 OTA](#scheduling-update-on-next-device-request)를 방지하지 않습니다.
 
-### Manual checking
+### 수동 확인
 
-To manually check for **updates**, send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.  
-To check if a **downgrade** is available, send the message to `zigbee2mqtt/bridge/request/device/ota_update/check/downgrade` instead.
+**업데이트**를 수동으로 확인하려면 `zigbee2mqtt/bridge/request/device/ota_update/check`에 페이로드 `{"id":"deviceID"}`를 전송하세요. 여기서 deviceID는 기기의 `ieee_address` 또는 `friendly_name`입니다.  
+**다운그레이드** 가능 여부를 확인하려면 대신 `zigbee2mqtt/bridge/request/device/ota_update/check/downgrade`에 메시지를 전송하세요.
 
-Zigbee2MQTT will request the current firmware information from the device (manufacturer code, image type and installed version). Only after reception, it will look up the OTA index.
-If the device does not respond, wake it up (e.g. push a button) right before checking, or wait for the automatic check.
+Zigbee2MQTT는 기기에서 현재 펌웨어 정보(제조사 코드, 이미지 타입, 설치된 버전)를 요청합니다. 수신한 후에만 OTA 인덱스를 조회합니다.
+기기가 응답하지 않으면 확인 전에 기기를 깨우거나(예: 버튼 누르기), 자동 확인을 기다리세요.
 
-Example request: `{"id":"my_remote"}`, response: `{"data":{"id":"my_remote","update_available":false},"status":"ok"}`.
+요청 예시: `{"id":"my_remote"}`, 응답: `{"data":{"id":"my_remote","update_available":false},"status":"ok"}`.
 
-If an update is available (`"update_available":true`), the response will also contain:
+업데이트가 가능한 경우(`"update_available":true`), 응답에는 다음도 포함됩니다:
 
-- `source`: the URL or file path to the OTA file
-- `release_notes`: (if provided) the release notes for the source
-- `downgrade`: true if the availability is for a downgrade
+- `source`: OTA 파일의 URL 또는 파일 경로
+- `release_notes`: (제공된 경우) 해당 소스의 릴리즈 노트
+- `downgrade`: 가용성이 다운그레이드인 경우 true
 
-## Starting an update
+## 업데이트 시작
 
-::: warning WARNINGS
-The update process greatly varies in duration: 10-100 minutes depending on device, settings and network stability. The device is usable during this time, but heavy traffic is added on the network. Therefore, the best practice is to **update one device at a time, while the network is in low demand.**
+::: warning 주의사항
+업데이트 과정은 기기, 설정 및 네트워크 안정성에 따라 10-100분으로 크게 다릅니다. 이 시간 동안 기기는 사용 가능하지만 네트워크에 많은 트래픽이 추가됩니다. 따라서 **네트워크 사용량이 적은 시간에 한 번에 하나의 기기만 업데이트하는 것이 좋습니다.**
 
-When uploading the OTA file completes, the device will reboot with the new firmware. **The reboot may cause unwanted interruptions or turn-ons, due to power-on behavior (e.g. light-up in the middle of the night)!**
+OTA 파일 업로드가 완료되면 기기가 새 펌웨어로 재부팅됩니다. **재부팅으로 인해 원하지 않는 인터럽트나 켜짐이 발생할 수 있습니다(예: 밤중에 조명이 켜지는 경우, 전원 켜짐 동작으로 인해)!**
 
-Since updating can drastically change the device behavior, Zigbee2MQTT treats it similarly to pairing a new device. It will automatically re-interview to detect new capabilities and **re-configure to ensure normal operation (this may overwrite custom reporting intervals with the default values)**
+업데이트는 기기 동작을 크게 변경할 수 있으므로, Zigbee2MQTT는 새 기기를 페어링하는 것과 유사하게 처리합니다. 새로운 기능을 감지하기 위해 자동으로 재인터뷰를 수행하며, **정상 작동을 보장하기 위해 재구성합니다(사용자 지정 리포팅 간격이 기본값으로 덮어써질 수 있습니다)**
 :::
 
-### Manual update request
+### 수동 업데이트 요청
 
-When an **update** is available, start it by sending a message to `zigbee2mqtt/bridge/request/device/ota_update/update` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device.  
-When a **downgrade** is available, start it by sending the message to `zigbee2mqtt/bridge/request/device/ota_update/update/downgrade` instead.
+**업데이트**가 가능한 경우, `zigbee2mqtt/bridge/request/device/ota_update/update`에 페이로드 `{"id":"deviceID"}`를 전송하여 시작하세요. 여기서 deviceID는 기기의 `ieee_address` 또는 `friendly_name`입니다.  
+**다운그레이드**가 가능한 경우, 대신 `zigbee2mqtt/bridge/request/device/ota_update/update/downgrade`에 메시지를 전송하세요.
 
-If the device does not respond, wake it up (e.g. push a button) right before starting, or [schedule](#scheduling-update-on-next-device-request) the update.  
-The progress is published to the respective device topic, as described [above](#device-state).
+기기가 응답하지 않으면 시작하기 바로 전에 기기를 깨우거나(예: 버튼 누르기) [업데이트를 예약](#scheduling-update-on-next-device-request)하세요.  
+진행률은 [위에서](#device-state) 설명한 대로 해당 기기 topic에 게시됩니다.
 
-Once the update is completed, a response is sent, example response: `{"data":{"id":"my_remote","from":{"file_version":5,"software_build_id":1,"date_code":"20190101"},"to":{"file_version":10,"software_build_id":2,"date_code":"20190102"}},"status":"ok"}`.  
-Note that `software_build_id` and `date_code` are optional device attributes.
+업데이트가 완료되면 응답이 전송됩니다. 응답 예시: `{"data":{"id":"my_remote","from":{"file_version":5,"software_build_id":1,"date_code":"20190101"},"to":{"file_version":10,"software_build_id":2,"date_code":"20190102"}},"status":"ok"}`.  
+`software_build_id`와 `date_code`는 선택적 기기 속성입니다.
 
-### Scheduling update on next device request
+### 다음 기기 요청 시 업데이트 예약
 
-It's possible to schedule the update for the next time the device requests an OTA update check.
+기기가 OTA 업데이트 확인을 요청하는 다음 번에 업데이트를 예약할 수 있습니다.
 
-:::tip TIP
-This can help for battery-powered devices that usually don't respond to [manual update requests](#manual-update-request) unless physically woken up right before triggering. Some brands/models are known to only update this way (e.g. some Legrand devices).
+:::tip 팁
+이는 일반적으로 트리거 직전에 물리적으로 깨우지 않으면 [수동 업데이트 요청](#manual-update-request)에 응답하지 않는 배터리 구동 기기에 도움이 됩니다. 일부 브랜드/모델은 이 방법으로만 업데이트됩니다(예: 일부 Legrand 기기).
 :::
 
-To schedule, send a message to `zigbee2mqtt/bridge/request/device/ota_update/schedule` with payload `{"id":"deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example request: `{"id":"my_remote"}`.  
-The same applies for downgrade with topic `zigbee2mqtt/bridge/request/device/ota_update/schedule/downgrade`.
+예약하려면 `zigbee2mqtt/bridge/request/device/ota_update/schedule`에 페이로드 `{"id":"deviceID"}`를 전송하세요. 여기서 deviceID는 기기의 `ieee_address` 또는 `friendly_name`입니다. 요청 예시: `{"id":"my_remote"}`.  
+다운그레이드도 마찬가지로 topic `zigbee2mqtt/bridge/request/device/ota_update/schedule/downgrade`를 사용합니다.
 
-To unschedule, send the same payload, but with the topic `zigbee2mqtt/bridge/request/device/ota_update/unschedule`.
+예약을 취소하려면 같은 페이로드를 `zigbee2mqtt/bridge/request/device/ota_update/unschedule` topic에 전송하세요.
 
-Scheduling status is saved in the database, and restored after Zigbee2MQTT restarts.
+예약 상태는 데이터베이스에 저장되며 Zigbee2MQTT 재시작 후에도 복원됩니다.
 
-If a scheduled update fails, it will remain scheduled (Device will try again, on the next check).  
-If there is no update available when the device requests, the schedule is removed.  
-A [manual update request](#manual-update-request) will remove the existing schedule, only if the update succeeds.
+예약된 업데이트가 실패하면 예약 상태가 유지됩니다(기기가 다음 확인 시 다시 시도합니다).  
+기기가 요청할 때 업데이트가 없으면 예약이 제거됩니다.  
+[수동 업데이트 요청](#manual-update-request)은 업데이트가 성공한 경우에만 기존 예약을 제거합니다.
 
-## Downgrading
+## 다운그레이드
 
-Downgrading the firmware is also possible. Follow the same updating steps, but use the respective `downgrade` topics, as described above.
+펌웨어 다운그레이드도 가능합니다. 위의 업데이트 단계와 동일하게 진행하되, 위에서 설명한 `downgrade` topic을 사용하세요.
 
-The default source ([Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA)) usually stores the latest and latest-1 images. This allows for one version downgrade. Otherwise, the older firmware must be provided by the user as a [custom source](#using-custom-firmware-files-or-index).
+기본 소스([Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA))는 일반적으로 최신 및 최신-1 이미지를 저장합니다. 이를 통해 한 버전 다운그레이드가 가능합니다. 그렇지 않으면 오래된 펌웨어는 사용자가 [사용자 지정 소스](#using-custom-firmware-files-or-index)로 제공해야 합니다.
 
-Even though Zigbee specification allows firmware downgrading, some devices may reject older firmware versions. Additionally, updating to a firmware of same version is not supported by Zigbee specification. This cannot be forced by Zigbee2MQTT.
+Zigbee 사양이 펌웨어 다운그레이드를 허용하더라도 일부 기기는 이전 펌웨어 버전을 거부할 수 있습니다. 또한 같은 버전의 펌웨어로 업데이트하는 것은 Zigbee 사양에서 지원되지 않습니다. 이는 Zigbee2MQTT에서 강제할 수 없습니다.
 
-Backing-up the currently installed version is not possible.
+현재 설치된 버전을 백업하는 것은 불가능합니다.
 
-## Advanced configuration
+## 고급 설정
 
-### Change update parameters
+### 업데이트 파라미터 변경
 
-The following OTA settings can be adjusted globally (by editing `configuration.yaml`) or per request (by providing them in the payload): `image_block_request_timeout`, `image_block_response_delay`, `default_maximum_data_size`.
+다음 OTA 설정은 전역적으로(`configuration.yaml` 편집) 또는 요청별로(페이로드에 제공) 조정할 수 있습니다: `image_block_request_timeout`, `image_block_response_delay`, `default_maximum_data_size`.
 
 ```yaml
 ota:
@@ -136,66 +136,66 @@ ota:
     default_maximum_data_size: 50
 ```
 
-Increasing the **timeout for reception of chunk requests** from the device can help if a device is unusually slow at this. The default is however already 150000ms and should fit most cases.
+기기가 청크 요청을 받는 속도가 비정상적으로 느린 경우 **청크 요청 수신 타임아웃**을 늘리면 도움이 됩니다. 하지만 기본값은 이미 150000ms로 대부분의 경우에 충분합니다.
 
-The **minimum delay between two chunks** can be decreased for faster OTA updates, but it may require a far more stable network to avoid issues and crashes. The default is 250ms and the minimum is 50ms.
+더 빠른 OTA 업데이트를 위해 **두 청크 사이의 최소 지연**을 줄일 수 있지만, 문제와 충돌을 방지하기 위해 훨씬 더 안정적인 네트워크가 필요할 수 있습니다. 기본값은 250ms이고 최소값은 50ms입니다.
 
-The **size of image chunks** sent by Zigbee2MQTT is by default limited to 50 bytes. Similarly, bigger chunks will increase the OTA speed, but reduce network stability. Minimum is 10B and maximum is 100B.  
-Some devices will refuse higher sizes than 50/64 bytes.  
-Zigbee2MQTT will ignore the custom value for some devices and automatically use the correct size that they expect.
+Zigbee2MQTT가 전송하는 **이미지 청크 크기**는 기본적으로 50바이트로 제한됩니다. 마찬가지로 청크 크기가 클수록 OTA 속도가 빨라지지만 네트워크 안정성이 낮아집니다. 최소는 10B이고 최대는 100B입니다.  
+일부 기기는 50/64바이트보다 큰 크기를 거부합니다.  
+Zigbee2MQTT는 일부 기기에 대해 사용자 지정 값을 무시하고 해당 기기가 예상하는 올바른 크기를 자동으로 사용합니다.
 
-### Using custom firmware files or index
+### 사용자 지정 펌웨어 파일 또는 인덱스 사용
 
-Devices can be updated from custom sources, by supplying the firmware files directly, or by listing them in a custom index.
+펌웨어 파일을 직접 제공하거나 사용자 지정 인덱스에 나열하여 사용자 지정 소스에서 기기를 업데이트할 수 있습니다.
 
-:::caution CAUTION
-Improper use of custom OTA index or firmware files can brick devices. Due to the nature of "custom firmware", several of the regular OTA constraints are bypassed in this mode. **Use trusted sources!**
+:::caution 주의
+사용자 지정 OTA 인덱스 또는 펌웨어 파일을 잘못 사용하면 기기를 벽돌로 만들 수 있습니다. "사용자 지정 펌웨어"의 특성상 이 모드에서는 일반적인 OTA 제약 조건이 여러 개 우회됩니다. **신뢰할 수 있는 소스를 사용하세요!**
 :::
 
-An OTA index file is a list of firmware images available in designated locations. By default, Zigbee2MQTT uses the [upgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json), and the [downgrade index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index1.json) from the [zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository.
+OTA 인덱스 파일은 지정된 위치에서 사용 가능한 펌웨어 이미지 목록입니다. 기본적으로 Zigbee2MQTT는 [zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) 저장소의 [업그레이드 인덱스 파일](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json)과 [다운그레이드 인덱스 파일](https://github.com/Koenkk/zigbee-OTA/blob/master/index1.json)을 사용합니다.
 
-A custom update index can be supplied globally (by editing `configuration.yaml`) or per update request. Accepted formats are: local file path (absolute or relative) and web URL.
+사용자 지정 업데이트 인덱스는 전역적으로(`configuration.yaml` 편집) 또는 업데이트 요청별로 제공할 수 있습니다. 허용되는 형식은 로컬 파일 경로(절대 또는 상대)와 웹 URL입니다.
 
-The override OTA index file shall have the same structure as the [zigbee-OTA index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json).
-See the [repository README](https://github.com/Koenkk/zigbee-OTA/tree/master?tab=readme-ov-file#notes-for-maintainers--developers) if an image requires extra metadata.
+재정의 OTA 인덱스 파일은 [zigbee-OTA 인덱스 파일](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json)과 동일한 구조를 가져야 합니다.
+이미지에 추가 메타데이터가 필요한 경우 [저장소 README](https://github.com/Koenkk/zigbee-OTA/tree/master?tab=readme-ov-file#notes-for-maintainers--developers)를 참조하세요.
 
-:::tip TIP
-The following tool can generate indexes and do more helpful operations: [https://nerivec.github.io/zigbee-ota-file-editor/](https://nerivec.github.io/zigbee-ota-file-editor/)
+:::tip 팁
+다음 도구를 사용하면 인덱스를 생성하고 더 유용한 작업을 수행할 수 있습니다: [https://nerivec.github.io/zigbee-ota-file-editor/](https://nerivec.github.io/zigbee-ota-file-editor/)
 :::
 
-If the default Zigbee2MQTT index is inaccessible (e.g. air gapped network), only the local OTA index will be used.  
-If both indexes are available, records in the override index will take precedence over the ones in the default index.
+기본 Zigbee2MQTT 인덱스에 접근할 수 없는 경우(예: 에어갭 네트워크), 로컬 OTA 인덱스만 사용됩니다.  
+두 인덱스가 모두 사용 가능한 경우, 재정의 인덱스의 레코드가 기본 인덱스의 레코드보다 우선합니다.
 
-#### Global index override
+#### 전역 인덱스 재정의
 
-In this example, `my_index.json` is located in the same directory as `configuration.yaml`:
+이 예시에서 `my_index.json`은 `configuration.yaml`과 동일한 디렉토리에 있습니다:
 
 ```yaml
 ota:
     zigbee_ota_override_index_location: my_index.json
-    # or
+    # 또는
     zigbee_ota_override_index_location: https://example.com/ota/index.json
 ```
 
-#### Per request custom index / firmware
+#### 요청별 사용자 지정 인덱스/펌웨어
 
-The following topics support supplying `url` in the payload (also accepting local paths and web URLs) to update with custom files.
+다음 topic들은 페이로드에 `url`을 제공하여(로컬 경로 및 웹 URL도 허용) 사용자 지정 파일로 업데이트할 수 있습니다.
 
-If the pointed location is a JSON file (`*.json`), it will be treated as an index, else as a firmware file.
+지정된 위치가 JSON 파일(`*.json`)이면 인덱스로, 그렇지 않으면 펌웨어 파일로 처리됩니다.
 
-- Only index supported
+- 인덱스만 지원
     - `bridge/request/device/ota_update/check`
     - `bridge/request/device/ota_update/check/downgrade`
-- Index, firmware file and hex data supported
+- 인덱스, 펌웨어 파일 및 hex 데이터 지원
     - `bridge/request/device/ota_update/update`
     - `bridge/request/device/ota_update/update/downgrade`
     - `bridge/request/device/ota_update/schedule`
     - `bridge/request/device/ota_update/schedule/downgrade`
 
-The full OTA file can also be supplied in hex string form: `"hex":{"data":"1EF1EEB0...","file_name":"my-file.ota"}`. The firmware file will be stored in `data/ota/` upon receipt. This is mainly intended for frontend use (where this payload is built from a "file upload" dialog).
+전체 OTA 파일을 hex 문자열 형태로도 제공할 수 있습니다: `"hex":{"data":"1EF1EEB0...","file_name":"my-file.ota"}`. 펌웨어 파일은 수신 시 `data/ota/`에 저장됩니다. 이는 주로 프론트엔드 사용을 위한 것입니다("파일 업로드" 다이얼로그에서 이 페이로드가 생성됩니다).
 
-## Troubleshooting
+## 문제 해결
 
-- `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds, then try OTA again, make sure to activate the device by pressing a button on it right before sending the update request
-- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming. Some devices check for a minimum battery level prior to updating and will refuse to update if too low
-- Make sure your log level is set to `info`. When set to `warning` or `error`, frontend will not report some messages indicating the current OTA status
+- `Device didn't respond to OTA request` 또는 `Update failed with reason: 'aborted by device'`: 전원/배터리를 몇 초간 분리하여 기기를 재시작한 후 OTA를 다시 시도하세요. 업데이트 요청 전에 기기의 버튼을 눌러 활성화하세요.
+- 배터리 구동 기기의 경우 OTA 업데이트는 전력 소모가 매우 크므로 배터리가 70% 이상인지 확인하세요. 일부 기기는 업데이트 전 최소 배터리 수준을 확인하고 너무 낮으면 업데이트를 거부합니다.
+- 로그 수준이 `info`로 설정되어 있는지 확인하세요. `warning` 또는 `error`로 설정되면 프론트엔드에서 현재 OTA 상태를 나타내는 일부 메시지가 표시되지 않습니다.

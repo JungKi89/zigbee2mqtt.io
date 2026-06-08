@@ -2,11 +2,11 @@
 next: pairing_devices.md
 ---
 
-# Usage
+# 사용법
 
-This section will guide you through the features and possibilities of Zigbee2MQTT and how to use them.
+이 섹션에서는 Zigbee2MQTT의 기능과 가능성, 그리고 이를 활용하는 방법을 안내합니다.
 
-Almost any function of Zigbee2MQTT and its paired devices can be controlled using MQTT or the integrated frontend.
-The frontend provides the basic controlling of devices and managing of the features around Zigbee.
-To integrate with other systems MQTT is the way to go. Applications like HomeAssistant, NodeRED and many others
-gives you much possibilities to use visualizations and implement custom logics.
+Zigbee2MQTT와 페어링된 기기의 거의 모든 기능은 MQTT 또는 내장 프론트엔드를 통해 제어할 수 있습니다.
+프론트엔드는 기기의 기본 제어와 Zigbee 관련 기능 관리를 제공합니다.
+다른 시스템과 연동하려면 MQTT를 사용하는 것이 좋습니다. HomeAssistant, NodeRED 등 다양한 애플리케이션을 통해
+시각화를 활용하고 사용자 정의 로직을 구현하는 다양한 가능성을 얻을 수 있습니다.

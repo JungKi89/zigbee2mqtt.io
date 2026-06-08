@@ -3,47 +3,47 @@ sidebar: auto
 redirectFrom: /information/3d_cases.md
 ---
 
-# 3D cases
+# 3D 케이스
 
 ## Texas Instruments launchpad
 
-- Case designs for [TI LAUNCHXL boards for CC1352P1, CC1352P-2 and CC2652R][thingiverse-c1352p1-cc1352p-2-cc2652r-launchxl]
+- [TI LAUNCHXL 보드(CC1352P1, CC1352P-2, CC2652R용) 케이스 디자인][thingiverse-c1352p1-cc1352p-2-cc2652r-launchxl]
 
 ## CC2530
 
-- Case design for a [CC2530 Zigbee minimal case][thingiverse-cc2530-case]
+- [CC2530 Zigbee 미니멀 케이스 디자인][thingiverse-cc2530-case]
 
 ## CC2531
 
-- Case design for a [CC2531 Zigbee dongle][thingiverse-rpi-cc2531-dongle]
+- [CC2531 Zigbee dongle 케이스 디자인][thingiverse-rpi-cc2531-dongle]
 
-## CC2531 with external antenna
+## 외부 안테나를 갖춘 CC2531
 
-- Case design for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-external-antenna]
-- Case design with buttons for a [CC2531 Zigbee dongle with external antenna][thingiverse-rpi-cc2531-dongle-with-buttons]
+- [외부 안테나를 갖춘 CC2531 Zigbee dongle 케이스 디자인][thingiverse-rpi-cc2531-dongle-external-antenna]
+- [외부 안테나를 갖춘 CC2531 Zigbee dongle 버튼 포함 케이스 디자인][thingiverse-rpi-cc2531-dongle-with-buttons]
 
 ## Electrolama zig-a-zig-ah! (zzh!)
 
-- Case design with button for a [Electrolama zig-a-zig-ah! (zzh!)][thingiverse-CC2652R-zzh-case]
+- [Electrolama zig-a-zig-ah! (zzh!) 버튼 포함 케이스 디자인][thingiverse-CC2652R-zzh-case]
 
-## Slaesh's CC2652RB stick
+## Slaesh의 CC2652RB stick
 
-- Case design for a [Slaesh's CC2652RB stick][thingiverse-CC2652RB-slaesh-case]
+- [Slaesh의 CC2652RB stick 케이스 디자인][thingiverse-CC2652RB-slaesh-case]
 
 ## CC2530 + CC2591
 
-- Case design for a [minimal case compatible with the CC2530 + CC2591 combination][thingiverse-cc2530-cc2591-case]
-- Case design with PSU and C7 socket for a [CC2530 + CC2591 + PSU + C7 socket][thingiverse-cc2530-cc2591-case-psu-c7]
-- Case design with PSU HLK-PM03 for a [CC2530 + CC2591 + HLK-PM03][thingiverse-cc2530-cc2591-case-hlk-pm03]
+- [CC2530 + CC2591 조합 호환 미니멀 케이스 디자인][thingiverse-cc2530-cc2591-case]
+- [CC2530 + CC2591 + PSU + C7 소켓 포함 케이스 디자인][thingiverse-cc2530-cc2591-case-psu-c7]
+- [CC2530 + CC2591 + HLK-PM03 PSU 포함 케이스 디자인][thingiverse-cc2530-cc2591-case-hlk-pm03]
 
 ## Raspberry Pi Zero
 
-- Blog post about a [round case for the Raspberry Pi Zero by Jens Willmer][jwillmer-blog-post]. The files can also be found on [Thingiverse][thingiverse-jwillmer-design].
-- [Minimal Pi Zero Case by Jens Willmer][thingiverse-jwillmer-design2]
+- [Jens Willmer의 Raspberry Pi Zero용 원형 케이스 블로그 포스트][jwillmer-blog-post]. 파일은 [Thingiverse][thingiverse-jwillmer-design]에서도 찾을 수 있습니다.
+- [Jens Willmer의 미니멀 Pi Zero 케이스][thingiverse-jwillmer-design2]
 
-## Alternatives
+## 대안
 
-A lot of different case designs can be found via the [Thingiverse search][thingiverse-search-rpi]
+다양한 케이스 디자인은 [Thingiverse 검색][thingiverse-search-rpi]에서 찾을 수 있습니다.
 
 [jwillmer-blog-post]: https://jwillmer.de/blog/tools/raspberry-pi-zero-cc2531-case
 [thingiverse-jwillmer-design]: https://www.thingiverse.com/thing:3101600

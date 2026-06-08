@@ -5,94 +5,94 @@ redirectFrom: /information/binding.md
 
 # Binding
 
-Zigbee supports binding, allowing devices to directly control each other without the intervention of Zigbee2MQTT or any home automation software.
+Zigbee는 binding을 지원하여 Zigbee2MQTT나 홈 오토메이션 소프트웨어의 개입 없이 기기가 서로 직접 제어할 수 있게 합니다.
 
-## When to use this
+## 언제 사용해야 하나요
 
-A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
+binding의 사용 사례로는 예를 들어 TRADFRI wireless dimmer가 있습니다. dimmer를 전구 또는 그룹에 직접 binding하면 다음과 같은 장점이 있습니다:
 
-- **Smoothness:** Improves dimming feedback by directly controlling the bulb, reducing the need for MQTT/home automation software roundtrip.
-- **Reliability:** Works even when home automation software, Zigbee2MQTT, or the coordinator is down.
+- **부드러움:** 전구를 직접 제어하여 디밍 피드백을 개선하고, MQTT/홈 오토메이션 소프트웨어 왕복에 대한 필요성을 줄입니다.
+- **안정성:** 홈 오토메이션 소프트웨어, Zigbee2MQTT 또는 코디네이터가 다운되어도 작동합니다.
 
-## Commands
-
-::: tip
-All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
-:::
-
-Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
-
-By default all supported clusters are bound. To restrict which clusters are being bound/unbound add `clusters` to the request payload e.g. `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. Possible clusters are: `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl` and `closuresWindowCovering`.
-
-When binding reporting is setup on the target device. This makes the target device update their state when it is changed by the source of the bind. When unbinding this reporting is removed again, if you want to skip this use `skip_disable_reporting` (e.g. `{"from": "my_remote", "to": "my_bulb", "skip_disable_reporting": true}`).
-
-When binding/unbinding of a battery powered device fails, this is most of the time caused because the device is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
-
-In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device and the bulb the `TARGET` device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
-
-### Binding specific endpoint
-
-**This is not applicable for most users**
-
-If wanting to bind to specific endpoints instead of the default ones, specify the payload `{"from": SOURCE, "from_endpoint": SOURCE_ENDPOINT, "to": TARGET, "to_endpoint": TARGET_ENDPOINT}` where `SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are the desired endpoints ID or name. Example request payload: `{"from": "my_remote", "from_endpoint": "top", "to": "my_bulb", "to_endpoint": 3}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"top","to":"my_bulb","to_endpoint":3,"clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`
-
-`SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are optional. `SOURCE_ENDPOINT` will default to the default endpoint for the `SOURCE` device if not supplied. `TARGET_ENDPOINT` behaves the same, but is only used if `TARGET` is a device.
+## 명령어
 
 ::: tip
-The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
+아래 모든 명령어는 프론트엔드에서도 실행할 수 있습니다. 기기를 클릭하고 _Bind_ 탭으로 이동하세요.
 :::
 
-### Binding a remote to a group
+Binding은 `zigbee2mqtt/bridge/request/device/bind`를 사용하여 bind하고, `zigbee2mqtt/bridge/request/device/unbind`를 사용하여 unbind할 수 있습니다. 페이로드는 `{"from": SOURCE, "to": TARGET}`이어야 하며, `SOURCE`와 `TARGET`은 그룹 또는 기기의 `friendly_name`일 수 있습니다. 요청 페이로드 예시: `{"from": "my_remote", "to": "my_bulb"}`, 응답 페이로드 예시: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. 응답의 `clusters`는 bind/unbind된 클러스터를 나타내고, `failed`는 bind/unbind에 실패한 클러스터를 나타냅니다. 모든 클러스터 bind에 실패하면 `status`는 `error`로 설정됩니다.
 
-Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2MQTT.
+기본적으로 지원되는 모든 클러스터가 bind됩니다. bind/unbind할 클러스터를 제한하려면 요청 페이로드에 `clusters`를 추가하세요. 예: `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. 가능한 클러스터는 `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl`, `closuresWindowCovering`입니다.
 
-When we for example have an IKEA E1743 remote called `my_remote` and two bulbs called `bulb_1` and `bulb_2`, we can control the 2 bulbs with the remote by putting them in the same group and binding the remote to it.
+binding 시 대상 기기에 리포팅이 설정됩니다. 이로 인해 bind 소스에 의해 상태가 변경될 때 대상 기기가 상태를 업데이트합니다. unbinding 시 이 리포팅은 다시 제거됩니다. 이를 건너뛰려면 `skip_disable_reporting`을 사용하세요(예: `{"from": "my_remote", "to": "my_bulb", "skip_disable_reporting": true}`).
 
-To do this execute the following steps:
+배터리 구동 기기의 binding/unbinding이 실패하는 경우, 대부분 기기가 절전 상태이기 때문입니다. MQTT 메시지를 전송하기 바로 전에 리모컨 버튼을 눌러 기기를 깨울 수 있습니다.
 
-1. Create a new group in `configuration.yaml` and give it a `friendly_name` (see [Groups](./groups.md)). In this example we will set the `friendly_name` to `my_group`.
-2. Add the 2 bulbs to the group by sending the following two MQTT messages.
-    - `zigbee2mqtt/bridge/request/group/members/add` with payload `{"group":"my_group","device":"bulb_1"}`
-    - `zigbee2mqtt/bridge/request/group/members/add` with payload `{"group":"my_group","device":"bulb_2"}`
-3. Bind the remote to the group by sending the following MQTT message.
-    - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
+위의 예시에서 TRADFRI wireless dimmer가 `SOURCE` 기기이고 전구가 `TARGET` 기기입니다. 그룹을 대상으로 사용할 때는 그룹의 friendly_name을 사용해야 하며, 그룹 ID는 작동하지 않습니다.
 
-### Clearing bindings
+### 특정 엔드포인트에 binding
 
-Using `zigbee2mqtt/bridge/request/device/binds/clear`, bindings can be all or selectively cleared.
+**대부분의 사용자에게는 해당되지 않습니다**
 
-To clear all bindings, just send the topic with the payload e.g. `{"target": "my_device"}`.
+기본 엔드포인트 대신 특정 엔드포인트에 bind하려면 페이로드 `{"from": SOURCE, "from_endpoint": SOURCE_ENDPOINT, "to": TARGET, "to_endpoint": TARGET_ENDPOINT}`를 지정하세요. `SOURCE_ENDPOINT`와 `TARGET_ENDPOINT`는 원하는 엔드포인트 ID 또는 이름입니다. 요청 페이로드 예시: `{"from": "my_remote", "from_endpoint": "top", "to": "my_bulb", "to_endpoint": 3}`, 응답 페이로드 예시: `{"data":{"from":"my_remote","from_endpoint":"top","to":"my_bulb","to_endpoint":3,"clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`
 
-To selectively clear bindings by IEEE address, send the topic with the payload e.g. `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}`.
+`SOURCE_ENDPOINT`와 `TARGET_ENDPOINT`는 선택사항입니다. `SOURCE_ENDPOINT`를 지정하지 않으면 `SOURCE` 기기의 기본 엔드포인트가 사용됩니다. `TARGET_ENDPOINT`도 마찬가지이나, `TARGET`이 기기일 때만 사용됩니다.
 
 ::: tip
-Clearing bindings will automatically adjust the cached data that Zigbee2MQTT uses internally based on the request/response. After successfully executing this requests, bindings in Zigbee2MQTT should reflect actual bindings on the device.
+기기의 기본 엔드포인트는 첫 번째 등록된 엔드포인트입니다(대부분 엔드포인트 ID 1).
 :::
 
-## Devices
+### 리모컨을 그룹에 binding
 
-Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
+리모컨을 그룹에 binding하면 Zigbee2MQTT의 개입 없이 리모컨이 기기 그룹을 직접 제어할 수 있습니다.
 
-## State changes
+예를 들어 `my_remote`라는 IKEA E1743 리모컨과 `bulb_1`, `bulb_2`라는 두 개의 전구가 있을 때, 두 전구를 같은 그룹에 넣고 리모컨을 해당 그룹에 binding하면 리모컨으로 두 전구를 제어할 수 있습니다.
 
-When a devices is being bound to, Zigbee2MQTT will automatically configure reporting for these devices. This will make the device report state changes when the state is changed through a bound device.
+이를 위해 다음 단계를 수행하세요:
 
-In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
+1. `configuration.yaml`에 새 그룹을 만들고 `friendly_name`을 지정하세요([그룹(Groups)](./groups.md) 참조). 이 예시에서는 `friendly_name`을 `my_group`으로 설정합니다.
+2. 다음 두 MQTT 메시지를 전송하여 두 전구를 그룹에 추가합니다.
+    - `zigbee2mqtt/bridge/request/group/members/add`에 페이로드 `{"group":"my_group","device":"bulb_1"}`
+    - `zigbee2mqtt/bridge/request/group/members/add`에 페이로드 `{"group":"my_group","device":"bulb_2"}`
+3. 다음 MQTT 메시지를 전송하여 리모컨을 그룹에 binding합니다.
+    - `zigbee2mqtt/bridge/request/device/bind`에 페이로드 `{"from": "my_remote", "to": "my_group"}`
 
-| Brand              | On/Off | Brightness | Color | Color temperature | Color mode |
-| :----------------- | :----: | :--------: | :---: | :---------------: | :--------: |
-| Philips Hue (old)  |   N¹   |     N²     |   N   |         N         |     N      |
-| Philips Hue (new³) |   Y    |     Y      |   Y   |         Y         |     N      |
-| IKEA               |   Y    |     Y      |   Y   |         Y         |     Y      |
-| Innr               |   Y    |     Y      |   Y   |         Y         |     Y      |
-| GLEDOPTO           |   N    |     N      |   N   |         N         |     N      |
-| OSRAM              |   Y    |     Y      |   N   |         N         |     Y      |
-| Müller Licht       |   N    |     N      |   N   |         N         |     Y      |
+### Binding 해제 (Clearing bindings)
 
-1. Bulbs on old firmware (date 20170908 or older) do report On/Off
-2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
-3. Lamps & bulbs released starting around 2019
+`zigbee2mqtt/bridge/request/device/binds/clear`를 사용하여 binding을 전체 또는 선택적으로 해제할 수 있습니다.
 
-If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
+모든 binding을 해제하려면 예를 들어 `{"target": "my_device"}` 페이로드로 topic을 전송하세요.
 
-Any manual setup reportings of the clusters `genOnOff`, `genLevelCtrl` `lightingColorCtrl` and `closuresWindowCovering` will be removed if there are no binds to the device or group a device is in when unbinding. You have to setup these reportings again.
+IEEE 주소로 선택적 binding 해제는 예를 들어 `{"target": "my_deivce", "ieee_list": ["0xa1a2a3a4a5a6a7a8", "0xb1b2b3b4b5b6b7b8"]}` 페이로드로 topic을 전송하세요.
+
+::: tip
+Binding을 해제하면 요청/응답에 따라 Zigbee2MQTT가 내부적으로 사용하는 캐시 데이터가 자동으로 업데이트됩니다. 이 요청이 성공적으로 실행된 후 Zigbee2MQTT의 binding은 기기의 실제 binding을 반영해야 합니다.
+:::
+
+## 기기
+
+모든 기기가 이를 지원하지는 않으며, 기본적으로 기기 자체의 Zigbee 구현에 달려 있습니다. 자세한 내용은 기기별 페이지(지원 기기 페이지를 통해 접근 가능)를 확인하세요.
+
+## 상태 변경
+
+기기에 binding이 설정되면 Zigbee2MQTT가 해당 기기에 대한 리포팅을 자동으로 구성합니다. 이로 인해 bound 기기를 통해 상태가 변경될 때 기기가 상태 변경을 보고합니다.
+
+이 기능이 작동하려면 기기가 이를 지원해야 합니다. 같은 제조사의 기기는 (대부분) 동일한 기능을 갖고 있으므로, 아래 표가 기기의 지원 여부를 파악하는 데 도움이 될 것입니다.
+
+| 브랜드              | 켜기/끄기 | 밝기 | 색상 | 색온도 | 색상 모드 |
+| :------------------ | :-------: | :--: | :--: | :----: | :-------: |
+| Philips Hue (구형)  |    N¹     |  N²  |  N   |   N    |     N     |
+| Philips Hue (신형³) |     Y     |  Y   |  Y   |   Y    |     N     |
+| IKEA                |     Y     |  Y   |  Y   |   Y    |     Y     |
+| Innr                |     Y     |  Y   |  Y   |   Y    |     Y     |
+| GLEDOPTO            |     N     |  N   |  N   |   N    |     N     |
+| OSRAM               |     Y     |  Y   |  N   |   N    |     Y     |
+| Müller Licht        |     N     |  N   |  N   |   N    |     Y     |
+
+1. 구형 펌웨어(날짜 20170908 이하)의 전구는 켜기/끄기를 보고합니다.
+2. binding이 전구를 업데이트하면 Zigbee2MQTT가 수동으로 변경 사항을 폴링합니다.
+3. 2019년경부터 출시된 램프 및 전구
+
+기기가 리포팅을 **지원하지 않는** 경우, 기기를 그룹에 추가하고 리모컨을 기기에 직접 binding하는 대신 그룹에 binding하세요. 이렇게 하면 bound 리모컨이 기기를 제어할 때 Zigbee2MQTT가 기기를 폴링하여 업데이트를 확인합니다. 트래픽을 최소화하기 위해 모든 기기에 대해 활성화되지 않았습니다. 작동하지 않는 경우 [여기](https://github.com/Koenkk/zigbee2mqtt/issues)에 이슈를 생성해 주세요.
+
+unbinding 시 기기 또는 기기가 속한 그룹에 binding이 없으면, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl`, `closuresWindowCovering` 클러스터의 수동 설정 리포팅이 제거됩니다. 이러한 리포팅을 다시 설정해야 합니다.

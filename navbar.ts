@@ -11,22 +11,22 @@ export function getFiles(dir: string) {
 
 export const navbar: NavbarOptions = [
     {
-        text: 'Guide',
+        text: '가이드',
         children: [
             '/guide/getting-started/',
             {
                 link: '/guide/adapters/',
-                text: 'Supported Adapters',
+                text: '지원 어댑터',
                 activeMatch: '(/guide/adapters/|/guide/supported-hardware)',
             },
             {
-                text: 'Supported Devices',
+                text: '지원 디바이스',
                 link: '/supported-devices/',
             },
             '/guide/installation/',
             '/guide/configuration/',
             {
-                text: 'Usage',
+                text: '사용법',
                 link: '/guide/usage/pairing_devices.md',
                 activeMatch: '/guide/usage/',
             },
@@ -34,24 +34,24 @@ export const navbar: NavbarOptions = [
         ],
     },
     {
-        text: 'Devices',
+        text: '디바이스',
         link: '/supported-devices/',
         activeMatch: '^/(supported-)?devices/',
     },
     {
-        text: 'Advanced',
+        text: '고급',
         children: [
             {text: 'Zigbee', children: getFiles('advanced/zigbee')},
-            {text: 'Support new devices', children: getFiles('advanced/support-new-devices')},
-            {text: 'Remote Adapter', children: getFiles('advanced/remote-adapter')},
-            {text: 'More', children: getFiles('advanced/more')},
+            {text: '새 디바이스 지원', children: getFiles('advanced/support-new-devices')},
+            {text: '원격 어댑터', children: getFiles('advanced/remote-adapter')},
+            {text: '더보기', children: getFiles('advanced/more')},
         ],
     },
     {
-        text: 'Support',
+        text: '지원',
         children: [
             {
-                text: 'Forum',
+                text: '포럼',
                 link: 'https://github.com/Koenkk/zigbee2mqtt/discussions',
             },
             {
@@ -59,11 +59,11 @@ export const navbar: NavbarOptions = [
                 link: 'https://discord.gg/NyseBeK',
             },
             {
-                text: 'Issues',
+                text: '이슈',
                 link: 'https://github.com/Koenkk/zigbee2mqtt/issues',
             },
             {
-                text: 'Donate',
+                text: '기부',
                 link: 'https://github.com/Koenkk/zigbee2mqtt',
             },
         ],

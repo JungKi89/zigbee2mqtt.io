@@ -6,48 +6,48 @@ sidebar: auto
 
 ## MQTT discovery
 
-The easiest way to integrate Zigbee2MQTT with Home Assistant is by
-using [MQTT discovery](https://www.home-assistant.io/integrations/mqtt#mqtt-discovery).
-This allows Zigbee2MQTT to automatically add devices to Home Assistant.
+Zigbee2MQTT를 Home Assistant와 연동하는 가장 쉬운 방법은
+[MQTT discovery](https://www.home-assistant.io/integrations/mqtt#mqtt-discovery)를 사용하는 것입니다.
+이를 통해 Zigbee2MQTT가 기기를 Home Assistant에 자동으로 추가할 수 있습니다.
 
-To achieve the best possible integration (including MQTT discovery):
+최상의 연동(MQTT discovery 포함)을 위해:
 
-- In your **Zigbee2MQTT** `configuration.yaml` set:
+- **Zigbee2MQTT** `configuration.yaml`에 다음을 설정하세요:
 
     ```yaml
     homeassistant:
         enabled: true
     ```
 
-- Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
+- Home Assistant에서 [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)을 활성화하세요.
 
-## Device/group page
+## 기기/그룹 페이지
 
-Since Home Assistant 2021.11 the device/group page in Home Assistant can directly link to the frontend (_Visit device_ button).
-To enable this set the `url` in the [frontend](../../configuration/frontend.md) configuration.
+Home Assistant 2021.11부터 Home Assistant의 기기/그룹 페이지에서 프론트엔드로 직접 연결할 수 있습니다(_기기 방문_ 버튼).
+이를 활성화하려면 [frontend](../../configuration/frontend.md) 설정에서 `url`을 설정하세요.
 
-## Home Assistant device registry
+## Home Assistant 기기 레지스트리
 
-When using Home Assistant MQTT discovery, Zigbee2MQTT integrates
-with the [Home Assistant device registry](https://developers.home-assistant.io/docs/en/device_registry_index.html).
-This allows you to change the Home Assistant `entity_id` and `friendly_name` from the Home Assistant web interface
-without having to restart Home Assistant. It also makes it possible to show which entities belong to which device.
+Home Assistant MQTT discovery를 사용할 때, Zigbee2MQTT는
+[Home Assistant 기기 레지스트리](https://developers.home-assistant.io/docs/en/device_registry_index.html)와 연동됩니다.
+이를 통해 Home Assistant를 재시작하지 않고도 Home Assistant 웹 인터페이스에서 `entity_id`와 `friendly_name`을 변경할 수 있습니다.
+또한 어떤 엔티티가 어떤 기기에 속하는지 표시할 수 있습니다.
 
-![Changing name and device ID via web interface](../../../images/home_assistant_change_name.png)
+![웹 인터페이스를 통한 이름 및 기기 ID 변경](../../../images/home_assistant_change_name.png)
 
-![Device registry](../../../images/home_assistant_device_registry.png)
+![기기 레지스트리](../../../images/home_assistant_device_registry.png)
 
-## Customizing discovery
+## discovery 사용자 정의
 
-The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
+기기별 설정을 통해 discovery 페이로드를 수정할 수 있습니다. 여기서 기기가 discovery되지 않도록 방지할 수도 있습니다. 사용 가능한 옵션은 [기기별 설정](../../configuration/devices-groups.html#specific-device-options)을 참조하세요.
 
-## Responding to button actions
+## 버튼 액션에 응답하기
 
-To respond to button actions you can use one of the following Home Assistant configurations.
+버튼 액션에 응답하려면 다음 Home Assistant 설정 중 하나를 사용할 수 있습니다.
 
-### Via MQTT device trigger (recommended)
+### MQTT 기기 트리거를 통한 방법 (권장)
 
-The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+[MQTT 기기 트리거](https://www.home-assistant.io/integrations/device_trigger.mqtt/)는 Zigbee2MQTT에 의해 **기기에서 이벤트가 최소 한 번 트리거된 후** discovery됩니다.
 
 ```yaml
 automation:
@@ -64,11 +64,11 @@ automation:
                 entity_id: light.bedroom
 ```
 
-### Via Home Assistant `event` entity (experimental)
+### Home Assistant `event` 엔티티를 통한 방법 (실험적)
 
-Note: `event` entity is **experimental** and may **break** in the future.
+참고: `event` 엔티티는 **실험적**이며 향후 **변경될 수 있습니다**.
 
-This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targeted via the `event_type` attribute. Until the implementation becomes finalized, the event types and additional attributes are subject to change and you have to enable `event` entities explicitly by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+이 방법은 [`event` 엔티티](https://www.home-assistant.io/integrations/event)의 상태 변경에 응답하는 방식으로 작동합니다. 특정 이벤트는 `event_type` 속성을 통해 지정할 수 있습니다. 구현이 확정될 때까지 이벤트 타입 및 추가 속성은 변경될 수 있으며, `homeassistant: {experimental_event_entities: true}`를 설정하여 `event` 엔티티를 명시적으로 활성화해야 합니다(자세한 내용은 [설정](../../configuration/homeassistant.md) 참조).
 
 ```yaml
 automation:
@@ -88,12 +88,12 @@ automation:
                 entity_id: light.bedroom
 ```
 
-### Via Home Assistant action sensor (deprecated)
+### Home Assistant 액션 센서를 통한 방법 (deprecated)
 
-This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
+이 방법은 센서의 상태 변경 이벤트에 응답하는 방식으로 작동합니다. 이를 위해 `configuration.yaml`에 `homeassistant.legacy_action_sensor: true`를 설정해야 합니다. 자세한 내용은 [문서](../../configuration/homeassistant.md)를 참조하세요.
 
 ::: warning
-Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
+이 기능은 deprecated 상태이며 향후 제거될 예정입니다. 대신 MQTT 기기 트리거를 사용하는 것을 권장합니다.
 :::
 
 ```yaml
@@ -108,20 +108,20 @@ automation:
           service: light.toggle
 ```
 
-## Groups
+## 그룹(Groups)
 
-Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
-Group discovery properties can be overridden via `groups.<id>.homeassistant` in the Zigbee2MQTT configuration.
+그룹 discovery는 조명, 스위치, 잠금장치, 커버 그룹에 대해 지원됩니다. 다른 타입의 경우 Home Assistant `configuration.yaml`에 수동으로 설정을 추가해야 합니다.
+그룹 discovery 속성은 Zigbee2MQTT 설정에서 `groups.<id>.homeassistant`를 통해 재정의할 수 있습니다.
 
-## Overriding discovery properties
+## discovery 속성 재정의
 
-Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
+모든 Home Assistant MQTT discovery 속성은 기기별로 재정의할 수 있습니다. 아래에 두 가지 예시가 나와 있습니다. discovery 속성의 전체 및 최신 목록은 [Home Assistant MQTT Discovery 연동](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) 및 Zigbee2MQTT 소스 코드의 [Home Assistant 확장](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts)을 참조하세요.
 
-### Changing `supported_color_modes`
+### `supported_color_modes` 변경
 
-This is useful for switching light bulbs from reporting values from X/Y (which is the default) to reporting in hue / saturation (which is what bulbs report color in when changing via hue or saturation, such as with the `hue_move` and `saturation_move` commands).
+이는 전구가 X/Y(기본값)로 값을 보고하는 방식에서 색조/채도(hue/saturation)로 전환할 때 유용합니다(`hue_move` 및 `saturation_move` 명령처럼 색조 또는 채도를 통해 변경할 때 전구가 색상을 보고하는 방식).
 
-This example changes a [light's `supported_color_modes` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#supported_color_modes) to hue / saturation and color temperature:
+이 예시는 [조명의 `supported_color_modes` discovery 속성](https://www.home-assistant.io/integrations/light.mqtt/#supported_color_modes)을 색조/채도 및 색온도로 변경합니다:
 
 ```yaml
 devices:
@@ -132,9 +132,9 @@ devices:
                 supported_color_modes: ['hs', 'color_temp']
 ```
 
-### Exposing switch as a light
+### 스위치를 조명으로 노출하기
 
-If your device is currently discovered as a switch and you want to discover it as a light, the following config in the Zigbee2MQTT `configuration.yaml` can be used:
+기기가 현재 스위치로 discovery되고 있고 조명으로 discovery하고 싶다면, Zigbee2MQTT `configuration.yaml`에서 다음 설정을 사용할 수 있습니다:
 
 ```yaml
 devices:
@@ -148,7 +148,7 @@ devices:
                 name: null
                 value_template: null
                 state_value_template: '{{ value_json.state }}'
-            # OR if your devices has multiple endpoints (e.g. left/right)
+            # 또는 기기에 여러 엔드포인트가 있는 경우(예: left/right)
             switch_left:
                 type: light
                 object_id: light_left
@@ -165,11 +165,11 @@ devices:
                 state_value_template: '{{ value_json.state_right }}'
 ```
 
-### Changing device properties
+### 기기 속성 변경
 
-As an advanced example to show changing any MQTT property can be overridden, the following configuration changes the `suggested_area` property of the `device`. The example shows that you can just copy the given MQTT discovery hierarchy underneath the `homeassistant` property (given that `suggested_area` is underneath the `device` property). Please note, that other `device` properties are possibly set by Zigbee2MQTT (e.g. `manufacturer`).
+MQTT 속성 재정의가 가능한 고급 예시로, 다음 설정은 `device`의 `suggested_area` 속성을 변경합니다. 이 예시는 `homeassistant` 속성 아래에 주어진 MQTT discovery 계층 구조를 그대로 복사할 수 있음을 보여줍니다(`suggested_area`가 `device` 속성 아래에 있는 경우). 참고로 다른 `device` 속성은 Zigbee2MQTT에 의해 설정될 수 있습니다(예: `manufacturer`).
 
-This example changes the [light's device's `suggested area` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#device) to "Living Room":
+이 예시는 [조명 기기의 `suggested area` discovery 속성](https://www.home-assistant.io/integrations/light.mqtt/#device)을 "Living Room"으로 변경합니다:
 
 ```yaml
 devices:
@@ -180,9 +180,9 @@ devices:
                 suggested_area: 'Living Room'
 ```
 
-## Using a custom name for the device and entities
+## 기기 및 엔티티에 사용자 정의 이름 사용하기
 
-In order to get a more readable name for the device and entities in Home Assistant, a specific name for Home Assistant can be set in the device configuration. If set, this name will be used instead of `friendly_name`.
+Home Assistant에서 기기 및 엔티티에 더 읽기 쉬운 이름을 표시하려면 기기 설정에서 Home Assistant용 특정 이름을 설정할 수 있습니다. 설정된 경우 `friendly_name` 대신 이 이름이 사용됩니다.
 
 ```yaml
 devices:
@@ -192,14 +192,14 @@ devices:
             name: Living Room Temperature Sensor
 ```
 
-## Controlling Zigbee2MQTT via Home Assistant
+## Home Assistant를 통해 Zigbee2MQTT 제어하기
 
-The following Home Assistant configuration allows you to control Zigbee2MQTT from Home Assistant.
+다음 Home Assistant 설정을 통해 Home Assistant에서 Zigbee2MQTT를 제어할 수 있습니다.
 
-You can add it to the appropriate section of your `configuration.yaml`, or you can add it as a [Home Assistant Package](https://www.home-assistant.io/docs/configuration/packages/) by adding the following to `zigbee2mqtt.yaml` in your packages folder.
+`configuration.yaml`의 적절한 섹션에 추가하거나, 패키지 폴더의 `zigbee2mqtt.yaml`에 다음 내용을 추가하여 [Home Assistant Package](https://www.home-assistant.io/docs/configuration/packages/)로 추가할 수 있습니다.
 
 ```yaml
-# Input number for joining time remaining (in minutes)
+# 참가 남은 시간(분)을 위한 input number
 input_number:
     zigbee2mqtt_join_minutes:
         name: 'Zigbee2MQTT join minutes'
@@ -209,14 +209,14 @@ input_number:
         step: 1
         mode: slider
 
-# Input text to input Zigbee2MQTT friendly_name for scripts
+# 스크립트용 Zigbee2MQTT friendly_name 입력을 위한 input text
 input_text:
     zigbee2mqtt_new_name:
         name: Zigbee2MQTT New Name
         initial: ''
         icon: 'mdi:moon-new'
 
-# Input select for choosing Zigbee2MQTT devices
+# Zigbee2MQTT 기기 선택을 위한 input select
 input_select:
     zigbee2mqtt_old_name_select:
         name: Zigbee2MQTT Old Name
@@ -229,14 +229,14 @@ input_select:
         options:
             - Initial Option
 
-# Input boolean to set the force remove flag for devices
+# 기기의 강제 제거 플래그 설정을 위한 input boolean
 input_boolean:
     zigbee2mqtt_force_remove:
         name: Zigbee2MQTT Force Remove
         initial: false
         icon: mdi:alert-remove
 
-# Scripts for renaming & removing devices
+# 기기 이름 변경 및 제거를 위한 스크립트
 script:
     zigbee2mqtt_rename:
         alias: Zigbee2MQTT Rename
@@ -326,7 +326,7 @@ automation:
       mode: single
 ```
 
-The following is an example lovelace card configuration.
+다음은 lovelace 카드 설정 예시입니다.
 
 ```yaml
 title: Zigbee2MQTT
@@ -349,6 +349,6 @@ entities:
     - entity: script.zigbee2mqtt_remove
 ```
 
-## Zigbee Network Map (Custom Card)
+## Zigbee 네트워크 맵 (커스텀 카드)
 
 [Zigbee Network Map Home Assistant Custom Card](https://github.com/azuwis/zigbee2mqtt-networkmap/).

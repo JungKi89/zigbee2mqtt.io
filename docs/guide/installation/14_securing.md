@@ -6,41 +6,41 @@ redirectFrom:
     - /advanced/zigbee/03_secure_network.md
 ---
 
-# Securing the installation
+# 설치 보안
 
 ::: warning
-This page provides an overview of how security applies to a typical installation.
-Each setup being slightly different, not all, and/or more, could apply.
+이 페이지는 일반적인 설치에서 보안이 어떻게 적용되는지 개요를 제공합니다.
+설정마다 약간씩 다를 수 있으므로, 전부 해당되지 않을 수도 있고 추가적인 사항이 있을 수도 있습니다.
 :::
 
-A useful way to think about Zigbee2MQTT in terms of security is to compare it to the software running on a network router: it provides configuration and control of a network.
-As such, it is, by default, only locally accessible.
+Zigbee2MQTT를 보안 관점에서 이해하는 유용한 방법은 네트워크 라우터에서 실행되는 소프트웨어와 비교하는 것입니다: 네트워크의 설정과 제어를 담당합니다.
+따라서 기본적으로 로컬에서만 접근 가능합니다.
 
-With Zigbee2MQTT being a bridge, the various software components attached to it (MQTT broker, automation software, etc.) must each be secured properly as well. Refer to their respective documentation.
+Zigbee2MQTT는 브리지이므로, 연결된 다양한 소프트웨어 구성 요소(MQTT 브로커, 자동화 소프트웨어 등)도 각각 적절히 보안 설정을 해야 합니다. 각 소프트웨어의 공식 문서를 참고하세요.
 
-Exposing any of these components publicly requires careful security planning.
-Untrusted access must never be permitted.
+이러한 구성 요소를 공개적으로 노출하려면 신중한 보안 계획이 필요합니다.
+신뢰할 수 없는 접근은 절대 허용해서는 안 됩니다.
 
-## Host system
+## 호스트 시스템
 
-- **Dedicated user**: run Zigbee2MQTT under a dedicated, unprivileged user account (not `root`). This limits the blast radius if the process is ever compromised.
-- **Restrict data directory access**: the data directory contains the full configuration, network state, and device data. Only the Zigbee2MQTT user should have access to it.
-- **Keep the host system up to date**: apply operating system and dependency (Node.js, MQTT broker, etc.) security updates regularly and keep Zigbee2MQTT itself updated.
+- **전용 사용자**: 전용의 권한이 없는 사용자 계정(`root` 아님)으로 Zigbee2MQTT를 실행합니다. 이는 프로세스가 침해될 경우 피해 범위를 제한합니다.
+- **data 디렉토리 접근 제한**: data 디렉토리에는 전체 설정, 네트워크 상태, 장치 데이터가 포함됩니다. Zigbee2MQTT 사용자만 접근할 수 있어야 합니다.
+- **호스트 시스템 최신 상태 유지**: 운영 체제 및 의존성(Node.js, MQTT 브로커 등)의 보안 업데이트를 정기적으로 적용하고 Zigbee2MQTT 자체도 업데이트된 상태를 유지합니다.
 
-## Configuration file
+## 설정 파일
 
-The `configuration.yaml` file contains sensitive information such as MQTT credentials and the Zigbee network key.
+`configuration.yaml` 파일에는 MQTT 자격 증명 및 Zigbee 네트워크 키와 같은 민감한 정보가 포함되어 있습니다.
 
-- **Restrict file permissions**: ensure only the user running Zigbee2MQTT can read/write the file.
+- **파일 권한 제한**: Zigbee2MQTT를 실행하는 사용자만 파일을 읽고 쓸 수 있도록 합니다.
 
     ```bash
     chmod 600 configuration.yaml
     ```
 
-- **Use a secrets file**: avoid storing credentials in plain text in `configuration.yaml`.
-  Instead, use a separate `secret.yaml` file referenced with the `!secret.yaml` syntax. See [Specifying in a different file](../configuration/mqtt.md#specifying-mqtt-serveruserpassword-and-network_key-in-a-different-file).
+- **secrets 파일 사용**: `configuration.yaml`에 자격 증명을 평문으로 저장하지 않습니다.
+  대신 `!secret.yaml` 구문을 사용하여 참조하는 별도의 `secret.yaml` 파일을 사용합니다. [다른 파일에서 지정하기](../configuration/mqtt.md#specifying-mqtt-serveruserpassword-and-network_key-in-a-different-file)를 참고하세요.
 
-    Apply the same permission restriction to `secret.yaml`:
+    `secret.yaml`에도 동일한 권한 제한을 적용합니다:
 
     ```bash
     chmod 600 secret.yaml
@@ -48,179 +48,179 @@ The `configuration.yaml` file contains sensitive information such as MQTT creden
 
 ## MQTT
 
-MQTT is the primary entry point in and out of Zigbee2MQTT.
-It is used to publish data and to control every aspect of Zigbee2MQTT (configuration, network, devices, etc.).
+MQTT는 Zigbee2MQTT의 주요 입출력 경로입니다.
+데이터를 발행하고 Zigbee2MQTT의 모든 측면(설정, 네트워크, 장치 등)을 제어하는 데 사용됩니다.
 
-See [MQTT configuration](../configuration/mqtt.md) for the full reference.
+전체 참조는 [MQTT 설정](../configuration/mqtt.md)을 참고하세요.
 
-:::caution CAUTION
-Do not expose the MQTT broker publicly without securing its access.
-Refer to the available documentation and guides for your broker.
+:::caution 주의
+접근 보안 없이 MQTT 브로커를 공개적으로 노출하지 마세요.
+브로커에 대한 사용 가능한 문서와 가이드를 참고하세요.
 :::
 
-:::caution CAUTION
-Using `reject_unauthorized: false` in production is dangerous. Its disables TLS certificate validation and makes the connection vulnerable.
+:::caution 주의
+프로덕션 환경에서 `reject_unauthorized: false`를 사용하는 것은 위험합니다. TLS 인증서 검증을 비활성화하여 연결을 취약하게 만듭니다.
 :::
 
 ## Frontend
 
-The frontend uses the same API as MQTT, but wrapped in a [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) for in-browser access.
-Anyone who can reach the frontend has full control over Zigbee2MQTT, same as MQTT.
+Frontend는 MQTT와 동일한 API를 사용하지만, 브라우저 내 접근을 위해 [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)으로 래핑됩니다.
+Frontend에 접근할 수 있는 사람은 MQTT와 동일하게 Zigbee2MQTT를 완전히 제어할 수 있습니다.
 
-:::caution CAUTION
-Do not expose the frontend publicly without securing its access.
+:::caution 주의
+접근 보안 없이 frontend를 공개적으로 노출하지 마세요.
 :::
 
-### Authentication
+### 인증
 
-Enable token-based authentication with the [`auth_token` option](../configuration/frontend.md#advanced-configuration).
+[`auth_token` 옵션](../configuration/frontend.md#advanced-configuration)을 사용하여 토큰 기반 인증을 활성화합니다.
 
-Use the same precautions as any password.
-Store it in `secret.yaml` (see [Configuration file](#configuration-file)) rather than directly in `configuration.yaml`.
+비밀번호와 동일한 주의를 기울여 사용합니다.
+`configuration.yaml`에 직접 저장하지 말고 `secret.yaml`에 저장합니다([설정 파일](#설정-파일) 참고).
 
-### Encryption (HTTPS / WSS)
+### 암호화 (HTTPS / WSS)
 
-Enable HTTPS/WSS directly within Zigbee2MQTT by providing a [certificate and private key](../configuration/frontend.md#advanced-configuration).
+[인증서 및 개인 키](../configuration/frontend.md#advanced-configuration)를 제공하여 Zigbee2MQTT 내에서 직접 HTTPS/WSS를 활성화합니다.
 
-Alternatively, terminate TLS at a reverse proxy (Nginx, Apache, etc.) placed in front of the frontend.
-See [Frontend configuration](../configuration/frontend.md) for proxy configuration examples.
+또는 frontend 앞에 배치된 리버스 프록시(Nginx, Apache 등)에서 TLS를 종료합니다.
+프록시 설정 예시는 [Frontend 설정](../configuration/frontend.md)을 참고하세요.
 
-### Bind address
+### 바인드 주소
 
-By default, the frontend listens on all interfaces (`0.0.0.0`).
-If remote access is not required, restrict it to localhost:
+기본적으로 frontend는 모든 인터페이스(`0.0.0.0`)에서 수신 대기합니다.
+원격 접근이 필요하지 않은 경우 localhost로 제한합니다:
 
 ```yaml
 frontend:
     host: 127.0.0.1
 ```
 
-Alternatively, use a Unix socket to avoid any network exposure:
+또는 Unix 소켓을 사용하여 네트워크 노출을 완전히 피할 수 있습니다:
 
 ```yaml
 frontend:
     host: '/run/zigbee2mqtt/zigbee2mqtt.sock'
 ```
 
-:::warning WARNING
-Beware of the specific requirements of some systems in this regard (Docker, Home Assistant, etc.).
+:::warning 경고
+이와 관련하여 일부 시스템(Docker, Home Assistant 등)의 특정 요구 사항에 주의하세요.
 :::
 
-## Zigbee network
+## Zigbee 네트워크
 
-### Network encryption key
+### 네트워크 암호화 키
 
-Zigbee communication is encrypted using a 128-bit network key.
+Zigbee 통신은 128비트 네트워크 키를 사용하여 암호화됩니다.
 
-:::caution CAUTION
-Changing this key requires re-pairing all devices.
+:::caution 주의
+이 키를 변경하면 모든 장치를 재페어링해야 합니다.
 :::
 
-:::caution CAUTION
-If you are currently running a network with the old default key `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]`, it is strongly suggested you change it.
+:::caution 주의
+현재 기존 기본 키 `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]`로 네트워크를 운영 중인 경우, 키를 변경하는 것을 강력히 권장합니다.
 :::
 
-To generate a new random key on next startup, use [Onboarding](../getting-started/README.md#onboarding), or update it manually:
+다음 시작 시 새로운 랜덤 키를 생성하려면 [온보딩](../getting-started/README.md#onboarding)을 사용하거나 수동으로 업데이트합니다:
 
 ```yaml
 advanced:
     network_key: GENERATE
 ```
 
-Zigbee2MQTT will replace `GENERATE` with a randomly generated key on startup.
-Of course, you can also set a specific key manually.
+Zigbee2MQTT는 시작 시 `GENERATE`를 무작위로 생성된 키로 교체합니다.
+물론 특정 키를 수동으로 설정할 수도 있습니다.
 
-See [Zigbee network configuration](../configuration/zigbee-network.md) for more details.
+자세한 내용은 [Zigbee 네트워크 설정](../configuration/zigbee-network.md)을 참고하세요.
 
-### PAN ID and Extended PAN ID
+### PAN ID 및 Extended PAN ID
 
-The PAN ID and Extended PAN ID identify your network. These are not security measures.
+PAN ID와 Extended PAN ID는 네트워크를 식별합니다. 이것들은 보안 수단이 아닙니다.
 
-Changing them is possible and requires re-pairing all devices.
-This is mostly done in case you need to avoid a conflict with another nearby network.
+변경은 가능하지만 모든 장치를 재페어링해야 합니다.
+주로 근처의 다른 네트워크와의 충돌을 피해야 할 때 사용합니다.
 
-### IEEE and Network addresses
+### IEEE 및 네트워크 주소
 
-The IEEE and Network addresses identify your devices. These are not security measures.
+IEEE 주소와 네트워크 주소는 장치를 식별합니다. 이것들은 보안 수단이 아닙니다.
 
-The IEEE address is statically assigned to the Zigbee chip in the device (although it can be changed in some cases).
-Two devices with the same IEEE address cannot join a same network.
+IEEE 주소는 장치의 Zigbee 칩에 정적으로 할당됩니다(일부 경우에는 변경 가능).
+동일한 IEEE 주소를 가진 두 장치는 같은 네트워크에 참여할 수 없습니다.
 
-The Network Address is randomly assigned on device join and usually remains the same until reset/rejoin (although it may change at the discretion of the device).
+네트워크 주소는 장치 참여 시 무작위로 할당되며 일반적으로 리셋/재참여까지 동일하게 유지됩니다(장치의 재량에 따라 변경될 수 있음).
 
-### Joining (permit join)
+### 참여 (permit join)
 
-The "permit join" state determines whether new devices are allowed to join the network.
-Joining is enabled temporarily (for 254 seconds by default) via the dedicated frontend button or via MQTT. You can also close the joining window manually once pairing is complete.
+"permit join" 상태는 새 장치가 네트워크에 참여할 수 있는지 여부를 결정합니다.
+참여는 전용 frontend 버튼 또는 MQTT를 통해 일시적으로(기본 254초) 활성화됩니다. 페어링이 완료되면 참여 창을 수동으로 닫을 수도 있습니다.
 
 :::tip TIP
-Freshly joined devices may automatically permit joining on themselves for a specific duration (max 254 seconds).
+새로 참여한 장치는 특정 기간(최대 254초) 동안 자체적으로 참여를 자동 허용할 수 있습니다.
 :::
 
-#### Install codes
+#### 설치 코드
 
-Joining with an install code provides better security (if available).
-A code is randomly assigned during the manufacturing process of a device.
-The code allows to encrypt the initial network key transport from the Trust Center (coordinator) to the joining device.
+설치 코드로 참여하면 더 나은 보안을 제공합니다(사용 가능한 경우).
+코드는 장치 제조 과정에서 무작위로 할당됩니다.
+코드는 Trust Center(coordinator)에서 참여 장치로의 초기 네트워크 키 전송을 암호화합니다.
 
-Ask the vendor or refer to each device's documentation to check if an install code is available (usually printed on the device, plainly or as a QR code).
-Codes can be added through the frontend.
-See also [Add install code via MQTT](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd).
+설치 코드가 있는지 확인하려면 공급업체에 문의하거나 각 장치의 문서를 참조하세요(일반적으로 장치에 인쇄되어 있거나 QR 코드로 표시됩니다).
+코드는 frontend를 통해 추가할 수 있습니다.
+[MQTT를 통한 설치 코드 추가](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd)도 참고하세요.
 
-### Device passlist and blocklist
+### 장치 passlist 및 blocklist
 
-For stricter control over which devices are allowed on the network, use a passlist or blocklist.
-See [Device blocklist / passlist](../configuration/block-pass-list.md) for more details.
+네트워크에 허용되는 장치를 더 엄격하게 제어하려면 passlist 또는 blocklist를 사용합니다.
+자세한 내용은 [장치 blocklist / passlist](../configuration/block-pass-list.md)를 참고하세요.
 
 :::tip TIP
-Devices that are not allowed are removed from the network on startup (e.g. configuration changes since last run), and on join attempts.
-Note: removal is a request sent to the targeted device to "ask it" to leave, a malicious device could purposely ignore it.
+허용되지 않은 장치는 시작 시(예: 마지막 실행 이후 설정 변경) 및 참여 시도 시 네트워크에서 제거됩니다.
+참고: 제거는 대상 장치에 "떠나달라"는 요청을 전송하는 것이므로, 악의적인 장치는 의도적으로 이를 무시할 수 있습니다.
 :::
 
 :::tip TIP
-Using a passlist is the most restrictive and therefore most secure option, only explicitly trusted devices can join.
+passlist를 사용하는 것이 가장 제한적이고 따라서 가장 안전한 옵션으로, 명시적으로 신뢰할 수 있는 장치만 참여할 수 있습니다.
 :::
 
 ### Inter-PAN
 
-Inter-PAN messages are **unsecured messages** sent to or received from unjoined devices 1-hop away.
-Touchlink (previously known as ZLL) uses inter-PAN messaging.
+Inter-PAN 메시지는 1홉 거리의 미참여 장치로 보내거나 받는 **비보안 메시지**입니다.
+Touchlink(이전에는 ZLL로 알려진)는 Inter-PAN 메시징을 사용합니다.
 
-Inter-PAN is usually reserved for highly specific operations (e.g. resetting a device to factory settings via Touchlink), undesired messages are aggressively dropped, and close physical proximity is required.
-This limits the impact of its lack of security.
+Inter-PAN은 일반적으로 매우 특정한 작업(예: Touchlink를 통해 장치를 공장 초기화)에 사용되며, 원하지 않는 메시지는 적극적으로 차단되고 물리적 근접이 필요합니다.
+이는 보안 부재의 영향을 제한합니다.
 
-:::warning WARNING
-Avoid devices that keep Touchlink permanently enabled, especially in places with relative ease of access; a malicious user could otherwise disrupt the network.
+:::warning 경고
+특히 접근이 비교적 쉬운 장소에서는 Touchlink가 영구적으로 활성화된 장치를 피하세요. 악의적인 사용자가 네트워크를 방해할 수 있습니다.
 :::
 
 ### Zigbee 4.0
 
-Zigbee 4.0 provides several security enhancements.
-You can read more about it in the announcement from the CSA: [https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/](https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/)
+Zigbee 4.0은 여러 보안 향상 사항을 제공합니다.
+CSA의 발표에서 더 자세히 읽을 수 있습니다: [https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/](https://csa-iot.org/newsroom/the-connectivity-standards-alliance-announces-zigbee-4-0-and-suzi-empowering-the-next-generation-of-secure-interoperable-iot-devices/)
 
-NOTE: It will take time before devices catch up to the new standard and support all these enhancements.
+참고: 장치들이 새로운 표준을 따르고 이러한 향상 사항을 모두 지원하기까지는 시간이 걸릴 것입니다.
 
-## External extensions and converters
+## 외부 확장 및 컨버터
 
-By design, external extensions and converters execute arbitrary user-provided JavaScript code within the Zigbee2MQTT process.
-This grants significant customization flexibility, but also means that malicious or buggy code can compromise the entire Zigbee2MQTT instance, and potentially the host system.
+설계상, 외부 확장 및 컨버터는 Zigbee2MQTT 프로세스 내에서 사용자가 제공한 임의의 JavaScript 코드를 실행합니다.
+이는 상당한 커스터마이징 유연성을 제공하지만, 악의적이거나 버그가 있는 코드가 전체 Zigbee2MQTT 인스턴스, 나아가 호스트 시스템을 침해할 수 있음을 의미합니다.
 
-:::caution CAUTION
-Only add external extensions and converters from trusted, reviewed sources.
-Treat them with the same level of scrutiny as any other code/scripts running on your system.
+:::caution 주의
+신뢰할 수 있고 검토된 출처에서만 외부 확장 및 컨버터를 추가하세요.
+시스템에서 실행되는 다른 코드/스크립트와 동일한 수준의 검토를 적용하세요.
 :::
 
-## Firmware updates (OTA)
+## 펌웨어 업데이트 (OTA)
 
-Firmware updates can provide bug fixes, security updates and other welcomed features.
-However, they can also change device behavior in ways that may affect Zigbee2MQTT compatibility and potentially introduce buggy, or even malicious functionality.
-Review the release notes before applying a firmware update.
-See [OTA updates](../usage/ota_updates.md) for more details.
+펌웨어 업데이트는 버그 수정, 보안 업데이트 및 기타 유용한 기능을 제공할 수 있습니다.
+그러나 Zigbee2MQTT 호환성에 영향을 미치거나 버그가 있거나 심지어 악의적인 기능을 도입하는 방식으로 장치 동작을 변경할 수도 있습니다.
+펌웨어 업데이트를 적용하기 전에 릴리즈 노트를 검토하세요.
+자세한 내용은 [OTA 업데이트](../usage/ota_updates.md)를 참고하세요.
 
-By default, Zigbee2MQTT matches and retrieves OTA images from the [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) repository.
-This repository is a mirror of manufacturer-provided firmware updates, both manually and automatically curated.
+기본적으로 Zigbee2MQTT는 [Koenkk/zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) 저장소에서 OTA 이미지를 매칭하고 가져옵니다.
+이 저장소는 수동 및 자동으로 관리되는 제조업체 제공 펌웨어 업데이트의 미러입니다.
 
-:::caution CAUTION
-Only use firmware from trusted sources.
-Avoid using custom OTA index URLs unless you fully trust the source.
+:::caution 주의
+신뢰할 수 있는 출처의 펌웨어만 사용하세요.
+출처를 완전히 신뢰하지 않는 한 사용자 정의 OTA index URL을 사용하지 마세요.
 :::

@@ -2,33 +2,33 @@
 sidebarDepth: 1
 ---
 
-# Home Assistant integration
+# Home Assistant 연동
 
-See: [Home Assistant integration guide](../usage/integrations/home_assistant.md).
+참고: [Home Assistant 연동 가이드](../usage/integrations/home_assistant.md).
 
 ```yaml
-# Optional: Home Assistant integration (MQTT discovery)
+# 선택 사항: Home Assistant 연동 (MQTT 디스커버리)
 homeassistant:
-    # Enable the integration (default: false)
+    # 연동 활성화 (기본값: false)
     enabled: true
 ```
 
-## Advanced configuration
+## 고급 설정
 
 ```yaml
 homeassistant:
     enabled: true
-    # Optional: Home Assistant discovery topic (default: shown below)
-    # Note: should be different from [MQTT base topic](../mqtt.md) to prevent errors in HA software
+    # 선택 사항: Home Assistant 디스커버리 토픽 (기본값: 아래 표시)
+    # 참고: HA 소프트웨어 오류를 방지하기 위해 [MQTT 기본 토픽](../mqtt.md)과 다르게 설정해야 합니다
     discovery_topic: 'homeassistant'
-    # Optional: Home Assistant status topic (default: shown below)
+    # 선택 사항: Home Assistant 상태 토픽 (기본값: 아래 표시)
     status_topic: 'homeassistant/status'
-    # Optional: Experimental support for Home Assistant event entities, may break in the future (default: shown below) when enabled:
-    # - An `event` entity will be discovered for each 'action'.
-    # - The `event_type` attribute will contain the action itself, additional attributes like `button` will have further information.
+    # 선택 사항: Home Assistant 이벤트 엔티티의 실험적 지원, 향후 변경될 수 있음 (기본값: 아래 표시) 활성화 시:
+    # - 각 'action'에 대해 `event` 엔티티가 검색됩니다.
+    # - `event_type` 속성에는 action 자체가 포함되고, `button`과 같은 추가 속성에는 더 많은 정보가 있습니다.
     experimental_event_entities: false
-    # Optional: Home Assistant legacy action sensor (default: `false`), when enabled:
-    # - Zigbee2MQTT will send an empty 'action' after one has been send
-    # - A 'sensor_action' will be discovered
+    # 선택 사항: Home Assistant 레거시 action 센서 (기본값: `false`), 활성화 시:
+    # - Zigbee2MQTT는 action을 전송한 후 빈 'action'을 전송합니다
+    # - 'sensor_action'이 검색됩니다
     legacy_action_sensor: false
 ```

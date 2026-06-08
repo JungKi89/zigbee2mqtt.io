@@ -2,32 +2,32 @@
 redirectFrom: /how_tos/how_to_create_a_cc2530_router.md
 ---
 
-# Create a CC2530 router
+# CC2530 Router 만들기
 
-The CC2530 is highly suitable for serving as a router. It has an external antenna which will greatly improve the range of your Zigbee network. This tutorial will explain how to create a CC2530 router packed into a nice enclosure which can be powered via any regular outlet.
+CC2530은 router로 사용하기에 매우 적합합니다. 외부 안테나를 갖추고 있어 Zigbee 네트워크 범위를 크게 향상시킵니다. 이 튜토리얼은 일반 콘센트로 전원을 공급받을 수 있는 멋진 케이스에 넣은 CC2530 router를 만드는 방법을 설명합니다.
 
-**DISCLAIMER:** The CC2530 router will use Mains AC so there is a danger of electrocution if not installed properly. If you don't know how to install it, please call an electrician!
+**주의사항:** CC2530 router는 AC 전원을 사용하므로 올바르게 설치하지 않으면 감전 위험이 있습니다. 설치 방법을 모른다면 전기 기사에게 연락하세요!
 
-![CC2530 in an enclosure](../../images/cc2530_router_enclosure.jpg)
+![케이스에 넣은 CC2530](../../images/cc2530_router_enclosure.jpg)
 
-## What do I need?
+## 필요한 것은?
 
-| Name                                                                                                      | Price                                                | Picture                                                         |
-| --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- |
-| CC2530 <br/> **OR** <br/> CC2530 + CC2591 <br/> _The CC2530 + CC2591 is more powerful but more expensive_ | +-7.50$ on AliExpress <br/><br/> +-15$ on AliExpress | ![CC2530](../../images/cc2530.jpg)                              |
-| HLK-PM03                                                                                                  | +-2.20$ on AliExpress                                | ![HLK-PM03](../../images/HLK-PM03.jpg)                          |
-| Enclosure (the one used has the following dimensions: 100x68x40mm)                                        | +-2$                                                 | ![Enclosure](../../images/enclosure.jpg)                        |
-| Power cable                                                                                               | +-2$                                                 | ![Power cable](../../images/power_cable.png)                    |
-| CC debugger                                                                                               | -                                                    | ![CC debugger](../../images/cc_debugger.jpg)                    |
-| 8 female to female jumper wires                                                                           | -                                                    | ![Jumper wires](../../images/female_to_female_jumper_wires.jpg) |
+| 이름                                                                                        | 가격                                                     | 사진                                                           |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------------- |
+| CC2530 <br/> **또는** <br/> CC2530 + CC2591 <br/> _CC2530 + CC2591은 더 강력하지만 더 비쌈_ | AliExpress에서 약 7.50$ <br/><br/> AliExpress에서 약 15$ | ![CC2530](../../images/cc2530.jpg)                             |
+| HLK-PM03                                                                                    | AliExpress에서 약 2.20$                                  | ![HLK-PM03](../../images/HLK-PM03.jpg)                         |
+| 케이스 (사용된 케이스의 크기: 100x68x40mm)                                                  | 약 2$                                                    | ![케이스](../../images/enclosure.jpg)                          |
+| 전원 케이블                                                                                 | 약 2$                                                    | ![전원 케이블](../../images/power_cable.png)                   |
+| CC debugger                                                                                 | -                                                        | ![CC debugger](../../images/cc_debugger.jpg)                   |
+| 암-암 점퍼 와이어 8개                                                                       | -                                                        | ![점퍼 와이어](../../images/female_to_female_jumper_wires.jpg) |
 
-## Flashing the CC2530
+## CC2530 Flash
 
-The CC2530 has to be flashed with a router firmware which has to be done with a CC debugger using 6 female to female jumper wires. Pins have to connected as follows:
+CC2530에는 router firmware를 Flash해야 합니다. 이는 6개의 암-암 점퍼 와이어를 사용하여 CC debugger로 수행해야 합니다. 핀은 다음과 같이 연결해야 합니다:
 
-### CC debugger pin layout
+### CC debugger 핀 레이아웃
 
-![CC-Debugger Pins](../../images/ccdebugger_pins.png)
+![CC-Debugger 핀](../../images/ccdebugger_pins.png)
 
 | CC debugger | CC2530 |
 | ----------- | ------ |
@@ -38,30 +38,30 @@ The CC2530 has to be flashed with a router firmware which has to be done with a 
 | 7           | RST    |
 | 9           | VCC    |
 
-### Pin layout of various CC2530 modules
+### 다양한 CC2530 모듈 핀 레이아웃
 
-| Name                  | Pin layout                                                                          | Picture                                            |
-| --------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------- |
-| CC2530                | ![CC2530 pin layout](../../images/cc2530_pin_layout.png)                            | ![CC2530](../../images/cc2530.jpg)                 |
-| Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 pin layout](../../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../../images/cc2530_cc2591.jpg) |
+| 이름                  | 핀 레이아웃                                                                          | 사진                                               |
+| --------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------- |
+| CC2530                | ![CC2530 핀 레이아웃](../../images/cc2530_pin_layout.png)                            | ![CC2530](../../images/cc2530.jpg)                 |
+| Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 핀 레이아웃](../../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../../images/cc2530_cc2591.jpg) |
 
-### Flashing
+### Flash 방법
 
-Now the CC2530 can be flashed using the same instructions as [Flashing the CC2531](../../guide/adapters/flashing/flashing_the_cc2531.md). The router firmwares can be found [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router).
+이제 [CC2531 Flash하기](../../guide/adapters/flashing/flashing_the_cc2531.md)와 동일한 지침을 사용하여 CC2530을 Flash할 수 있습니다. Router firmware는 [여기](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router)에서 찾을 수 있습니다.
 
-![CC debugger connected to CC2530](../../images/ccdebugger_cc2530.jpg)
+![CC2530에 연결된 CC debugger](../../images/ccdebugger_cc2530.jpg)
 
-## Putting it in an enclosure
+## 케이스에 넣기
 
-The following steps have to be followed:
+다음 단계를 따르세요:
 
-- Drill 2 holes in the enclosure; one for the antenna, one for the power cable
-- Lay a knot in the power cable; this serves as strain relief
-- Solder the power cable on to the AC pins of the HLK-PM03
-- Use 2 female to female jumper wires to connect the VC+ pin of the HLK-PM03 to the VCC pin of the CC2530 and the VC- pin of the HLK-PM03 to the GND pin of the CC2530
-- Use double sided tape to fix the CC2530 and HLK-PM03 into the enclosure
+- 케이스에 구멍 2개 뚫기: 안테나용 1개, 전원 케이블용 1개
+- 전원 케이블에 매듭 묶기 (이것이 장력 완화 역할을 함)
+- HLK-PM03의 AC 핀에 전원 케이블 납땜
+- 암-암 점퍼 와이어 2개를 사용하여 HLK-PM03의 VC+ 핀을 CC2530의 VCC 핀에 연결하고 HLK-PM03의 VC- 핀을 CC2530의 GND 핀에 연결
+- 양면 테이프를 사용하여 CC2530과 HLK-PM03을 케이스에 고정
 
-### Result
+### 결과
 
 ![1](../../images/router_1.jpg)
 
@@ -71,8 +71,8 @@ The following steps have to be followed:
 
 ![4](../../images/router_4.jpg)
 
-![CC2530 in an enclosure](../../images/cc2530_router_enclosure.jpg)
+![케이스에 넣은 CC2530](../../images/cc2530_router_enclosure.jpg)
 
-## Done!
+## 완료!
 
-Now plug the CC2530 into a power outlet where it will automatically join your Zigbee network. (don't forget to enable joining of new devices). Enjoy your extended Zigbee network range! :smile:
+이제 CC2530을 콘센트에 연결하면 자동으로 Zigbee 네트워크에 참여합니다 (새 기기 참여 활성화를 잊지 마세요). 확장된 Zigbee 네트워크 범위를 즐기세요! :smile:

@@ -1,14 +1,14 @@
-# Docker Stack device mapping
+# Docker Stack 장치 매핑
 
-_This is only relevant when using Docker Stack_
+_이 내용은 Docker Stack을 사용할 때만 해당됩니다_
 
-Docker stack doesn't support device mappings with option `--devices` when deploying a stack in swarm mode. There are two solutions to this. Both of these solutions start with binding the devices as volumes.
+Docker stack은 swarm 모드에서 스택을 배포할 때 `--devices` 옵션을 사용한 장치 매핑을 지원하지 않습니다. 이에 대한 두 가지 해결 방법이 있습니다. 두 방법 모두 장치를 볼륨으로 바인딩하는 것부터 시작합니다.
 
-## Automatic device mapping for cgroup v1 and v2
+## cgroup v1 및 v2에 대한 자동 장치 매핑
 
-The easiest solution for enabling devices on Docker Stacks is the [allfro device-mapping-manager docker image](https://github.com/allfro/device-mapping-manager). This container has a tiny program that reads all of the volume mounts on its own host, identifies devices, and then modifies the permissions on the host to allow the container to use them. Unlike other solutions, this works for both versions of cgroups.
+Docker Stack에서 장치를 활성화하는 가장 쉬운 해결책은 [allfro device-mapping-manager docker 이미지](https://github.com/allfro/device-mapping-manager)입니다. 이 컨테이너는 자체 호스트의 모든 볼륨 마운트를 읽어 장치를 식별하고, 호스트의 권한을 수정하여 컨테이너가 사용할 수 있도록 합니다. 다른 해결책과 달리 이 방법은 cgroup의 두 버전 모두에서 작동합니다.
 
-This container has to be deployed directly to docker, not through a stack. It's possible to work around this by creating a stack with a privileged service that acts as a proxy to launch the actual device mapper container.
+이 컨테이너는 스택이 아닌 docker에 직접 배포해야 합니다. 실제 장치 매퍼 컨테이너를 실행하는 프록시 역할을 하는 privileged 서비스가 있는 스택을 생성하여 이 문제를 해결할 수 있습니다.
 
 ```yaml
 version: '3.8'
@@ -30,7 +30,7 @@ services:
             -v /sys:/host/sys
             -v /var/run/docker.sock:/var/run/docker.sock
             -v /dev:/dev
-            # Uncomment the line below if Docker version > 29.0.0
+            # Docker 버전 > 29.0.0인 경우 아래 줄의 주석을 해제하세요
             # -e DOCKER_API_VERSION=1.44
             ghcr.io/allfro/allfro/device-mapping-manager:latest
         volumes:
@@ -39,14 +39,14 @@ services:
             mode: global
 ```
 
-## Manual cgroup v1
+## 수동 cgroup v1
 
-A workaround is to manually set the right permissions. The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
+수동으로 올바른 권한을 설정하는 방법도 있습니다. 이 방법은 [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430)에서 찾은 해결책을 기반으로 합니다. 모든 공로는 해당 기여자에게 있습니다.
 
-This workaround only works with cgroup v1, which is not enabled on many newer distro releases.
+이 방법은 많은 최신 배포판에서 기본적으로 활성화되지 않은 cgroup v1에서만 작동합니다.
 
-1. Identify serial adapter
-   Identify the serial adapter using the following command:
+1. 직렬 adapter 확인
+   다음 명령을 사용하여 직렬 adapter를 확인합니다:
 
     ```shell
     sudo lsusb -v
@@ -144,27 +144,27 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
       (Bus Powered)
     ```
 
-2. UDEV Rules
+2. UDEV 규칙
 
-    Create a new udev rule for serial adapter, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
+    직렬 adapter에 대한 새로운 udev 규칙을 생성합니다. `idVendor`와 `idProduct`는 `lsusb` 명령의 값과 일치해야 합니다. 아래 규칙은 `/dev/zigbee-serial` 장치를 생성합니다:
 
     ```shell
     echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0451\", ATTRS{idProduct}==\"16a8\", SYMLINK+=\"zigbee-serial\",  RUN+=\"/usr/local/bin/docker-setup-zigbee-serial.sh\"" | sudo tee /etc/udev/rules.d/99-zigbee-serial.rules
     ```
 
-    Reload newly created rule using the following command:
+    다음 명령을 사용하여 새로 생성된 규칙을 다시 로드합니다:
 
     ```shell
     sudo udevadm control --reload-rules
     ```
 
-3. Create docker-setup-zigbee-serial.sh
+3. docker-setup-zigbee-serial.sh 생성
 
     ```shell
     sudo nano /usr/local/bin/docker-setup-zigbee-serial.sh
     ```
 
-    Copy the following content:
+    다음 내용을 복사합니다:
 
     ```shell
     #!/bin/bash
@@ -185,19 +185,19 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     echo "c $dmajor:$dminor rwm" > /sys/fs/cgroup/devices/docker/$CID/devices.allow
     ```
 
-    Set permissions:
+    권한을 설정합니다:
 
     ```shell
     sudo chmod 744 /usr/local/bin/docker-setup-zigbee-serial.sh
     ```
 
-4. Create docker-event-listener.sh
+4. docker-event-listener.sh 생성
 
     ```shell
     sudo nano /usr/local/bin/docker-event-listener.sh
     ```
 
-    Copy the following content:
+    다음 내용을 복사합니다:
 
     ```shell
     #!/bin/bash
@@ -207,19 +207,19 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     done
     ```
 
-    Set permissions:
+    권한을 설정합니다:
 
     ```shell
     sudo chmod 744 /usr/local/bin/docker-event-listener.sh
     ```
 
-5. Create docker-event-listener.service
+5. docker-event-listener.service 생성
 
     ```shell
     sudo nano /etc/systemd/system/docker-event-listener.service
     ```
 
-    Copy the following content:
+    다음 내용을 복사합니다:
 
     ```shell
     [Unit]
@@ -237,39 +237,39 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     WantedBy=multi-user.target
     ```
 
-    Set permissions:
+    권한을 설정합니다:
 
     ```shell
     sudo chmod 744 /etc/systemd/system/docker-event-listener.service
     ```
 
-    Reload daemon
+    데몬 다시 로드
 
     ```shell
     sudo systemctl daemon-reload
     ```
 
-    Start Docker event listener
+    Docker 이벤트 리스너 시작
 
     ```shell
     sudo systemctl start docker-event-listener.service
     ```
 
-    Status Docker event listener
+    Docker 이벤트 리스너 상태 확인
 
     ```shell
     sudo systemctl status docker-event-listener.service
     ```
 
-    Enable Docker event listener
+    Docker 이벤트 리스너 활성화
 
     ```shell
     sudo systemctl enable docker-event-listener.service
     ```
 
-6. Verify and deploy Zigbee2MQTT stack
+6. Zigbee2MQTT 스택 확인 및 배포
 
-    Now reconnect the serial adapter. Verify using the following command:
+    직렬 adapter를 다시 연결합니다. 다음 명령으로 확인합니다:
 
     ```shell
     ls -al /dev/zigbee-serial
@@ -279,7 +279,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     lrwxrwxrwx 1 root root 7 Sep 28 21:14 /dev/zigbee-serial -> ttyACM0
     ```
 
-    Below an example of a `docker-stack-zigbee2mqtt.yml`:
+    다음은 `docker-stack-zigbee2mqtt.yml` 예시입니다:
 
     ```yaml
     version: "3.7"
@@ -303,9 +303,9 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     	external: true
     ```
 
-    In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the serial adapter is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
+    위 예시에서 `proxy_traefik-net`은 mqtt 브로커에 연결하는 네트워크입니다. 제약 조건은 Docker가 직렬 adapter가 연결된 해당 노드(`rpi-3`)에만 배포하도록 합니다. 볼륨 바인딩 `/mnt/docker-cluster/zigbee2mqtt/data`는 `configuration.yaml`이 저장되는 zigbee2mqtt 영구 디렉토리입니다.
 
-    The Zigbee2MQTT `configuration.yaml` should point to `/dev/zigbee-serial`:
+    Zigbee2MQTT의 `configuration.yaml`이 `/dev/zigbee-serial`을 가리키도록 설정해야 합니다:
 
     ```yaml
     [...]
@@ -313,23 +313,23 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     [...]
     ```
 
-    Deploy the stack:
+    스택을 배포합니다:
 
     ```shell
     docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
     ```
 
-## Troubleshooting
+## 문제 해결
 
-It could happen that even after the above the container is not starting correctly and bringing a "Operation not permitted" message in the log of the service for the device:
+위의 과정을 따랐음에도 컨테이너가 올바르게 시작되지 않고 서비스 로그에 장치에 대한 "Operation not permitted" 메시지가 나타날 수 있습니다:
 
 ```
 Error: Error while opening serialport 'Error: Error: Operation not permitted, cannot open /dev/zigbee-serial'
 ```
 
-This is due to the usage of cgroupv2 instead of cgroupv1 which is not fully supported by docker/containerd.
-To switch from cgroupv2 to cgroupv1 you have to add `systemd.unified_cgroup_hierarchy=false` to the grub cmdline.
-E.g. on an Raspberry Pi 4 with Raspian Bullseye you can add it to the end of the line in the /boot/cmdline.txt file:
+이는 docker/containerd에서 완전히 지원되지 않는 cgroupv2 사용으로 인한 것입니다.
+cgroupv2에서 cgroupv1으로 전환하려면 grub cmdline에 `systemd.unified_cgroup_hierarchy=false`를 추가해야 합니다.
+예를 들어 Raspian Bullseye가 설치된 Raspberry Pi 4에서 /boot/cmdline.txt 파일의 줄 끝에 추가할 수 있습니다:
 
 ```
 [...] rootfstype=ext4 fsck.repair=yes rootwait cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 systemd.unified_cgroup_hierarchy=false

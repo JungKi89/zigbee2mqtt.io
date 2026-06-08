@@ -2,53 +2,53 @@
 redirectFrom: /how_tos/how_to_connect_to_a_remote_adapter.md
 ---
 
-# Connect to a remote adapter
+# 원격 Adapter에 연결하기
 
-This how-to explains how to run Zigbee2MQTT with an adapter on a remote location.
-We will use ser2net for this which allows to connect to a serial port over TCP.
-In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the adapter is connected to.
+이 가이드는 원격 위치에 있는 adapter로 Zigbee2MQTT를 실행하는 방법을 설명합니다.
+TCP를 통해 직렬 포트에 연결할 수 있는 ser2net을 사용합니다.
+이렇게 하면 Raspberry Pi Zero에 adapter를 연결하면서 다른 시스템에서 Zigbee2MQTT를 실행할 수 있습니다. 아래 지침은 adapter가 연결된 시스템에서 실행해야 합니다.
 
 ::: warning
-Be aware that it is not recommended to use a Zigbee Coordinator via a Serial-Proxy-Server (also known as Serial-to-IP bridge or Ser2Net remote adapter) over a WiFi, WAN, or VPN connection.
+WiFi, WAN 또는 VPN 연결을 통해 Serial-Proxy-Server(Serial-to-IP bridge 또는 Ser2Net 원격 adapter라고도 함)로 Zigbee Coordinator를 사용하는 것은 권장되지 않습니다.
 
-Serial protocols used by Zigbee Coordinator do not have enough robustness, resilience, or fault-tolerance to handle packet loss and latency delays that can occur over unstable connections.
+Zigbee Coordinator에서 사용하는 직렬 프로토콜은 불안정한 연결에서 발생할 수 있는 패킷 손실 및 지연을 처리할 만큼 충분한 견고성, 탄력성 또는 장애 허용성을 갖추고 있지 않습니다.
 
-Zigbee Coordinator requires a stable local connection to its serial port interface with no drops in communication between it and the Zigbee gateway application running on the host computer.
+Zigbee Coordinator는 호스트 컴퓨터에서 실행되는 Zigbee 게이트웨이 애플리케이션과의 통신 중단 없이 직렬 포트 인터페이스에 안정적인 로컬 연결이 필요합니다.
 
-Thus be warned that connecting to a network-attached remote Zigbee Coordinator over WiFi/WAN/VPN using Ser2Net or other Serial Proxy/Forwarding Tunnel is not supported for normal operation.
+따라서 Ser2Net 또는 다른 Serial Proxy/Forwarding Tunnel을 사용하여 WiFi/WAN/VPN을 통해 네트워크에 연결된 원격 Zigbee Coordinator에 연결하는 것은 정상 작동에 지원되지 않습니다.
 :::
 
-## 1. Install ser2net
+## 1. ser2net 설치
 
 ```bash
 sudo apt-get install ser2net
 ```
 
-## 2(a). Configure ser2net (<4.0)
+## 2(a). ser2net 설정 (<4.0)
 
 ```bash
 sudo nano /etc/ser2net.conf
 ```
 
-Add the following entry, replace `/dev/ttyACM0` with the correct path to your adapter.
+다음 항목을 추가하고 `/dev/ttyACM0`을 adapter의 올바른 경로로 교체합니다.
 
 ```
 20108:raw:0:/dev/ttyACM0:115200 8DATABITS NONE 1STOPBIT
 ```
 
-After this reboot the system.
+그런 다음 시스템을 재부팅합니다.
 
 ```bash
 reboot
 ```
 
-## 2(b). Configure ser2net (>=4.0)
+## 2(b). ser2net 설정 (>=4.0)
 
 ```bash
 sudo nano /etc/ser2net.yaml
 ```
 
-Add the following entry, replace `/dev/ttyACM0` with the correct path to your adapter.
+다음 항목을 추가하고 `/dev/ttyACM0`을 adapter의 올바른 경로로 교체합니다.
 
 ```
 connection: &con01
@@ -58,7 +58,7 @@ connection: &con01
     kickolduser: true
 ```
 
-With a Slaesh coordinator, you need to set the DTR and RTS pins of the RS232 interfece in a specific way. The current (2023-02-04) version of Raspberry Pi OS does not have recent enough of ser2net to do that correctly, see https://github.com/cminyard/ser2net/issues/46. You might need to build the "gensi" and the "ser2net" packages on your rpi yourself. Other distributions might already have a more recent version. Once you have a version of ser2net that supports the "dtr=off" setting, use the following configuration:
+Slaesh coordinator를 사용하는 경우, RS232 인터페이스의 DTR 및 RTS 핀을 특정 방식으로 설정해야 합니다. 현재(2023-02-04) Raspberry Pi OS 버전에는 이를 올바르게 처리하기에 충분히 최신 버전의 ser2net이 없습니다. https://github.com/cminyard/ser2net/issues/46 참조. Raspberry Pi에서 직접 "gensi" 및 "ser2net" 패키지를 빌드해야 할 수 있습니다. 다른 배포판에는 이미 더 최신 버전이 있을 수 있습니다. "dtr=off" 설정을 지원하는 ser2net 버전이 있으면 다음 설정을 사용하세요:
 
 ```
 connection: &con01
@@ -68,7 +68,7 @@ connection: &con01
     kickolduser: true
 ```
 
-For ConBee II / RaspBee II, use the following configuration:
+ConBee II / RaspBee II의 경우 다음 설정을 사용합니다:
 
 ```
 connection: &con01
@@ -78,19 +78,19 @@ connection: &con01
     kickolduser: true
 ```
 
-After this reboot the system.
+그런 다음 시스템을 재부팅합니다.
 
 ```bash
 reboot
 ```
 
-## 3. Configure
+## 3. 설정
 
-Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to.
+이제 Zigbee2MQTT `configuration.yaml`을 적절하게 편집합니다. `192.168.2.13`을 adapter가 연결된 시스템의 IP 또는 hostname으로 교체합니다.
 
 ```yaml
 serial:
     port: 'tcp://192.168.2.13:20108'
 ```
 
-Done! Now you can start Zigbee2MQTT.
+완료! 이제 Zigbee2MQTT를 시작할 수 있습니다.

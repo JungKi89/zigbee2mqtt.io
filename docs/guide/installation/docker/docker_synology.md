@@ -1,9 +1,9 @@
-# Docker on Synology DSM 7.0
+# Synology DSM 7.0에서 Docker
 
-> **_NOTE:_** This may not work with all Zigbee controllers, but has been tested with the CC2531.
+> **_참고:_** 모든 Zigbee 컨트롤러에서 작동하지 않을 수 있으나, CC2531로 테스트되었습니다.
 
-As of Disk Station Manager version 7, Synology removed the built-in support for USB-devices like a Zigbee controller.
-The USB support can be installed to the Linux kernel by issuing the following commands as _root_.
+Disk Station Manager 버전 7부터 Synology는 Zigbee 컨트롤러와 같은 USB 장치에 대한 내장 지원을 제거했습니다.
+다음 명령을 _root_ 로 실행하여 Linux 커널에 USB 지원을 설치할 수 있습니다.
 
 ```
 modprobe usbserial
@@ -11,9 +11,9 @@ modprobe ftdi_sio
 modprobe cdc-acm
 ```
 
-After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
+명령을 실행한 후, Zigbee 컨트롤러를 USB 포트에서 분리했다가 다시 연결해야 할 수 있습니다.
 
-You may also need additional drivers based on your USB Zigbee controller setup, e.g. CH341 module is not included by default. You can download precompiled modules from jadahl.com pages - select module directory based on NAS CPU architecture (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
+USB Zigbee 컨트롤러 설정에 따라 추가 드라이버가 필요할 수 있습니다. 예를 들어 CH341 모듈은 기본적으로 포함되어 있지 않습니다. jadahl.com 페이지에서 미리 컴파일된 모듈을 다운로드할 수 있습니다 - NAS CPU 아키텍처에 맞는 모듈 디렉토리를 선택하세요 (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
 
 ```
 cd /lib/modules
@@ -21,7 +21,7 @@ wget http://www.jadahl.com/iperf-arp-scan/DSM_7.0/apollolake/ch341.ko
 insmod /lib/modules/ch341.ko
 ```
 
-It is possible to create a start-up task that issues the above commands:
+위의 명령을 실행하는 시작 작업을 생성할 수 있습니다:
 
-1. Create an executable script file that contains the three modprobe commands.
-1. Using DSM's _Control Panel_ -> _Task Scheduler_ -> _Create_ -> _Triggered Task_ -> _User-defined script_ with the settings: **User:** root, **Event:** Boot-up, and a `bash` command executing the executable file under _Task Settings_.
+1. 세 가지 modprobe 명령을 포함하는 실행 가능한 스크립트 파일을 생성합니다.
+1. DSM의 _제어판_ -> _작업 스케줄러_ -> _생성_ -> _트리거된 작업_ -> _사용자 정의 스크립트_ 를 사용하여 설정합니다: **사용자:** root, **이벤트:** 부팅, 그리고 _작업 설정_ 에서 실행 가능한 파일을 실행하는 `bash` 명령을 입력합니다.

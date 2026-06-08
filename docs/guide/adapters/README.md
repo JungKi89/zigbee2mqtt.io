@@ -4,60 +4,60 @@ next: ../installation/
 redirectFrom: /information/supported_adapters.md
 ---
 
-# Supported Adapters
+# 지원되는 Adapter
 
-All officially supported adapters are listed on this page. Note that before an adapter can be used with Zigbee2MQTT it has to be flashed with a coordinator firmware (some adapters come preflashed).
+공식적으로 지원되는 모든 adapter는 이 페이지에 나열되어 있습니다. adapter를 Zigbee2MQTT와 함께 사용하기 전에 coordinator firmware로 flash해야 합니다 (일부 adapter는 미리 flash되어 제공됩니다).
 
-## Recommended
+## 권장
 
-- [zStack based (Texas Instruments)](./zstack.md)
-- [EmberZNet based (Silicon Labs)](./emberznet.md)
-- [deCONZ based (Dresden Elektronik)](./deconz.md)
+- [zStack 기반 (Texas Instruments)](./zstack.md)
+- [EmberZNet 기반 (Silicon Labs)](./emberznet.md)
+- [deCONZ 기반 (Dresden Elektronik)](./deconz.md)
 
-## Not recommended
+## 비권장
 
-### Not maintained
+### 유지 관리되지 않음
 
-- [ZiGate based](./zigate.md)
+- [ZiGate 기반](./zigate.md)
 
-### Experimental
+### 실험적
 
-- [ZBOSS based (Nordic Semiconductor)](./zboss.md)
+- [ZBOSS 기반 (Nordic Semiconductor)](./zboss.md)
 
-::: tip TIP
-Want to migrate to a different adapter? Read [this](../faq/README.md#how-do-i-migrate-from-one-adapter-to-another)
+::: tip 팁
+다른 adapter로 마이그레이션하고 싶으신가요? [여기](../faq/README.md#how-do-i-migrate-from-one-adapter-to-another)를 읽어보세요.
 :::
 
-## Notes
+## 참고 사항
 
-Before buying an adapter, please read the notes below!
+adapter를 구매하기 전에 아래 참고 사항을 꼭 읽어보세요!
 
-- Want to migrate to a different adapter? This may require repairing all your devices in some cases, see [FAQ](../faq/README.md#what-does-and-does-not-require-repairing-of-all-devices)
-- Network adapters connected via WiFi might have reduced stability as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections. If you cannot use a locally connected USB or UART/GPIO adapter then the recommendation is to use remote adapter that connected via Ethernet (wired) to avoid issues.
-- What are the differences between the various CC2652/CC1352 chips?
-    - Chips ending with `P` have a power amplifier which support up-to 20dBm vs 5dBm on adapters ending with `R`/`RB`.
-    - Chips starting with `CC1352` support the sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz), `CC2652` only supports 2.4 GHz. So for Zigbee2MQTT purposes there is no difference between `CC1352` and `CC2652`.
-    - Chips ending with `RB` don't require a crystal on the PCB, this only makes a difference for the manufacturing process.
+- 다른 adapter로 마이그레이션하고 싶으신가요? 경우에 따라 모든 기기를 다시 페어링해야 할 수 있습니다. [FAQ](../faq/README.md#what-does-and-does-not-require-repairing-of-all-devices)를 참조하세요.
+- WiFi를 통해 연결된 네트워크 adapter는 안정성이 저하될 수 있습니다. serial 프로토콜은 WiFi 연결에서 일반적으로 발생할 수 있는 패킷 손실이나 지연을 처리할 만큼 충분한 내결함성을 갖추고 있지 않기 때문입니다. 로컬로 연결된 USB 또는 UART/GPIO adapter를 사용할 수 없는 경우, 문제를 방지하기 위해 Ethernet(유선)으로 연결된 원격 adapter 사용을 권장합니다.
+- 다양한 CC2652/CC1352 칩의 차이점은 무엇인가요?
+    - `P`로 끝나는 칩은 전력 증폭기가 있어 `R`/`RB`로 끝나는 adapter의 5dBm에 비해 최대 20dBm을 지원합니다.
+    - `CC1352`로 시작하는 칩은 sub-1 GHz 주파수를 지원합니다 (Zigbee는 2.4 GHz를 사용하므로 관련 없음). `CC2652`는 2.4 GHz만 지원합니다. 따라서 Zigbee2MQTT 용도로는 `CC1352`와 `CC2652` 사이에 차이가 없습니다.
+    - `RB`로 끝나는 칩은 PCB에 크리스탈이 필요 없으며, 이는 제조 공정에서만 차이를 만듭니다.
 
-### Coordinator backups
+### Coordinator 백업
 
-Note that only adapters based on zStack or EmberZNet currently support backing up the coordinator (`coordinator_backup.json`).
+현재 zStack 또는 EmberZNet 기반의 adapter만 coordinator 백업(`coordinator_backup.json`)을 지원합니다.
 
-#### Flashing an existing adapter
+#### 기존 adapter Flash하기
 
-Flashing tools can be used to upgrade the firmware on an existing adapter without needing to repair devices. See the [FAQ](https://www.zigbee2mqtt.io/guide/faq/#what-does-and-does-not-require-repairing-of-all-devices) for information on what does and does not require repairing of devices.
+Flash 도구를 사용하여 기기를 다시 페어링하지 않고도 기존 adapter의 firmware를 업그레이드할 수 있습니다. 기기를 다시 페어링해야 하는 경우와 그렇지 않은 경우에 대한 정보는 [FAQ](https://www.zigbee2mqtt.io/guide/faq/#what-does-and-does-not-require-repairing-of-all-devices)를 참조하세요.
 
-#### Is your OS unable to find your device?
+#### OS에서 기기를 인식하지 못하는 경우
 
-If you're asking yourself "Why won't my dongle or adapter show up?" when you are using (for example) Flash Programmer 2, chances are that your OS can't communicate with your device over VCP (Virtual COM Port) serial port, causing your dongle not showing up as a flashable device. To fix this problem, be sure to install a USB-to-UART bridge/converter VCP driver for your operating system like the one at [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers), [FTDI Chip](https://ftdichip.com/drivers/vcp-drivers/), or [WCH (CH34x/CH91xx)](http://www.wch-ic.com/downloads/category/30.html).
+Flash Programmer 2 등을 사용할 때 "왜 dongle이나 adapter가 표시되지 않을까요?"라는 질문을 하고 있다면, OS가 VCP(Virtual COM Port) serial 포트를 통해 기기와 통신하지 못하는 것일 수 있습니다. 이 문제를 해결하려면 운영 체제에 맞는 USB-to-UART 브리지/컨버터 VCP 드라이버를 설치하세요. [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers), [FTDI Chip](https://ftdichip.com/drivers/vcp-drivers/), 또는 [WCH (CH34x/CH91xx)](http://www.wch-ic.com/downloads/category/30.html)에서 드라이버를 찾을 수 있습니다.
 
 ### Router
 
-Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:
+coordinator로 사용하는 것 외에도, 일부 adapter는 Zigbee router로도 사용할 수 있습니다 (adapter를 클릭하여 router firmware가 있는지 확인하세요). 초기화/페어링 방법:
 
-- Texas Instruments CC2531: press the S2 button for 5 seconds.
-- Texas Instruments CC2530: power on/power off the device three times (power on, wait 2 seconds, power off, repeat this cycle three times).
-- Adapters based on CC2652/CC1352: single press (one of the) buttons on the device
-- Adapters based on Silicon Labs EmberZNet:
+- Texas Instruments CC2531: S2 버튼을 5초간 누릅니다.
+- Texas Instruments CC2530: 기기를 3번 켜고 끕니다 (전원 켜기, 2초 대기, 전원 끄기, 이 사이클을 3번 반복).
+- CC2652/CC1352 기반 adapter: 기기의 버튼 중 하나를 한 번 누릅니다.
+- Silicon Labs EmberZNet 기반 adapter:
     - [Sonoff Dongle-E](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)
     - [SMLight SLZB-06M](https://www.zigbee2mqtt.io/devices/SLZB-06M.html)

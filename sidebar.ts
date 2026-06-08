@@ -6,20 +6,20 @@ export const sidebar: SidebarOptions = {
     '/guide/': [
         '/guide/getting-started/',
         {
-            text: 'Supported Hardware',
+            text: '지원 하드웨어',
             link: '/guide/supported-hardware.md',
             children: [
-                {text: 'Adapters', link: '/guide/adapters/'},
-                {text: 'Devices', link: '/supported-devices/'},
+                {text: '어댑터', link: '/guide/adapters/'},
+                {text: '디바이스', link: '/supported-devices/'},
             ],
         },
         {
-            text: 'Installation',
+            text: '설치',
             link: '/guide/installation/',
             children: [...getFiles('guide/installation')],
         },
         {
-            text: 'Configuration',
+            text: '설정',
             link: '/guide/configuration/',
             children: [
                 '/guide/configuration/adapter-settings.md',
@@ -38,7 +38,7 @@ export const sidebar: SidebarOptions = {
             ],
         },
         {
-            text: 'Usage',
+            text: '사용법',
             link: '/guide/usage/',
             children: [
                 '/guide/usage/pairing_devices.md',

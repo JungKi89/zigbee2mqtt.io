@@ -2,9 +2,9 @@
 redirectFrom: /getting_started/running_zigbee2mqtt.md
 ---
 
-# Installation
+# 설치
 
-Zigbee2MQTT was written in Node.js and runs almost on every platform with affordable memory footprint.
+Zigbee2MQTT는 Node.js로 작성되었으며, 적은 메모리로 거의 모든 플랫폼에서 실행할 수 있습니다.
 
 - [Linux](./01_linux.md)
 - [Docker](./02_docker.md)
@@ -14,10 +14,10 @@ Zigbee2MQTT was written in Node.js and runs almost on every platform with afford
 - [FreeBSD jail](./06_freebsd_jail.md)
 - [Kubernetes](./08_kubernetes.md)
 
-## Optional
+## 선택 사항
 
 - [Watchdog](./15_watchdog.md)
 
-## Troubleshooting
+## 문제 해결
 
-- [Zigbee2MQTT fails to start/crashes runtime](./20_zigbee2mqtt-fails-to-start_crashes-runtime.md)
+- [Zigbee2MQTT 시작 실패/런타임 충돌](./20_zigbee2mqtt-fails-to-start_crashes-runtime.md)

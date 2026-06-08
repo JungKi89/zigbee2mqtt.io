@@ -4,63 +4,63 @@ next: 14_securing.md
 
 # FreeBSD jail
 
-These instructions explain how to run Zigbee2MQTT in a [FreeBSD jail](https://en.wikipedia.org/wiki/FreeBSD_jail).
+이 안내서는 [FreeBSD jail](https://en.wikipedia.org/wiki/FreeBSD_jail)에서 Zigbee2MQTT를 실행하는 방법을 설명합니다.
 
-For the sake of simplicity this guide assumes running on [TrueNAS CORE](https://www.truenas.com/truenas-core/) and installing Zigbee2MQTT in the _Mosquitto MQTT_ jail to be used with Home Assistant. This setup only uses MQTT for interfacing between Zigbee and Home Assistant. The instructions should otherwise work on any FreeBSD machine.
+설명을 간단하게 하기 위해 이 가이드는 [TrueNAS CORE](https://www.truenas.com/truenas-core/)에서 실행하고 Home Assistant와 함께 사용하기 위해 _Mosquitto MQTT_ jail에 Zigbee2MQTT를 설치하는 것을 가정합니다. 이 설정은 Zigbee와 Home Assistant 간의 인터페이스에 MQTT만 사용합니다. 다른 FreeBSD 머신에서도 이 안내서를 따를 수 있습니다.
 
-## Jail creation
+## Jail 생성
 
-First we have to create the jail that will run both Zigbee2MQTT and Mosquitto. We can do that by opening the TrueNAS Web UI, navigating to `Plugins`, selecting `Community` plugins and then `Mosquitto MQTT`.
+먼저 Zigbee2MQTT와 Mosquitto를 모두 실행할 jail을 생성해야 합니다. TrueNAS 웹 UI에서 `Plugins`로 이동하여 `Community` 플러그인을 선택한 후 `Mosquitto MQTT`를 선택하면 됩니다.
 
-To enter the jail's terminal, we can use the Web UI's _Shell_ feature under _Jails_, or SSH into TrueNAS and then
+jail의 터미널에 접속하려면, 웹 UI의 _Jails_ 아래 _Shell_ 기능을 사용하거나, TrueNAS에 SSH로 접속한 후 다음 명령을 실행합니다:
 
 ```sh
 sudo iocage console <jail-name>
 ```
 
-## Installing
+## 설치
 
-Enter the following commands inside the jail's shell:
+jail의 셸 내에서 다음 명령을 입력합니다:
 
 ```bash
-# Install Node.js and required dependencies:
-# - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
-# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
-# - Selecting `npm` also installs `node`.
+# Node.js와 필요한 의존성을 설치합니다:
+# - 공식 Node 저장소에서 Node 22를 설치하는 것을 권장합니다. 방법은 https://github.com/nodesource/distributions/blob/master/README.md 를 참고하세요.
+# - 구형 i386 하드웨어는 [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/)에서 버전 20.9.0으로 작동할 수 있습니다.
+# - `npm`을 선택하면 `node`도 함께 설치됩니다.
 pkg install git gmake gcc
 corepack enable
 
-# Verify that the correct Node.js version has been installed
-node --version  # Should output V20.x, V22.X
+# 올바른 Node.js 버전이 설치되었는지 확인합니다
+node --version  # V20.x 또는 V22.X가 출력되어야 합니다
 
-# Create installation folder (/usr/local prefix is used for software not part of the base system)
+# 설치 폴더 생성 (/usr/local 접두사는 기본 시스템에 포함되지 않은 소프트웨어에 사용됩니다)
 mkdir -p /usr/local/opt/zigbee2mqtt
 cd /usr/local/opt/zigbee2mqtt
 
-# Clone Zigbee2MQTT repository
+# Zigbee2MQTT 저장소를 클론합니다
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
-# Install dependencies
+# 의존성을 설치합니다
 pnpm install --frozen-lockfile
 
-# Build Zigbee2MQTT
+# Zigbee2MQTT를 빌드합니다
 pnpm run build
 ```
 
-## Starting Zigbee2MQTT
+## Zigbee2MQTT 시작
 
-Now that we have setup everything correctly we can start Zigbee2MQTT.
+모든 설정이 완료되면 Zigbee2MQTT를 시작할 수 있습니다.
 
 ```bash
 cd /usr/local/opt/zigbee2mqtt
 pnpm start
 ```
 
-On first start, Zigbee2MQTT will start the onboarding on port 8080.
-Navigate to this board and configure accordingly.
-More information about [onboarding](../getting-started/README.md#onboarding).
+처음 시작 시, Zigbee2MQTT는 포트 8080에서 온보딩을 시작합니다.
+해당 페이지로 이동하여 설정을 진행하세요.
+[온보딩](../getting-started/README.md#onboarding)에 대한 자세한 정보를 참고하세요.
 
-Once the onboarding is completed, you will see something like:
+온보딩이 완료되면 다음과 같은 내용이 표시됩니다:
 
 ```bash
 Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
@@ -73,18 +73,18 @@ Zigbee2MQTT:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://local
 Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```
 
-Zigbee2MQTT can be stopped by pressing `CTRL + C`.
+Zigbee2MQTT는 `CTRL + C`를 눌러 중지할 수 있습니다.
 
-## (Optional) Running as a daemon with rc
+## (선택 사항) rc로 데몬 실행
 
-To run Zigbee2MQTT as a daemon (in background) and start it automatically on jail start we will create a service file for it.
+Zigbee2MQTT를 데몬으로 실행하고(백그라운드에서) jail 시작 시 자동으로 시작하려면 서비스 파일을 생성합니다.
 
 ```sh
-# Create service file for Zigbee2MQTT (assuming `nano` is installed, `vi` can also be used)
+# Zigbee2MQTT용 서비스 파일을 생성합니다 (`nano`가 설치되어 있다고 가정하며, `vi`도 사용할 수 있습니다)
 nano /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
-Add the following to this file:
+이 파일에 다음 내용을 추가합니다:
 
 ```
 #!/bin/sh
@@ -101,7 +101,7 @@ rcvar=zigbee2mqtt_enable
 
 : ${zigbee2mqtt_enable:="NO"}
 
-# enable watchdog
+# watchdog 활성화
 zigbee2mqtt_env="Z2M_WATCHDOG=default"
 
 # daemon
@@ -116,55 +116,55 @@ load_rc_config $name
 run_rc_command "$1"
 ```
 
-Save the file and exit.
+파일을 저장하고 종료합니다.
 
-Make it executable:
+실행 권한을 부여합니다:
 
 ```sh
 chmod +x /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
-Verify that the configuration works:
+설정이 올바른지 확인합니다:
 
 ```sh
-# Start Zigbee2MQTT without enabling it
+# 활성화하지 않고 Zigbee2MQTT를 시작합니다
 service zigbee2mqtt onestart
 
-# Show status
+# 상태 확인
 service zigbee2mqtt onestatus
 ```
 
-Output should look like:
+출력은 다음과 같이 나타납니다:
 
 ```
 root@zigbee2mqtt:/usr/local/opt/zigbee2mqtt # service zigbee2mqtt onestatus
 zigbee2mqtt is running as pid 80246.
 ```
 
-Now that everything works, we want the init system to start Zigbee2MQTT automatically when the jail starts. This can be done by executing:
+모든 것이 정상적으로 작동하면, jail 시작 시 Zigbee2MQTT가 자동으로 시작되도록 init 시스템을 설정합니다:
 
 ```sh
 service zigbee2mqtt enable
 ```
 
-Done! 😃
+완료! 😃
 
-Some tips that can be handy later:
+나중에 유용하게 사용할 수 있는 몇 가지 팁:
 
 ```sh
-# Stopping Zigbee2MQTT
+# Zigbee2MQTT 중지
 service zigbee2mqtt stop
 
-# Starting Zigbee2MQTT
+# Zigbee2MQTT 시작
 service zigbee2mqtt start
 ```
 
-## (For later) Update Zigbee2MQTT to the latest version
+## (나중을 위해) Zigbee2MQTT를 최신 버전으로 업데이트
 
-To update Zigbee2MQTT to the latest version, execute:
+Zigbee2MQTT를 최신 버전으로 업데이트하려면 다음을 실행합니다:
 
 ```sh
-# Run the update script from the Zigbee2MQTT directory
+# Zigbee2MQTT 디렉토리에서 업데이트 스크립트를 실행합니다
 cd /usr/local/opt/zigbee2mqtt
 ./update.sh
 ```

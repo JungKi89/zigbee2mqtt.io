@@ -4,39 +4,34 @@ next: 14_securing.md
 
 # Kubernetes
 
-These instructions explain how to run Zigbee2MQTT on k8s clusters through the use of the helm chart.
+이 안내서는 helm chart를 사용하여 k8s 클러스터에서 Zigbee2MQTT를 실행하는 방법을 설명합니다.
 
-# Values - Configuration
+# Values - 설정
 
-Regardless of the method of installation chosen helm cli, flux/argo CD, first review the values.yaml file and choose the
-configuration required for you.
-The Zigbee2MQTT config section in the values.yaml is a 1:1 mapping of the usual config file, it simply is created on a configmap
-during the helm release creation. If you don't provide any additional values, sensible defaults are used in the deployment.
+helm cli, flux/argo CD 등 어떤 설치 방법을 선택하든 먼저 values.yaml 파일을 검토하고 필요한 설정을 선택합니다.
+values.yaml의 Zigbee2MQTT config 섹션은 일반 설정 파일과 1:1로 매핑되며, helm 릴리즈 생성 시 configmap으로 만들어집니다. 추가 값을 제공하지 않으면 배포에서 적절한 기본값이 사용됩니다.
 
-If you are planning to use an usb adapter directly plugged into a node of the cluster, most likely you need to
-specify a `.values.statefulset.nodeSelector` so the pods are scheduled in the right node.
+클러스터의 노드에 직접 연결된 USB adapter를 사용할 계획이라면, 올바른 노드에 파드가 스케줄링되도록 `.values.statefulset.nodeSelector`를 지정해야 할 가능성이 높습니다.
 
-By default, storage is not enabled, which is great for testing.
-If you just want to use dynamic volume provisioning, just configure the `statefulset.storage.storageClassName`.
-Persisting the volumes across installations, or you want to reuse existing data, you can leverage the options
-in `statefulset.storage` either providing a `volumeName` or selectors for volumes. Those fields get injected
-into the statefulSet persistentVolumeClaim which can link to existing volumes.
+기본적으로 스토리지는 비활성화되어 있어 테스트에 적합합니다.
+동적 볼륨 프로비저닝을 사용하려면 `statefulset.storage.storageClassName`만 설정하면 됩니다.
+설치 간 볼륨을 유지하거나 기존 데이터를 재사용하려면, `volumeName`이나 볼륨 선택자를 제공하는 `statefulset.storage`의 옵션을 활용할 수 있습니다. 이 필드들은 기존 볼륨에 연결할 수 있는 statefulSet의 persistentVolumeClaim에 주입됩니다.
 
 ## helm
 
-To install the chart manually using helm, first you need to add your the helm repository to your local helm installation:
+helm을 사용하여 차트를 수동으로 설치하려면 먼저 로컬 helm 설치에 helm 저장소를 추가합니다:
 
 ```bash
 helm repo add zigbee2mqtt  https://charts.zigbee2mqtt.io
 ```
 
-Load the charts from the repository:
+저장소에서 차트를 불러옵니다:
 
 ```bash
 helm repo update
 ```
 
-Install the helm chart using the values of your choice (`myvalues.yaml` in the snippet below):
+원하는 값으로 helm 차트를 설치합니다 (아래 예시에서는 `myvalues.yaml`):
 
 ```bash
 helm install -f myvalues.yaml zigbee2mqtt zigbee2mqtt/zigbee2mqtt
@@ -44,9 +39,9 @@ helm install -f myvalues.yaml zigbee2mqtt zigbee2mqtt/zigbee2mqtt
 
 ## flux
 
-If you are using a gitops approach to manage your cluster, you can use the flux CRDs to create and manage the releases.
+gitops 방식으로 클러스터를 관리하는 경우, flux CRD를 사용하여 릴리즈를 생성하고 관리할 수 있습니다.
 
-The first step is to add to your repository the helm repository of zigbee2mqtt:
+먼저 저장소에 zigbee2mqtt의 helm 저장소를 추가합니다:
 
 ```yaml
 apiVersion: source.toolkit.fluxcd.io/v1beta2
@@ -59,7 +54,7 @@ spec:
     url: https://charts.zigbee2mqtt.io
 ```
 
-Then create a Helm release:
+그런 다음 Helm 릴리즈를 생성합니다:
 
 ```yaml
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
@@ -79,5 +74,5 @@ spec:
                 name: zigbee2mqtt
                 namespace: flux-system
             interval: 10m
-    values: ... your settings
+    values: ... 여기에 설정을 입력하세요
 ```

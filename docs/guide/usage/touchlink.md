@@ -4,81 +4,81 @@ redirectFrom: /information/touchlink.md
 
 # Touchlink
 
-Touchlink (or ZLL) is a feature that allows Zigbee devices to communicate, **without** necessarily being in the same network.
+Touchlink(또는 ZLL)은 Zigbee 기기가 반드시 같은 네트워크에 속하지 않아도 **직접** 통신할 수 있는 기능입니다.
 
-Devices must be **physically close** to each other, and have Touchlink enabled in their firmware.  
-_Range depends on devices: normally 10cm, but up to 1m on strong adapters._
+기기들은 **물리적으로 가까이** 있어야 하며, 펌웨어에 Touchlink가 활성화되어 있어야 합니다.  
+_범위는 기기에 따라 다릅니다: 일반적으로 10cm이지만, 강한 어댑터에서는 최대 1m까지 가능합니다._
 
-**Example uses:**
+**사용 예시:**
 
-- Identify or reset devices near the coordinator via Zigbee2MQTT
-- Reset devices via a Touchlink-capable device, e.g. [Hue dimmer switch gen 1](./../../devices/324131092621.md)
-- Setup device-to-device [binding](./binding.md) (e.g. remote to light) without involving the coordinator and Zigbee2MQTT
+- Zigbee2MQTT를 통해 코디네이터 근처 기기를 식별하거나 초기화
+- Touchlink 지원 기기를 통한 기기 초기화(예: [Hue dimmer switch gen 1](./../../devices/324131092621.md))
+- 코디네이터와 Zigbee2MQTT 없이 기기 간 [binding](./binding.md) 설정(예: 리모컨과 조명 연결)
 
-## Support
+## 지원 현황
 
-### Coordinator
+### 코디네이터
 
-Texas Instruments adapters _(zStack, CCxxxx)_ are **fully supported**.
+Texas Instruments 어댑터 _(zStack, CCxxxx)_: **완전 지원**.
 
-Silicon Labs adapters _(EmberZNet, EFR32xxxx)_ are **partially supported**.  
-`2026-03-18`: The [Scan](#scan) operation does not produce responses with some firmware versions. Philips Hue reset is not affected. _Under investigation_
+Silicon Labs 어댑터 _(EmberZNet, EFR32xxxx)_: **부분 지원**.  
+`2026-03-18`: 일부 펌웨어 버전에서 [Scan](#scan) 동작이 응답을 반환하지 않을 수 있습니다. Philips Hue 초기화에는 영향이 없습니다. _조사 중_
 
-Other adapters/drivers are currently **not supported**.
+그 외 어댑터/드라이버는 현재 **지원되지 않습니다**.
 
-### Devices
+### 기기
 
-Compatible devices expose the `Touchlink` cluster, which includes most Philips and IKEA devices, some Tuya light bulbs, Namron relays and more.
+호환 기기는 `Touchlink` 클러스터를 지원하며, 여기에는 대부분의 Philips 및 IKEA 기기, 일부 Tuya 전구, Namron 릴레이 등이 포함됩니다.
 
 ::: warning
-Some devices may disable Touchlink after a few minutes! _(security measure)_  
-Power-cycle the device to make sure it's active.
+일부 기기는 몇 분 후 Touchlink를 비활성화할 수 있습니다! _(보안 조치)_  
+기기의 전원을 껐다 켜서 Touchlink가 활성 상태인지 확인하세요.
 :::
 
 ::: tip
-All commands below can also be executed via the frontend _Touchlink_ tab.
+아래 모든 명령은 프론트엔드의 _Touchlink_ 탭에서도 실행할 수 있습니다.
 :::
 
 ## Scan
 
-Scan for Touchlink-enabled devices **near the coordinator**.  
-The outcome of this scan can be used later, to choose which device to reset or identify.
+**코디네이터 근처의** Touchlink 지원 기기를 검색합니다.  
+이 검색 결과를 이후에 초기화하거나 식별할 기기를 선택하는 데 사용할 수 있습니다.
 
-This can take up to 1 minute. **This is a disruptive operation**, during the scan, **communication with devices is unavailable** (be sure to account for that, prefer times of lesser usage if necessary).
+최대 1분이 소요될 수 있습니다. **이는 네트워크에 영향을 주는 작업으로**, 검색 중에는 **기기와의 통신이 불가능합니다**(이 점을 반드시 고려하고, 가능하면 사용량이 적은 시간대에 수행하세요).
 
-To scan, send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
+검색을 시작하려면 `zigbee2mqtt/bridge/request/touchlink/scan`에 빈 페이로드로 MQTT 메시지를 전송하세요.
 
-The response will be sent to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{"ieee_address": "0x12345678", "channel": 12}, {"ieee_address": "0x12654321", "channel": 24}]},"status":"ok"}`.
+응답은 `zigbee2mqtt/bridge/response/touchlink/scan`으로 전송됩니다. 예시 페이로드: `{"data":{"found":[{"ieee_address": "0x12345678", "channel": 12}, {"ieee_address": "0x12654321", "channel": 24}]},"status":"ok"}`.
 
 ## Identify
 
-Identify a nearby device via Touchlink _(e.g. bulb blinking)._
+Touchlink을 통해 근처 기기를 식별합니다 _(예: 전구 깜빡임)._
 
-Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{"ieee_address": "0x12345678", "channel": 12}`  
-_(Use scan from above to determine `ieee_address` and `channel`)._
+`zigbee2mqtt/bridge/request/touchlink/identify`에 예시 페이로드 `{"ieee_address": "0x12345678", "channel": 12}`를 담아 MQTT 메시지를 전송하세요.  
+_(`ieee_address`와 `channel`은 위의 scan을 통해 확인할 수 있습니다)._
 
-## Factory reset device
+## 기기 공장 초기화
 
-Factory reset nearby devices through Touchlink. _Demonstration: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)_
+Touchlink을 통해 근처 기기를 공장 초기화합니다. _시연 영상: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)_
 
-If the device does not enter pairing mode after one of the following methods, it may additionally need one **power-cycle.**
+아래 방법 중 하나를 수행한 후 기기가 페어링 모드로 진입하지 않으면 **전원을 한 번 껐다 켜야** 할 수 있습니다.
 
-To pair the device again, _permit joining_ **after** the reset is done.
+초기화 완료 **후** 기기를 다시 페어링하려면 *참가 허용*을 활성화하세요.
 
-### Any device
+### 모든 기기
 
-Without targeting a specific device, it is advised to _power-off devices that should not be reset or ensure they are out of range_ (the first device found becomes the target).
-Send an MQTT message to `zigbee2mqtt/bridge/request/touchlink/factory_reset` with an empty payload.
+특정 기기를 지정하지 않는 경우, _초기화되어서는 안 되는 기기의 전원을 끄거나 범위 밖으로 옮기는 것을 권장합니다_(처음 발견된 기기가 대상이 됩니다).
+`zigbee2mqtt/bridge/request/touchlink/factory_reset`에 빈 페이로드로 MQTT 메시지를 전송하세요.
 
-Zigbee2MQTT will start scanning.
-After some time the device will identify itself and reset.
+Zigbee2MQTT가 검색을 시작합니다.
+잠시 후 기기가 자신을 식별하고 초기화됩니다.
 
-### Specific device
+### 특정 기기
 
-#### IEEE address + channel
+#### IEEE 주소 + 채널
 
-Target a specific device by adding a payload to the above message, e.g. `{"ieee_address": "0x12345678", "channel": 12}`. _(Obtain the values from a scan)_
+위 메시지에 페이로드를 추가하여 특정 기기를 대상으로 지정할 수 있습니다. 예: `{"ieee_address": "0x12345678", "channel": 12}`. _(값은 scan을 통해 얻을 수 있습니다)_
 
-#### Serial number (Philips Hue only)
+#### 시리얼 번호 (Philips Hue 전용)
 
-Most Philips Hue devices can be targeted without scanning, by using the serial number written on the device. More info on device-specific pages, e.g. [Hue white ambiance E27](./../../devices/9290022169.md)
+대부분의 Philips Hue 기기는 scan 없이 기기에 적힌 시리얼 번호를 사용하여 대상을 지정할 수 있습니다. 기기별 페이지에서 자세한 정보를 확인하세요. 예: [Hue white ambiance E27](./../../devices/9290022169.md)

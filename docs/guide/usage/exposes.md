@@ -5,47 +5,47 @@ redirectFrom: /information/exposes.md
 
 # Exposes
 
-Zigbee2MQTT exposes the device capabilities through the `exposes` property in [`zigbee2mqtt/bridge/devices`](./mqtt_topics_and_messages.md). The possible `exposes` are documented here.
+Zigbee2MQTT는 [`zigbee2mqtt/bridge/devices`](./mqtt_topics_and_messages.md)의 `exposes` 속성을 통해 기기 기능을 노출합니다. 가능한 `exposes`는 여기에 문서화되어 있습니다.
 
-There are two types of exposes:
+두 가지 타입의 exposes가 있습니다:
 
-- Generic: types like `numeric` and `binary`
-- Specific: represents a specific capability of a device like a `light` or `switch`.
+- 제네릭(Generic): `numeric` 및 `binary`와 같은 타입
+- 특정(Specific): `light` 또는 `switch`와 같은 기기의 특정 기능을 나타냄
 
-Both types will always have a `type` property.
+두 타입 모두 항상 `type` 속성을 가집니다.
 
-The generic types (except composite) will always have an `access` property and an optional `description` property.
+제네릭 타입(composite 제외)은 항상 `access` 속성과 선택적 `description` 속성을 가집니다.
 
-All generic types will always have a `name` property indicating the context and `label` property containing the name of the capability in the correct case and without using the underscore separator (e.g. `Device temperature`, `VOC`, `Power outage count`).
+모든 제네릭 타입은 항상 컨텍스트를 나타내는 `name` 속성과 올바른 형식(언더스코어 구분자 없이)으로 기능 이름을 포함하는 `label` 속성을 가집니다(예: `Device temperature`, `VOC`, `Power outage count`).
 
-All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`.
+모든 제네릭 타입은 항상 값이 노출되는 위치를 나타내는 `property` 타입을 가지며, 일반적으로 이름과 같지만 `endpoint`가 정의된 경우 `name_endpoint`가 됩니다.
 
-The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+특정 타입과 제네릭 composite 타입은 항상 제네릭 exposes 타입을 포함하는 배열인 `features` 속성을 가집니다. 두 타입 모두 선택적으로 `endpoint` 속성을 가질 수 있으며, 기기가 특정 엔드포인트에서 이 기능을 노출함을 나타냅니다.
 
-Both types have an optional `category` attribute which can be set to either `config` or `diagnostic`. If it is set, it indicates that the expose is primarily for configuration (e.g. `operation_mode`, `power_on_behaviour`) or diagnostic purposes (e.g. `power_outage_count`, `device_temperature`). If it is not set, it indicates that the expose is for regular usage of the device (e.g. `switch`, `light`, `power`). A configuration expose must always be settable (see [access rights](#access)). A diagnostic expose must be read-only (otherwise it should be either a configuration or a regular expose).
+두 타입 모두 `config` 또는 `diagnostic`으로 설정할 수 있는 선택적 `category` 속성을 가집니다. 설정된 경우, expose가 주로 구성 목적(예: `operation_mode`, `power_on_behaviour`)이나 진단 목적(예: `power_outage_count`, `device_temperature`)임을 나타냅니다. 설정되지 않은 경우 expose가 기기의 일반 사용을 위한 것임을 나타냅니다(예: `switch`, `light`, `power`). 구성 expose는 항상 설정 가능해야 합니다([액세스 권한](#access) 참조). 진단 expose는 읽기 전용이어야 합니다(그렇지 않으면 구성 또는 일반 expose여야 함).
 
-### Access
+### 액세스(Access)
 
-The `access` property is a 3-bit bitmask.
+`access` 속성은 3비트 비트마스크입니다.
 
-- Bit 1: The property can be found in the published state of this device.
-- Bit 2: The property can be set with a `/set` command
-- Bit 3: The property can be retrieved with a `/get` command (when this bit is true, bit 1 will also be true)
+- 비트 1: 이 기기의 게시된 상태에서 속성을 찾을 수 있습니다.
+- 비트 2: `/set` 명령으로 속성을 설정할 수 있습니다.
+- 비트 3: `/get` 명령으로 속성을 가져올 수 있습니다(이 비트가 true이면 비트 1도 true).
 
-Examples:
+예시:
 
-- A Xiaomi WSDCGQ01LM climate sensor exposes a numeric temperature sensor. Since the device is sleeping most of the time it cannot be retrieved with a `/get` command. Access will be `1` (binary: `0b001`).
-- A Philips 7146060PH Hue Go light exposes brightness. This can be `/get`, `/set` and is also in the published state. Access will be `7` (binary: `0b111`)
-- A Philips 7146060PH Hue Go light exposes effect (e.g. to trigger a flashing effect). This can only be `/set`. Access will be `2` (binary: `0b010`)
-- A Xiaomi ZNCZ02LM power plug exposes a numeric power sensor. This can be `/get` and is published in the state. Access will be `5` (binary: `0b101`)
+- Xiaomi WSDCGQ01LM 기후 센서는 수치 온도 센서를 노출합니다. 기기가 대부분의 시간 절전 상태이므로 `/get` 명령으로 가져올 수 없습니다. Access는 `1` (이진: `0b001`)입니다.
+- Philips 7146060PH Hue Go 조명은 밝기를 노출합니다. `/get`, `/set`이 가능하며 게시된 상태에도 있습니다. Access는 `7` (이진: `0b111`)입니다.
+- Philips 7146060PH Hue Go 조명은 효과를 노출합니다(예: 깜빡임 효과 트리거). `/set`만 가능합니다. Access는 `2` (이진: `0b010`)입니다.
+- Xiaomi ZNCZ02LM 전원 플러그는 수치 전력 센서를 노출합니다. `/get`이 가능하며 상태에도 게시됩니다. Access는 `5` (이진: `0b101`)입니다.
 
-## Generic
+## 제네릭(Generic)
 
 ### Binary
 
-Indicates a device exposes a binary value. Always has `value_on` and `value_off` which indicates how to interpret the value. Optionally has a `value_toggle` which can be send to toggle the value.
+기기가 이진 값을 노출함을 나타냅니다. 항상 값 해석 방법을 나타내는 `value_on`과 `value_off`를 가집니다. 선택적으로 값을 토글하는 데 사용할 수 있는 `value_toggle`을 가질 수 있습니다.
 
-Examples:
+예시:
 
 ```json
 {
@@ -74,9 +74,9 @@ Examples:
 
 ### Numeric
 
-Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step`, `unit` and `presets`. The `presets` defines values which have a special interpretation.
+기기가 수치 값을 노출함을 나타냅니다. 선택적으로 `value_max`, `value_min`, `value_step`, `unit`, `presets`를 가집니다. `presets`는 특별한 해석을 가진 값을 정의합니다.
 
-Examples:
+예시:
 
 ```json
 {
@@ -119,9 +119,9 @@ Examples:
 
 ### Enum
 
-Indicates a device exposes an enum value. Always has `values` indicating all possible values.
+기기가 열거형 값을 노출함을 나타냅니다. 항상 가능한 모든 값을 나타내는 `values`를 가집니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -136,9 +136,9 @@ Example:
 
 ### Text
 
-Indicates a device exposes a textual value.
+기기가 텍스트 값을 노출함을 나타냅니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -152,9 +152,9 @@ Example:
 
 ### Composite
 
-Composite combines the above generic types in the `features` array.
+Composite는 위의 제네릭 타입을 `features` 배열로 결합합니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -184,10 +184,10 @@ Example:
 
 ### List
 
-Indicates a device exposes a list of values. The `item_type` can be any other exposes where the `property` is omitted.
-Optionally a `length_min` and `length_max` property can be added which defines the min/max number of entries in the list.
+기기가 값의 목록을 노출함을 나타냅니다. `item_type`은 `property`가 생략된 다른 expose가 될 수 있습니다.
+선택적으로 목록의 최소/최대 항목 수를 정의하는 `length_min`과 `length_max` 속성을 추가할 수 있습니다.
 
-Examples:
+예시:
 
 ```json
 {
@@ -246,13 +246,13 @@ Examples:
 }
 ```
 
-## Specific
+## 특정(Specific)
 
 ### Light
 
-Indicates a device exposes a light, possible features are `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`, `min_brightness`, `level_config` and `color_temp_startup`.
+기기가 조명을 노출함을 나타냅니다. 가능한 features는 `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`, `min_brightness`, `level_config`, `color_temp_startup`입니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -332,13 +332,13 @@ Example:
 }
 ```
 
-Note that some bulbs are known to not correctly represent XY colors, so it is preferred to set colors via HS. In this case `color_hs` will appear before `color_xy` in the `features` list.
+일부 전구는 XY 색상을 올바르게 표현하지 못하는 것으로 알려져 있으므로, HS를 통해 색상을 설정하는 것이 좋습니다. 이 경우 `color_hs`가 `features` 목록에서 `color_xy` 앞에 나타납니다.
 
 ### Switch
 
-Indicates a device exposes a switch.
+기기가 스위치를 노출함을 나타냅니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -360,9 +360,9 @@ Example:
 
 ### Fan
 
-Indicates a device exposes a fan. Possible features are `state` and `mode`.
+기기가 팬을 노출함을 나타냅니다. 가능한 features는 `state`와 `mode`입니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -391,9 +391,9 @@ Example:
 
 ### Cover
 
-Indicates a device exposes a cover. Possible features are `state`, `position` and `tilt`.
+기기가 커버를 노출함을 나타냅니다. 가능한 features는 `state`, `position`, `tilt`입니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -432,9 +432,9 @@ Example:
 
 ### Lock
 
-Indicates a device exposes a lock. Possible features are `state` and `lock_state`.
+기기가 잠금장치를 노출함을 나타냅니다. 가능한 features는 `state`와 `lock_state`입니다.
 
-Example:
+예시:
 
 ```json
 {
@@ -463,14 +463,14 @@ Example:
 
 ### Climate
 
-Indicates this device exposes climate functionality.
+기기가 냉난방 기능을 노출함을 나타냅니다.
 
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `pi_heating_demand`, `running_mode`, `ac_louver_position`, `control_sequence_of_operation` and `swing_mode`.
-- Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
-- Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
-- Possible values for `running_state` are `idle`, `heat`, `cool`.
+- 가능한 features: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `pi_heating_demand`, `running_mode`, `ac_louver_position`, `control_sequence_of_operation`, `swing_mode`.
+- `occupied_heating_setpoint`와 `current_heating_setpoint`를 동시에 가지지 않습니다.
+- `system_mode`의 가능한 값: `off`, `heat`, `cool`, `auto`, `dry`, `fan_only`.
+- `running_state`의 가능한 값: `idle`, `heat`, `cool`.
 
-Example:
+예시:
 
 ```json
 {
