@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /develop
+
+Sitemap: https://jungki89.github.io/zigbee2mqtt.io/zigbee2mqtt.io/sitemap.xml
