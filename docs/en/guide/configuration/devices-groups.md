@@ -137,9 +137,9 @@ Allows to override the device icon (image) shown on the frontend, should be one 
 
 ## Specific device options
 
-Some Zigbee devices like the [RTCGQ11LM](../../devices/RTCGQ11LM.md) supports some special attributes.
+Some Zigbee devices like the [RTCGQ11LM](/devices/RTCGQ11LM.md) supports some special attributes.
 To see if your device has device type specific configuration, visit the device page by going
-to [Supported devices](../../supported-devices/) and clicking on the model number.
+to [Supported devices](/supported-devices/) and clicking on the model number.
 
 In the above example `occupancy_timeout` and `no_occupancy_since` are device specific options.
 

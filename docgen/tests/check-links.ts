@@ -5,10 +5,19 @@ import * as path from 'path';
 
 const hrefRgxp = /<a[^>]+href ?= ?"([^#?]+?)["#?]/gi;
 
+function decodeHtmlEntities(s: string): string {
+    return s
+        .replace(/&apos;/g, "'")
+        .replace(/&quot;/g, '"')
+        .replace(/&amp;/g, '&')
+        .replace(/&#x([0-9a-f]+);/gi, (_, c) => String.fromCharCode(parseInt(c, 16)))
+        .replace(/&#(\d+);/g, (_, c) => String.fromCharCode(Number(c)));
+}
+
 async function checkFile(file: string, availableFiles: string[]) {
     const content = await fsp.readFile(file, 'utf-8');
     const linkToFiles = Array.from(content.matchAll(hrefRgxp))
-        .map((x) => x[1]) // get the matched part
+        .map((x) => decodeHtmlEntities(x[1])) // get the matched part, decode HTML entities
         .filter((x) => !x.match(/^https?:/)) // filter external links
         .filter((x) => !x.endsWith('.md')) // ignore links to .md files
         .filter((x) => !x.startsWith('mailto:')) // ignore mailto

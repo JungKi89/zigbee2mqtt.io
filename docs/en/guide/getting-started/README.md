@@ -70,7 +70,7 @@ The following environment variables are available, if your setup requires custom
 
 ## Connect a device
 
-Search the [supported devices](../../supported-devices/) for your device and follow the instructions how to pair.
+Search the [supported devices](/supported-devices/) for your device and follow the instructions how to pair.
 
 If no instructions are available, the device can probably be paired by factory resetting it.
 

@@ -22,7 +22,7 @@ The `zigbee2mqtt/bridge/request/permit_join` MQTT topic can be used to enable jo
 
 ## Pairing
 
-First check if the device page ([Supported devices](../../supported-devices/), click on the model number) contains instructions on how to pair your device.
+First check if the device page ([Supported devices](/supported-devices/), click on the model number) contains instructions on how to pair your device.
 
 If no instructions are available, the device can probably be paired by factory resetting it.
 

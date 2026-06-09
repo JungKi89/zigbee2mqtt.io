@@ -16,7 +16,7 @@ You can use the `/` separator in `friendly_name` to structure devices and groups
 For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 :::
 
-Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
+Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](/supported-devices/). Some examples:
 
 **Xiaomi MiJia temperature & humidity sensor (WSDCGQ01LM)**
 
@@ -59,7 +59,7 @@ If ["Device-Availability"](../configuration/device-availability.md) is configure
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
 
-Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the _Exposes_ section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the _Exposes_ section on the device page which can be accessed via ["Supported devices"](/supported-devices/).
 
 ```js
 {
