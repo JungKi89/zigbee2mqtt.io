@@ -42,4 +42,4 @@ Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](
 - [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)
 - [Buy](https://zigate.fr/boutique/?orderby=date_desc)
 
-<img src="../../images/zigate_usb_ttl.png" width="200" />
+<img src="../../../images/zigate_usb_ttl.png" width="200" />

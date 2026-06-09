@@ -33,9 +33,9 @@ with the [Home Assistant device registry](https://developers.home-assistant.io/d
 This allows you to change the Home Assistant `entity_id` and `friendly_name` from the Home Assistant web interface
 without having to restart Home Assistant. It also makes it possible to show which entities belong to which device.
 
-![Changing name and device ID via web interface](../../../images/home_assistant_change_name.png)
+![Changing name and device ID via web interface](../../../../images/home_assistant_change_name.png)
 
-![Device registry](../../../images/home_assistant_device_registry.png)
+![Device registry](../../../../images/home_assistant_device_registry.png)
 
 ## Customizing discovery
 

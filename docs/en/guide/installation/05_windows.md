@@ -80,7 +80,7 @@ First determine which COM port is assigned to your device:
 1. Expand `Ports (COM & LPT)`
 1. Look for a node similar to `USB Serial Device (COM4)`
 
-![Device Manager](../../images/devicemanager.png)
+![Device Manager](../../../images/devicemanager.png)
 
 For the example above, we would use `port: COM4` in the `configuration.yaml`.
 Next configure the `serial` section as described [here](../configuration/adapter-settings.md).

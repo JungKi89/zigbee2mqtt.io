@@ -16,10 +16,10 @@ The firmware can be flashed with multiple devices. The easiest but most expensiv
 
 The following additional hardware is required in order to flash the CC2531:
 
-| Name                    | Price              | Picture                                                          |
-| ----------------------- | ------------------ | ---------------------------------------------------------------- |
-| CC Debugger             | +-9$ on AliExpress | ![CC Debugger](../../../images/cc_debugger.jpg)                  |
-| CC2531 downloader cable | +-2$ on AliExpress | ![Downloader cable CC2531](../../../images/downloader_cable.png) |
+| Name                    | Price              | Picture                                                             |
+| ----------------------- | ------------------ | ------------------------------------------------------------------- |
+| CC Debugger             | +-9$ on AliExpress | ![CC Debugger](../../../../images/cc_debugger.jpg)                  |
+| CC2531 downloader cable | +-2$ on AliExpress | ![Downloader cable CC2531](../../../../images/downloader_cable.png) |
 
 or you can use almost any Arduino, ESP8266 or ESP32 board as alternative for CC Debugger, when using XZG Multi-tool.
 
@@ -58,12 +58,12 @@ or you can use almost any Arduino, ESP8266 or ESP32 board as alternative for CC 
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED press set reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not use [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 
-    ![How to connect](../../../images/connected.jpg)
+    ![How to connect](../../../../images/connected.jpg)
 
 6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
 7. Start SmartRF Flash Programmer, setup as shown below and press `Perform actions`. Make sure to select the `.hex` file, not the `.bin` file!
 
-    ![SmartRF Flash Programmer](../../../images/smartrf.png)
+    ![SmartRF Flash Programmer](../../../../images/smartrf.png)
 
 ## Linux or MacOS
 
@@ -124,7 +124,7 @@ make
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, try to reboot and retry or follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 
-    ![How to connect](../../../images/connected.jpg)
+    ![How to connect](../../../../images/connected.jpg)
 
 6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 7. Flash your firmware:

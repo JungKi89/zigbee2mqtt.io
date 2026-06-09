@@ -8,10 +8,10 @@ redirectFrom: /information/connecting_cc2530.md
 
 The pin layout is different between each CC2530 module
 
-| Name                  | Pin layout                                                                             | Picture                                               |
-| --------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| CC2530                | ![CC2530 pin layout](../../../images/cc2530_pin_layout.png)                            | ![CC2530](../../../images/cc2530.jpg)                 |
-| Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 pin layout](../../../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../../../images/cc2530_cc2591.jpg) |
+| Name                  | Pin layout                                                                                | Picture                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| CC2530                | ![CC2530 pin layout](../../../../images/cc2530_pin_layout.png)                            | ![CC2530](../../../../images/cc2530.jpg)                 |
+| Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 pin layout](../../../../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../../../../images/cc2530_cc2591.jpg) |
 
 ## Using a USB to serial adapter
 
@@ -19,15 +19,15 @@ The pin layout is different between each CC2530 module
 
 This how-to has been confirmed working with the following CC2530 based devices:
 
-| Device     | Image                                 |
-| ---------- | ------------------------------------- |
-| **CC2530** | ![CC2530](../../../images/cc2530.jpg) |
+| Device     | Image                                    |
+| ---------- | ---------------------------------------- |
+| **CC2530** | ![CC2530](../../../../images/cc2530.jpg) |
 
 and the following USB to serial adapters:
 
-| Device     | Image                                 |
-| ---------- | ------------------------------------- |
-| **CP2102** | ![CP2102](../../../images/CP2102.png) |
+| Device     | Image                                    |
+| ---------- | ---------------------------------------- |
+| **CP2102** | ![CP2102](../../../../images/CP2102.png) |
 
 ##### Flashing the firmware
 
@@ -86,7 +86,7 @@ P02 -> TXD (Pin8 / BCM 14)
 P03 -> RXD (Pin10 / BCM 15)
 ```
 
-![CC2531PI](../../../images/CC2530_PI.jpg)
+![CC2531PI](../../../../images/CC2530_PI.jpg)
 
 ### Configuring Zigbee2MQTT
 

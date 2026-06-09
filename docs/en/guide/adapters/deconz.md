@@ -39,4 +39,4 @@ The latest stable firmware versions are recommended and listed in the [firmware 
 - [Buy](https://phoscon.de/conbee3#buy) (ConBee III)
 - [Buy](https://phoscon.de/raspbee2#buy) (RaspBee II)
 
-<img src="../../images/conbee.jpg" width="200" />
+<img src="../../../images/conbee.jpg" width="200" />

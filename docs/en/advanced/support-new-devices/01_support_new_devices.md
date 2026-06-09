@@ -34,7 +34,7 @@ Note that feature discovery is still WIP, not all features may be discovered, so
 
 Next generate the external definition by navigating to the `Dev console` tab of the device and press `Generate external definition`.
 
-<img src="../../images/generate_external_definition.gif" height="300"/>
+<img src="../../../images/generate_external_definition.gif" height="300"/>
 
 By default, the external definition will map exposed Zigbee clusters to features according to the Zigbee ZCL specification. Of course, if the device does not conform to the specification, it may not work properly or at all.
 If all features work and all expected features are present, you are lucky and can skip to step 3.

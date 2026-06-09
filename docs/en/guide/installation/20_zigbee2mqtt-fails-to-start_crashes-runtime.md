@@ -222,7 +222,7 @@ The revision of your board can be seen in UniFlash by clicking _more info_ in th
 
 The correct revision is: **E** like shown below.
 
-![cc26xr1_revision](../../images/cc26xr1_revision.png)
+![cc26xr1_revision](../../../images/cc26xr1_revision.png)
 
 All earlier version are not supported (these are development boards). Return this board to the seller immediately.
 
@@ -305,7 +305,7 @@ Possible reasons that may cause this error:
 
 1. The hardware connection between the host computer and the Zigbee dongle is unreliable.
    In the following example a cheap USB cable causing unreliable connection is compared with a good USB cable:
-   ![good-vs-bad-usb-cable](../../images/good-vs-bad-usb-cable.jpg)
+   ![good-vs-bad-usb-cable](../../../images/good-vs-bad-usb-cable.jpg)
    With such cheap cable it is enough to touch the cable to cause USB disconnections.
 
 2. Zigbee2MQTT is running in a Virtual Machine and the USB passthrough between the host and the VM is unreliable.

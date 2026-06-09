@@ -39,7 +39,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
-<img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
+<img src="../../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 
 ## Hardware
 
@@ -54,7 +54,7 @@ USB connected adapter with external antenna based on CC2652R chip
 - [Vendor flashing instructions](https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick)
 - [Buy](https://shop.electrolama.com/collections/usb-rf-sticks/products/zzh-multiprotocol-rf-stick)
 
-<img src="../../images/zzh.jpg" width="200" />
+<img src="../../../images/zzh.jpg" width="200" />
 :::
 
 ::: details Slaesh's CC2652RB stick
@@ -68,7 +68,7 @@ USB connected adapter with external antenna based on CC2652RB chip
 - [Vendor flashing instructions](https://slae.sh/projects/cc2652/#flashing)
 - [Buy](https://slae.sh/projects/cc2652/)
 
-<img src="../../images/slaeshs_cc2652rb_stick.jpg" width="200" />
+<img src="../../../images/slaeshs_cc2652rb_stick.jpg" width="200" />
 :::
 
 ::: details Tube's CC2652P2 USB Coordinator
@@ -80,7 +80,7 @@ Open source hardware CC2652P based USB connected adapter with external antenna a
 - [Vendor flashing instructions](https://github.com/tube0013/tube_gateways)
 - [Buy](https://www.tubeszb.com/)
 
-<img src="../../images/Tubes_USB_Coordinator_CC2652P2_variant.png" width="200" />
+<img src="../../../images/Tubes_USB_Coordinator_CC2652P2_variant.png" width="200" />
 :::
 
 ::: details Egony Stick V4
@@ -93,7 +93,7 @@ Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Eb
 - Description: [Ebyte](https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Home-EN) [RFSTAR](https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN)
 - [Contact](http://t.me/Egony)
 
-<img src="../../images/Egony_v4_E72.jpg" width="200" /> <img src="../../images/Egony_v4_RFS.jpg" width="200" />
+<img src="../../../images/Egony_v4_E72.jpg" width="200" /> <img src="../../../images/Egony_v4_RFS.jpg" width="200" />
 
 :::
 
@@ -107,7 +107,7 @@ Powerful Open source dongle with external antenna based on CC2652P
 - [Vendor flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/)
 - [Buy](https://zig-star.com)
 
-<img src="../../images/ZigStar-USB.png" width="200" />
+<img src="../../../images/ZigStar-USB.png" width="200" />
 :::
 
 ::: details CircuitSetup's CC2652P2 USB Coordinator
@@ -119,7 +119,7 @@ CC2652P based USB connected adapter pre-programmed with Z-Stack
 - [Vendor flashing instructions](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/)
 - [Buy](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/)
 
-<img src="../../images/circset_cc2652.jpg" width="200" />
+<img src="../../../images/circset_cc2652.jpg" width="200" />
 :::
 
 ::: details SMLIGHT CC2652P Zigbee USB Adapter SLZB-02
@@ -132,7 +132,7 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 - [Vendor flashing instructions](https://smartlight.me/flashing_slzb-02)
 - Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p), [Tindie](https://www.tindie.com/products/smartlightme/zigbee-cc2652p-coordinator-dongle-stick-adapter/)
 
-<img src="../../images/CC2652P_smartlight_zigbee_coordinator.png" width="200" />
+<img src="../../../images/CC2652P_smartlight_zigbee_coordinator.png" width="200" />
 :::
 
 ::: details SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P
@@ -149,7 +149,7 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 - [Vendor flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx) ([PDF version](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf) and [required python script](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-uartLog.zip))
 - [Buy](https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/)
 
-<img src="../../images/sonoff_plus_dongle.png" width="200" />
+<img src="../../../images/sonoff_plus_dongle.png" width="200" />
 :::
 
 ::: details Vision CC2652 dongle
@@ -161,7 +161,7 @@ Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/releases/dow
 - [Vendor flashing instructions](https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D)
 - Buy: [VS201](https://www.aliexpress.com/item/1005002809329614.html) [VS202](https://www.aliexpress.com/item/1005003393047763.html)
 
-<img src="../../images/cc26x2r1_dongle.jpg" width="200" />
+<img src="../../../images/cc26x2r1_dongle.jpg" width="200" />
 :::
 
 ::: details JetHome JetStick Z2/ZB6UX CC2652P1
@@ -173,7 +173,7 @@ Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 - [Firmware](https://docs.jethome.ru/en/zigbee/software/ti_cc2652p.html#zigbee-software-ti-cc2652p)
 - Buy: [JetStick Z2](https://jethome.ru/z2/)
 
-<img src="../../images/jetstick_z2.png" width="200" />
+<img src="../../../images/jetstick_z2.png" width="200" />
 :::
 
 ::: details SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter
@@ -210,7 +210,7 @@ Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator (lef
 - [Vendor flashing instructions](https://github.com/tube0013/tube_gateways)
 - [Buy](https://www.tubeszb.com/)
 
-<img src="../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg" width="200" /> <img src="../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg" width="200" />
+<img src="../../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg" width="200" /> <img src="../../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg" width="200" />
 
 :::
 
@@ -223,7 +223,7 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 - [Description](https://github.com/cyijun/OpenZ3Gateway)
 - [Tindie](https://www.tindie.com/products/cyijun/openz3gateway/)
 
-<img src="../../images/openz3gateway.jpg" width="200" />
+<img src="../../../images/openz3gateway.jpg" width="200" />
 :::
 
 ::: details XGG 52PZ2MGateway
@@ -235,7 +235,7 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 - [Description](https://shop68536829.taobao.com/)
 - [Buy](https://shop68536829.taobao.com/)
 
-<img src="../../images/CC2652P-Z2M.jpg" width="200" />
+<img src="../../../images/CC2652P-Z2M.jpg" width="200" />
 :::
 
 ::: details SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05
@@ -262,7 +262,7 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 - [Vendor flashing instructions](https://gio-dot.github.io/Z-Bee-Duo/Firmware-upgrade)
 - [Buy](https://www.tindie.com/products/gio_dot/z-bee-duo-modular-cc2652p-zigbee-30-adapter/)
 
-<img src="../../images/Z-Bee_Duo-ico.jpg" width="200" />
+<img src="../../../images/Z-Bee_Duo-ico.jpg" width="200" />
 :::
 
 ::: details ZigStar LAN Coordinator
@@ -275,7 +275,7 @@ Powerful Open source LAN Coordinator with external antenna on CC2652P
 - [Vendor flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/)
 - [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
 
-<img src="../../images/ZigStar-LAN.png" width="200" />
+<img src="../../../images/ZigStar-LAN.png" width="200" />
 :::
 
 ::: details ZigStar PoE Coordinator
@@ -288,7 +288,7 @@ Open source PoE af Coordinator with external antenna on CC2652P
 - [Vendor flashing instructions](https://zig-star.com/radio-docs/zigstar-multi-tool/)
 - [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-olizig-poe/)
 
-<img src="../../images/ZigStar-PoE.png" width="200" />
+<img src="../../../images/ZigStar-PoE.png" width="200" />
 :::
 
 ::: details SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter
@@ -330,9 +330,9 @@ Open source PoE af Coordinator with external antenna on CC2652P
 - [Vendor flashing instructions](https://uzg.zig-star.com/flashing-and-updating/)
 - Buy: [Official Store](https://uzg.zig-star.com),[Tindie](https://www.tindie.com/stores/zigstar/),[Elecrow](https://www.elecrow.com/zigstar-uzg-01-universal-zigbee-gateway.html)
 
-|                       ZigStar UZG-01                       |                         Dimensions                         |
-| :--------------------------------------------------------: | :--------------------------------------------------------: |
-| <img src="../../images/Zigstar-UZG01-1.png" width="200" /> | <img src="../../images/Zigstar-UZG01-2.png" width="200" /> |
+|                        ZigStar UZG-01                         |                          Dimensions                           |
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+| <img src="../../../images/Zigstar-UZG01-1.png" width="200" /> | <img src="../../../images/Zigstar-UZG01-2.png" width="200" /> |
 
 :::
 
@@ -386,7 +386,7 @@ Links:
 - [Documentation](https://docs.codm.de/en/zigbee/coordinator/)
 - [Buy](https://shop.codm.de/en/automation/zigbee/40/zigbee-coordinator-cc2652p7-PoE)
 
-<img src="../../images/codm-cc2652p7-zigbee-coordinator.jpg" width="200" /> <img src="../../images/codm-cc2652p7-zigbee-coordinator-schematic.png" width="200" />
+<img src="../../../images/codm-cc2652p7-zigbee-coordinator.jpg" width="200" /> <img src="../../../images/codm-cc2652p7-zigbee-coordinator-schematic.png" width="200" />
 
 :::
 
@@ -394,9 +394,9 @@ Links:
 
 SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG21 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
-|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
-| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+|                                     Product picture                                     |                                    Interface screenshot                                    |                                                          Youtube videoreview                                                          |
+| :-------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr1/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
@@ -408,9 +408,9 @@ SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG
 
 SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG21, and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
-|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
-| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+|                                     Product picture                                     |                                    Interface screenshot                                    |                                                          Youtube videoreview                                                          |
+| :-------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="200" /> | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr2/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).
@@ -422,9 +422,9 @@ SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG2
 
 SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32MG24 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
-|                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
-| :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+|                                     Product picture                                     |                                    Interface screenshot                                    |                                                          Youtube videoreview                                                          |
+| :-------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr3/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
@@ -452,9 +452,9 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 Designed for **local, cloud-independent** operation with Home Assistant and Zigbee2MQTT.
 
-|                                       Product functions                                        |                                    Porduct photo                                    |                                  Interface screenshot                                  |
-| :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
+|                                         Product functions                                         |                                     Porduct photo                                      |                                   Interface screenshot                                    |
+| :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
 
 - [Product page](https://smlight.tech/global/slzb-ultima)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-ultima), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005010752270531.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010752555288.html).
@@ -467,9 +467,9 @@ Designed for **local, cloud-independent** operation with Home Assistant and Zigb
 
 SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Premium variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Premium variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
-|                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
-| :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
+|                                Product picture                                 |                             Interface screenshot                              |                                                Youtube videoreview                                                 |
+| :----------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
 
 - [Product page](https://smlight.tech/global/smhub)
 - [Manual](https://smlight.tech/support/manuals/books/smhub)
@@ -488,7 +488,7 @@ Based on TI CC2652P1.
 - [Documentation](https://docs.jethome.ru/en/controllers/linux/din_rail/d1p.html)
 - [Buy](https://jethome.ru/d1p/)
 
-<img src="../../images/jethub_d1_full.png" width="200" />
+<img src="../../../images/jethub_d1_full.png" width="200" />
 :::
 
 ### Custom
@@ -502,7 +502,7 @@ Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)
 - [Vendor flashing instructions](https://github.com/codm/cc2652-raspberry-pi-module#firmware)
 - [Buy](https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module)
 
-<img src="../../images/codm-cc2652p-rpi.jpg" width="200" />
+<img src="../../../images/codm-cc2652p-rpi.jpg" width="200" />
 :::
 
 ::: details ZigStar ZigiHAT PoE
@@ -515,7 +515,7 @@ Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
 - [Vendor flashing instructions](https://zig-star.com/projects/zigbee-zigihat/#flashing)
 - [Buy](https://zig-star.com)
 
-<img src="../../images/ZigiHAT.png" width="200" />
+<img src="../../../images/ZigiHAT.png" width="200" />
 :::
 
 ::: details Texas Instruments LAUNCHXL-CC1352P-2
@@ -529,7 +529,7 @@ An external antenna can be connected which could increase range: [requires resol
 - [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 - [Buy](http://www.ti.com/tool/LAUNCHXL-CC1352P)
 
-<img src="../../images/cc1352p2.jpg" width="200" />
+<img src="../../../images/cc1352p2.jpg" width="200" />
 :::
 
 ::: details Texas Instruments LAUNCHXL-CC26X2R1
@@ -543,7 +543,7 @@ An external antenna can be connected which could increase range: [requires resol
 - [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 - [Buy](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 
-<img src="../../images/cc26x2r1.jpg" width="200" />
+<img src="../../../images/cc26x2r1.jpg" width="200" />
 :::
 
 ::: details Texas Instruments LP-CC2652R7
@@ -555,7 +555,7 @@ These devices have two serial devices built in. Make sure you put the right seri
 - [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 - [Buy](http://www.ti.com/tool/LP-CC2652R7)
 
-<img src="../../images/CC2652R7.png" width="200" />
+<img src="../../../images/CC2652R7.png" width="200" />
 :::
 
 ::: details Texas Instruments LP-CC1352P7
@@ -567,7 +567,7 @@ These devices have two serial devices built in. Make sure you put the right seri
 - [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 - [Buy](https://www.ti.com/tool/LP-CC1352P7)
 
-<img src="../../images/LP-CC1352P7.jpg" width="200" />
+<img src="../../../images/LP-CC1352P7.jpg" width="200" />
 :::
 
 ### Not recommended
@@ -584,7 +584,7 @@ USB connected Zigbee adapter with PCB antenna
 - [Flashing instructions](./flashing/flashing_the_cc2531.md)
 - [Buy](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2531)
 
-<img src="../../images/cc2531.jpg" width="200" />
+<img src="../../../images/cc2531.jpg" width="200" />
 :::
 
 ::: details Vision CC2538+CC2592 Dongle(VS203)
@@ -595,7 +595,7 @@ Adapter or small development board based on CC2538 and CC2592 chip
 - [Flashing instructions](https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX)
 - [Buy](https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX)
 
-<img src="../../images/cc2538_cc2592_dongle.jpg" width="200" />
+<img src="../../../images/cc2538_cc2592_dongle.jpg" width="200" />
 :::
 
 ::: details Texas Instruments CC2530
@@ -610,7 +610,7 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 - [Connecting](./flashing/connecting_cc2530.md)
 - Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
 
-<img src="../../images/cc2530.jpg" width="200" />
+<img src="../../../images/cc2530.jpg" width="200" />
 :::
 
 ::: details Texas Instruments CC2538
@@ -621,7 +621,7 @@ Serial connected adapter with CC2592 RF Amplifier
 - [Flashing instructions](./flashing/flashing_the_cc2538.md)
 - Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 
-<img src="../../images/cc2538.jpg" width="200" />
+<img src="../../../images/cc2538.jpg" width="200" />
 :::
 
 ::: details XGG gateway
@@ -631,7 +631,7 @@ Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firm
 
 - [Contact](https://shop68536829.taobao.com/)
 
-<img src="../../images/CC2652P-Z2M.jpg" width="200" />
+<img src="../../../images/CC2652P-Z2M.jpg" width="200" />
 :::
 
 ::: details Texas Instruments CC2538 HAT
@@ -642,5 +642,5 @@ Raspberry pinout compatible HAT with CC2538 and optional external antenna
 - [Flashing instructions](./flashing/flashing_the_cc2538.md)
 - [Buy](https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/)
 
-<img src="../../images/cc2538hat.jpg" width="200" />
+<img src="../../../images/cc2538hat.jpg" width="200" />
 :::

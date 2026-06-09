@@ -23,9 +23,9 @@ Start Android Studio and create a new empty project:
 1. File -> New -> New Project...
 1. Phone and Tablet -> Empty Activity -> Next
 1. Finish
-1. Click on the emulator ("Pixel*3a*..." in the case below) -> Device Manager <br/> ![](../../images/android_studio_run.png)
+1. Click on the emulator ("Pixel*3a*..." in the case below) -> Device Manager <br/> ![](../../../images/android_studio_run.png)
 1. Click on the pencil icon of the device, under "Show Advanced Settings" change the "Internal Storage" to "2000". Click "Finish".
-1. Start the emulator by clicking the play icon. <br/> ![](../../images/android_studio_adv.png)
+1. Start the emulator by clicking the play icon. <br/> ![](../../../images/android_studio_adv.png)
 1. On the emulator, go to Settings -> Network & internet -> Internet -> AndroidWifi -> Edit (pencil right top) -> Advanced options -> Proxy -> Manual. For proxy host name fill in the IP address of your computer (e.g. 192.168.2.145), for port fill in 8080. Save.
 1. Open Chrome on the emulator, go to http://mitm.it and click on "Get mitmproxy-ca-cert.cer" under Android.
 1. Go to settings again, Security -> Encryption & credentials -> Install a certificate -> CA certificate -> Install anyway -> Drawer icon -> Downloads -> click on the downloaded certificate.
@@ -39,7 +39,7 @@ Start Android Studio and create a new empty project:
 1. If an firmware upgrade is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see red box below).
     - Tip: to go back to the overview of requests press the `Q` key on your keyboard.
 
-![](../../images/tuya_ota.png)
+![](../../../images/tuya_ota.png)
 
 ## Step 3b: get the Xiaomi OTA url
 

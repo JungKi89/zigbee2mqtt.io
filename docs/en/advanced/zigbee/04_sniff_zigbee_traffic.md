@@ -48,7 +48,7 @@ Next click on `Pre-configured keys > Edit`. Click on _+_ and add `5A:69:67:42:65
 
 _NOTE: The Hue bridge uses a [different Trust Center link key](https://peeveeone.com/2016/11/breakout-breakthrough/)_
 
-![Wireshark Trust Center link key](../../images/wireshark_tclink_key.png)
+![Wireshark Trust Center link key](../../../images/wireshark_tclink_key.png)
 
 ### Adding the Network key
 
@@ -67,13 +67,13 @@ If you changed your `network_key` (used `GENERATE`), you need to convert it to t
 
 3. If you don't want to translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is _Device Announcement...._. Open the message and expand _Zigbee Network Layer Data_ -> _Zigbee Security Header_.
 
-    ![Wireshark network key](../../images/wireshark_network_key.png)
+    ![Wireshark network key](../../../images/wireshark_network_key.png)
 
 Copy the key value, as shown above and go to `Edit > Preferences > Protocols > Zigbee > Pre-configured keys > Edit` and add the key with Byte Order `Normal`.
 
 Now Wireshark is able to decrypt the messages. When e.g. turning on a light you will see a message similar to:
 
-![Wireshark packet](../../images/wireshark_packet.png)
+![Wireshark packet](../../../images/wireshark_packet.png)
 
 ## With CC2531
 

@@ -67,7 +67,7 @@ serial:
 - [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-2)
 - [Buy](https://www.home-assistant.io/connect/zbt-2)
 
-<img src="../../images/zbt2.jpg" width="200" />
+<img src="../../../images/zbt2.jpg" width="200" />
 
 :::
 
@@ -82,7 +82,7 @@ With external antenna(+3 dBi). Only supports software flow control (make sure no
 - [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-pmg24/hardware-specification-dongle-pmg24/)
 - [Buy](https://sonoff.tech/products/sonoff-zigbee-thread-usb-dongle-dongle-plus-mg24)
 
-<img src="../../images/dongle-pmg24-device.jpg" width="200" />
+<img src="../../../images/dongle-pmg24-device.jpg" width="200" />
 
 :::
 
@@ -99,7 +99,7 @@ serial:
 
 - [Product page](https://smlight.tech/product/slzb-07mg24/) (not available yet, so link doesn't work)
 
-<img src="../../images/smlight-slzb-07mg24.jpg" width="200" />
+<img src="../../../images/smlight-slzb-07mg24.jpg" width="200" />
 
 :::
 
@@ -117,7 +117,7 @@ serial:
 - [Product page](https://aeotec.com/products/aeotec-z-stick-zigbee/)
 - [Buy](https://store.aeotec.com/products/zi-stick-zigbee-zga008)
 
-<img src="../../images/aeotec-zi-stick-zga008.jpg" width="200" />
+<img src="../../../images/aeotec-zi-stick-zga008.jpg" width="200" />
 
 :::
 
@@ -135,7 +135,7 @@ With external antenna. Only supports software flow control (make sure not to set
     - **Note**: The PDF links to an old firmware. See all [NCP_X.Y.Z](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E) versions and pick [7.4.4](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/NCP_7.4.4) or newer.
 - [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
-<img src="../../images/dongle-e.jpg" width="200" />
+<img src="../../../images/dongle-e.jpg" width="200" />
 :::
 
 ::: details SMLIGHT SLZB-07
@@ -153,7 +153,7 @@ serial:
 - Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
   Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07-usb-zigbee-adapter), [Austria, Belgium, Germany, Netherlands](https://www.hobbyelectronica.nl/product/slzb-07-zigbee-coordinator-usb/), [France](https://www.domadoo.fr/fr/interface-domotique/7044-smlight-dongle-usb-zigbee-efr32mg21-cp2102n-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb), [US Amazon](https://www.amazon.com/LOAMLIN-SMLIGHT-SLZB-07-Zigbee-Coordinator/dp/B0CNVBCCR3)
 
-<img src="../../images/smlight-slzb-07.jpg" width="200" />
+<img src="../../../images/smlight-slzb-07.jpg" width="200" />
 
 :::
 
@@ -173,7 +173,7 @@ serial:
 - [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
 - [Buy](https://www.home-assistant.io/connectzbt1)
 
-<img src="../../images/skyconnect_isometric.jpg" width="200" />
+<img src="../../../images/skyconnect_isometric.jpg" width="200" />
 
 :::
 
@@ -192,7 +192,7 @@ serial:
 - [Firmware](https://z-wave.me/support/tools-for-zigbee-openthread-ble/)
 - Buy: [Official Store - Worldwide](https://smartsd.ch/z-station-usb-adaptor-for-z-wave-zigbee-thread-ble/)
 
-<img src="../../images/z-station.jpg" width="200" />
+<img src="../../../images/z-station.jpg" width="200" />
 
 :::
 
@@ -209,7 +209,7 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 - [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
 - [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
 
-<img src="../../images/tubezb-mgm24-poe.jpg" width="200" />
+<img src="../../../images/tubezb-mgm24-poe.jpg" width="200" />
 
 :::
 
@@ -228,7 +228,7 @@ Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-
 - [Product page](https://shop68536829.taobao.com)
 - [Buy](https://shop68536829.taobao.com)
 
-<img src="../../images/zbgw_pro.jpg" width="200" />
+<img src="../../../images/zbgw_pro.jpg" width="200" />
 
 :::
 
@@ -254,9 +254,9 @@ Note: You can also use TCP with either `zbgw_efr32_pro.local:6638` or `<gateway-
 
 Designed for **local, cloud-independent** operation with Home Assistant and Zigbee2MQTT.
 
-|                                       Product functions                                        |                                    Porduct photo                                    |                                  Interface screenshot                                  |
-| :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
+|                                         Product functions                                         |                                     Porduct photo                                      |                                   Interface screenshot                                    |
+| :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-functions.png" width=" 200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SLZB-Ultima/slzb-ultima-fw.jpg" width="200" /> |
 
 - [Product page](https://smlight.tech/global/slzb-ultima)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-ultima), [Aliexpress-1 - Worldwide](https://www.aliexpress.com/item/1005010752270531.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010752555288.html).
@@ -267,15 +267,15 @@ Designed for **local, cloud-independent** operation with Home Assistant and Zigb
 
 SLZB-MRx Series is a compact multi-radio smart home adapter featuring Silicon Labs **EFR32MG26**/EFR32MG24/EFR32MG21 and Texas Instruments CC2674P10/CC2652P7/CC2652P for MR4/MR3/MR2/MR1, respectively (two Zigbee/Thread radios), and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread running on different SoCs, alongside Ethernet, Wi-Fi, or USB. Devices support PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, DDNS, WireGuard VPN, HA integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
-| Parameter                        |                                                                 **SLZB-MR4**                                                                  |                                                             **SLZB-MR3**                                                             |                                                                   **SLZB-MR2**                                                                    |                                                            **SLZB-MR1**                                                            |
-| :------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| **Zigbee/Thread Radio 1 SoC**    |                                                                   EFR32MG26                                                                   |                                                              EFR32MG24                                                               |                                                                     EFR32MG21                                                                     |                                                             EFR32MG21                                                              |
-| **Zigbee/Thread Radio 2 SoC**    |                                                                   CC2674P10                                                                   |                                                              CC2674P10                                                               |                                                                      CC2652P                                                                      |                                                              CC2652P7                                                              |
-| **Max Supported Zigbee Devices** |                                                                     ≈ 800                                                                     |                                                                ≈ 750                                                                 |                                                                       ≈ 400                                                                       |                                                               ≈ 500                                                                |
-| **Product image**                |                             <img src="../../images/adapters/SMLIGHT/SLZB-MR4/slzb-mr4-device.jpg" width="150" />                              |                         <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="150" />                         |                               <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="150" />                                |                        <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="150" />                        |
-| **Web interface**                |                                                                                                                                               |                       <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="150" />                        |                              <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="150" />                              |                      <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="150" />                       |
-| **Youtube review**               | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-smarthomeaustralia.jpg" width="150" />](https://www.youtube.com/watch?v=2fYrW38R0Jc) | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-mrtimtech.jpg" width="150" />](https://www.youtube.com/watch?v=Oc0PkPVUseE) | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-simonsayshomeassistant.jpg" width="150" />](https://www.youtube.com/watch?v=hQnM7l5iwsw) | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="150" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
-| **Product page**                 |                                                [SLZB-MR4](https://smlight.tech/global/slzbmr4)                                                |                                           [SLZB-MR3](https://smlight.tech/global/slzbmr3)                                            |                                                  [SLZB-MR2](https://smlight.tech/global/slzbmr2)                                                  |                                          [SLZB-MR1](https://smlight.tech/global/slzbmr2)                                           |
+| Parameter                        |                                                                   **SLZB-MR4**                                                                   |                                                              **SLZB-MR3**                                                               |                                                                     **SLZB-MR2**                                                                     |                                                             **SLZB-MR1**                                                              |
+| :------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
+| **Zigbee/Thread Radio 1 SoC**    |                                                                    EFR32MG26                                                                     |                                                                EFR32MG24                                                                |                                                                      EFR32MG21                                                                       |                                                               EFR32MG21                                                               |
+| **Zigbee/Thread Radio 2 SoC**    |                                                                    CC2674P10                                                                     |                                                                CC2674P10                                                                |                                                                       CC2652P                                                                        |                                                               CC2652P7                                                                |
+| **Max Supported Zigbee Devices** |                                                                      ≈ 800                                                                       |                                                                  ≈ 750                                                                  |                                                                        ≈ 400                                                                         |                                                                 ≈ 500                                                                 |
+| **Product image**                |                             <img src="../../../images/adapters/SMLIGHT/SLZB-MR4/slzb-mr4-device.jpg" width="150" />                              |                         <img src="../../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="150" />                         |                               <img src="../../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="150" />                                |                        <img src="../../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="150" />                        |
+| **Web interface**                |                                                                                                                                                  |                       <img src="../../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="150" />                        |                              <img src="../../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="150" />                              |                      <img src="../../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="150" />                       |
+| **Youtube review**               | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-smarthomeaustralia.jpg" width="150" />](https://www.youtube.com/watch?v=2fYrW38R0Jc) | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-mrtimtech.jpg" width="150" />](https://www.youtube.com/watch?v=Oc0PkPVUseE) | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-simonsayshomeassistant.jpg" width="150" />](https://www.youtube.com/watch?v=hQnM7l5iwsw) | [<img src="../../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="150" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+| **Product page**                 |                                                 [SLZB-MR4](https://smlight.tech/global/slzbmr4)                                                  |                                             [SLZB-MR3](https://smlight.tech/global/slzbmr3)                                             |                                                   [SLZB-MR2](https://smlight.tech/global/slzbmr2)                                                    |                                            [SLZB-MR1](https://smlight.tech/global/slzbmr2)                                            |
 
 **SLZB-MR4 buy**: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress-1 - Wordldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
 Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter), [CH](https://www.swiss-domotique.ch/en/actuators-modules/smlight-usb-ethernet-poe-adapter-zigbee-and-thread-cc2674p10-efr32mg26), [FR](https://www.domadoo.fr/fr/produits-de-domotique/8369-smlight-adaptateur-usb-ethernet-poe-zigbee-et-thread-cc2674p10-efr32mg26-slzb-mr4.html), [PL](https://pcblab.io/adapter-slzbmr4-zigbee-thread-cc2674p10-efr32mg26-poe-usb-wifi-esp32-lan.html), [UK](https://zigbeesmart.com/de-de/products/smlight-slzb-mr4-dual-radio-zigbee-thread-ethernet-coordinator?_pos=6&_sid=04f161c3b&_ss=r)
@@ -302,7 +302,7 @@ The Dongle-M includes two chips: ESP32-D0WD-R2 and EFR32MG24. It comes with two 
 - [Hardware-specification](https://dongle.sonoff.tech/guide/dongle-m/hardware-specification-dongle-m/)
 - [Buy](https://sonoff.tech/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
 
-<img src="../../images/Dongle-M_600_600.jpg" width="200" />
+<img src="../../../images/Dongle-M_600_600.jpg" width="200" />
 
 :::
 
@@ -314,7 +314,7 @@ With external antenna.
 
 - [Product page](https://smlight.tech/global/slzb06mg26)
 
-<img src="../../images/adapters/SMLIGHT/SLZB-06MG26/slzb-06mg26-device.jpg" width="200" />
+<img src="../../../images/adapters/SMLIGHT/SLZB-06MG26/slzb-06mg26-device.jpg" width="200" />
 
 **SLZB-06Mg26 buy**:
 
@@ -330,7 +330,7 @@ With external antenna.
 
 - [Product page](https://smlight.tech/global/slzb06mg24)
 
-<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
+<img src="../../../images/smlight-slzb-06mg24.jpg" width="200" />
 
 :::
 
@@ -357,9 +357,9 @@ Not suitable for WiFi or other high latency connections.**
 
 SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates SL SoC EFR32MG24 SoC, with Ethernet+POE, Wi-Fi, Bluetooth and USB connectivity. Hardware features include SD card, eMMC, button and 4 service LEDs. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
-|                                            Product picture                                            |                                       Interface1 screenshot 1                                        |                                        Interface screenshot 2                                        |
-| :---------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_2.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_4.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_3.jpg" width="200" /> |
+|                                             Product picture                                              |                                         Interface1 screenshot 1                                         |                                         Interface screenshot 2                                          |
+| :------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_2.jpg" width=" 200" /> | <img src="../../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_4.jpg" width="200" /> | <img src="../../../images/adapters/SMLIGHT/SMHUB-Nano/SMHHUB-Nano-Mg24/SMHUB-Nano_3.jpg" width="200" /> |
 
 - [Product page](https://smlight.tech/global/smhub-nano-mg24)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/smhub-nano), [Aliexpress-1 - Worldwide](https://a.aliexpress.com/_EwWCdYC), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005010395706341.html).
@@ -370,9 +370,9 @@ SMHUB Nano Mg24 is a Linux-based multi-radio smart home hub with fancy UI, that 
 
 SMHUB is a Linux-based multi-radio smart home hub with fancy UI, that runs Zigbee2MQTT directly on the device, without needing an external server. It also comes with Mosquitto MQTT broker, Node-RED, and Matterbridge preinstalled, making it a full smart home gateway out of the box. SMHUB integrates TI SoC (CC2652P for Essential, CC2674P10 for Premium variants), and SL SoC (EFR32MG21 for Essential, and EFR32MG24 for Premium variants), with Ethernet, Wi-Fi, USB, and optional Z-Wave radios, PoE, and 4G connectivity. Hardware features include 12 RGB LEDs, IR receiver/transmitter, audio, SD card, eMMC, and multiple USB ports. With OTA updates, VPN and more via SMHUB-OS, it provides a powerful and future-proof platform for any ecosystems.
 
-|                               Product picture                               |                            Interface screenshot                            |                                               Youtube videoreview                                               |
-| :-------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
-| <img src="../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
+|                                Product picture                                 |                             Interface screenshot                              |                                                Youtube videoreview                                                 |
+| :----------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| <img src="../../../images/adapters/SMLIGHT/SMHUB/smhub_21.jpg" width=" 200" /> | <img src="../../../images/adapters/SMLIGHT/SMHUB/smhub-os.jpg" width="200" /> | [<img src="../../../images/adapters/SMLIGHT/SMHUB/smhub-youtube.jpg" width="200" />](https://youtu.be/xQsIt4yYxdw) |
 
 - [Product page](https://smlight.tech/global/smhub)
 - [Manual](https://smlight.tech/support/manuals/books/smhub)
@@ -396,7 +396,7 @@ serial:
 - [Flashing](https://toolbox.openhomefoundation.org/home-assistant-connect-zbt-1)
 - [Buy](https://www.home-assistant.io/yellow)
 
-<img src="../../images/yellow.jpg" width="200" />
+<img src="../../../images/yellow.jpg" width="200" />
 :::
 
 ### Custom
@@ -409,7 +409,7 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 - [Product page - Sense variant](https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html)
 - [Getting started](https://wiki.seeedstudio.com/xiao_mg24_getting_started/)
 
-<img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
+<img src="../../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
 
 ### Not recommended
