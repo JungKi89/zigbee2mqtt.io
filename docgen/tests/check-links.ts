@@ -3,7 +3,8 @@ import {getBase} from '../../getBase';
 import {distDir, findFiles} from './utils';
 import * as path from 'path';
 
-const hrefRgxp = /<a[^>]+href ?= ?"([^#?]+?)["#?]/gi;
+// Capture full href value up to closing quote; fragment/query stripped in processing
+const hrefRgxp = /<a[^>]+href ?= ?"([^"]+?)"/gi;
 
 function decodeHtmlEntities(s: string): string {
     return s
@@ -17,7 +18,12 @@ function decodeHtmlEntities(s: string): string {
 async function checkFile(file: string, availableFiles: string[]) {
     const content = await fsp.readFile(file, 'utf-8');
     const linkToFiles = Array.from(content.matchAll(hrefRgxp))
-        .map((x) => decodeHtmlEntities(x[1])) // get the matched part, decode HTML entities
+        .map((x) => {
+            const decoded = decodeHtmlEntities(x[1]);
+            // Strip fragment (#...) and query string (?...) after decoding
+            return decoded.split('#')[0].split('?')[0];
+        })
+        .filter((x) => x.length > 0) // skip fragment-only or empty hrefs
         .filter((x) => !x.match(/^https?:/)) // filter external links
         .filter((x) => !x.endsWith('.md')) // ignore links to .md files
         .filter((x) => !x.startsWith('mailto:')) // ignore mailto
