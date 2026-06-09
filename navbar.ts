@@ -2,14 +2,14 @@ import type {NavbarOptions} from '@vuepress/theme-default';
 import {resolve} from 'path';
 import {readdirSync} from 'fs';
 
-export function getFiles(dir: string) {
+export function getFiles(dir: string, locale = '') {
     const base = resolve(__dirname, 'docs');
-    return readdirSync(resolve(base, dir))
+    return readdirSync(resolve(base, ...(locale ? [locale, dir] : [dir])))
         .filter((file) => file.endsWith('.md') && file !== 'README.md')
-        .map((file) => `/${dir}/${file}`);
+        .map((file) => `/${locale ? locale + '/' : ''}${dir}/${file}`);
 }
 
-export const navbar: NavbarOptions = [
+export const koNavbar: NavbarOptions = [
     {
         text: '가이드',
         children: [
@@ -73,3 +73,71 @@ export const navbar: NavbarOptions = [
         link: 'https://github.com/Koenkk/zigbee2mqtt',
     },
 ];
+
+export const enNavbar: NavbarOptions = [
+    {
+        text: 'Guide',
+        children: [
+            '/en/guide/getting-started/',
+            {
+                link: '/en/guide/adapters/',
+                text: 'Supported Adapters',
+                activeMatch: '(/en/guide/adapters/|/en/guide/supported-hardware)',
+            },
+            {
+                text: 'Supported Devices',
+                link: '/supported-devices/',
+            },
+            '/en/guide/installation/',
+            '/en/guide/configuration/',
+            {
+                text: 'Usage',
+                link: '/en/guide/usage/pairing_devices.md',
+                activeMatch: '/en/guide/usage/',
+            },
+            '/en/guide/faq/',
+        ],
+    },
+    {
+        text: 'Devices',
+        link: '/supported-devices/',
+        activeMatch: '^/(supported-)?devices/',
+    },
+    {
+        text: 'Advanced',
+        children: [
+            {text: 'Zigbee', children: getFiles('advanced/zigbee', 'en')},
+            {text: 'Support new devices', children: getFiles('advanced/support-new-devices', 'en')},
+            {text: 'Remote Adapter', children: getFiles('advanced/remote-adapter', 'en')},
+            {text: 'More', children: getFiles('advanced/more', 'en')},
+        ],
+    },
+    {
+        text: 'Support',
+        children: [
+            {
+                text: 'Forum',
+                link: 'https://github.com/Koenkk/zigbee2mqtt/discussions',
+            },
+            {
+                text: 'Discord',
+                link: 'https://discord.gg/NyseBeK',
+            },
+            {
+                text: 'Issues',
+                link: 'https://github.com/Koenkk/zigbee2mqtt/issues',
+            },
+            {
+                text: 'Donate',
+                link: 'https://github.com/Koenkk/zigbee2mqtt',
+            },
+        ],
+    },
+    {
+        text: 'GitHub',
+        link: 'https://github.com/Koenkk/zigbee2mqtt',
+    },
+];
+
+// 하위 호환성을 위한 기본 export (한국어)
+export const navbar = koNavbar;

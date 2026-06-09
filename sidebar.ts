@@ -1,7 +1,7 @@
 import type {SidebarOptions} from '@vuepress/theme-default';
 import {getFiles} from './navbar';
 
-export const sidebar: SidebarOptions = {
+export const koSidebar: SidebarOptions = {
     '/devices/': false,
     '/guide/': [
         '/guide/getting-started/',
@@ -63,3 +63,69 @@ export const sidebar: SidebarOptions = {
     '/advanced/remote-adapter/': getFiles('advanced/remote-adapter'),
     '/advanced/support-new-devices/': getFiles('advanced/support-new-devices'),
 };
+
+export const enSidebar: SidebarOptions = {
+    '/devices/': false,
+    '/en/guide/': [
+        '/en/guide/getting-started/',
+        {
+            text: 'Supported Hardware',
+            link: '/en/guide/supported-hardware.md',
+            children: [
+                {text: 'Adapters', link: '/en/guide/adapters/'},
+                {text: 'Devices', link: '/supported-devices/'},
+            ],
+        },
+        {
+            text: 'Installation',
+            link: '/en/guide/installation/',
+            children: [...getFiles('guide/installation', 'en')],
+        },
+        {
+            text: 'Configuration',
+            link: '/en/guide/configuration/',
+            children: [
+                '/en/guide/configuration/adapter-settings.md',
+                '/en/guide/configuration/mqtt.md',
+                '/en/guide/configuration/zigbee-network.md',
+                '/en/guide/configuration/frontend.md',
+                '/en/guide/configuration/devices-groups.md',
+                '/en/guide/configuration/logging.md',
+                '/en/guide/configuration/block-pass-list.md',
+                '/en/guide/configuration/ota-device-updates.md',
+                '/en/guide/configuration/device-availability.md',
+                '/en/guide/configuration/homeassistant.md',
+                '/en/guide/configuration/more-config-options.md',
+                '/en/guide/configuration/configuration-update.md',
+                '/en/guide/configuration/all-settings.md',
+            ],
+        },
+        {
+            text: 'Usage',
+            link: '/en/guide/usage/',
+            children: [
+                '/en/guide/usage/pairing_devices.md',
+                '/en/guide/usage/integrations.md',
+                '/en/guide/usage/touchlink.md',
+                '/en/guide/usage/scenes.md',
+                '/en/guide/usage/binding.md',
+                '/en/guide/usage/groups.md',
+                '/en/guide/usage/ota_updates.md',
+                '/en/guide/usage/mqtt_topics_and_messages.md',
+                '/en/guide/usage/exposes.md',
+                '/en/guide/usage/health.md',
+            ],
+        },
+        {
+            text: 'FAQ',
+            link: '/en/guide/faq/',
+        },
+    ],
+
+    '/en/advanced/zigbee/': getFiles('advanced/zigbee', 'en'),
+    '/en/advanced/remote-adapter/': getFiles('advanced/remote-adapter', 'en'),
+    '/en/advanced/support-new-devices/': getFiles('advanced/support-new-devices', 'en'),
+};
+
+// 하위 호환성을 위한 기본 export (한국어)
+export const sidebar = koSidebar;

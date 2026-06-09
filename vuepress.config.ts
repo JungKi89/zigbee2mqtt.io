@@ -1,5 +1,5 @@
-import {navbar} from './navbar';
-import {sidebar} from './sidebar';
+import {koNavbar, enNavbar} from './navbar';
+import {koSidebar, enSidebar} from './sidebar';
 import * as path from 'path';
 import {defaultTheme} from '@vuepress/theme-default';
 import viteBundler from '@vuepress/bundler-vite';
@@ -28,6 +28,15 @@ const conf = defineUserConfig({
     base: getBase(),
     title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''),
     description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
+
+    locales: {
+        '/': {lang: 'ko-KR', title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''), description: 'Zigbee를 MQTT로 연결하는 브리지'},
+        '/en/': {
+            lang: 'en-US',
+            title: 'Zigbee2MQTT' + (isDevelop ? ' develop' : ''),
+            description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
+        },
+    },
 
     dest: 'dist',
     public: 'public',
@@ -111,12 +120,22 @@ const conf = defineUserConfig({
         lastUpdatedText: 'Page was last updated on',
         logo: '/logo.png',
         docsDir: 'docs',
-        navbar,
-        sidebar,
         sidebarDepth: 2,
         contributors: false,
         themePlugins: {
             git: true,
+        },
+        locales: {
+            '/': {
+                selectLanguageName: '한국어',
+                navbar: koNavbar,
+                sidebar: koSidebar,
+            },
+            '/en/': {
+                selectLanguageName: 'English',
+                navbar: enNavbar,
+                sidebar: enSidebar,
+            },
         },
     }),
 
@@ -161,6 +180,9 @@ const conf = defineUserConfig({
             appId: 'K1BM3QYQ34',
             locales: {
                 '/': {
+                    placeholder: '검색',
+                },
+                '/en/': {
                     placeholder: 'Search',
                 },
             },
